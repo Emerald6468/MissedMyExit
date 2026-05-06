@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cskp5c50osm7w"]
+
+[ext_resource type="PackedScene" uid="uid://cxg887y84alki" path="res://Scenes/TestScenes/TestCar.tscn" id="1_72kwx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kwx"]
+sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
+sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+
+[sub_resource type="Sky" id="Sky_72kwx"]
+sky_material = SubResource("ProceduralSkyMaterial_72kwx")
+
+[sub_resource type="Environment" id="Environment_xhf2q"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+sky = SubResource("Sky_72kwx")
+ambient_light_color = Color(0.14117648, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_72kwx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhf2q"]
+albedo_color = Color(0, 0.0076275417, 0.0076275375, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ytlcx"]
+material = SubResource("StandardMaterial3D_xhf2q")
+
+[node name="DrivingTest" type="Node3D" unique_id=2097895203]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=396442294]
+environment = SubResource("Environment_xhf2q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=258828581]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+
+[node name="Car" parent="." unique_id=1085145983 instance=ExtResource("1_72kwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.343557, 0)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1114849922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1059796766]
+transform = Transform3D(309.56512, 0, 0, 0, 1, 0, 0, 0, 309.56512, 0, 0, 0)
+shape = SubResource("BoxShape3D_72kwx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D" unique_id=1664393972]
+mesh = SubResource("BoxMesh_ytlcx")
