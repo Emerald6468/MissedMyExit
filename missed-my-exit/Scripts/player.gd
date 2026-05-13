@@ -6,6 +6,7 @@ const JUMP_VELOCITY = 4.5
 
 #Camera stuff
 var mouse_sensitivity = 0.3
+@onready var head: Node3D = $Head
 
 
 func _ready():
@@ -38,3 +39,5 @@ func _physics_process(delta: float) -> void:
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity
+		head.rotation_degrees.x -= event.relative.y * mouse_sensitivity
+		head.rotation_degrees.x = clampf(head.rotation_degrees.x,-45,90)
