@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bjf0up8nka4mg"]
+
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_pd2gy"]
+[ext_resource type="Script" uid="uid://cmwcetyhkdsry" path="res://Scripts/player.gd" id="2_4efsp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a6iq2"]
+sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
+sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+
+[sub_resource type="Sky" id="Sky_72kwx"]
+sky_material = SubResource("ProceduralSkyMaterial_a6iq2")
+
+[sub_resource type="Environment" id="Environment_2b5ik"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+sky = SubResource("Sky_72kwx")
+ambient_light_color = Color(0.14117648, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_senr6"]
+albedo_texture = ExtResource("1_pd2gy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfvba"]
+albedo_texture = ExtResource("1_pd2gy")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mwclm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c5mjq"]
+
+[node name="OnFootTest" type="Node3D" unique_id=142770682]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1633675492]
+environment = SubResource("Environment_2b5ik")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1143215815]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1187681420]
+transform = Transform3D(54.467884, 0, 0, 0, 3.3668203, 0, 0, 0, 42.97863, 0.19749355, -4.6553783, 0.9016695)
+material_override = SubResource("StandardMaterial3D_senr6")
+use_collision = true
+size = Vector3(1, 2.5292969, 1)
+material = SubResource("StandardMaterial3D_sfvba")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1021162246]
+script = ExtResource("2_4efsp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=649821816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64109087, 0)
+shape = SubResource("CapsuleShape3D_mwclm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D" unique_id=1185571509]
+mesh = SubResource("CapsuleMesh_c5mjq")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=2098546661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1279738, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=246548626]
