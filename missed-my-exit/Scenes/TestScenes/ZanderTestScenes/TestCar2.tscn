@@ -219,6 +219,8 @@ size = Vector3(1, 1.2241211, 1.6289063)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ntpel"]
 size = Vector3(1, 0.647583, 0.6732178)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_qn5rq"]
+
 [node name="TestCar2" type="VehicleBody3D" unique_id=1880288469]
 mass = 240.0
 inertia = Vector3(0, 0, 0.2)
@@ -300,3 +302,13 @@ shape = SubResource("BoxShape3D_ntpel")
 
 [node name="CarCamera" type="Camera3D" parent="." unique_id=182063250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9166391, 3.7930007)
+
+[node name="PlayerPoint" type="Marker3D" parent="." unique_id=82242388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0043018, 0.6006232, 0)
+
+[node name="DriversDoor" type="Area3D" parent="PlayerPoint" unique_id=508734790]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerPoint/DriversDoor" unique_id=690483299]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 0, 0, 0)
+shape = SubResource("SphereShape3D_qn5rq")
+debug_color = Color(0.7176471, 0.48235294, 0, 0.7647059)

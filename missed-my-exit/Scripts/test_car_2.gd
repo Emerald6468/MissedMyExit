@@ -8,8 +8,13 @@ var turn_amount = 0.3
 #Camera
 @onready var car_camera: Camera3D = $CarCamera
 
+#Player Point and Door
+@onready var player_point: Marker3D = $PlayerPoint
+@onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
+
 
 func _process(delta: float) -> void:
+	Global.PlayerMarker = player_point.global_position
 	#Switching
 	if !Global.OnFoot:
 		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls"):
@@ -30,3 +35,10 @@ func _process(delta: float) -> void:
 		
 		if dir == 0:
 			brake = 2
+	else: 
+		var body_list = drivers_door.get_overlapping_bodies()
+		if drivers_door.has_overlapping_bodies():
+			for body in body_list:
+				if body.is_in_group("Player"):
+					Global.NearDoor = true
+				else: Global.NearDoor = false

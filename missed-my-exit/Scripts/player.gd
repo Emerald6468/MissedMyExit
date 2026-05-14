@@ -19,15 +19,21 @@ func _ready():
 func switch_timer():
 	if !timer_started:
 		timer_started = true
+		if Global.OnFoot: get_out_car()
 		await get_tree().create_timer(.05).timeout
 		timer_started = false
 		Global.JustSwitched = false
+
+
+func get_out_car():
+	global_position = Global.PlayerMarker
 
 func _physics_process(delta: float) -> void:
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:
-		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls"):
+		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls") and Global.NearDoor:
+			Global.NearDoor = false
 			Global.OnFoot = false
 			Global.JustSwitched = true
 		#Camera

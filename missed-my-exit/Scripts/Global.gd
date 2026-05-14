@@ -4,10 +4,11 @@ extends Node
 #Switching Controls
 var OnFoot = false
 var JustSwitched = false
+var NearDoor = false
 var PlayerMarker:Vector3
 
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = true
 	JustSwitched = false
-	
+	NearDoor = false

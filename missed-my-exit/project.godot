@@ -18,6 +18,10 @@ config/icon="res://Assets/Other/icon.svg"
 
 Global="*uid://df830k8onidc5"
 
+[global_group]
+
+Player=""
+
 [input]
 
 Right={
