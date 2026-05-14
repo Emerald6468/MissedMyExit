@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cskp5c50osm7w"]
+
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_xhf2q"]
+[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCar2.tscn" id="2_xhf2q"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kwx"]
+sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
+sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+
+[sub_resource type="Sky" id="Sky_xhf2q"]
+sky_material = SubResource("ProceduralSkyMaterial_72kwx")
+
+[sub_resource type="Environment" id="Environment_xhf2q"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+sky = SubResource("Sky_xhf2q")
+ambient_light_color = Color(0.14117648, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytlcx"]
+albedo_texture = ExtResource("1_xhf2q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mb3d"]
+albedo_texture = ExtResource("1_xhf2q")
+
+[node name="DrivingTest" type="Node3D" unique_id=2097895203]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=396442294]
+environment = SubResource("Environment_xhf2q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=258828581]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=604145976]
+transform = Transform3D(54.467884, 0, 0, 0, 3.3668203, 0, 0, 0, 42.97863, 0.19749355, -4.6553783, 0.9016695)
+material_override = SubResource("StandardMaterial3D_ytlcx")
+use_collision = true
+size = Vector3(1, 2.5292969, 1)
+material = SubResource("StandardMaterial3D_8mb3d")
+
+[node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("2_xhf2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14752412, 0.14336991, 0.6998825)
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0, 0.2)
+inertia = Vector3(0, 0, 0)

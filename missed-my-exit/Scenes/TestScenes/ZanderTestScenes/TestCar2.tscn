@@ -298,5 +298,5 @@ shape = SubResource("BoxShape3D_0yh6a")
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -6.92239e-08, 0.5386805, -0.6496351)
 shape = SubResource("BoxShape3D_ntpel")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=182063250]
+[node name="CarCamera" type="Camera3D" parent="." unique_id=182063250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9166391, 3.7930007)

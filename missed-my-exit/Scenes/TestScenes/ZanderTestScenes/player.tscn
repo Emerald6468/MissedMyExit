@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbx5elfj6aehx"]
+[gd_scene format=3 uid="uid://5cfidd5tn0et"]
 
 [ext_resource type="Script" uid="uid://cmwcetyhkdsry" path="res://Scripts/player.gd" id="1_er31s"]
 
@@ -19,4 +19,4 @@ mesh = SubResource("CapsuleMesh_c5mjq")
 [node name="Head" type="Node3D" parent="." unique_id=639513388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1279738, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1938948036]
+[node name="OnFootCamera" type="Camera3D" parent="Head" unique_id=1938948036]
