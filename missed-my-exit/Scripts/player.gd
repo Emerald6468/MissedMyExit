@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -29,6 +29,7 @@ func get_out_car():
 	global_position = Global.PlayerMarker
 
 func _physics_process(delta: float) -> void:
+	if Global.HasRock: print("HAVEROCK")
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:
@@ -38,6 +39,11 @@ func _physics_process(delta: float) -> void:
 			Global.JustSwitched = true
 		#Camera
 		on_foot_camera.make_current()
+		
+		#Interactables
+		if Input.is_action_just_pressed("Interact") and Global.NearPickup:
+			if on_foot_camera.is_position_in_frustum(Global.ObjectPosition):
+				Global.JustPickedUp = true
 		
 		# Add the gravity.
 		if not is_on_floor():
