@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bdsj8p33sx8w2"]
+
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_yg8ar"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scenes/TestScenes/Harlan/trigger.gd" id="2_7m4yd"]
+[ext_resource type="Script" uid="uid://dwogjrkqhrih3" path="res://Scenes/TestScenes/Harlan/move_event.gd" id="3_61up8"]
+[ext_resource type="Script" uid="uid://5rdxy4qauawe" path="res://Scenes/TestScenes/Harlan/method_event.gd" id="4_ed22e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
+sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
+sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+
+[sub_resource type="Sky" id="Sky_xhf2q"]
+sky_material = SubResource("ProceduralSkyMaterial_7m4yd")
+
+[sub_resource type="Environment" id="Environment_61up8"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+sky = SubResource("Sky_xhf2q")
+ambient_light_color = Color(0.14117648, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ed22e"]
+albedo_texture = ExtResource("1_yg8ar")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa2op"]
+albedo_texture = ExtResource("1_yg8ar")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xe0c"]
+
+[node name="Node3D" type="Node3D" unique_id=1615769401]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=149609153]
+environment = SubResource("Environment_61up8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=522869465]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=405791956]
+transform = Transform3D(54.467884, 0, 0, 0, 3.3668203, 0, 0, 0, 42.97863, 0.19749355, -4.6553783, 0.9016695)
+material_override = SubResource("StandardMaterial3D_ed22e")
+use_collision = true
+size = Vector3(1, 2.5292969, 1)
+material = SubResource("StandardMaterial3D_pa2op")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1090024576]
+collision_layer = 0
+script = ExtResource("2_7m4yd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=601591839]
+shape = SubResource("BoxShape3D_6xe0c")
+
+[node name="MoveEvent" type="Node3D" parent="." unique_id=1595362732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2894535, 1.9073486e-06, -7.28928)
+script = ExtResource("3_61up8")
+
+[node name="MethodEvent" type="Node3D" parent="." unique_id=1956118238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.772993, 9.536743e-07, 13.513581)
+script = ExtResource("4_ed22e")
+trigger_type = 1
