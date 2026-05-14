@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_yg8ar"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scenes/TestScenes/Harlan/trigger.gd" id="2_7m4yd"]
 [ext_resource type="Script" uid="uid://dwogjrkqhrih3" path="res://Scenes/TestScenes/Harlan/move_event.gd" id="3_61up8"]
+[ext_resource type="Script" uid="uid://5rdxy4qauawe" path="res://Scenes/TestScenes/Harlan/method_event.gd" id="4_ed22e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -50,5 +51,10 @@ script = ExtResource("2_7m4yd")
 shape = SubResource("BoxShape3D_6xe0c")
 
 [node name="MoveEvent" type="Node3D" parent="." unique_id=1595362732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2894535, 1.9073486e-06, -7.28928)
 script = ExtResource("3_61up8")
+
+[node name="MethodEvent" type="Node3D" parent="." unique_id=1956118238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.772993, 9.536743e-07, 13.513581)
+script = ExtResource("4_ed22e")
 trigger_type = 1

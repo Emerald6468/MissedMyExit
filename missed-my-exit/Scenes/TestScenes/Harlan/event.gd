@@ -17,15 +17,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Code to execute in editor.
 	if Engine.is_editor_hint():
-		drawDebugLine()
+		if trigger != null:
+			drawDebugLine(global_position, trigger.global_position)
+		else:
+			drawDebugLine(global_position, global_position)
 
-func drawDebugLine():
+func drawDebugLine(pos1: Vector3, pos2: Vector3):
 	var line = mesh.mesh
 	line.clear_surfaces()
 	line.surface_begin(Mesh.PRIMITIVE_LINES, StandardMaterial3D.new())
-	line.surface_add_vertex(global_position)
-	if trigger != null:
-		line.surface_add_vertex(trigger.global_position)
-	else:
-		line.surface_add_vertex(global_position)
+	line.surface_add_vertex(pos1)
+	line.surface_add_vertex(pos2)
 	line.surface_end()
