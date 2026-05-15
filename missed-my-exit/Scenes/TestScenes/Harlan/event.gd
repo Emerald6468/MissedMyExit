@@ -1,31 +1,29 @@
 @tool
 extends Node3D
 
-@export_enum("Area", "PrevEvent") var trigger_type: int
-@export var trigger: Node3D
+#@export_enum("Area", "PrevEvent") var trigger_type: int
+@export var trigger: Node
+@export var target: Node
 
-var mesh = MeshInstance3D.new()
-var line = ImmediateMesh.new()
-var finished = false
+const DEBUG_LINE = preload("res://Scenes/TestScenes/Harlan/debug_line.tscn")
+
+var line1 = DEBUG_LINE.instantiate()
+var line2 = DEBUG_LINE.instantiate()
+var start_next_event = false
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		mesh.mesh = line
-		mesh.name = "Debug_Line"
-		get_tree().root.add_child(mesh)
+		get_tree().root.add_child(line1)
+		get_tree().root.add_child(line2)
 
 func _process(delta: float) -> void:
 	# Code to execute in editor.
 	if Engine.is_editor_hint():
 		if trigger != null:
-			drawDebugLine(global_position, trigger.global_position)
+			line1.drawDebugLine(trigger.global_position, global_position)
 		else:
-			drawDebugLine(global_position, global_position)
-
-func drawDebugLine(pos1: Vector3, pos2: Vector3):
-	var line = mesh.mesh
-	line.clear_surfaces()
-	line.surface_begin(Mesh.PRIMITIVE_LINES, StandardMaterial3D.new())
-	line.surface_add_vertex(pos1)
-	line.surface_add_vertex(pos2)
-	line.surface_end()
+			line1.clearDebugLine()
+		if target != null:
+			line2.drawDebugLine(global_position, target.global_position)
+		else:
+			line1.clearDebugLine()

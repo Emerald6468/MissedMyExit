@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://be4quto00a5ay"]
+
+[ext_resource type="Script" uid="uid://b18ehrteut8d3" path="res://Scenes/TestScenes/Harlan/debug_line.gd" id="1_lk01c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5u8j0"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_lk01c"]
+
+[node name="Debug_Line" type="MeshInstance3D" unique_id=406663740]
+material_override = SubResource("StandardMaterial3D_5u8j0")
+mesh = SubResource("ImmediateMesh_lk01c")
+script = ExtResource("1_lk01c")
