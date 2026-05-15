@@ -13,6 +13,7 @@ var start_next_event = false
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
+		$Sprite3D.visible = true
 		get_tree().root.add_child(line1)
 		get_tree().root.add_child(line2)
 
@@ -26,4 +27,4 @@ func _process(delta: float) -> void:
 		if target != null:
 			line2.drawDebugLine(global_position, target.global_position)
 		else:
-			line1.clearDebugLine()
+			line2.clearDebugLine()

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dmuahqlhfsrs8"]
+
+[ext_resource type="Script" uid="uid://bkn6gudb5hl1i" path="res://Scenes/TestScenes/Harlan/hide_event.gd" id="1_s5lm8"]
+[ext_resource type="Texture2D" uid="uid://dhtlprh5bxhl" path="res://Assets/Other/HideE.png" id="2_s2ppk"]
+
+[node name="HideEvent" type="Node3D" unique_id=1518793143]
+script = ExtResource("1_s5lm8")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1634873705]
+visible = false
+pixel_size = 0.02
+billboard = 1
+double_sided = false
+texture = ExtResource("2_s2ppk")

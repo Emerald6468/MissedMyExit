@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cd0qvg7k1fm4a"]
+
+[ext_resource type="Script" uid="uid://dwogjrkqhrih3" path="res://Scenes/TestScenes/Harlan/move_event.gd" id="1_tjv1a"]
+[ext_resource type="Texture2D" uid="uid://bq7ktgwa54ly4" path="res://Assets/Other/MoveE.png" id="2_76h3i"]
+
+[node name="MoveEvent" type="Node3D" unique_id=1494704290]
+script = ExtResource("1_tjv1a")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=762141632]
+visible = false
+pixel_size = 0.02
+billboard = 1
+double_sided = false
+texture = ExtResource("2_76h3i")

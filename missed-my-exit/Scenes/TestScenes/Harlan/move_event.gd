@@ -4,6 +4,7 @@ extends "res://Scenes/TestScenes/Harlan/event.gd"
 @export var speed: float
 @export var end_point: Node3D
 @export var lerp: bool
+@export var teleport: bool
 
 var line3 = DEBUG_LINE.instantiate()
 
@@ -18,13 +19,18 @@ func _process(delta: float) -> void:
 		if end_point != null && target != null:
 			line3.drawDebugLine(target.global_position, end_point.global_position)
 		else:
-			line3.clearDebugLine()
+			line3.drawDebugLine(global_position, global_position)
 	else:
-		if trigger.start_next_event == true:
+		if trigger.start_next_event && !start_next_event:
 			move(delta)
 
 func move(delta: float):
 	if lerp:
-		target.position = target.position.lerp(end_point.position, speed)
+		target.global_position = target.global_position.lerp(end_point.global_position, speed)
+	elif teleport:
+		target.global_position = end_point.global_position
 	else:
-		target.position = target.position.move_toward(end_point.position, speed * delta)
+		target.global_position = target.global_position.move_toward(end_point.global_position, speed * delta)
+	if target.global_position.distance_to(end_point.global_position) <= speed:
+		print("test3")
+		start_next_event = true
