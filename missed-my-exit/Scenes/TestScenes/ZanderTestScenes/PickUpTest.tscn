@@ -44,3 +44,4 @@ material = SubResource("StandardMaterial3D_sfvba")
 
 [node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("3_w1h60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4998927, -0.10753438, -5.415989)
+ObjectType = "Rock"
