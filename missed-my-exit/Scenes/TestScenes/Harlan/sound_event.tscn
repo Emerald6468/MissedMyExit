@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bbbjo5ruqvl1b"]
+
+[ext_resource type="Script" uid="uid://dge60lol4qyjr" path="res://Scenes/TestScenes/Harlan/sound_event.gd" id="1_began"]
+[ext_resource type="Texture2D" uid="uid://deu5ojo34uyc1" path="res://Assets/Other/SoundE.png" id="2_5x5d5"]
+
+[node name="SoundEvent" type="Node3D" unique_id=1199906187]
+script = ExtResource("1_began")
+end = "SoundStarted"
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1072259495]
+pixel_size = 0.02
+billboard = 1
+double_sided = false
+texture = ExtResource("2_5x5d5")

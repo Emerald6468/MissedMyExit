@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bdsj8p33sx8w2"]
 
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_yg8ar"]
-[ext_resource type="PackedScene" uid="uid://kun3f8ljfksu" path="res://Scenes/TestScenes/Harlan/trigger.tscn" id="2_ed22e"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scenes/TestScenes/Harlan/trigger.gd" id="2_xtx70"]
+[ext_resource type="AudioStream" uid="uid://cfnmqilybo2et" path="res://Assets/Other/Ambient_Scary_1.wav" id="4_6xe0c"]
+[ext_resource type="PackedScene" uid="uid://bbbjo5ruqvl1b" path="res://Scenes/TestScenes/Harlan/sound_event.tscn" id="4_pa2op"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/TestScenes/ZanderTestScenes/player.tscn" id="5_pa2op"]
+[ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/TestScenes/Harlan/move_event.tscn" id="7_xtx70"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -25,6 +28,9 @@ albedo_texture = ExtResource("1_yg8ar")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa2op"]
 albedo_texture = ExtResource("1_yg8ar")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xe0c"]
+size = Vector3(1, 3, 3)
+
 [sub_resource type="SphereMesh" id="SphereMesh_ed22e"]
 
 [node name="Node3D" type="Node3D" unique_id=1615769401]
@@ -42,16 +48,43 @@ use_collision = true
 size = Vector3(1, 2.5292969, 1)
 material = SubResource("StandardMaterial3D_pa2op")
 
-[node name="Trigger" parent="." unique_id=1169108329 instance=ExtResource("2_ed22e")]
+[node name="Trigger" type="Area3D" parent="." unique_id=1169108329]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_xtx70")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trigger" unique_id=190863318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_6xe0c")
+debug_color = Color(0, 11.708403, 13.469126, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=382880208]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2352604, 0.75976086, -1.432406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.208573, 0.75976086, -2.4958656)
 mesh = SubResource("SphereMesh_ed22e")
 
 [node name="EndPoint" type="Node3D" parent="." unique_id=419770789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.379859, 0.6828227, 5.1645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7537904, 0.6828228, -16.762722)
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("5_pa2op")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1564126, -0.038624287, -3.3458111)
 collision_layer = 2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=195743910]
+stream = ExtResource("4_6xe0c")
+
+[node name="SoundEvent" parent="." unique_id=1199906187 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_pa2op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.101404, 0.6024656, 8.87919)
+action = "Play"
+end = "SoundFinished"
+trigger = NodePath("../Trigger")
+target = NodePath("../AudioStreamPlayer3D")
+
+[node name="MoveEvent" parent="." unique_id=1494704290 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("7_xtx70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3250828, 0.6024666, 10.1753025)
+end_point = NodePath("../EndPoint")
+teleport = true
+trigger = NodePath("../SoundEvent")
+target = NodePath("../MeshInstance3D")
+
+[connection signal="body_entered" from="Trigger" to="Trigger" method="_on_body_entered"]
