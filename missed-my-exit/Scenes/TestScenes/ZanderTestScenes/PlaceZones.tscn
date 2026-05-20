@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://civkgy5xa0ny"]
+
+[ext_resource type="Script" uid="uid://c2agtrt63aafr" path="res://Scripts/place_zones.gd" id="1_os62k"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
+
+[node name="PlaceZone" type="Area3D" unique_id=1743039300]
+script = ExtResource("1_os62k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358614051]
+transform = Transform3D(2.595, 0, 0, 0, 2.595, 0, 0, 0, 2.595, 0, 0, 0)
+shape = SubResource("SphereShape3D_kgrkx")
+debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
+
+[node name="PickupText" type="Label3D" parent="." unique_id=342850726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5488042, 0)
+billboard = 1
+text = "Place?"

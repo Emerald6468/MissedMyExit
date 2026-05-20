@@ -10,10 +10,14 @@ var NearDoor = false
 var NearPickup = false
 var JustPickedUp = false
 var HasRock = false
+var NearPlaceZone = false
+var JustPlaced = false
+var HasItem = false
 
 #positions
 var PlayerMarker: Vector3
 var ObjectPosition: Vector3
+var PlaceZonePosition: Vector3
 
 #make sure to add every var to reset
 func reset_vars():
@@ -22,5 +26,9 @@ func reset_vars():
 	NearDoor = false
 	NearPickup = false
 	JustPickedUp = false
+	NearPlaceZone = false
+	JustPlaced = false
+	HasItem = false
 	#temp ones prob delete later
 	HasRock = false
+	

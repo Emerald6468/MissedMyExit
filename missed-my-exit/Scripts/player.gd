@@ -28,8 +28,16 @@ func switch_timer():
 func get_out_car():
 	global_position = Global.PlayerMarker
 
+func inventory():
+	#later add all other possible items with or 
+	if Global.HasRock:
+		Global.HasItem = true
+	else:
+		Global.HasItem = false
+	
 func _physics_process(delta: float) -> void:
 	if Global.HasRock: print("HAVEROCK")
+	inventory()
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:
@@ -41,9 +49,13 @@ func _physics_process(delta: float) -> void:
 		on_foot_camera.make_current()
 		
 		#Interactables
-		if Input.is_action_just_pressed("Interact") and Global.NearPickup:
-			if on_foot_camera.is_position_in_frustum(Global.ObjectPosition):
-				Global.JustPickedUp = true
+		if Input.is_action_just_pressed("Interact"):
+			if Global.NearPickup and !Global.HasItem:
+				if on_foot_camera.is_position_in_frustum(Global.ObjectPosition):
+					Global.JustPickedUp = true
+			elif Global.NearPlaceZone and Global.HasItem:
+				if on_foot_camera.is_position_in_frustum(Global.PlaceZonePosition):
+					Global.JustPlaced = true	
 		
 		# Add the gravity.
 		if not is_on_floor():
