@@ -54,7 +54,7 @@ func check_nearby():
 			else:
 				if !just_grab_range: Global.NearPickup = false
 				if !just_place_range: Global.NearPlaceZone = false
-			
+	if Global.NearPlaceZone: Global.ClosestDistance = 100.0
 
 
 func _physics_process(delta: float) -> void:
@@ -64,6 +64,7 @@ func _physics_process(delta: float) -> void:
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:
+		Global.PlayerPosition = global_position
 		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls") and Global.NearDoor:
 			Global.NearDoor = false
 			Global.OnFoot = false

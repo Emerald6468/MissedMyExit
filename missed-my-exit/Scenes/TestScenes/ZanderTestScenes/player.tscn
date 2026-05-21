@@ -23,6 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1279738, 0)
 
 [node name="OnFootCamera" type="Camera3D" parent="Head" unique_id=1938948036]
 
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=542214953]
+
 [node name="NearbyCheck" type="Area3D" parent="." unique_id=102659409]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NearbyCheck" unique_id=1776399417]
