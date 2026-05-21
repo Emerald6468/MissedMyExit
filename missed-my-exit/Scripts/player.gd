@@ -10,6 +10,9 @@ var timer_started = false
 @onready var head: Node3D = $Head
 @onready var on_foot_camera: Camera3D = $Head/OnFootCamera
 
+#Detection
+@onready var nearby_check: Area3D = $NearbyCheck
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -35,9 +38,29 @@ func inventory():
 	else:
 		Global.HasItem = false
 	
+func check_nearby():
+	var area_list = nearby_check.get_overlapping_areas()
+	#Checks if player is nearby
+	if nearby_check.has_overlapping_areas():
+		var just_grab_range = false
+		var just_place_range = false
+		for area in area_list:
+			if area is PickUp:
+				Global.NearPickup = true
+				just_grab_range = true
+			elif area is PlaceZone:
+				Global.NearPlaceZone = true
+				just_place_range = true
+			else:
+				if !just_grab_range: Global.NearPickup = false
+				if !just_place_range: Global.NearPlaceZone = false
+			
+
+
 func _physics_process(delta: float) -> void:
 	if Global.HasRock: print("HAVEROCK")
 	inventory()
+	check_nearby()
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:

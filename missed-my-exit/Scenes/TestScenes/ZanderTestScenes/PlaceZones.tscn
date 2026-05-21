@@ -4,6 +4,12 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrqgv"]
+albedo_color = Color(0.41942388, 0.70514256, 0.2606285, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_os62k"]
+material = SubResource("StandardMaterial3D_mrqgv")
+
 [node name="PlaceZone" type="Area3D" unique_id=1743039300]
 script = ExtResource("1_os62k")
 
@@ -16,3 +22,7 @@ debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5488042, 0)
 billboard = 1
 text = "Place?"
+
+[node name="debug" type="MeshInstance3D" parent="." unique_id=973013009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13941193, 0)
+mesh = SubResource("SphereMesh_os62k")

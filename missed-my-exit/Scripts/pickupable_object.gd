@@ -1,5 +1,5 @@
 extends Area3D
-
+class_name PickUp
 @export var ObjectType: String
 
 var player_nearby = false
@@ -10,16 +10,15 @@ func _process(delta: float) -> void:
 	var body_list = get_overlapping_bodies()
 	#Checks if player is nearby
 	if has_overlapping_bodies():
+		var just_nearby = false
 		for body in body_list:
 			if body is Player:
-				Global.NearPickup = true
 				player_nearby = true
+				just_nearby = true
 				Global.ObjectPosition = global_position
 			else: 
-				Global.NearPickup = false
-	else: 
-		Global.NearPickup = false
-		player_nearby = false
+				if !just_nearby: player_nearby = false
+		
 		
 	#Picking up check
 	if player_nearby and Global.JustPickedUp:

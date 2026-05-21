@@ -49,3 +49,9 @@ ObjectType = "Rock"
 
 [node name="PlaceZone" parent="." unique_id=1290826887 instance=ExtResource("4_7rgsu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93498886, -0.3975346, -6.5801945)
+
+[node name="PlaceZone2" parent="." unique_id=1177315162 instance=ExtResource("4_7rgsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7402887, -0.3975346, -6.5801945)
+
+[node name="PlaceZone3" parent="." unique_id=250481239 instance=ExtResource("4_7rgsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6638498, -0.3975346, -6.5801945)
