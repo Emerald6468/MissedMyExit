@@ -5,7 +5,11 @@
 [ext_resource type="AudioStream" uid="uid://cfnmqilybo2et" path="res://Assets/Other/Ambient_Scary_1.wav" id="4_6xe0c"]
 [ext_resource type="PackedScene" uid="uid://bbbjo5ruqvl1b" path="res://Scenes/TestScenes/Harlan/sound_event.tscn" id="4_pa2op"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/TestScenes/ZanderTestScenes/player.tscn" id="5_pa2op"]
+[ext_resource type="PackedScene" uid="uid://dkkxa1uffsa3l" path="res://Assets/New Models/Pole1.glb" id="7_lravs"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/TestScenes/Harlan/move_event.tscn" id="7_xtx70"]
+[ext_resource type="PackedScene" uid="uid://dwbcva726uu4n" path="res://Assets/New Models/Light1.glb" id="8_lm584"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="9_lm584"]
+[ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_rydv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -40,6 +44,7 @@ environment = SubResource("Environment_61up8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=522869465]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+light_color = Color(0.15247649, 0.15247649, 0.15247646, 1)
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=405791956]
 transform = Transform3D(54.467884, 0, 0, 0, 3.3668203, 0, 0, 0, 42.97863, 0.20532608, -4.6553783, 0.93144417)
@@ -86,5 +91,36 @@ end_point = NodePath("../EndPoint")
 teleport = true
 trigger = NodePath("../SoundEvent")
 target = NodePath("../MeshInstance3D")
+
+[node name="Pole1" parent="." unique_id=1462185188 instance=ExtResource("7_lravs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.398, 0)
+
+[node name="Light1" parent="Pole1" unique_id=395664907 instance=ExtResource("8_lm584")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Pole1/Light1" unique_id=761727595]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 7.2151155, -2.5222955)
+light_color = Color(1, 0.57, 0.13999999, 1)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 12.439801
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Pole1/Light1/SpotLight3D" unique_id=1864783662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_color = Color(1, 0.7041031, 0.47365624, 1)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="Pole1/Light1/SpotLight3D" unique_id=524879124]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("9_rydv8")
+
+[node name="TreeNewWIP1" parent="." unique_id=501513004 instance=ExtResource("9_lm584")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.336241, -0.39753342, 0.9507663)
 
 [connection signal="body_entered" from="Trigger" to="Trigger" method="_on_body_entered"]
