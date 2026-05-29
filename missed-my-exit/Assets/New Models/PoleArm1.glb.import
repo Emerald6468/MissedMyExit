@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dcjny86ttjuob"
-path="res://.godot/imported/Light1.glb-63d265ba78aa4c5806631961fdabe182.scn"
+uid="uid://bnd2ts3vy3unt"
+path="res://.godot/imported/PoleArm1.glb-cb4f5683be42b424fe59bbaf3d226a4a.scn"
 
 [deps]
 
-source_file="res://Assets/New Models/Light1.glb"
-dest_files=["res://.godot/imported/Light1.glb-63d265ba78aa4c5806631961fdabe182.scn"]
+source_file="res://Assets/New Models/PoleArm1.glb"
+dest_files=["res://.godot/imported/PoleArm1.glb-cb4f5683be42b424fe59bbaf3d226a4a.scn"]
 
 [params]
 

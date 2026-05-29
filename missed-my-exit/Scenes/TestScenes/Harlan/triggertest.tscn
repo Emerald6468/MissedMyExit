@@ -7,9 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/TestScenes/ZanderTestScenes/player.tscn" id="5_pa2op"]
 [ext_resource type="PackedScene" uid="uid://dkkxa1uffsa3l" path="res://Assets/New Models/Pole1.glb" id="7_lravs"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/TestScenes/Harlan/move_event.tscn" id="7_xtx70"]
-[ext_resource type="PackedScene" uid="uid://dwbcva726uu4n" path="res://Assets/New Models/Light1.glb" id="8_lm584"]
+[ext_resource type="PackedScene" uid="uid://dcjny86ttjuob" path="res://Assets/New Models/Light1.glb" id="9_j0y78"]
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="9_lm584"]
 [ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_rydv8"]
+[ext_resource type="PackedScene" uid="uid://bnd2ts3vy3unt" path="res://Assets/New Models/PoleArm1.glb" id="10_rydv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -95,10 +96,14 @@ target = NodePath("../MeshInstance3D")
 [node name="Pole1" parent="." unique_id=1462185188 instance=ExtResource("7_lravs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.398, 0)
 
-[node name="Light1" parent="Pole1" unique_id=395664907 instance=ExtResource("8_lm584")]
+[node name="PoleArm1" parent="Pole1" unique_id=965747908 instance=ExtResource("10_rydv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.582, 0)
+
+[node name="Light1" parent="Pole1" unique_id=1201522965 instance=ExtResource("9_j0y78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.480995, -2.5164275)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Pole1/Light1" unique_id=761727595]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 7.2151155, -2.5222955)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.26587963, -0.005867958)
 light_color = Color(1, 0.57, 0.13999999, 1)
 light_energy = 3.0
 shadow_enabled = true
@@ -122,5 +127,41 @@ texture = ExtResource("9_rydv8")
 
 [node name="TreeNewWIP1" parent="." unique_id=501513004 instance=ExtResource("9_lm584")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.336241, -0.39753342, 0.9507663)
+
+[node name="Pole2" parent="." unique_id=159944517 instance=ExtResource("7_lravs")]
+transform = Transform3D(0.9543499, 0, 0.29869103, -0.023720857, 0.99684155, 0.07579068, -0.29774764, -0.07941603, 0.9513356, -4.571537, -0.39753342, 6.46072)
+
+[node name="PoleArm1" parent="Pole2" unique_id=176912696 instance=ExtResource("10_rydv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="PoleArm2" parent="Pole2" unique_id=856651542 instance=ExtResource("10_rydv8")]
+transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="Pole3" parent="." unique_id=1735519981 instance=ExtResource("7_lravs")]
+transform = Transform3D(0.6688178, 0.07217153, -0.7399149, -0.023720859, 0.9968415, 0.07579068, 0.7430478, -0.033138726, 0.66841733, 6.4985094, -0.39753342, 9.574885)
+
+[node name="PoleArm1" parent="Pole3" unique_id=600507101 instance=ExtResource("10_rydv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="PoleArm2" parent="Pole3" unique_id=1121514734 instance=ExtResource("10_rydv8")]
+transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="Pole4" parent="." unique_id=1209921540 instance=ExtResource("7_lravs")]
+transform = Transform3D(0.99906206, 0.026384171, -0.034334186, -0.030223154, 0.9927212, -0.11658076, 0.03100833, 0.1175091, 0.99258757, 20.536947, -0.39753342, 14.396602)
+
+[node name="PoleArm1" parent="Pole4" unique_id=66324995 instance=ExtResource("10_rydv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="PoleArm2" parent="Pole4" unique_id=278565457 instance=ExtResource("10_rydv8")]
+transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="Pole5" parent="." unique_id=1571771116 instance=ExtResource("7_lravs")]
+transform = Transform3D(0.9179698, 0.07371671, 0.3897399, -0.030223157, 0.9927213, -0.11658078, -0.3954971, 0.09523844, 0.91351616, -17.514235, -0.39753342, 14.396602)
+
+[node name="PoleArm1" parent="Pole5" unique_id=571376660 instance=ExtResource("10_rydv8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.006810665, 8.059992, -0.03824711)
+
+[node name="PoleArm2" parent="Pole5" unique_id=229777427 instance=ExtResource("10_rydv8")]
+transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, 0.006810665, 8.059992, -0.03824711)
 
 [connection signal="body_entered" from="Trigger" to="Trigger" method="_on_body_entered"]
