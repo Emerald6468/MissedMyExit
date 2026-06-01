@@ -30,6 +30,9 @@ func check_if_place():
 		if Global.HasRock:
 			var rock = BOULDER_1_Scene.instantiate()
 			add_child(rock)
+			rock.scale.x = .50
+			rock.scale.y = .50
+			rock.scale.z = .50
 			Global.HasRock = false
 
 

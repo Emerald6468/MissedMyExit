@@ -47,6 +47,14 @@ material = SubResource("StandardMaterial3D_sfvba")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4998927, -0.10753438, -5.415989)
 ObjectType = "Rock"
 
+[node name="PickupableObject2" parent="." unique_id=726061339 instance=ExtResource("3_w1h60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4998927, -0.10753438, 1.5080724)
+ObjectType = "Rock"
+
+[node name="PickupableObject3" parent="." unique_id=1215820240 instance=ExtResource("3_w1h60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.244271, -0.10753438, 1.5080724)
+ObjectType = "Rock"
+
 [node name="PlaceZone" parent="." unique_id=1290826887 instance=ExtResource("4_7rgsu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93498886, -0.3975346, -6.5801945)
 num = 1

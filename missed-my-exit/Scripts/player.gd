@@ -58,6 +58,7 @@ func check_nearby():
 
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("Escape"): get_tree().quit()
 	if Global.HasRock: print("HAVEROCK")
 	inventory()
 	check_nearby()
