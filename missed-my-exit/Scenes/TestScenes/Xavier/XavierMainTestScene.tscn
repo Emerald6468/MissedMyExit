@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://rtvjmqlbvrqx"]
+
+[ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="1_7xe24"]
+
+[node name="MainTestScene" type="Node2D" unique_id=1211951512]
+
+[node name="Toolcart" parent="." unique_id=634600555 instance=ExtResource("1_7xe24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2871374, 0, -0.17696702)
