@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1pekp0ut3hhm"
-path.s3tc="res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Normal.png-293f9872ba40135fc28d745309fb8a82.s3tc.ctex"
+uid="uid://dwovbjd1m75c1"
+path.s3tc="res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_BaseColor.png-36950b32d04e212b591cc87dbfa5f327.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8b1d4c894f6e4b70426f471decea5d00"
+"md5": "9c4e131a94b2045a819c7870bd9bface"
 }
 
 [deps]
 
-source_file="res://Assets/New Models/Garage/Toolcart/Toolcart_Untextured_openPBR_shader1_Normal.png"
-dest_files=["res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Normal.png-293f9872ba40135fc28d745309fb8a82.s3tc.ctex"]
+source_file="res://Assets/New Models/Car Parts/MAIN/Textures/CarFrame_UntexturedV2_openPBR_shader1_BaseColor.png"
+dest_files=["res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_BaseColor.png-36950b32d04e212b591cc87dbfa5f327.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Assets/New Models/Garage/Toolcart_Untextured_openPBR_shader1_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

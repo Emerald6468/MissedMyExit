@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://beex6tfwgmj3e"
-path="res://.godot/imported/Toolcart.glb-763c68f81ea431dc1c9a749c5bd80208.scn"
+uid="uid://sddprvg6c2gx"
+path="res://.godot/imported/CarSeat.glb-4623a85dc01df2df37ea793e8ea439dc.scn"
 
 [deps]
 
-source_file="res://Assets/New Models/Garage/Toolcart/Toolcart.glb"
-dest_files=["res://.godot/imported/Toolcart.glb-763c68f81ea431dc1c9a749c5bd80208.scn"]
+source_file="res://Assets/New Models/Car Parts/Seat/CarSeat.glb"
+dest_files=["res://.godot/imported/CarSeat.glb-4623a85dc01df2df37ea793e8ea439dc.scn"]
 
 [params]
 
@@ -39,10 +39,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"aiStandardSurface1": {
+"openPBR_shader1": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/New Models/Garage/Toolcart/Textures/aiStandardSurface1.tres",
-"use_external/path": "uid://dcupxiwqfqgc8"
+"use_external/fallback_path": "res://Assets/New Models/Car Parts/Seat/Textures/openPBR_shader1.tres",
+"use_external/path": "uid://cb2jel1us2gnr"
 }
 }
 }

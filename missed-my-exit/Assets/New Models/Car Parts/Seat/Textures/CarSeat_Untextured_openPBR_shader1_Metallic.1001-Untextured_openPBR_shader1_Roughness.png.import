@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qm4vnbsvxt2x"
-path.s3tc="res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Emissive.png-064a33245133f3546b5f93feee0dbef7.s3tc.ctex"
+uid="uid://cqm2d04a6xui5"
+path.s3tc="res://.godot/imported/CarSeat_Untextured_openPBR_shader1_Metallic.1001-Untextured_openPBR_shader1_Roughness.png-89a51799ab099c1b73a5b1e6a6dd1bd7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d1dd210d6b1312cb342b56d02bd5e651"
+"md5": "93c69183d430f93f90b450468ac87094"
 }
 
 [deps]
 
-source_file="res://Assets/New Models/Garage/Toolcart/Toolcart_Untextured_openPBR_shader1_Emissive.png"
-dest_files=["res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Emissive.png-064a33245133f3546b5f93feee0dbef7.s3tc.ctex"]
+source_file="res://Assets/New Models/Car Parts/Seat/Textures/CarSeat_Untextured_openPBR_shader1_Metallic.1001-Untextured_openPBR_shader1_Roughness.png"
+dest_files=["res://.godot/imported/CarSeat_Untextured_openPBR_shader1_Metallic.1001-Untextured_openPBR_shader1_Roughness.png-89a51799ab099c1b73a5b1e6a6dd1bd7.s3tc.ctex"]
 
 [params]
 

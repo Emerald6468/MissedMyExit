@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cb2jel1us2gnr"]
+
+[ext_resource type="Texture2D" uid="uid://cjewfi27emlkc" path="res://Assets/New Models/Car Parts/Seat/Textures/CarSeat_Untextured_openPBR_shader1_BaseColor.png" id="1_mqrna"]
+[ext_resource type="Texture2D" uid="uid://dl01nq3006gjr" path="res://Assets/New Models/Car Parts/Seat/Textures/CarSeat_Untextured_openPBR_shader1_Emissive.png" id="2_qry1d"]
+[ext_resource type="Texture2D" uid="uid://cqm2d04a6xui5" path="res://Assets/New Models/Car Parts/Seat/Textures/CarSeat_Untextured_openPBR_shader1_Metallic.1001-Untextured_openPBR_shader1_Roughness.png" id="3_e478q"]
+[ext_resource type="Texture2D" uid="uid://dmxrr42u0st2t" path="res://Assets/New Models/Car Parts/Seat/Textures/CarSeat_Untextured_openPBR_shader1_Normal.png" id="4_oed2g"]
+
+[resource]
+resource_name = "openPBR_shader1"
+cull_mode = 2
+albedo_texture = ExtResource("1_mqrna")
+metallic = 1.0
+metallic_texture = ExtResource("3_e478q")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_e478q")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_qry1d")
+normal_enabled = true
+normal_texture = ExtResource("4_oed2g")

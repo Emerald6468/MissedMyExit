@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcupxiwqfqgc8"]
+
+[ext_resource type="Texture2D" uid="uid://cpnc4apx6y7f6" path="res://Assets/New Models/Garage/Toolcart/Textures/Toolcart_Untextured_openPBR_shader1_BaseColor.png" id="1_hxjwi"]
+[ext_resource type="Texture2D" uid="uid://qm4vnbsvxt2x" path="res://Assets/New Models/Garage/Toolcart/Textures/Toolcart_Untextured_openPBR_shader1_Emissive.png" id="2_hwe6k"]
+[ext_resource type="Texture2D" uid="uid://bd02e2lyp8iu1" path="res://Assets/New Models/Garage/Toolcart/Textures/Toolcart_Untextured_openPBR_shader1_Metallic.1001-Untextured_openPBR_shader1_Roughness.png" id="3_tu4cd"]
+[ext_resource type="Texture2D" uid="uid://c1pekp0ut3hhm" path="res://Assets/New Models/Garage/Toolcart/Textures/Toolcart_Untextured_openPBR_shader1_Normal.png" id="4_fl4a5"]
+
+[resource]
+resource_name = "aiStandardSurface1"
+cull_mode = 2
+albedo_texture = ExtResource("1_hxjwi")
+metallic = 1.0
+metallic_texture = ExtResource("3_tu4cd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_tu4cd")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_hwe6k")
+normal_enabled = true
+normal_texture = ExtResource("4_fl4a5")

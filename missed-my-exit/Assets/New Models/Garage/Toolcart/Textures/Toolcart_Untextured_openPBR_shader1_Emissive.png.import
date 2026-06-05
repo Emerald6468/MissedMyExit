@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpnc4apx6y7f6"
-path.s3tc="res://.godot/imported/Toolcart_Untextured_openPBR_shader1_BaseColor.png-bbbb2340860eb14c42ea25e85513fd2e.s3tc.ctex"
+uid="uid://qm4vnbsvxt2x"
+path.s3tc="res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Emissive.png-1a86a6216edbc94f9df2ac20ec58406c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "dc04218e5034dd8da594db68a314fb74"
+"md5": "d1dd210d6b1312cb342b56d02bd5e651"
 }
 
 [deps]
 
-source_file="res://Assets/New Models/Garage/Toolcart/Toolcart_Untextured_openPBR_shader1_BaseColor.png"
-dest_files=["res://.godot/imported/Toolcart_Untextured_openPBR_shader1_BaseColor.png-bbbb2340860eb14c42ea25e85513fd2e.s3tc.ctex"]
+source_file="res://Assets/New Models/Garage/Toolcart/Textures/Toolcart_Untextured_openPBR_shader1_Emissive.png"
+dest_files=["res://.godot/imported/Toolcart_Untextured_openPBR_shader1_Emissive.png-1a86a6216edbc94f9df2ac20ec58406c.s3tc.ctex"]
 
 [params]
 
