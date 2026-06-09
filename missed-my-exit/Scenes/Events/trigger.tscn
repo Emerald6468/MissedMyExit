@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://kun3f8ljfksu"]
 
-[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scenes/TestScenes/Harlan/trigger.gd" id="1_mxfjw"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="1_mxfjw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xe0c"]
 

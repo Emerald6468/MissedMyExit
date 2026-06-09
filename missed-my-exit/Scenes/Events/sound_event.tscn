@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbbjo5ruqvl1b"]
 
-[ext_resource type="Script" uid="uid://dge60lol4qyjr" path="res://Scenes/TestScenes/Harlan/sound_event.gd" id="1_began"]
+[ext_resource type="Script" uid="uid://dge60lol4qyjr" path="res://Scripts/Events/sound_event.gd" id="1_began"]
 [ext_resource type="Texture2D" uid="uid://deu5ojo34uyc1" path="res://Assets/Other/SoundE.png" id="2_5x5d5"]
 
 [node name="SoundEvent" type="Node3D" unique_id=1199906187]

@@ -4,11 +4,14 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5u8j0"]
 shading_mode = 0
+disable_fog = true
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="ImmediateMesh" id="ImmediateMesh_lk01c"]
 
 [node name="Debug_Line" type="MeshInstance3D" unique_id=406663740]
 material_override = SubResource("StandardMaterial3D_5u8j0")
+cast_shadow = 0
+gi_mode = 0
 mesh = SubResource("ImmediateMesh_lk01c")
 script = ExtResource("1_lk01c")

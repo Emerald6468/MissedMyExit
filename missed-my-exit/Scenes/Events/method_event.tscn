@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://dy5roeg1lmxyy"]
 
-[ext_resource type="Script" uid="uid://5rdxy4qauawe" path="res://Scenes/TestScenes/Harlan/method_event.gd" id="1_u4qck"]
+[ext_resource type="Script" uid="uid://5rdxy4qauawe" path="res://Scripts/Events/method_event.gd" id="1_u4qck"]
 [ext_resource type="Texture2D" uid="uid://b8uklofg1dx6u" path="res://Assets/Other/MethodE.png" id="2_8pdrk"]
 
 [node name="MethodEvent" type="Node3D" unique_id=1959494374]
 script = ExtResource("1_u4qck")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1412100136]
-visible = false
 pixel_size = 0.02
 billboard = 1
 double_sided = false

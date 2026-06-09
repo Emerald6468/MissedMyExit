@@ -1,0 +1,77 @@
+[gd_scene format=4 uid="uid://wf7ir14dexn1"]
+
+[ext_resource type="Texture2D" uid="uid://bjsto84gd0bhk" path="res://Assets/New Models/Pole1_street_Light_Street Light Textures.png" id="1_44qt5"]
+[ext_resource type="PackedScene" uid="uid://bnd2ts3vy3unt" path="res://Assets/New Models/PoleArm1.glb" id="2_o5y8p"]
+[ext_resource type="PackedScene" uid="uid://dcjny86ttjuob" path="res://Assets/New Models/Light1.glb" id="3_103v6"]
+[ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="4_3fmwj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ci16m"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_44qt5")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_abosp"]
+_surfaces = [{
+"aabb": AABB(-0.21650635, 0, -0.25, 0.4330127, 8.5, 0.5),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIABQADAAAABQACAAYAAwAHAAQACAAFAAYAAwAFAAkACQAFAAgAAwAJAAcABwAKAAQABwAJAAoAAgAEAAsAAgALAAYACwAEAAoACAAGAAsACQALAAoACQAIAAsA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/38AAAAAAAD//////z8AAP9///8AAAAA//8AAP8/AAD//////78AAAAAAAD/PwAAAAD///8/AAD//wAA/78AAAAAAAD/vwAA/38AAP//AAD/f/////8AAAAA////vwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yxoh8"]
+resource_name = "Pole1_Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.21650635, 0, -0.25, 0.4330127, 8.5, 0.5),
+"attribute_data": PackedByteArray("Pg2lIHYYW98+DVnfdhigIHYYoCCuI1zfdhhb368joSCvI6Eg5i5d364jXN/nLqEg5y6hIB46Xd/mLl3fHzqiIJtawdYsR8HW41Dz0+NQK9+bWl3cLEdd3B86oiBWRV7fHjpd31dFoyBXRaMgj1BZ31ZFXt+PUKUgLEeBy+NQ69MsRx3Rm1qBy+NQs8ibWh3R"),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEQAQABMAEwAQABQAEQATABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHwAeACEAIQAeACIAHwAhACMA"),
+"material": SubResource("StandardMaterial3D_ci16m"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/38AAAAA9v///////z////9///8AAP////8AAP8/9v///wAA/z/4////////v/////////8//////wAA/7/3////AAD/v////3//////9////////7/3//9/AAD//////38AAP//9/8AAP///7////9/////////AAAAAP+/9////////79Kyv9///8AAErK//////8/SsoAAP///79Kyv9//////0rKAAD///8/SsoAAAAA/7///wAA////P/j/AAD///+/9/8AAAAA/z///wAAAAD/P////3///wAA9v8AAP///z/2//9/AAAAAP//AAAAAP8/Ssr//wAA/z9Kyv9/AAAAAErK/38AAP//SsoAAAAA/79Kyv//AAD/v0rKKQDRZOfk8X/m5O9/KQDRZPu/+H/+v/1//r/9f/u/938NAAkbC5v8fwub/H8KAAob82QCgPH/9eT0//Tk82QCgGa7S6Jmu0uiZrtLoma7S6Jmu0uiZrtLogBAAYADQAaAA0AHgABAAYAXGw2A1f8tm9X/LZsZGw+ATCKXxEwil8RMIpfETCKXxEwil8RMIpfE")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_abosp")
+
+[node name="Pole1" type="Node3D" unique_id=1843127715]
+
+[node name="Cylinder" type="MeshInstance3D" parent="." unique_id=1340185933]
+mesh = SubResource("ArrayMesh_yxoh8")
+
+[node name="PoleArm1" parent="." unique_id=965747908 instance=ExtResource("2_o5y8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.582, 0)
+
+[node name="Light1" parent="." unique_id=1201522965 instance=ExtResource("3_103v6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.480995, -2.5164275)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light1" unique_id=1527424177]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.26587963, -0.005867958)
+light_color = Color(1, 0.57, 0.13999999, 1)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 12.439801
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light1/SpotLight3D" unique_id=504137256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_color = Color(1, 0.7041031, 0.47365624, 1)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="Light1/SpotLight3D" unique_id=1400732894]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("4_3fmwj")
