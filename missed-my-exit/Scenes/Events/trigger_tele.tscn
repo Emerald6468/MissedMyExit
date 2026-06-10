@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bhpkwxpr0i6y7"]
+
+[ext_resource type="PackedScene" uid="uid://kun3f8ljfksu" path="res://Scenes/Events/trigger.tscn" id="1_qfm2q"]
+[ext_resource type="Script" uid="uid://b0b6f5oyvetxj" path="res://Scenes/Events/trigger_tele.gd" id="2_t6u2g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t6u2g"]
+
+[node name="TriggerTele" unique_id=1169108329 instance=ExtResource("1_qfm2q")]
+script = ExtResource("2_t6u2g")
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=190863318]
+shape = SubResource("BoxShape3D_t6u2g")
+debug_color = Color(11.695692, 10.692295, 0, 1)
