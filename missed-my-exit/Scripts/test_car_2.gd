@@ -15,6 +15,11 @@ var mouse_sensitivity = 0.3
 @onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
 
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	set_as_top_level(true)
+
+
 func _process(delta: float) -> void:
 	Global.PlayerMarker = player_point.global_position
 	#Switching

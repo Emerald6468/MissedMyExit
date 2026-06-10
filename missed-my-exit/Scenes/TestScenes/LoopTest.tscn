@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="1_df030"]
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="2_ig67w"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="3_2jjn5"]
-[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCars/TestCar2.tscn" id="4_hjlgc"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="4_ct2dd"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="5_ct2dd"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="6_rjdij"]
 
@@ -42,7 +42,6 @@ mesh = ExtResource("2_ig67w")
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjlgc"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
 sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
-ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
 
 [sub_resource type="Sky" id="Sky_xhf2q"]
@@ -144,9 +143,6 @@ curve = SubResource("Curve3D_p80e4")
 [node name="Path3D2" type="Path3D" parent="." unique_id=2062073366]
 curve = SubResource("Curve3D_df030")
 
-[node name="TreeNewWIP1" parent="." unique_id=501513004 instance=ExtResource("1_df030")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6906505, -0.296103, 2.8048944)
-
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=1560260542]
 multimesh = SubResource("MultiMesh_2jjn5")
 
@@ -155,26 +151,19 @@ environment = SubResource("Environment_2rq0p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=388845399]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
-light_color = Color(0.15247649, 0.15247649, 0.15247646, 1)
+light_color = Color(0.1552538, 0.16244861, 0.17684266, 1)
 
-[node name="Pole1" parent="." unique_id=1843127715 instance=ExtResource("3_2jjn5")]
-transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, -2.2992697, 0, 15.269175)
-
-[node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("4_hjlgc")]
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("4_ct2dd")]
 transform = Transform3D(-0.9880219, 0, -0.15431379, 0, 1, 0, 0.15431379, 0, -0.9880219, 1.1537954, 0.14336991, 12.728337)
-collision_layer = 2
-axis_lock_angular_z = false
 
-[node name="SpotLight3D" type="SpotLight3D" parent="TestCar2" unique_id=920342789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41286767, 0.653496, -0.94456446)
-light_energy = 2.24
+[node name="SpotLight3D" type="SpotLight3D" parent="FinalCar" unique_id=920342789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50847876, 0.653496, -1.5567322)
 shadow_enabled = true
 spot_range = 7.4135404
 spot_angle = 31.317436
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="TestCar2" unique_id=2119248502]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4217553, 0.653496, -0.94456446)
-light_energy = 2.24
+[node name="SpotLight3D2" type="SpotLight3D" parent="FinalCar" unique_id=2119248502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6233411, 0.653496, -1.5234671)
 shadow_enabled = true
 spot_range = 7.4135404
 spot_angle = 31.317436
@@ -195,13 +184,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901
 shape = SubResource("BoxShape3D_6xe0c")
 debug_color = Color(0, 11.708403, 13.469126, 1)
 
-[node name="MoveEvent" parent="Events/TeleGasStation1" unique_id=1494704290 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+[node name="MoveEvent" parent="Events/TeleGasStation1" unique_id=1494704290 node_paths=PackedStringArray("end_point", "trigger") instance=ExtResource("6_rjdij")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.992874, -6.9425335, -5.128784)
 end_point = NodePath("../../TeleGasStationEnd")
 teleport = true
 rotate_y = true
 trigger = NodePath("../Trigger")
-target = NodePath("../../../TestCar2")
 
 [node name="TeleGasStation2" type="Node3D" parent="Events" unique_id=432631934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.62685, 0, 251.49759)
@@ -217,13 +205,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901
 shape = SubResource("BoxShape3D_6xe0c")
 debug_color = Color(0, 11.708403, 13.469126, 1)
 
-[node name="MoveEvent" parent="Events/TeleGasStation2" unique_id=351740133 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+[node name="MoveEvent" parent="Events/TeleGasStation2" unique_id=351740133 node_paths=PackedStringArray("end_point", "trigger") instance=ExtResource("6_rjdij")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.992874, -1.7231488, -5.128784)
 end_point = NodePath("../../TeleGasStationEnd")
 teleport = true
 rotate_y = true
 trigger = NodePath("../Trigger")
-target = NodePath("../../../TestCar2")
 
 [node name="TeleGasStation3" type="Node3D" parent="Events" unique_id=1831376489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.75513, 0, -248.96281)
@@ -239,19 +226,98 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901
 shape = SubResource("BoxShape3D_6xe0c")
 debug_color = Color(0, 11.708403, 13.469126, 1)
 
-[node name="MoveEvent" parent="Events/TeleGasStation3" unique_id=1641544398 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+[node name="MoveEvent" parent="Events/TeleGasStation3" unique_id=1641544398 node_paths=PackedStringArray("end_point", "trigger") instance=ExtResource("6_rjdij")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8338013, 2.2792702, 12.112198)
 end_point = NodePath("../../TeleGasStationEnd2")
 teleport = true
 rotate_y = true
 trigger = NodePath("../Trigger")
-target = NodePath("../../../TestCar2")
 
 [node name="TeleGasStationEnd" type="Marker3D" parent="Events" unique_id=140946025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.38156, 0.81108284, -28.312326)
 
 [node name="TeleGasStationEnd2" type="Marker3D" parent="Events" unique_id=1815608260]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 247.2639, -3.9936576, 266.9612)
+
+[node name="Poles" type="Node3D" parent="." unique_id=1930516491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6906505, -0.296103, 2.8048944)
+
+[node name="Pole1" parent="Poles" unique_id=1843127715 instance=ExtResource("3_2jjn5")]
+transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, 4.391381, 0.296103, 12.46428)
+
+[node name="Pole2" parent="Poles" unique_id=1760249330 instance=ExtResource("3_2jjn5")]
+transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, 6.3639092, 0.29610205, 30.111805)
+
+[node name="Pole3" parent="Poles" unique_id=1163840493 instance=ExtResource("3_2jjn5")]
+transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, 10.196117, 0.29610205, 53.516945)
+
+[node name="Pole4" parent="Poles" unique_id=8535235 instance=ExtResource("3_2jjn5")]
+transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, 1.4433417, 1.851367, 70.54077)
+
+[node name="Pole5" parent="Poles" unique_id=1663049766 instance=ExtResource("3_2jjn5")]
+transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, -11.79777, 2.7119017, 85.01889)
+
+[node name="Trees" type="Node3D" parent="." unique_id=396121677]
+
+[node name="TreeNewWIP1" parent="Trees" unique_id=501513004 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6906505, -0.296103, 2.8048944)
+
+[node name="TreeNewWIP5" parent="Trees" unique_id=1210067845 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.760599, -0.17994356, 11.511304)
+
+[node name="TreeNewWIP6" parent="Trees" unique_id=1524376130 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.634066, -0.17994356, 22.008823)
+
+[node name="TreeNewWIP7" parent="Trees" unique_id=943761292 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.840165, -0.17994356, 40.049038)
+
+[node name="TreeNewWIP8" parent="Trees" unique_id=69678708 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.442965, -0.17994356, 51.647636)
+
+[node name="TreeNewWIP9" parent="Trees" unique_id=248600995 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.620986, -0.17994356, 68.372345)
+
+[node name="TreeNewWIP10" parent="Trees" unique_id=319692668 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07463431, -0.17994356, 60.81851)
+
+[node name="TreeNewWIP11" parent="Trees" unique_id=1914077715 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.449134, -0.17994356, 71.62264)
+
+[node name="TreeNewWIP12" parent="Trees" unique_id=2087879108 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8622966, -0.17994356, 91.14431)
+
+[node name="TreeNewWIP13" parent="Trees" unique_id=1854279649 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.671299, -0.17994356, 103.31309)
+
+[node name="TreeNewWIP14" parent="Trees" unique_id=1387113533 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.34189, -0.17994356, 88.63389)
+
+[node name="TreeNewWIP15" parent="Trees" unique_id=92879946 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.87106, -0.17994356, 115.1545)
+
+[node name="TreeNewWIP16" parent="Trees" unique_id=1250199925 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442843, -0.17994547, 102.11521)
+
+[node name="TreeNewWIP17" parent="Trees" unique_id=245459152 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4034052, -0.17994356, 76.80888)
+
+[node name="TreeNewWIP18" parent="Trees" unique_id=607979114 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.041041, -0.17994165, 55.487274)
+
+[node name="TreeNewWIP19" parent="Trees" unique_id=1429750152 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6172247, -0.17994356, 44.90323)
+
+[node name="TreeNewWIP20" parent="Trees" unique_id=1058003502 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.721494, -0.17994356, 30.60736)
+
+[node name="TreeNewWIP2" parent="Trees" unique_id=788114577 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6786304, -0.296103, 10.9593525)
+
+[node name="TreeNewWIP3" parent="Trees" unique_id=790709403 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7808394, -0.296103, 24.403976)
+
+[node name="TreeNewWIP4" parent="Trees" unique_id=1412946898 instance=ExtResource("1_df030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.020928, -0.08211756, 36.549267)
 
 [connection signal="body_entered" from="Events/TeleGasStation1/Trigger" to="Events/TeleGasStation1/Trigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Events/TeleGasStation2/Trigger" to="Events/TeleGasStation2/Trigger" method="_on_body_entered"]
