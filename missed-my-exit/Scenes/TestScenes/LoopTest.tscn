@@ -143,5 +143,5 @@ light_color = Color(0.15247649, 0.15247649, 0.15247646, 1)
 transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, -2.2992697, 0, 15.269175)
 
 [node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("4_hjlgc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1537954, 0.14336991, 12.728337)
+transform = Transform3D(-0.9754116, 0, -0.22039102, 0, 1, 0, 0.22039102, 0, -0.9754116, 1.1537954, 0.14336991, 12.728337)
 axis_lock_angular_z = false

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://3iqye8ywa1qv"]
+
+[ext_resource type="PackedScene" uid="uid://dcliuwge50x12" path="res://Assets/New Models/Car Parts/MAIN/CarFrame.glb" id="1_7822p"]
+
+[node name="CarFrame" unique_id=1124658755 instance=ExtResource("1_7822p")]

@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eg3br5d1ea1a"
-path="res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_Metallic.1001-UntexturedV2_openPBR_shader1_Roughness.png-4afbd8b86cf6bcd75fa655710aed378a.ctex"
+path.s3tc="res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_Metallic.1001-UntexturedV2_openPBR_shader1_Roughness.png-4afbd8b86cf6bcd75fa655710aed378a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ab5098d8602b4b3a778cebffa8c68203"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/New Models/Car Parts/MAIN/CarFrame_UntexturedV2_openPBR_shader1_Metallic.1001-UntexturedV2_openPBR_shader1_Roughness.png"
-dest_files=["res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_Metallic.1001-UntexturedV2_openPBR_shader1_Roughness.png-4afbd8b86cf6bcd75fa655710aed378a.ctex"]
+dest_files=["res://.godot/imported/CarFrame_UntexturedV2_openPBR_shader1_Metallic.1001-UntexturedV2_openPBR_shader1_Roughness.png-4afbd8b86cf6bcd75fa655710aed378a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
