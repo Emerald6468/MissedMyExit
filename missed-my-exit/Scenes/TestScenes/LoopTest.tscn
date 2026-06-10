@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="1_df030"]
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="2_ig67w"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="3_2jjn5"]
+[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCar2.tscn" id="4_hjlgc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p80e4"]
 albedo_color = Color(0.34906504, 0.34906504, 0.34906498, 1)
@@ -71,6 +72,7 @@ path_joined = false
 
 [node name="CSGPolygon3D2" type="CSGPolygon3D" parent="." unique_id=1902708696]
 material_override = SubResource("StandardMaterial3D_p80e4")
+use_collision = true
 polygon = PackedVector2Array(-2.1, 0, -2, 0.1, 2, 0.1, 2.1, 0)
 mode = 2
 path_node = NodePath("../Path3D2")
@@ -87,7 +89,8 @@ path_joined = false
 [node name="CSGPolygon3D3" type="CSGPolygon3D" parent="." unique_id=2121526146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 material_override = SubResource("StandardMaterial3D_df030")
-polygon = PackedVector2Array(-10, 0, -10, -0.1, 10, -0.1, 10, 0)
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, -4, 10, -4, 10, 0)
 mode = 2
 path_node = NodePath("../Path3D")
 path_interval_type = 1
@@ -103,6 +106,7 @@ path_joined = false
 [node name="CSGPolygon3D4" type="CSGPolygon3D" parent="." unique_id=1424137878]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 material_override = SubResource("StandardMaterial3D_df030")
+use_collision = true
 polygon = PackedVector2Array(-10, 0, -10, -0.1, 10, -0.1, 10, 0)
 mode = 2
 path_node = NodePath("../Path3D2")
@@ -137,3 +141,7 @@ light_color = Color(0.15247649, 0.15247649, 0.15247646, 1)
 
 [node name="Pole1" parent="." unique_id=1843127715 instance=ExtResource("3_2jjn5")]
 transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, -2.2992697, 0, 15.269175)
+
+[node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("4_hjlgc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1537954, 0.14336991, 12.728337)
+axis_lock_angular_z = false

@@ -42,9 +42,7 @@ material = SubResource("StandardMaterial3D_8mb3d")
 
 [node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("2_b3nva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14752412, 0.14336991, 0.6998825)
-center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0, 0.2)
-inertia = Vector3(0, 0, 0)
+axis_lock_angular_z = false
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("3_b3nva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.156972, -0.038624287, 7.6504855)
