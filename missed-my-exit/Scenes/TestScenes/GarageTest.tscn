@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cy30n6vf3mecj"]
+
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_y4rai"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_jr836"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="3_bb8cp"]
+[ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6dgh"]
+albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4rai"]
+albedo_color = Color(0.35686275, 1, 1, 1)
+albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr836"]
+albedo_color = Color(0.727249, 0.3030704, 0.030452518, 1)
+albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb8cp"]
+albedo_color = Color(0.21629497, 0.24962568, 0.20296285, 1)
+albedo_texture = ExtResource("1_y4rai")
+
+[node name="GarageTest" type="Node3D" unique_id=1617414937]
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1048498076]
+transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.8152521, -0.5142399, 0.17121482)
+material_override = SubResource("StandardMaterial3D_u6dgh")
+use_collision = true
+size = Vector3(0.76623535, 1, 0.3918457)
+
+[node name="Player" parent="." unique_id=1477566545 instance=ExtResource("2_jr836")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91128945, 0, 0)
+
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("3_bb8cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1507142, 0, 0)
+
+[node name="Wall" type="CSGBox3D" parent="." unique_id=1825729235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, -2.876808)
+size = Vector3(5.8730164, 3.5303345, 0.41882324)
+material = SubResource("StandardMaterial3D_y4rai")
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=1939912211]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.292947, 1.77792, 0.07848477)
+size = Vector3(6.526352, 3.5303345, 0.41882324)
+material = SubResource("StandardMaterial3D_y4rai")
+
+[node name="Wall3" type="CSGBox3D" parent="." unique_id=815234877]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.901301, 1.77792, 0.07848477)
+size = Vector3(6.526352, 3.5303345, 0.41882324)
+material = SubResource("StandardMaterial3D_y4rai")
+
+[node name="Door" type="CSGBox3D" parent="." unique_id=1031770749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68649983, 1.136059, -2.7076056)
+size = Vector3(0.9859276, 2.2466125, 0.41882324)
+material = SubResource("StandardMaterial3D_jr836")
+
+[node name="GarageOpener" type="CSGBox3D" parent="." unique_id=1321666768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4319923, 1.7410779, -2.663027)
+size = Vector3(0.2710681, 0.17023468, 0.060272217)
+material = SubResource("StandardMaterial3D_bb8cp")
+
+[node name="Toolcart" parent="." unique_id=1789723979 instance=ExtResource("4_jr836")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7531284, 0.18778333, 1.642514)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi74rg1ciq7cj"]
 
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_0oac6"]
-[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/TestScenes/ZanderTestScenes/player.tscn" id="2_w1h60"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_w1h60"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/TestScenes/ZanderTestScenes/PickupableObject.tscn" id="3_w1h60"]
 [ext_resource type="PackedScene" uid="uid://civkgy5xa0ny" path="res://Scenes/TestScenes/ZanderTestScenes/PlaceZones.tscn" id="4_7rgsu"]
 

@@ -58,7 +58,7 @@ transform = Transform3D(1.515, 0, 0, 0, -2.1855694e-08, -0.589, 0, 0.5, -2.57460
 mesh = SubResource("ArrayMesh_mhgd0")
 
 [node name="wheel_back_left" type="VehicleWheel3D" parent="." unique_id=1551386741]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.49999994, 0.3, 1.094683)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.6194257, 0.3, 1.143338)
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.32
@@ -68,10 +68,10 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="Wheel" parent="wheel_back_left" unique_id=2063767389 instance=ExtResource("3_navvt")]
-transform = Transform3D(0.425, 0, 0, 0, 0.425, 0, 0, 0, 0.425, 0.099170774, -0.025596768, -0.03786826)
+transform = Transform3D(0.425, 0, 0, 0, 0.425, 0, 0, 0, 0.425, 0, 0, 0)
 
 [node name="wheel_back_right" type="VehicleWheel3D" parent="." unique_id=1039943274]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.50000006, 0.3, 1.0946829)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.65481144, 0.3, 1.1566075)
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.32
@@ -81,10 +81,10 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="Wheel" parent="wheel_back_right" unique_id=1211117903 instance=ExtResource("3_navvt")]
-transform = Transform3D(-0.425, 0, 6.417322e-08, 0, 0.425, 0, -6.417322e-08, 0, -0.425, -0.1267466, -0.025596768, -0.03786826)
+transform = Transform3D(-0.425, 0, 6.417322e-08, 0, 0.425, 0, -6.417322e-08, 0, -0.425, 0, 0, 0)
 
 [node name="wheel_front_left" type="VehicleWheel3D" parent="." unique_id=1856707372]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.50000006, 0.3, -1.0585324)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.60173327, 0.3, -1.0231469)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
@@ -95,10 +95,10 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="Wheel" parent="wheel_front_left" unique_id=1284382314 instance=ExtResource("3_navvt")]
-transform = Transform3D(0.425, 0, 0, 0, 0.425, 0, 0, 0, 0.425, 0.099170774, -0.025596768, -0.03786826)
+transform = Transform3D(0.425, 0, 0, 0, 0.425, 0, 0, 0, 0.425, 0, 0, 0)
 
 [node name="wheel_front_right" type="VehicleWheel3D" parent="." unique_id=1640443606]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.49999994, 0.3, -1.047435)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.65038794, 0.3, -0.9899336)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
@@ -109,7 +109,7 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="Wheel" parent="wheel_front_right" unique_id=1982737570 instance=ExtResource("3_navvt")]
-transform = Transform3D(-0.425, 0, 6.417322e-08, 0, 0.425, 0, -6.417322e-08, 0, -0.425, -0.1267466, -0.025596768, -0.03786826)
+transform = Transform3D(-0.425, 0, 6.417322e-08, 0, 0.425, 0, -6.417322e-08, 0, -0.425, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=862041292]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.10131843, 0.5494227, 0.7941954)
@@ -119,8 +119,11 @@ shape = SubResource("BoxShape3D_0yh6a")
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.027343646, 0.44649452, -0.87346625)
 shape = SubResource("BoxShape3D_ntpel")
 
-[node name="CarCamera" type="Camera3D" parent="." unique_id=182063250]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9166391, 3.7930007)
+[node name="Head" type="Node3D" parent="." unique_id=836823007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16328767, 0.8234637, -0.04787401)
+
+[node name="CarCamera" type="Camera3D" parent="Head" unique_id=182063250]
+transform = Transform3D(1, 0, 0, 0, 0.9472494, 0.32049727, 0, -0.32049727, 0.9472494, 0, 0, 0)
 
 [node name="PlayerPoint" type="Marker3D" parent="." unique_id=82242388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0043018, 0.6006232, 0)

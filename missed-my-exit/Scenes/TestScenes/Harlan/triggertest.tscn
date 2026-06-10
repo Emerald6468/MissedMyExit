@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="3_8moob"]
 [ext_resource type="AudioStream" uid="uid://cfnmqilybo2et" path="res://Assets/Other/Ambient_Scary_1.wav" id="4_6xe0c"]
 [ext_resource type="PackedScene" uid="uid://bbbjo5ruqvl1b" path="res://Scenes/Events/sound_event.tscn" id="4_pa2op"]
-[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/TestScenes/ZanderTestScenes/player.tscn" id="5_pa2op"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="5_pa2op"]
 [ext_resource type="PackedScene" uid="uid://dkkxa1uffsa3l" path="res://Assets/New Models/Pole1.glb" id="7_lravs"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="7_xtx70"]
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="9_lm584"]

@@ -6,7 +6,9 @@ var turn_speed = 3
 var turn_amount = 0.3
 
 #Camera
-@onready var car_camera: Camera3D = $CarCamera
+var mouse_sensitivity = 0.3
+@onready var car_camera: Camera3D = $Head/CarCamera
+@onready var head: Node3D = $Head
 
 #Player Point and Door
 @onready var player_point: Marker3D = $PlayerPoint
@@ -43,3 +45,10 @@ func _process(delta: float) -> void:
 					Global.NearDoor = true
 				else: Global.NearDoor = false
 		else: Global.NearDoor = false
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		head.rotation_degrees.y -= event.relative.x * mouse_sensitivity
+		head.rotation_degrees.y = clampf(head.rotation_degrees.y,-80,80)
+		head.rotation_degrees.x -= event.relative.y * mouse_sensitivity
+		head.rotation_degrees.x = clampf(head.rotation_degrees.x,-45,90)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cskp5c50osm7w"]
 
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_xhf2q"]
-[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCar2.tscn" id="2_xhf2q"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="2_6fqfo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kwx"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -39,8 +39,4 @@ use_collision = true
 size = Vector3(1, 2.5292969, 1)
 material = SubResource("StandardMaterial3D_8mb3d")
 
-[node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("2_xhf2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14752412, 0.14336991, 0.6998825)
-center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0, 0.2)
-inertia = Vector3(0, 0, 0)
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("2_6fqfo")]
