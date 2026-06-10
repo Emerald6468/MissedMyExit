@@ -4,6 +4,8 @@
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="2_ig67w"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="3_2jjn5"]
 [ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCar2.tscn" id="4_hjlgc"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="5_ct2dd"]
+[ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="6_rjdij"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p80e4"]
 albedo_color = Color(0.34906504, 0.34906504, 0.34906498, 1)
@@ -52,6 +54,9 @@ background_color = Color(0.07450981, 0, 0.19215687, 1)
 sky = SubResource("Sky_xhf2q")
 ambient_light_color = Color(0.14117648, 0, 0, 1)
 volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xe0c"]
+size = Vector3(3.8995361, 5.3153076, 15.331207)
 
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
@@ -120,6 +125,19 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 
+[node name="CSGPolygon3D5" type="CSGPolygon3D" parent="." unique_id=1136527108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.44968, 0, 0)
+material_override = SubResource("StandardMaterial3D_p80e4")
+polygon = PackedVector2Array(-2.1, 0, -2, 0.1, 2, 0.1, 2.1, 0)
+depth = 300.0
+
+[node name="CSGPolygon3D6" type="CSGPolygon3D" parent="." unique_id=838825432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.43176, 0.038985133, -0.0062446594)
+material_override = SubResource("StandardMaterial3D_df030")
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, -4, 10, -4, 10, 0)
+depth = 300.0
+
 [node name="Path3D" type="Path3D" parent="." unique_id=839990330]
 curve = SubResource("Curve3D_p80e4")
 
@@ -143,5 +161,98 @@ light_color = Color(0.15247649, 0.15247649, 0.15247646, 1)
 transform = Transform3D(0.13196234, 0, -0.99125475, 0, 1, 0, 0.99125475, 0, 0.13196234, -2.2992697, 0, 15.269175)
 
 [node name="TestCar2" parent="." unique_id=1880288469 instance=ExtResource("4_hjlgc")]
-transform = Transform3D(-0.9754116, 0, -0.22039102, 0, 1, 0, 0.22039102, 0, -0.9754116, 1.1537954, 0.14336991, 12.728337)
+transform = Transform3D(-0.9880219, 0, -0.15431379, 0, 1, 0, 0.15431379, 0, -0.9880219, 1.1537954, 0.14336991, 12.728337)
+collision_layer = 2
 axis_lock_angular_z = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="TestCar2" unique_id=920342789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41286767, 0.653496, -0.94456446)
+light_energy = 2.24
+shadow_enabled = true
+spot_range = 7.4135404
+spot_angle = 31.317436
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="TestCar2" unique_id=2119248502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4217553, 0.653496, -0.94456446)
+light_energy = 2.24
+shadow_enabled = true
+spot_range = 7.4135404
+spot_angle = 31.317436
+
+[node name="Events" type="Node3D" parent="." unique_id=128377468]
+
+[node name="TeleGasStation1" type="Node3D" parent="Events" unique_id=1626952529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.31676, 0, 369.8887)
+
+[node name="Trigger" type="Area3D" parent="Events/TeleGasStation1" unique_id=1169108329]
+transform = Transform3D(0.93347406, 0, -0.35864493, 0, 1, 0, 0.35864493, 0, 0.93347406, 4.586899, -7.9233456, 2.7832947)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_ct2dd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/TeleGasStation1/Trigger" unique_id=190863318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901062)
+shape = SubResource("BoxShape3D_6xe0c")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="MoveEvent" parent="Events/TeleGasStation1" unique_id=1494704290 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.992874, -6.9425335, -5.128784)
+end_point = NodePath("../../TeleGasStationEnd")
+teleport = true
+rotate_y = true
+trigger = NodePath("../Trigger")
+target = NodePath("../../../TestCar2")
+
+[node name="TeleGasStation2" type="Node3D" parent="Events" unique_id=432631934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.62685, 0, 251.49759)
+
+[node name="Trigger" type="Area3D" parent="Events/TeleGasStation2" unique_id=1352055891]
+transform = Transform3D(0.28590575, 0, -0.9582577, 0, 1, 0, 0.9582577, 0, 0.28590575, 0.6852112, -4.20458, 2.703415)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_ct2dd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/TeleGasStation2/Trigger" unique_id=2037026787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901062)
+shape = SubResource("BoxShape3D_6xe0c")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="MoveEvent" parent="Events/TeleGasStation2" unique_id=351740133 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.992874, -1.7231488, -5.128784)
+end_point = NodePath("../../TeleGasStationEnd")
+teleport = true
+rotate_y = true
+trigger = NodePath("../Trigger")
+target = NodePath("../../../TestCar2")
+
+[node name="TeleGasStation3" type="Node3D" parent="Events" unique_id=1831376489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261.75513, 0, -248.96281)
+
+[node name="Trigger" type="Area3D" parent="Events/TeleGasStation3" unique_id=1553090181]
+transform = Transform3D(-0.008517146, 0, -0.9999637, 0, 1, 0, 0.9999637, 0, -0.008517146, -1.8792114, -0.033798218, 2.703415)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_ct2dd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/TeleGasStation3/Trigger" unique_id=255308736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4497681, 2.6576538, -0.3901062)
+shape = SubResource("BoxShape3D_6xe0c")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="MoveEvent" parent="Events/TeleGasStation3" unique_id=1641544398 node_paths=PackedStringArray("end_point", "trigger", "target") instance=ExtResource("6_rjdij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8338013, 2.2792702, 12.112198)
+end_point = NodePath("../../TeleGasStationEnd2")
+teleport = true
+rotate_y = true
+trigger = NodePath("../Trigger")
+target = NodePath("../../../TestCar2")
+
+[node name="TeleGasStationEnd" type="Marker3D" parent="Events" unique_id=140946025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.38156, 0.81108284, -28.312326)
+
+[node name="TeleGasStationEnd2" type="Marker3D" parent="Events" unique_id=1815608260]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 247.2639, -3.9936576, 266.9612)
+
+[connection signal="body_entered" from="Events/TeleGasStation1/Trigger" to="Events/TeleGasStation1/Trigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/TeleGasStation2/Trigger" to="Events/TeleGasStation2/Trigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/TeleGasStation3/Trigger" to="Events/TeleGasStation3/Trigger" method="_on_body_entered"]
