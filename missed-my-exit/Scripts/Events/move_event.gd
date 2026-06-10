@@ -5,6 +5,8 @@ extends "res://Scenes/TestScenes/Harlan/event.gd"
 @export var end_point: Node3D
 @export var lerp: bool
 @export var teleport: bool
+@export var rotate: bool
+@export var rotate_y: bool
 
 var line3 = DEBUG_LINE.instantiate()
 
@@ -29,6 +31,11 @@ func move(delta: float):
 		target.global_position = target.global_position.lerp(end_point.global_position, speed)
 	elif teleport:
 		target.global_position = end_point.global_position
+		if rotate:
+			target.rotation = end_point.rotation
+		elif rotate_y:
+			target.rotation.y = end_point.rotation.y
+			
 	else:
 		target.global_position = target.global_position.move_toward(end_point.global_position, speed * delta)
 	if target.global_position.distance_to(end_point.global_position) <= speed:
