@@ -1,0 +1,461 @@
+[gd_scene format=3 uid="uid://h14eqrm38lng"]
+
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_yjphe"]
+[ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="2_07afh"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_rx4uf"]
+[ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="4_wbiwg"]
+[ext_resource type="PackedScene" uid="uid://7bjxl6tt2oyu" path="res://Assets/New Models/Light2.glb" id="5_p5t3n"]
+[ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="6_0xn84"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5ijr"]
+albedo_color = Color(0.34906504, 0.34906504, 0.34906498, 1)
+metallic_specular = 0.0
+distance_fade_mode = 2
+distance_fade_min_distance = 75.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjphe"]
+albedo_color = Color(0.22193515, 0.15674934, 0.09690102, 1)
+metallic_specular = 0.0
+distance_fade_mode = 2
+distance_fade_min_distance = 75.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="Curve3D" id="Curve3D_ktonx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.22047424, -0.166893, 2.127388, 0, 0, 0, 0, 0, 0, -0.007621765, -0.16688919, 32.75287, 0, 0, 0, 0, 0, 0, 13.039009, 1.2016602, 59.45578, 0, 0, 0, 0, 0, 0, 28.118704, 0.6712737, 67.62666, 0, 0, 0, 0, 0, 0, 57.119965, 0.8814199, 69.9586, 0, 0, 0, 0, 0, 0, 101.420494, 1.029026, 70.111824, 0, 0, 0, 0, 0, 0, 166.01575, 1.1951218, 72.622856),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yjphe"]
+sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
+sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
+ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+
+[sub_resource type="Sky" id="Sky_xhf2q"]
+sky_material = SubResource("ProceduralSkyMaterial_yjphe")
+
+[sub_resource type="Environment" id="Environment_ktonx"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+sky = SubResource("Sky_xhf2q")
+ambient_light_color = Color(0.14117648, 0, 0, 1)
+volumetric_fog_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_07afh"]
+albedo_color = Color(0.6, 0.234, 0.24009992, 1)
+metallic_specular = 0.0
+distance_fade_mode = 2
+distance_fade_min_distance = 75.0
+distance_fade_max_distance = 0.0
+
+[node name="GasStation" type="Node3D" unique_id=570556203]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=129051813]
+material_override = SubResource("StandardMaterial3D_i5ijr")
+polygon = PackedVector2Array(-2.1, 0, -2, 0.1, 2, 0.1, 2.1, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 1
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="." unique_id=1846557773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
+material_override = SubResource("StandardMaterial3D_yjphe")
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, -4, 10, -4, 10, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 1
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Path3D" type="Path3D" parent="." unique_id=6788142]
+curve = SubResource("Curve3D_ktonx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=429137746]
+environment = SubResource("Environment_ktonx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1918322419]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+light_color = Color(0.1552538, 0.16244861, 0.17684266, 1)
+
+[node name="Pole1" parent="." unique_id=1843127715 instance=ExtResource("2_07afh")]
+transform = Transform3D(0.092821695, 0, -0.6938185, 0, 0.7, 0, 0.6938185, 0, 0.092821695, -3.5526485, -0.4247136, 7.932932)
+
+[node name="Player" parent="." unique_id=1477566545 instance=ExtResource("3_rx4uf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.178573, 0.24253994, 5.063813)
+
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("1_yjphe")]
+transform = Transform3D(-0.9997422, 0, -0.02270471, 0, 1, 0, 0.02270471, 0, -0.9997422, 0.048417628, -0.009398282, 5.439775)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=471675412]
+transform = Transform3D(0.98980355, 0, -0.1424389, 0, 1, 0, 0.14243889, 0, 0.9898036, 38.091553, 0.5379029, 83.7086)
+use_collision = true
+size = Vector3(36.30049, 1, 29.234818)
+material = SubResource("StandardMaterial3D_i5ijr")
+
+[node name="Shelves" type="Node3D" parent="." unique_id=1330758238]
+transform = Transform3D(-4.3711385e-08, 0, 1, 0, 1, 0, -0.99999994, 0, -4.371139e-08, 46.085083, 1.8149137, 90.63496)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Shelves" unique_id=1072239231]
+size = Vector3(0.63479614, 1.8201084, 3.8256836)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Shelves" unique_id=1390234529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.217434)
+size = Vector3(0.63479614, 1.8201084, 3.8256836)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Shelves" unique_id=1458171974]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1, 0, -0.99999994, 0, -4.371139e-08, 4.0485153, 0, 0.07156372)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Shelves" unique_id=1875362960]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1, 0, -0.99999994, 0, -4.371139e-08, 5.9348984, -0.23877954, 5.3274384)
+size = Vector3(0.63479614, 1.3425493, 3.156372)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Shelves" unique_id=2070665039]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 4.0485153, 0, -3.6281013)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Shelves" unique_id=1442423644]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1, 0, -0.99999994, 0, -4.371139e-08, 4.0485153, 0, -0.64458466)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Shelves" unique_id=1922166889]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 4.0485153, 0, -2.911953)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Shelves" unique_id=634475516]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 2.290184, 0, -6.249954)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Shelves" unique_id=879630018]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 5.7111588, 0, -6.249954)
+size = Vector3(0.63479614, 1.8201084, 3.156372)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Shelves" unique_id=1622755317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9257507, -0.22400904, 3.310131)
+size = Vector3(0.63479614, 1.3720903, 3.8256836)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Shelves" unique_id=1850461817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9257507, -0.22400904, -4.2160416)
+size = Vector3(0.63479614, 1.3720903, 3.8256836)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Shelves" unique_id=1135192130]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 1.492073, -0.34600925, 3.409134)
+size = Vector3(0.63479614, 1.1280899, 3.8256836)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Shelves" unique_id=993353835]
+transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 1.492073, 2.1773255, 3.409134)
+size = Vector3(0.63479614, 1.1280899, 3.8256836)
+
+[node name="Store" type="Node3D" parent="." unique_id=1750338008]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 45.66834, 5.262515, 88.61231)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Store" unique_id=1306678868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5950356, -3.7936106, -6.4959564)
+size = Vector3(5.505005, 1.1280899, 0.19238281)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Store" unique_id=815087985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3327942, -2.263611, -6.4959564)
+size = Vector3(0.9805298, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Store" unique_id=37537054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8571815, -2.263611, -6.4959564)
+size = Vector3(0.9805298, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Store" unique_id=47748221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4640617, -2.263611, -6.4959564)
+size = Vector3(0.9805298, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Store" unique_id=1204544440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9753, -2.263611, -6.4959564)
+size = Vector3(0.9805298, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Store" unique_id=654369599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05885315, -0.8851795, -6.4959564)
+size = Vector3(12.812775, 1.338459, 0.19238281)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Store" unique_id=1957222692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7152405, -3.7936106, -6.4959564)
+size = Vector3(5.503357, 1.1280899, 0.19238281)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Store" unique_id=1702394803]
+size = Vector3(13.759033, 1.6151428, 15.109894)
+material = SubResource("StandardMaterial3D_07afh")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Store" unique_id=733527270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059692383, -2.282155, 7.358986)
+size = Vector3(12.814453, 4.151001, 0.19238281)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Store" unique_id=1153894300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059692383, -2.282155, 2.47966)
+size = Vector3(12.814453, 4.151001, 0.19238281)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Store" unique_id=851070009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362671, -2.282155, 0.44743347)
+size = Vector3(0.2084961, 4.151001, 13.729614)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Store" unique_id=1337203914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2417526, -2.282155, 0.44743347)
+size = Vector3(0.2084961, 4.151001, 13.729614)
+
+[node name="Pole6" parent="." unique_id=1282755446 instance=ExtResource("4_wbiwg")]
+transform = Transform3D(0.6992413, 0, -0.032584026, 0, 0.7, 0, 0.032584026, 0, 0.6992413, 56.05016, 0.99651814, 73.71924)
+
+[node name="Pole7" type="Node3D" parent="." unique_id=1195803934]
+transform = Transform3D(0.032583997, 0, 0.6992413, 0, 0.7, 0, -0.6992413, 0, 0.032583997, 56.00906, 9.450066, 73.71234)
+
+[node name="Light2" parent="Pole7" unique_id=1615628739 instance=ExtResource("5_p5t3n")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Pole7/Light2" unique_id=272216488]
+transform = Transform3D(1.0000001, 2.9802322e-08, 0, 0, -4.3711392e-08, 1, 2.9802322e-08, -1.0000001, -4.3711395e-08, 0, 0.35469913, -3.3739004)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Pole7/Light2/SpotLight3D" unique_id=475304110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="Pole7/Light2/SpotLight3D" unique_id=908206682]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1155309750]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 42.79141, 3.5513387, 88.873604)
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+omni_range = 9.061
+omni_attenuation = 0.07
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1915590204]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 42.79141, 3.5513384, 84.53457)
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+omni_range = 9.061
+omni_attenuation = 0.07
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=678090515]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 48.181366, 3.5513387, 88.873604)
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+omni_range = 9.061
+omni_attenuation = 0.07
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1716019493]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 48.181366, 3.5513384, 84.53457)
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+omni_range = 9.061
+omni_attenuation = 0.07
+
+[node name="GasPumps" type="Node3D" parent="." unique_id=197200268]
+transform = Transform3D(0.98916745, 0, -0.14679092, 0, 1, 0, 0.14679089, 0, 0.9891676, 28.66311, 7.0881643, 81.82949)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="GasPumps" unique_id=1646685868]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+size = Vector3(10.290665, 0.88227844, 20.85292)
+material = SubResource("StandardMaterial3D_07afh")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="GasPumps" unique_id=797372546]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, -3.3249207, 0)
+size = Vector3(1, 5.9692383, 1)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="GasPumps" unique_id=1075167267]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 3.8146973e-06, -3.3249207, 5.7053223)
+size = Vector3(1, 5.9692383, 1)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="GasPumps" unique_id=1182035739]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, -3.3249207, -5.672348)
+size = Vector3(1, 5.9692383, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="GasPumps" unique_id=1954314743]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, 2.735073, -0.5016222, -8.018806)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D" unique_id=262856784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D" unique_id=1663401598]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="GasPumps" unique_id=2045979599]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, -2.8005142, -0.5016227, -8.090111)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D2" unique_id=651932215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D2" unique_id=601791600]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="GasPumps" unique_id=1163596413]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, 2.6395721, -0.5016222, -2.9109497)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D3" unique_id=945329672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D3" unique_id=1621715345]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="GasPumps" unique_id=1006803076]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, -2.8960114, -0.5016227, -2.9822617)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D4" unique_id=707049291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D4" unique_id=1618438475]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="GasPumps" unique_id=2090274324]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, 2.7541008, -0.5016222, 2.9203873)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D5" unique_id=1284070464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D5" unique_id=1022596928]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="GasPumps" unique_id=541746362]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, -2.7814865, -0.5016227, 2.849083)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D6" unique_id=1721086748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D6" unique_id=1637377180]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="GasPumps" unique_id=752903635]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, 2.6585999, -0.5016222, 8.028244)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D7" unique_id=1703924958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D7" unique_id=806493976]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="GasPumps" unique_id=1939957739]
+transform = Transform3D(0.041875735, -0.9991229, -4.3489695e-08, 6.2141208e-09, -4.326742e-08, 1, -0.99912286, -0.041875735, 4.3968154e-09, -2.8769798, -0.5016227, 7.956932)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 22.082327
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasPumps/SpotLight3D8" unique_id=948437993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="GasPumps/SpotLight3D8" unique_id=1584578338]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("6_0xn84")

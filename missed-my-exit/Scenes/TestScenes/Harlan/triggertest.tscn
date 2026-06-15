@@ -6,13 +6,11 @@
 [ext_resource type="AudioStream" uid="uid://cfnmqilybo2et" path="res://Assets/Other/Ambient_Scary_1.wav" id="4_6xe0c"]
 [ext_resource type="PackedScene" uid="uid://bbbjo5ruqvl1b" path="res://Scenes/Events/sound_event.tscn" id="4_pa2op"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="5_pa2op"]
+[ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="7_j0y78"]
 [ext_resource type="PackedScene" uid="uid://dkkxa1uffsa3l" path="res://Assets/New Models/Pole1.glb" id="7_lravs"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="7_xtx70"]
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="9_lm584"]
-[ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_rydv8"]
 [ext_resource type="PackedScene" uid="uid://bnd2ts3vy3unt" path="res://Assets/New Models/PoleArm1.glb" id="10_rydv8"]
-[ext_resource type="PackedScene" uid="uid://boxqnoxminawg" path="res://Assets/New Models/Pole2.glb" id="12_8moob"]
-[ext_resource type="PackedScene" uid="uid://7bjxl6tt2oyu" path="res://Assets/New Models/Light2.glb" id="13_0poja"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
@@ -105,32 +103,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.006810665, 8.059992, -0.0
 [node name="PoleArm2" parent="Props/Pole5" unique_id=229777427 instance=ExtResource("10_rydv8")]
 transform = Transform3D(-1, 0, -1.2079664e-07, 0, 1, 0, 1.509958e-07, 0, -0.8, 0.006810665, 8.059992, -0.03824711)
 
-[node name="Pole6" parent="Props" unique_id=1443033357 instance=ExtResource("12_8moob")]
-transform = Transform3D(0.6194502, 0, 0.7850359, 0, 1, 0, -0.7850359, 0, 0.6194502, -17.30734, -0.398, 5.4076853)
-
-[node name="Light2" parent="Props/Pole6" unique_id=1615628739 instance=ExtResource("13_0poja")]
-transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 11.991806, 0)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Props/Pole6/Light2" unique_id=2066405468]
-transform = Transform3D(1.0000001, 2.9802322e-08, 0, 0, -4.3711392e-08, 1, 2.9802322e-08, -1.0000001, -4.3711395e-08, 0, 0.35469913, -3.3739004)
-light_energy = 3.0
-shadow_enabled = true
-spot_range = 22.082327
-spot_angle = 57.883698
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Props/Pole6/Light2/SpotLight3D" unique_id=886903283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
-light_energy = 4.048
-shadow_enabled = true
-omni_range = 1.0380461
-
-[node name="Sprite3D" type="Sprite3D" parent="Props/Pole6/Light2/SpotLight3D" unique_id=806777999]
-pixel_size = 0.015
-billboard = 1
-shaded = true
-double_sided = false
-texture_filter = 2
-texture = ExtResource("9_rydv8")
+[node name="Pole6" parent="Props" unique_id=1282755446 instance=ExtResource("7_j0y78")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -0.40726513, 0)
 
 [node name="Events" type="Node3D" parent="." unique_id=592804167]
 
