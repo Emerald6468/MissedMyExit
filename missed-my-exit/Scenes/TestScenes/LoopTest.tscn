@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="4_ct2dd"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="5_ct2dd"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="6_rjdij"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="7_rjdij"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p80e4"]
 albedo_color = Color(0.34906504, 0.34906504, 0.34906498, 1)
@@ -155,18 +156,6 @@ light_color = Color(0.1552538, 0.16244861, 0.17684266, 1)
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("4_ct2dd")]
 transform = Transform3D(-0.9880219, 0, -0.15431379, 0, 1, 0, 0.15431379, 0, -0.9880219, 1.1537954, 0.14336991, 12.728337)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="FinalCar" unique_id=920342789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50847876, 0.653496, -1.5567322)
-shadow_enabled = true
-spot_range = 7.4135404
-spot_angle = 31.317436
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="FinalCar" unique_id=2119248502]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6233411, 0.653496, -1.5234671)
-shadow_enabled = true
-spot_range = 7.4135404
-spot_angle = 31.317436
 
 [node name="Events" type="Node3D" parent="." unique_id=128377468]
 
@@ -318,6 +307,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7808394, -0.296103, 24.403
 
 [node name="TreeNewWIP4" parent="Trees" unique_id=1412946898 instance=ExtResource("1_df030")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.020928, -0.08211756, 36.549267)
+
+[node name="Player" parent="." unique_id=1477566545 instance=ExtResource("7_rjdij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46303594, 1.7096262)
 
 [connection signal="body_entered" from="Events/TeleGasStation1/Trigger" to="Events/TeleGasStation1/Trigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Events/TeleGasStation2/Trigger" to="Events/TeleGasStation2/Trigger" method="_on_body_entered"]

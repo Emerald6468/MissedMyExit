@@ -5,6 +5,11 @@ var max_torque = 300
 var turn_speed = 3
 var turn_amount = 0.3
 
+#Headlights
+@onready var right_headlight: SpotLight3D = $RightHeadlight
+@onready var left_headlight: SpotLight3D = $LeftHeadlight
+var headlight = true
+
 #Camera
 var mouse_sensitivity = 0.3
 @onready var car_camera: Camera3D = $Head/CarCamera
@@ -14,10 +19,18 @@ var mouse_sensitivity = 0.3
 @onready var player_point: Marker3D = $PlayerPoint
 @onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
 
+func headlights():
+	if headlight: 
+		right_headlight.show()
+		left_headlight.show()
+	else:
+		right_headlight.hide()
+		left_headlight.hide()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
+	headlights() 
 
 
 func _process(delta: float) -> void:
@@ -28,6 +41,10 @@ func _process(delta: float) -> void:
 			Global.OnFoot = true
 			Global.JustSwitched = true
 		car_camera.make_current()
+		headlights()
+		if Input.is_action_just_pressed("Interact"): 
+			if headlight: headlight = false
+			else: headlight = true
 		var dir = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 		var steering_dir = Input.get_action_strength("Left") - Input.get_action_strength("Right")
 		

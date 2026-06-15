@@ -134,3 +134,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0043018, 0.6006232, 0)
 transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 0, 0, 0)
 shape = SubResource("SphereShape3D_qn5rq")
 debug_color = Color(0.7176471, 0.48235294, 0, 0.7647059)
+
+[node name="RightHeadlight" type="SpotLight3D" parent="." unique_id=431231350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50847876, 0.3996091, -1.5567322)
+shadow_enabled = true
+spot_range = 7.0
+spot_angle = 9.5
+
+[node name="LeftHeadlight" type="SpotLight3D" parent="." unique_id=680538823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6233411, 0.50402343, -1.5735412)
+shadow_enabled = true
+spot_range = 7.0
+spot_angle = 9.5
