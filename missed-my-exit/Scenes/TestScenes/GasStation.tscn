@@ -104,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.178573, 0.24253994, 5.06381
 transform = Transform3D(-0.9997422, 0, -0.02270471, 0, 1, 0, 0.02270471, 0, -0.9997422, 0.048417628, -0.009398282, 5.439775)
 
 [node name="Gas1" type="Node3D" parent="." unique_id=158232591]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 45.66834, 5.262515, 88.61231)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 45.66834, 4.348526, 84.847916)
 visible = false
 
 [node name="Pole6" parent="Gas1" unique_id=1282755446 instance=ExtResource("4_wbiwg")]
@@ -464,7 +464,7 @@ size = Vector3(36.30049, 1, 29.234818)
 material = SubResource("StandardMaterial3D_i5ijr")
 
 [node name="Gas2" type="Node3D" parent="." unique_id=1248397963]
-transform = Transform3D(0.9968467, 0, -0.07935091, 0, 1, 0, 0.0793509, 0, 0.99684674, 45.142094, 5.262515, 98.53166)
+transform = Transform3D(0.7974774, 0, -0.06348073, 0, 0.8, 0, 0.06348073, 0, 0.7974774, 45.142094, 4.346669, 92.825836)
 
 [node name="Pole6" parent="Gas2" unique_id=824963925 instance=ExtResource("4_wbiwg")]
 transform = Transform3D(-0.09745266, 0, -0.6931832, 0, 0.69999987, 0, 0.6931834, 0, -0.09745267, -22.759428, -4.265997, -23.745575)
@@ -505,7 +505,7 @@ size = Vector3(10.290665, 0.7233658, 16.397373)
 material = SubResource("StandardMaterial3D_07afh")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Gas2/GasPumps" unique_id=426432919]
-transform = Transform3D(0.987924, 0, 0.15494011, 0, 1, 0, -0.15494013, 0, 0.987924, 15.509743, -3.9529114, -12.136833)
+transform = Transform3D(0.98792386, 0, 0.15494008, 0, 0.9999998, 0, -0.15494016, 0, 0.98792386, 15.626686, -3.952911, -12.6886215)
 size = Vector3(1, 4.713257, 1)
 
 [node name="Store" type="Node3D" parent="Gas2" unique_id=1412165291]
@@ -527,8 +527,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4640617, -2.263611, -6.495
 size = Vector3(0.9805298, 1.9243565, 0.19238281)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Gas2/Store" unique_id=151942503]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.934986, -2.3766227, -6.4959564)
-size = Vector3(16.899906, 3.9040017, 0.19238281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.036736, -2.376622, -6.4959564)
+size = Vector3(7.1033955, 3.9040017, 0.19238281)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Gas2/Store" unique_id=1146387175]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05885315, -0.8851795, -6.4959564)
@@ -539,8 +539,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7152405, -3.7936106, -6.49
 size = Vector3(5.503357, 1.1280899, 0.19238281)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Gas2/Store" unique_id=1590151165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8579407, 0.17380524, 0)
-size = Vector3(27.474915, 1.2675323, 15.109894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9664993, 0.17380619, 0)
+size = Vector3(19.692047, 1.2675323, 15.109894)
 material = SubResource("StandardMaterial3D_07afh")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Gas2/Store" unique_id=1649946688]
@@ -548,8 +548,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059692383, -2.282155, 7.35
 size = Vector3(12.814453, 4.151001, 0.19238281)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Gas2/Store" unique_id=451572887]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.487148, -2.282155, 7.358986)
-size = Vector3(16.488281, 4.151001, 0.19238281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.402126, -2.282155, 7.3589935)
+size = Vector3(6.3182373, 4.151001, 0.19238281)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Gas2/Store" unique_id=1444531906]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059692383, -2.282155, 2.47966)
@@ -560,8 +560,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362671, -2.282155, 0.44743
 size = Vector3(0.2084961, 4.151001, 13.729614)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Gas2/Store" unique_id=351758535]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.349504, -2.282155, 0.44743347)
-size = Vector3(0.2084961, 4.151001, 13.729614)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.95713, -2.282155, 0.43974304)
+size = Vector3(0.2084961, 4.151001, 13.899963)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Gas2/Store" unique_id=1484189202]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2417526, -2.282155, 0.44743347)
