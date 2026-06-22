@@ -37,14 +37,14 @@ volumetric_fog_enabled = true
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1038534048]
 material_override = SubResource("StandardMaterial3D_pnnuj")
 polygon = PackedVector2Array(-2.1, 0, -2, 0.1, 2, 0.1, 2.1, 0)
-depth = 50.0
+depth = 100.0
 
 [node name="CSGPolygon3D3" type="CSGPolygon3D" parent="." unique_id=591696052]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 material_override = SubResource("StandardMaterial3D_021su")
 use_collision = true
 polygon = PackedVector2Array(-10, 0, -10, -4, 10, -4, 10, 0)
-depth = 50.0
+depth = 100.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=393306562]
 environment = SubResource("Environment_jwm0k")
@@ -67,8 +67,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1446266, -2.8017712, -6.495
 size = Vector3(1.6685867, 3.0006764, 0.19238281)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Cabin" unique_id=2100198391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8774843, -2.263611, -6.49596)
-size = Vector3(2.9114084, 1.9243565, 0.19238281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695574, -2.263611, -6.495961)
+size = Vector3(2.9272618, 1.9243565, 0.19238281)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Cabin" unique_id=1017779265]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.487096, -2.263611, -6.495958)
@@ -111,7 +111,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362672, -1.9386187, -2.449
 size = Vector3(0.2084961, 4.8380737, 7.9356995)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Cabin" unique_id=1308449127]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619623, -0.45271015, -2.566596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619623, -0.45271015, -2.4988375)
 size = Vector3(0.9058838, 10.450882, 1.523386)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Cabin" unique_id=40047171]
@@ -134,4 +134,204 @@ depth = 0.19
 [node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Cabin" unique_id=2025907976]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.2940626, 0.440269, -2.43369)
 polygon = PackedVector2Array(4, 0, -4, 0, 0, 3.5)
+depth = 0.19
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Cabin" unique_id=1221115964]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0147753, -1.1950011, -6.50112)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Cabin" unique_id=764598261]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6514978, -1.1950011, -6.501122)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+
+[node name="Cabin2" type="Node3D" parent="." unique_id=2022134733]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.204185, 5.083623, -30.121115)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Cabin2" unique_id=1737751817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1446266, -2.8017712, -6.4959626)
+size = Vector3(1.6685867, 3.0006764, 0.19238281)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Cabin2" unique_id=371508635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695574, -2.263611, -6.495961)
+size = Vector3(2.9272618, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Cabin2" unique_id=2128825392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.487096, -2.263611, -6.495958)
+size = Vector3(1.9569397, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Cabin2" unique_id=646419329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445087, -0.5372381, -6.4959593)
+size = Vector3(9.441475, 2.0343418, 0.19238281)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Cabin2" unique_id=1913705020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7325878, -4.9169188, -1.887639)
+size = Vector3(9.5871315, 1.338459, 9.53286)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Cabin2" unique_id=938351051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7327805, -4.380644, -8.748859)
+size = Vector3(9.586765, 0.2659092, 4.270672)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Cabin2" unique_id=2081365848]
+transform = Transform3D(1, -1.3123805e-08, -2.0166482e-09, 1.3123804e-08, 0.95386446, 0.30023766, -2.0166517e-09, -0.30023766, 0.95386446, -1.7454367, -0.5368614, -8.633818)
+size = Vector3(9.054345, 0.2659092, 4.5064907)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Cabin2" unique_id=1968280959]
+transform = Transform3D(-5.389182e-08, -0.64152884, 0.7670989, 2.804212e-08, 0.7670989, 0.64152884, -1, 5.6084232e-08, -2.335053e-08, -4.1313534, 2.446745, -1.9183064)
+size = Vector3(9.784338, 0.2659092, 6.493243)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Cabin2" unique_id=1193646315]
+transform = Transform3D(-3.353096e-08, 0.64152884, -0.7670989, 2.8042123e-08, 0.7670989, 0.64152884, 1, -5.3290705e-15, -4.371139e-08, 0.6635628, 2.4688292, -1.9183111)
+size = Vector3(9.784338, 0.2659092, 6.4243956)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Cabin2" unique_id=617581873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4372034, -3.7936106, -6.4959564)
+size = Vector3(6.059433, 1.1280899, 0.19238281)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Cabin2" unique_id=241239960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, -1.9378252, 2.706091)
+size = Vector3(9.449097, 4.8396606, 0.19238281)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Cabin2" unique_id=1223571751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362673, -1.9386187, -1.8830929)
+size = Vector3(0.2084961, 4.8380737, 9.068558)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Cabin2" unique_id=1960836396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619633, -0.45271015, -1.9926758)
+size = Vector3(0.9058838, 10.450882, 1.523386)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Cabin2" unique_id=1819990339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5932322, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Cabin2" unique_id=1619036623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1263895, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Cabin2" unique_id=559327733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667717, -1.9459429, -1.8710709)
+size = Vector3(0.2084961, 4.8234253, 9.092613)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Cabin2" unique_id=1663631808]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7434902, 0.41575146, -6.5973473)
+polygon = PackedVector2Array(5, 0, -5, 0, 0, 4)
+depth = 0.19
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Cabin2" unique_id=2093490352]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7434902, 0.41575146, 2.6010914)
+polygon = PackedVector2Array(5, 0, -5, 0, 0, 4)
+depth = 0.19
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Cabin2" unique_id=1139698734]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0147753, -1.1950011, -6.50112)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Cabin2" unique_id=364015428]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6514978, -1.1950011, -6.501122)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+
+[node name="House" type="Node3D" parent="." unique_id=1672522804]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.204185, 5.083623, -47.965164)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="House" unique_id=81233962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1446266, -2.8017712, -6.4959626)
+size = Vector3(1.6685867, 3.0006764, 0.19238281)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="House" unique_id=1140076936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695574, -2.263611, -6.495961)
+size = Vector3(2.9272618, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="House" unique_id=1712044165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.487096, -2.263611, -6.495958)
+size = Vector3(1.9569397, 1.9243565, 0.19238281)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="House" unique_id=1089548412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445087, -0.5372381, -6.4959593)
+size = Vector3(9.441475, 2.0343418, 0.19238281)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="House" unique_id=1848380355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7325859, -4.9169188, 1.679903)
+size = Vector3(9.5871315, 1.338459, 16.667944)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="House" unique_id=1733518745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7327805, -4.380644, -8.748859)
+size = Vector3(9.586765, 0.2659092, 4.270672)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="House" unique_id=817704916]
+transform = Transform3D(1, -1.3123805e-08, -2.0166482e-09, 1.3123804e-08, 0.95386446, 0.30023766, -2.0166517e-09, -0.30023766, 0.95386446, -1.7454367, -0.5368614, -8.633818)
+size = Vector3(9.054345, 0.2659092, 4.5064907)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="House" unique_id=31745360]
+transform = Transform3D(-5.389182e-08, -0.64152884, 0.7670989, 2.804212e-08, 0.7670989, 0.64152884, -1, 5.6084232e-08, -2.335053e-08, -4.1313553, 6.1328793, 1.6260681)
+size = Vector3(16.873087, 0.2659092, 6.493243)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="House" unique_id=1858591817]
+transform = Transform3D(-3.353096e-08, 0.64152884, -0.7670989, 2.8042123e-08, 0.7670989, 0.64152884, 1, -5.3290705e-15, -4.371139e-08, 0.6635628, 6.1549635, 1.5966749)
+size = Vector3(16.81431, 0.2659092, 6.4243956)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="House" unique_id=1862224195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4372034, -3.7936106, -6.4959564)
+size = Vector3(6.059433, 1.1280899, 0.19238281)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="House" unique_id=997140793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, -1.9378252, 9.804212)
+size = Vector3(9.449097, 4.8396606, 0.19238281)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="House" unique_id=783879932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362671, -1.9386187, 1.6651115)
+size = Vector3(0.2084961, 4.8380737, 16.164967)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="House" unique_id=1511659128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619614, -0.45271015, 6.6517076)
+size = Vector3(0.9058838, 10.450882, 1.523386)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="House" unique_id=755561753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5932322, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="House" unique_id=1233400270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1263895, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="House" unique_id=1631347306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667717, -1.9459429, 1.663393)
+size = Vector3(0.2084961, 4.8234253, 16.161541)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="House" unique_id=1865759164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445068, 2.298574, -6.495957)
+size = Vector3(9.441475, 3.7002764, 0.19238281)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="House" unique_id=510947495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, 2.3228884, 9.804212)
+size = Vector3(9.449097, 3.7938538, 0.19238281)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="House" unique_id=1598158567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.362671, 2.3235292, 1.6651115)
+size = Vector3(0.2084961, 3.7951355, 16.164967)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="House" unique_id=224936277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667717, 2.3220034, 1.663393)
+size = Vector3(0.2084961, 3.7920837, 16.161541)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="House" unique_id=2081949592]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7434883, 4.101886, -6.597347)
+polygon = PackedVector2Array(5, 0, -5, 0, 0, 4)
+depth = 0.19
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="House" unique_id=651091230]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7434921, 4.101886, 9.703158)
+polygon = PackedVector2Array(5, 0, -5, 0, 0, 4)
+depth = 0.19
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="House" unique_id=1448918594]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0147753, -1.1950011, -6.50112)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="House" unique_id=2008982163]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6514978, -1.1950011, -6.501122)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
 depth = 0.19
