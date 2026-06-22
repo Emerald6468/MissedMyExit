@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cskp5c50osm7w"]
 
-[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_xhf2q"]
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_xhf2q"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="2_6fqfo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kwx"]

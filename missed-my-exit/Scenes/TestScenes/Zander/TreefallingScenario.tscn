@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c28wun86yl402"]
+
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_ov7qb"]
+[ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="3_80sl8"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="4_ly7g8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eg3t"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.23529412)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ov7qb"]
+
+[sub_resource type="Sky" id="Sky_ly7g8"]
+sky_material = SubResource("ProceduralSkyMaterial_ov7qb")
+
+[sub_resource type="Environment" id="Environment_80sl8"]
+background_mode = 2
+sky = SubResource("Sky_ly7g8")
+
+[node name="TreefallingScenario" type="Node3D" unique_id=1032229353]
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1978042508]
+use_collision = true
+size = Vector3(10.38324, 1, 66.67505)
+
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("1_ov7qb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60344505, 0.44027507, 29.55008)
+
+[node name="Stump" parent="." unique_id=803317296 instance=ExtResource("2_ly7g8")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.889783, 1.1733444, 7.69771)
+
+[node name="FallenTree" type="Node3D" parent="." unique_id=1190182704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.604975)
+
+[node name="TreeNewWIP1" parent="FallenTree" unique_id=1210067845 instance=ExtResource("3_80sl8")]
+transform = Transform3D(0.0063982443, 0.59996593, 0, -0.59996593, 0.0063982443, 0, 0, 0, 0.6, -3.665, 0.696, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="FallenTree" unique_id=2088048531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2673242, 2.3755646, 0)
+size = Vector3(11.176819, 5.2846985, 1)
+material = SubResource("StandardMaterial3D_8eg3t")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=328594683]
+environment = SubResource("Environment_80sl8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=761488061]
+transform = Transform3D(1, 0, 0, 0, 0.9969051, 0.078615725, 0, -0.078615725, 0.9969051, 0, 12.427002, 0)
+
+[node name="Player" parent="." unique_id=1477566545 instance=ExtResource("4_ly7g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -258.18536, 59.148796, 44.17181)

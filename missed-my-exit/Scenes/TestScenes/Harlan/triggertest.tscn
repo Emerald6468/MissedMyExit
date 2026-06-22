@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdsj8p33sx8w2"]
 
-[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_yg8ar"]
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_yg8ar"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="2_xtx70"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Assets/New Models/pole_1.tscn" id="3_8moob"]
 [ext_resource type="AudioStream" uid="uid://cfnmqilybo2et" path="res://Assets/Other/Ambient_Scary_1.wav" id="4_6xe0c"]

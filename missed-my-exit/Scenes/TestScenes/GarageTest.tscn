@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy30n6vf3mecj"]
 
-[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_y4rai"]
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_y4rai"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_jr836"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="3_bb8cp"]
 [ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]

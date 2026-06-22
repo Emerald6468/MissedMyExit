@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxai1n0ywqw7c"]
 
-[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/placeholder/templategrid_albedo.png" id="1_7ron6"]
-[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/ZanderTestScenes/TestCars/TestCar2.tscn" id="2_b3nva"]
+[ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_7ron6"]
+[ext_resource type="PackedScene" uid="uid://lqoq8qaml3ut" path="res://Scenes/TestScenes/Zander/TestCars/TestCar2.tscn" id="2_b3nva"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_b3nva"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72kwx"]
