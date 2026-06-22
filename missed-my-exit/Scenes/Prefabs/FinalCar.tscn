@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://56t7axdw4bxh" path="res://Scripts/test_car_2.gd" id="1_m6frl"]
 [ext_resource type="Material" uid="uid://4gpy1351akmb" path="res://Assets/New Models/Car Parts/MAIN/Textures/openPBR_shader1.tres" id="2_stkjl"]
 [ext_resource type="PackedScene" uid="uid://kphl2red1fk4" path="res://Assets/New Models/Car Parts/Wheel/Wheel.glb" id="3_navvt"]
+[ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="4_kh7tr"]
+[ext_resource type="PackedScene" uid="uid://dw87whqghtt2" path="res://Assets/New Models/Car Parts/Gearshift/Gearshift.glb" id="5_k4lh1"]
+[ext_resource type="PackedScene" uid="uid://sddprvg6c2gx" path="res://Assets/New Models/Car Parts/Seat/CarSeat.glb" id="6_r0xd0"]
+[ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="7_5ipfh"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xslx7"]
 _surfaces = [{
@@ -146,3 +150,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6233411, 0.50402343, -1.57
 shadow_enabled = true
 spot_range = 7.0
 spot_angle = 9.5
+
+[node name="Dashboard" parent="." unique_id=31542187 instance=ExtResource("4_kh7tr")]
+transform = Transform3D(0.022, 0, 0, 0, 0.022, 0, 0, 0, 0.022, -0.22310814, 0.62759405, -0.3841281)
+
+[node name="Gearshift" parent="." unique_id=781458351 instance=ExtResource("5_k4lh1")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.02841802, 0.5542414, -0.10619118)
+
+[node name="CarSeat" parent="." unique_id=1242983191 instance=ExtResource("6_r0xd0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032, -0.20688468)
+
+[node name="CarSeat2" parent="." unique_id=1923902849 instance=ExtResource("6_r0xd0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.38251442, 0.29674032, -0.20688468)
+
+[node name="CarSeat3" parent="." unique_id=1904403401 instance=ExtResource("6_r0xd0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032, 0.5171848)
+
+[node name="CarSeat4" parent="." unique_id=822308419 instance=ExtResource("6_r0xd0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.38251442, 0.29674032, 0.5171848)
+
+[node name="SteeringWheel" parent="." unique_id=426506523 instance=ExtResource("7_5ipfh")]
+transform = Transform3D(-2.1855695e-09, 0, -0.05, 0.0056748944, 0.049676914, -2.4805752e-10, 0.049676914, -0.0056748944, -2.171447e-09, -0.25822666, 0.6268102, -0.34353036)

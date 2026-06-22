@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dw87whqghtt2" path="res://Assets/New Models/Car Parts/Gearshift/Gearshift.glb" id="5_66vgx"]
 [ext_resource type="PackedScene" uid="uid://ciytxbtg7vq4l" path="res://Assets/New Models/Foliage/Bushes/Bush.glb" id="6_bk5kp"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="7_gqyau"]
+[ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="8_axo4d"]
+[ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="9_yeci8"]
 
 [node name="MainTestScene" type="Node2D" unique_id=1211951512]
 
@@ -50,3 +52,9 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.45120156, -0.15960628
 transform = Transform3D(-0.0897072, 0, -0.28627366, 0, 0.29999998, 0, 0.28627366, 0, -0.0897072, 2.3043187, 0.297122, 0.31481326)
 
 [node name="Node3D" type="Node3D" parent="." unique_id=401973625]
+
+[node name="SteeringWheel" parent="." unique_id=426506523 instance=ExtResource("8_axo4d")]
+transform = Transform3D(-0.0842485, 0, -0.99644476, 0, 1, 0, 0.99644476, 0, -0.0842485, 1.6402783, 0, -2.5368044)
+
+[node name="Dashboard" parent="." unique_id=31542187 instance=ExtResource("9_yeci8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32314, -3.2742417, -4.479595)
