@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ou6facs600gm"
-path.s3tc="res://.godot/imported/PoleArm1_street_Light_Street Light Textures.png-31679e9e89995752b9cd98db7c0a667d.s3tc.ctex"
+uid="uid://db1lywcq2wc8i"
+path.s3tc="res://.godot/imported/protomap.png-92a1ba14bffb6f3e2d55521dcb00041d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "43ca15a8f4cdf3630cee25d99e69d2a2"
-}
 
 [deps]
 
-source_file="res://Assets/New Models/PoleArm1_street_Light_Street Light Textures.png"
-dest_files=["res://.godot/imported/PoleArm1_street_Light_Street Light Textures.png-31679e9e89995752b9cd98db7c0a667d.s3tc.ctex"]
+source_file="res://Assets/Other/protomap.png"
+dest_files=["res://.godot/imported/protomap.png-92a1ba14bffb6f3e2d55521dcb00041d.s3tc.ctex"]
 
 [params]
 

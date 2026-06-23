@@ -3,19 +3,21 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dcjny86ttjuob"
-path="res://.godot/imported/Light1.glb-63d265ba78aa4c5806631961fdabe182.scn"
+uid="uid://boxqnoxminawg"
+path="res://.godot/imported/Pole2.glb-2e1cca6c9ebbdb70800a028dc8ca01c4.scn"
 
 [deps]
 
-source_file="res://Assets/New Models/Light1.glb"
-dest_files=["res://.godot/imported/Light1.glb-63d265ba78aa4c5806631961fdabe182.scn"]
+source_file="res://Assets/New Models/Light Poles/Pole2.glb"
+dest_files=["res://.godot/imported/Pole2.glb-2e1cca6c9ebbdb70800a028dc8ca01c4.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -40,3 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0
