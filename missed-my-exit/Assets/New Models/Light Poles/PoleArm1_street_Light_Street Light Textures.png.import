@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt26ets4k5rdw"
-path.s3tc="res://.godot/imported/Light1_street_Light_Street Light Textures.png-2698900dab7091b12663ae40d38ed03b.s3tc.ctex"
+uid="uid://ou6facs600gm"
+path.s3tc="res://.godot/imported/PoleArm1_street_Light_Street Light Textures.png-58fe0b5e4497e131e1801c38b0b4b553.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/New Models/Light1_street_Light_Street Light Textures.png"
-dest_files=["res://.godot/imported/Light1_street_Light_Street Light Textures.png-2698900dab7091b12663ae40d38ed03b.s3tc.ctex"]
+source_file="res://Assets/New Models/Light Poles/PoleArm1_street_Light_Street Light Textures.png"
+dest_files=["res://.godot/imported/PoleArm1_street_Light_Street Light Textures.png-58fe0b5e4497e131e1801c38b0b4b553.s3tc.ctex"]
 
 [params]
 
