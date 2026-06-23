@@ -140,16 +140,18 @@ shape = SubResource("SphereShape3D_qn5rq")
 debug_color = Color(0.7176471, 0.48235294, 0, 0.7647059)
 
 [node name="RightHeadlight" type="SpotLight3D" parent="." unique_id=431231350]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50847876, 0.3996091, -1.5567322)
-shadow_enabled = true
-spot_range = 7.0
-spot_angle = 9.5
+transform = Transform3D(1, 0, 0, 0, 0.988694, 0.14994702, 0, -0.14994702, 0.988694, 0.52447927, 0.45503318, -1.6965883)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+spot_range = 40.0
+spot_attenuation = 0.25
 
 [node name="LeftHeadlight" type="SpotLight3D" parent="." unique_id=680538823]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6233411, 0.50402343, -1.5735412)
-shadow_enabled = true
-spot_range = 7.0
-spot_angle = 9.5
+transform = Transform3D(1, 0, 0, 0, 0.988694, 0.14994702, 0, -0.14994702, 0.988694, -0.6233411, 0.5024775, -1.7207849)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+spot_range = 40.0
+spot_attenuation = 0.25
 
 [node name="Dashboard" parent="." unique_id=31542187 instance=ExtResource("4_kh7tr")]
 transform = Transform3D(0.022, 0, 0, 0, 0.022, 0, 0, 0, 0.022, -0.22310814, 0.62759405, -0.3841281)

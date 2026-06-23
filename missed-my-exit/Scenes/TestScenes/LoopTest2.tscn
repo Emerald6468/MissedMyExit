@@ -117,7 +117,7 @@ environment = SubResource("Environment_2rq0p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=388845399]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
-light_color = Color(0.1552538, 0.16244861, 0.17684266, 1)
+light_energy = 0.0
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("2_o1k0p")]
 transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, -3.6970818, 0.831573, 1.4011242)
