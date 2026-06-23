@@ -124,7 +124,7 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.02
 shape = SubResource("BoxShape3D_ntpel")
 
 [node name="Head" type="Node3D" parent="." unique_id=836823007]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16328767, 0.8234637, -0.088162184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16328767, 0.8720574, -0.14527059)
 
 [node name="CarCamera" type="Camera3D" parent="Head" unique_id=182063250]
 transform = Transform3D(1, 0, 0, 0, 0.9472494, 0.32049727, 0, -0.32049727, 0.9472494, 0, 0, 0)
