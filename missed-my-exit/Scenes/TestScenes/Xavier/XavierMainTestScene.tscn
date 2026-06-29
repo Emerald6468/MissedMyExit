@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="7_gqyau"]
 [ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="8_axo4d"]
 [ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="9_yeci8"]
+[ext_resource type="PackedScene" uid="uid://c368ffp70oslf" path="res://Assets/New Models/Tools/Axe/Axe.glb" id="10_yeci8"]
 
 [node name="MainTestScene" type="Node2D" unique_id=1211951512]
 
@@ -58,3 +59,6 @@ transform = Transform3D(-0.0842485, 0, -0.99644476, 0, 1, 0, 0.99644476, 0, -0.0
 
 [node name="Dashboard" parent="." unique_id=31542187 instance=ExtResource("9_yeci8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32314, -3.2742417, -4.479595)
+
+[node name="Axe" parent="." unique_id=381552103 instance=ExtResource("10_yeci8")]
+transform = Transform3D(0.38531575, 0, -0.9227848, 0, 1, 0, 0.9227848, 0, 0.38531575, 9.766832, -0.42900658, -0.2133112)
