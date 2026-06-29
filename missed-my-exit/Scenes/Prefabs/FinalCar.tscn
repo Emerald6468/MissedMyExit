@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://sddprvg6c2gx" path="res://Assets/New Models/Car Parts/Seat/CarSeat.glb" id="6_r0xd0"]
 [ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="7_5ipfh"]
 [ext_resource type="PackedScene" uid="uid://dpa1q7vvwqekp" path="res://Assets/New Models/Car Parts/Radio/Radio.glb" id="8_k4lh1"]
+[ext_resource type="PackedScene" uid="uid://btirq5educql8" path="res://Assets/New Models/Car Parts/Dashboard/Speedometer Hand/Hand.glb" id="9_r0xd0"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xslx7"]
 _surfaces = [{
@@ -177,3 +178,6 @@ transform = Transform3D(-3.5193612e-09, 2.564633e-12, -0.08, 0.009079831, 0.0794
 
 [node name="Radio" parent="." unique_id=1581744298 instance=ExtResource("8_k4lh1")]
 transform = Transform3D(8.5, 0, 0, 0, 8.5, 0, 0, 0, 8.5, -0.07269718, 0.48530573, -0.43980354)
+
+[node name="Hand" parent="." unique_id=1443882783 instance=ExtResource("9_r0xd0")]
+transform = Transform3D(-0.0023101582, 8.881782e-18, 0.009729498, 0.009630016, 0.00142636, 0.002286537, -0.0013877772, 0.009897749, -0.00032951194, -0.3137929, 0.6768778, -0.43276614)
