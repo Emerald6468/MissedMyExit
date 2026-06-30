@@ -2,6 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="1_k34x6"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="2_o1k0p"]
+[ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="2_wmv8p"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_ehn2t"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="6_f6yu6"]
 [ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="7_ehn2t"]
@@ -36,19 +37,19 @@ point_count = 36
 transform_format = 1
 mesh = ExtResource("1_k34x6")
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjlgc"]
-sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
-sky_horizon_color = Color(0.13183698, 0.25782204, 0.3006993, 1)
-ground_horizon_color = Color(0.0053264285, 0.063683376, 0.07215647, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_n3l2a"]
+panorama = ExtResource("2_wmv8p")
 
-[sub_resource type="Sky" id="Sky_xhf2q"]
-sky_material = SubResource("ProceduralSkyMaterial_hjlgc")
+[sub_resource type="Sky" id="Sky_rsxtw"]
+sky_material = SubResource("PanoramaSkyMaterial_n3l2a")
 
 [sub_resource type="Environment" id="Environment_2rq0p"]
 background_mode = 2
 background_color = Color(0.07450981, 0, 0.19215687, 1)
-sky = SubResource("Sky_xhf2q")
-ambient_light_color = Color(0.14117648, 0, 0, 1)
+background_energy_multiplier = 3.0
+sky = SubResource("Sky_rsxtw")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.1
 volumetric_fog_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehn2t"]
@@ -117,7 +118,8 @@ environment = SubResource("Environment_2rq0p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=388845399]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
-light_energy = 0.0
+visible = false
+light_energy = 0.001
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("2_o1k0p")]
 transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, -3.6970818, 0.831573, 1.4011242)
