@@ -107,4 +107,4 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		head.rotation_degrees.x -= event.relative.y * mouse_sensitivity
-		head.rotation_degrees.x = clampf(head.rotation_degrees.x,-45,90)
+		head.rotation_degrees.x = clampf(head.rotation_degrees.x,-70,90)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5cfidd5tn0et"]
 
 [ext_resource type="Script" uid="uid://cmwcetyhkdsry" path="res://Scripts/player.gd" id="1_er31s"]
+[ext_resource type="PackedScene" uid="uid://dm774q5yrvca" path="res://Scenes/UI/camera_effects.tscn" id="2_pv3ct"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mwclm"]
 
@@ -30,3 +31,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1279738, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NearbyCheck" unique_id=1776399417]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0.61318755, 0)
 shape = SubResource("SphereShape3D_lu0ho")
+
+[node name="UI" type="Control" parent="." unique_id=819225529]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CameraEffects" parent="." unique_id=957742026 instance=ExtResource("2_pv3ct")]

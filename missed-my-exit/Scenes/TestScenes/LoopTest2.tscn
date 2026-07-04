@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c2l6svufk6x7"]
 
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="1_k34x6"]
-[ext_resource type="Texture2D" uid="uid://bxvm5ssqoidjl" path="res://Assets/TEMP Textures/Texturelabs_Soil_125S.png" id="1_nnkjq"]
-[ext_resource type="Texture2D" uid="uid://bbqfrppaa71n0" path="res://Assets/TEMP Textures/Texturelabs_Soil_135S2.png" id="2_f6yu6"]
+[ext_resource type="Texture2D" uid="uid://m8hgvkjr85p2" path="res://Assets/TEMP Textures/Texturelabs_Soil_135S.png" id="1_nnkjq"]
+[ext_resource type="Texture2D" uid="uid://djlk24lpfhtld" path="res://Assets/TEMP Textures/Texturelabs_Soil_128S2.png" id="2_f6yu6"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="2_o1k0p"]
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="2_wmv8p"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_ehn2t"]
