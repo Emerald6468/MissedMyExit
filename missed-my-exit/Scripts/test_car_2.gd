@@ -19,6 +19,10 @@ var mouse_sensitivity = 0.3
 @onready var player_point: Marker3D = $PlayerPoint
 @onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
 
+#Wheel & Dashboard
+@onready var steering_wheel: Node3D = $SteeringWheel
+var steering_tilt = 6.5
+
 func headlights():
 	if headlight: 
 		right_headlight.show()
@@ -28,6 +32,7 @@ func headlights():
 		left_headlight.hide()
 
 func _ready():
+	steering_tilt = deg_to_rad(steering_tilt)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
 	headlights() 
@@ -47,7 +52,11 @@ func _process(delta: float) -> void:
 			else: headlight = true
 		var dir = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 		var steering_dir = Input.get_action_strength("Left") - Input.get_action_strength("Right")
-		
+		#moves steering wheel resets z to get better rotation
+		var steer_wheel_change = deg_to_rad(steering_dir)
+		steering_wheel.rotate_x(steering_tilt)
+		steering_wheel.rotate_z(steer_wheel_change)
+		steering_wheel.rotate_x(-steering_tilt)
 		var RPM_left = abs($wheel_back_left.get_rpm())
 		var RPM_right = abs($wheel_back_right.get_rpm())
 		var RPM = (RPM_left + RPM_right) / 2.0
