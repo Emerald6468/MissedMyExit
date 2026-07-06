@@ -20,7 +20,7 @@ var mouse_sensitivity = 0.3
 @onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
 
 #Wheel & Dashboard
-@onready var steering_wheel: Node3D = $SteeringWheel
+@onready var steering_wheel: Node3D = $THESTEERINGWHEEL
 var steering_tilt = 6.5
 
 func headlights():

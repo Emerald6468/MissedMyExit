@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="4_kh7tr"]
 [ext_resource type="PackedScene" uid="uid://dw87whqghtt2" path="res://Assets/New Models/Car Parts/Gearshift/Gearshift.glb" id="5_k4lh1"]
 [ext_resource type="PackedScene" uid="uid://sddprvg6c2gx" path="res://Assets/New Models/Car Parts/Seat/CarSeat.glb" id="6_r0xd0"]
-[ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="7_5ipfh"]
+[ext_resource type="PackedScene" uid="uid://d32720hhrlmrh" path="res://Assets/New Models/Car Parts/Steering Wheel/thesteeringwheel.tscn" id="7_r0xd0"]
 [ext_resource type="PackedScene" uid="uid://dpa1q7vvwqekp" path="res://Assets/New Models/Car Parts/Radio/Radio.glb" id="8_k4lh1"]
 [ext_resource type="PackedScene" uid="uid://btirq5educql8" path="res://Assets/New Models/Car Parts/Dashboard/Speedometer Hand/Hand.glb" id="9_r0xd0"]
 
@@ -173,7 +173,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032,
 [node name="CarSeat4" parent="." unique_id=822308419 instance=ExtResource("6_r0xd0")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.38251442, 0.29674032, 0.5171848)
 
-[node name="SteeringWheel" parent="." unique_id=426506523 instance=ExtResource("7_5ipfh")]
+[node name="THESTEERINGWHEEL" parent="." unique_id=1840503549 instance=ExtResource("7_r0xd0")]
 transform = Transform3D(-3.519362e-09, 2.5645623e-12, -0.08, 0.009079831, 0.07948308, -3.9689196e-10, 0.07948308, -0.009079831, -3.496911e-09, -0.24711551, 0.6342863, -0.34353036)
 
 [node name="Radio" parent="." unique_id=1581744298 instance=ExtResource("8_k4lh1")]
