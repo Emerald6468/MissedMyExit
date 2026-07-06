@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ci2sd7njtsa"
-path.s3tc="res://.godot/imported/RoadTest2Flat_0.png-54484f22dbec42015b88dfee6ec65159.s3tc.ctex"
+uid="uid://ccbpnjw7ybsep"
+path.s3tc="res://.godot/imported/Ground1Exit_0.png-6e52210c05de5582f61b5c85543421ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/New Models/RoadTest2Flat_0.png"
-dest_files=["res://.godot/imported/RoadTest2Flat_0.png-54484f22dbec42015b88dfee6ec65159.s3tc.ctex"]
+source_file="res://Assets/New Models/Ground1Exit_0.png"
+dest_files=["res://.godot/imported/Ground1Exit_0.png-6e52210c05de5582f61b5c85543421ed.s3tc.ctex"]
 
 [params]
 

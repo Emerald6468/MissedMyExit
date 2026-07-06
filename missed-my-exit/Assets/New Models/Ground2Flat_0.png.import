@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dggv7cl34qina"
-path.s3tc="res://.godot/imported/RoadTestFlat_0.png-1731a10adaeacd84b59024906c51a1ef.s3tc.ctex"
+uid="uid://b16nij4bfwsce"
+path.s3tc="res://.godot/imported/Ground2Flat_0.png-5f6585207808071bc72890f999396652.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "b2c8726156b03cbb32108905363804cf"
+"md5": "622af2337dd046be66f8668a6be5b21e"
 }
 
 [deps]
 
-source_file="res://Assets/New Models/RoadTestFlat_0.png"
-dest_files=["res://.godot/imported/RoadTestFlat_0.png-1731a10adaeacd84b59024906c51a1ef.s3tc.ctex"]
+source_file="res://Assets/New Models/Ground2Flat_0.png"
+dest_files=["res://.godot/imported/Ground2Flat_0.png-5f6585207808071bc72890f999396652.s3tc.ctex"]
 
 [params]
 
