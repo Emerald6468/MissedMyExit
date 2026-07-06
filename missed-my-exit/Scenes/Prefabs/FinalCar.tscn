@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://56t7axdw4bxh" path="res://Scripts/test_car_2.gd" id="1_m6frl"]
 [ext_resource type="Material" uid="uid://4gpy1351akmb" path="res://Assets/New Models/Car Parts/MAIN/Textures/openPBR_shader1.tres" id="2_stkjl"]
+[ext_resource type="PackedScene" uid="uid://b3uygb6leujj3" path="res://Assets/New Models/Car Parts/MAIN_V2/CarFrameV2.glb" id="3_5ipfh"]
 [ext_resource type="PackedScene" uid="uid://kphl2red1fk4" path="res://Assets/New Models/Car Parts/Wheel/Wheel.glb" id="3_navvt"]
 [ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="4_kh7tr"]
 [ext_resource type="PackedScene" uid="uid://dw87whqghtt2" path="res://Assets/New Models/Car Parts/Gearshift/Gearshift.glb" id="5_k4lh1"]
@@ -62,6 +63,9 @@ script = ExtResource("1_m6frl")
 [node name="Frame" type="MeshInstance3D" parent="." unique_id=34946167]
 transform = Transform3D(1.515, 0, 0, 0, -2.1855694e-08, -0.589, 0, 0.5, -2.5746008e-08, 0.024594307, 0.4102951, 0.090134144)
 mesh = SubResource("ArrayMesh_mhgd0")
+
+[node name="CarFrameV2" parent="." unique_id=1312743517 instance=ExtResource("3_5ipfh")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.017765656, 0.40957564, 0.08452958)
 
 [node name="wheel_back_left" type="VehicleWheel3D" parent="." unique_id=1551386741]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.6194257, 0.3, 1.143338)
