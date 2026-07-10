@@ -13,6 +13,8 @@ var timer_started = false
 #Detection
 @onready var nearby_check: Area3D = $NearbyCheck
 
+#Audio
+@onready var walking_on_gravel: AudioStreamPlayer = $WalkingOnGravel
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -95,9 +97,13 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector("Left", "Right", "Forward", "Backward")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
+			#Walking Audio
+			if !walking_on_gravel.playing:
+				walking_on_gravel.play()
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
 		else:
+			walking_on_gravel.stop()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 

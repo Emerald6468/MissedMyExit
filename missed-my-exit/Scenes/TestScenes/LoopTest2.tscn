@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="2_wmv8p"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_ehn2t"]
 [ext_resource type="Texture2D" uid="uid://cmxe2ysevsibu" path="res://Assets/New Models/Trees/TreeNewWIP1_TreeTotal3.png" id="3_f6yu6"]
-[ext_resource type="ArrayMesh" uid="uid://bb37hn55o7en" path="res://Assets/New Models/RoadTestFlat.glb" id="3_qxeyf"]
+[ext_resource type="ArrayMesh" uid="uid://brc0idkbq0mwm" path="res://Assets/New Models/Ground1Flat.glb" id="3_qxeyf"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="6_f6yu6"]
 [ext_resource type="Texture2D" uid="uid://cirvapbk242fi" path="res://Assets/New Models/Foliage/Ferns/Fern1_Untitled.png" id="6_pnwip"]
 [ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="7_ehn2t"]

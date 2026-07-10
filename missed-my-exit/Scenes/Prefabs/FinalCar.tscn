@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://kphl2red1fk4" path="res://Assets/New Models/Car Parts/Wheel/Wheel.glb" id="3_navvt"]
 [ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="4_kh7tr"]
 [ext_resource type="PackedScene" uid="uid://dw87whqghtt2" path="res://Assets/New Models/Car Parts/Gearshift/Gearshift.glb" id="5_k4lh1"]
+[ext_resource type="AudioStream" uid="uid://dwm0gel4j5yxg" path="res://Assets/AUDIO/Car/Car_Idle_02.WAV" id="5_xu88u"]
+[ext_resource type="AudioStream" uid="uid://cow7pfy5e71vl" path="res://Assets/AUDIO/Car/CarMoving.wav" id="6_nnj4n"]
 [ext_resource type="PackedScene" uid="uid://sddprvg6c2gx" path="res://Assets/New Models/Car Parts/Seat/CarSeat.glb" id="6_r0xd0"]
+[ext_resource type="AudioStream" uid="uid://dkqac2t7suyjb" path="res://Assets/AUDIO/Car/Car_Accelerate.WAV" id="7_63ty5"]
 [ext_resource type="PackedScene" uid="uid://d32720hhrlmrh" path="res://Assets/New Models/Car Parts/Steering Wheel/thesteeringwheel.tscn" id="7_r0xd0"]
 [ext_resource type="PackedScene" uid="uid://dpa1q7vvwqekp" path="res://Assets/New Models/Car Parts/Radio/Radio.glb" id="8_k4lh1"]
 [ext_resource type="PackedScene" uid="uid://btirq5educql8" path="res://Assets/New Models/Car Parts/Dashboard/Speedometer Hand/Hand.glb" id="9_r0xd0"]
@@ -62,6 +65,7 @@ script = ExtResource("1_m6frl")
 
 [node name="Frame" type="MeshInstance3D" parent="." unique_id=34946167]
 transform = Transform3D(1.515, 0, 0, 0, -2.1855694e-08, -0.589, 0, 0.5, -2.5746008e-08, 0.024594307, 0.4102951, 0.090134144)
+visible = false
 mesh = SubResource("ArrayMesh_mhgd0")
 
 [node name="CarFrameV2" parent="." unique_id=1312743517 instance=ExtResource("3_5ipfh")]
@@ -134,6 +138,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16328767, 0.8720574, -0.14
 
 [node name="CarCamera" type="Camera3D" parent="Head" unique_id=182063250]
 transform = Transform3D(1, 0, 0, 0, 0.9472494, 0.32049727, 0, -0.32049727, 0.9472494, 0, 0, 0)
+
+[node name="CarIdle" type="AudioStreamPlayer" parent="Head" unique_id=348287228]
+stream = ExtResource("5_xu88u")
+volume_db = -8.602
+
+[node name="CarMoving" type="AudioStreamPlayer" parent="Head" unique_id=1177200410]
+stream = ExtResource("6_nnj4n")
+
+[node name="CarAccelerate" type="AudioStreamPlayer" parent="Head" unique_id=1022586349]
+stream = ExtResource("7_63ty5")
 
 [node name="PlayerPoint" type="Marker3D" parent="." unique_id=82242388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0043018, 0.6006232, 0)

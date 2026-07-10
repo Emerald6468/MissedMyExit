@@ -23,6 +23,13 @@ var mouse_sensitivity = 0.3
 @onready var steering_wheel: Node3D = $THESTEERINGWHEEL
 var steering_tilt = 6.5
 
+#Audio
+var direction_held = false
+@onready var car_idle: AudioStreamPlayer = $Head/CarIdle
+@onready var car_moving: AudioStreamPlayer = $Head/CarMoving
+@onready var car_accelerate: AudioStreamPlayer = $Head/CarAccelerate
+
+
 func headlights():
 	if headlight: 
 		right_headlight.show()
@@ -67,8 +74,26 @@ func _process(delta: float) -> void:
 		steering = lerp(steering, steering_dir * turn_amount, turn_speed * delta)
 		
 		if dir == 0:
+			direction_held = false
 			brake = 2
+		else:
+			if !car_accelerate.playing and !direction_held: 
+				car_accelerate.play()
+				direction_held = true
+		
+		#print(RPM)
+		if RPM > 1.0:
+			car_idle.stop()
+			if !car_moving.playing: car_moving.play()
+		else:
+			#print("test")
+			car_moving.stop()
+			if !car_idle.playing: car_idle.play()
 	else: 
+		#Audio
+		car_idle.stop()
+		car_moving.stop()
+		car_accelerate.stop()
 		var body_list = drivers_door.get_overlapping_bodies()
 		if drivers_door.has_overlapping_bodies():
 			for body in body_list:
