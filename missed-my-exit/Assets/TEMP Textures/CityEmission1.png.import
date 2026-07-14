@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kpgi66e5h8u"
-path.s3tc="res://.godot/imported/CityEmission.png-501988f9ebe714c53b29821c9f969aef.s3tc.ctex"
+uid="uid://758mvcn3f2d6"
+path.s3tc="res://.godot/imported/CityEmission1.png-76fcbeb36dc43afac3544afa96229f9b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/TEMP Textures/CityEmission.png"
-dest_files=["res://.godot/imported/CityEmission.png-501988f9ebe714c53b29821c9f969aef.s3tc.ctex"]
+source_file="res://Assets/TEMP Textures/CityEmission1.png"
+dest_files=["res://.godot/imported/CityEmission1.png-76fcbeb36dc43afac3544afa96229f9b.s3tc.ctex"]
 
 [params]
 

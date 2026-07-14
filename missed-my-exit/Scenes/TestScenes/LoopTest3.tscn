@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://c0ldd1wtdv7mt" path="res://Assets/TEMP Textures/Texturelabs_Brick_158S2.png" id="18_kxc82"]
 [ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="19_duwrd"]
 [ext_resource type="PackedScene" uid="uid://ctcxxdysedmf0" path="res://Assets/New Models/VistaOld.glb" id="28_27tf7"]
-[ext_resource type="Texture2D" uid="uid://kpgi66e5h8u" path="res://Assets/TEMP Textures/CityEmission.png" id="29_e0jes"]
+[ext_resource type="Texture2D" uid="uid://kpgi66e5h8u" path="res://Assets/TEMP Textures/City.png" id="29_e0jes"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcpsh"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -41,6 +41,7 @@ albedo_texture = ExtResource("2_xsjvs")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
+texture_filter = 0
 distance_fade_mode = 2
 distance_fade_min_distance = 75.0
 distance_fade_max_distance = 0.0
@@ -51,17 +52,20 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("4_kxc82")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5h35"]
 transparency = 1
 cull_mode = 2
 albedo_texture = ExtResource("6_54jx7")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxc82"]
 albedo_texture = ExtResource("1_4v7s2")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
+texture_filter = 0
 distance_fade_mode = 2
 distance_fade_min_distance = 75.0
 distance_fade_max_distance = 0.0
@@ -71,6 +75,7 @@ albedo_texture = ExtResource("1_nclww")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
+texture_filter = 0
 distance_fade_mode = 2
 distance_fade_min_distance = 75.0
 distance_fade_max_distance = 0.0
@@ -281,13 +286,36 @@ size = Vector2(1000, 1000)
 albedo_texture = ExtResource("29_e0jes")
 metallic_specular = 0.0
 emission_enabled = true
-emission_energy_multiplier = 1.5
+emission_energy_multiplier = 2.5
 emission_texture = ExtResource("29_e0jes")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
 material = SubResource("StandardMaterial3D_riqys")
 size = Vector2(1000, 1000)
+
+[sub_resource type="Gradient" id="Gradient_e0jes"]
+colors = PackedColorArray(1, 1, 1, 0.21568628, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6f8o3"]
+gradient = SubResource("Gradient_e0jes")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn0t7"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.45490196)
+albedo_texture = SubResource("GradientTexture2D_6f8o3")
+emission_enabled = true
+emission = Color(0.8244052, 0.5701251, 2.887845e-06, 1)
+emission_energy_multiplier = 2.0
+emission_operator = 1
+emission_texture = SubResource("GradientTexture2D_6f8o3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_riqys"]
+material = SubResource("StandardMaterial3D_sn0t7")
+size = Vector2(75, 250)
 
 [sub_resource type="Gradient" id="Gradient_8wike"]
 colors = PackedColorArray(0.99999994, 0.7684105, 0.5060078, 1, 0, 0, 0, 1)
@@ -336,27 +364,14 @@ size = Vector3(3.3596191, 7.484314, 7.74469)
 [sub_resource type="BoxMesh" id="BoxMesh_bx5wu"]
 size = Vector3(10.124268, 9.35907, 1.9835815)
 
-[sub_resource type="Gradient" id="Gradient_e0jes"]
-colors = PackedColorArray(1, 1, 1, 0.21568628, 1, 1, 1, 0)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wike"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6f8o3"]
-gradient = SubResource("Gradient_e0jes")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn0t7"]
-transparency = 1
-albedo_color = Color(1, 1, 1, 0.45490196)
-albedo_texture = SubResource("GradientTexture2D_6f8o3")
-emission_enabled = true
-emission = Color(0.8244052, 0.5701251, 2.887845e-06, 1)
-emission_operator = 1
-emission_texture = SubResource("GradientTexture2D_6f8o3")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_riqys"]
-material = SubResource("StandardMaterial3D_sn0t7")
-size = Vector2(75, 250)
+[sub_resource type="Curve3D" id="Curve3D_e0jes"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -139.0573, -0.06311035, -153.3618, 0, 0, 0, 0, 0, 0, -147.07564, -0.06311035, -166.96004, 0, 0, 0, 0, 0, 0, -160.8578, -0.06311035, -177.13495, 0, 0, 0, 0, 0, 0, -177.32744, -0.06311083, -182.98668, 0, 0, 0, 0, 0, 0, -194.64355, -0.06311035, -183.73334, 0, 0, 0, 0, 0, 0, -213.06337, -0.06311035, -181.74306, 0, 0, 0, 0, 0, 0, -226.73857, -0.06316402, -178.03284, 0, 0, 0, 0, 0, 0, -238.46768, -0.063198805, -166.18456, 0, 0, 0, 0, 0, 0, -247.98077, -0.06323242, -155.0247, 0, 0, 0, 0, 0, 0, -257.39355, -0.063111305, -139.54874, 0, 0, 0, 0, 0, 0, -270.3825, -0.06311035, -109.48299, 0, 0, 0, 0, 0, 0, -287.78854, -0.111816406, -86.269775, 0, 0, 0, 0, 0, 0, -312.15082, -0.5012207, -63.864216, 0, 0, 0, 0, 0, 0, -321.45737, -0.5308839, -50.39291, 0, 0, 0, 0, 0, 0, -333.67743, -0.5805664, -19.272818, 0, 0, 0, 0, 0, 0, -333.95825, -0.5740967, 22.957323, 0, 0, 0, 0, 0, 0, -334.79364, -0.5439453, 61.590828, 0, 0, 0, 0, 0, 0, -329.44052, -0.54186964, 94.80876, 0, 0, 0, 0, 0, 0, -320.85416, -0.5475836, 109.28805, 0, 0, 0, 0, 0, 0, -273.16876, -0.5723877, 150.469, 0, 0, 0, 0, 0, 0, -266.36343, -0.547322, 162.2824, 0, 0, 0, 0, 0, 0, -260.68646, -0.508667, 191.5767, 0, 0, 0, 0, 0, 0, -262.42316, -0.525146, 222.2955),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 23
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_n3l2a"]
 panorama = ExtResource("8_1x04j")
@@ -1797,6 +1812,10 @@ mesh = SubResource("PlaneMesh_00abl")
 transform = Transform3D(-0.94526935, 0.1318466, 0.29846737, 0.1381432, 0.99041253, 1.1663289e-08, -0.29560584, 0.041231245, -0.9544202, -634.479, -3.28714, -224.5968)
 mesh = SubResource("PlaneMesh_bhunq")
 
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop2" unique_id=1967790895]
+transform = Transform3D(0.38926485, 0.88769275, -0.24591598, -0.91581625, 0.40159738, 4.4246975e-09, 0.098759234, 0.22521387, 0.9692913, -582.6384, -2.8819675, -116.32078)
+mesh = SubResource("PlaneMesh_riqys")
+
 [node name="MiniCity" type="MeshInstance3D" parent="Loop2" unique_id=343926375]
 transform = Transform3D(-0.70272034, 0.10547727, 0.36750326, 0.10880703, 0.79232985, -0.01935187, -0.36653122, 0.03298498, -0.71032876, -600.8483, -6.031792, -107.88496)
 visible = false
@@ -1918,9 +1937,24 @@ transform = Transform3D(0.5428592, -9.313226e-09, -0.8398239, -1.1175871e-08, 1,
 material_override = SubResource("StandardMaterial3D_e0jes")
 mesh = SubResource("BoxMesh_bx5wu")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop2" unique_id=1967790895]
-transform = Transform3D(0.38926485, 0.88769275, -0.24591598, -0.91581625, 0.40159738, 4.4246975e-09, 0.098759234, 0.22521387, 0.9692913, -582.6384, -2.8819675, -116.32078)
-mesh = SubResource("PlaneMesh_riqys")
+[node name="Guardrail1" type="CSGPolygon3D" parent="Loop2" unique_id=980182329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+polygon = PackedVector2Array(0, 0.65, -0.125, 0.6, -0.125, 0.5, 0, 0.4, 0, 0.3, -0.125, 0.2, -0.125, 0.1, 0, 0.05)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_8wike")
+
+[node name="Path3D" type="Path3D" parent="Loop2/Guardrail1" unique_id=79192632]
+curve = SubResource("Curve3D_e0jes")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
 environment = SubResource("Environment_2rq0p")
