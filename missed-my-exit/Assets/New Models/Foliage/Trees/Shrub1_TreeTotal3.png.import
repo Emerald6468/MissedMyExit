@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmxe2ysevsibu"
-path.s3tc="res://.godot/imported/TreeNewWIP1_TreeTotal3.png-7803c702ca41d16b4db47f3c6e1eb8f1.s3tc.ctex"
+uid="uid://couqy08qh1pai"
+path.s3tc="res://.godot/imported/Shrub1_TreeTotal3.png-9e708c421a3774cbde35c6034c764d23.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/New Models/Trees/TreeNewWIP1_TreeTotal3.png"
-dest_files=["res://.godot/imported/TreeNewWIP1_TreeTotal3.png-7803c702ca41d16b4db47f3c6e1eb8f1.s3tc.ctex"]
+source_file="res://Assets/New Models/Foliage/Trees/Shrub1_TreeTotal3.png"
+dest_files=["res://.godot/imported/Shrub1_TreeTotal3.png-9e708c421a3774cbde35c6034c764d23.s3tc.ctex"]
 
 [params]
 
