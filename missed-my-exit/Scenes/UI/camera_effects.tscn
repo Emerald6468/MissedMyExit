@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dmwt6tjy0yuw7" path="res://Assets/UI/Shape.png" id="1_o34yh"]
 
 [node name="CameraEffects" type="Control" unique_id=957742026]
+modulate = Color(1, 1, 1, 0.32156864)
+self_modulate = Color(1, 1, 1, 0.48235294)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
