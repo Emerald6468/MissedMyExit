@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://c28wun86yl402"]
 
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_ov7qb"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="2_80sl8"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
+[ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="3_8eg3t"]
 [ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="3_80sl8"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="4_ly7g8"]
+[ext_resource type="Script" uid="uid://cfxb2vsykfi8a" path="res://Scripts/fallen_tree.gd" id="5_gd0fy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eg3t"]
 transparency = 1
@@ -21,17 +24,30 @@ sky = SubResource("Sky_ly7g8")
 [node name="TreefallingScenario" type="Node3D" unique_id=1032229353]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1978042508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.611603)
 use_collision = true
-size = Vector3(10.38324, 1, 66.67505)
+size = Vector3(10.38324, 1, 81.898254)
+
+[node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("2_80sl8")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.7603245, 1.1818451, 31.628744)
+ObjectType = "Rock"
+
+[node name="PickupableObject2" parent="." unique_id=393651177 instance=ExtResource("2_80sl8")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.0111032, 1.1818451, 31.628744)
+ObjectType = "Axe"
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("1_ov7qb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60344505, 0.44027507, 29.55008)
+
+[node name="MultiPlaceZone" parent="FinalCar" unique_id=2058875668 instance=ExtResource("3_8eg3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08968443, 0.30875397, 1.5384483)
 
 [node name="Stump" parent="." unique_id=803317296 instance=ExtResource("2_ly7g8")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.889783, 1.1733444, 7.69771)
 
 [node name="FallenTree" type="Node3D" parent="." unique_id=1190182704]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.604975)
+script = ExtResource("5_gd0fy")
 
 [node name="TreeNewWIP1" parent="FallenTree" unique_id=1210067845 instance=ExtResource("3_80sl8")]
 transform = Transform3D(0.0063982443, 0.59996593, 0, -0.59996593, 0.0063982443, 0, 0, 0, 0.6, -3.665, 0.696, 0)

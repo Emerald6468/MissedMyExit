@@ -10,6 +10,7 @@ var NearDoor = false
 var NearPickup = false
 var JustPickedUp = false
 var HasRock = false
+var HasAxe = false
 var NearPlaceZone = false
 var JustPlaced = false
 var HasItem = false
@@ -28,6 +29,7 @@ func reset_vars():
 	NearDoor = false
 	NearPickup = false
 	JustPickedUp = false
+	HasAxe = false
 	NearPlaceZone = false
 	JustPlaced = false
 	HasItem = false

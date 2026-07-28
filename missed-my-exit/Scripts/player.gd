@@ -35,7 +35,7 @@ func get_out_car():
 
 func inventory():
 	#later add all other possible items with or 
-	if Global.HasRock:
+	if Global.HasRock or Global.HasAxe:
 		Global.HasItem = true
 	else:
 		Global.HasItem = false
@@ -50,7 +50,7 @@ func check_nearby():
 			if area is PickUp:
 				Global.NearPickup = true
 				just_grab_range = true
-			elif area is PlaceZone:
+			elif area is PlaceZone or MultiPlaceZone:
 				Global.NearPlaceZone = true
 				just_place_range = true
 			else:

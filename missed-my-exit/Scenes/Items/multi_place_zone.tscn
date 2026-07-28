@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://brypsavn55fcm"]
+
+[ext_resource type="Script" uid="uid://fpxgtgvikto1" path="res://Scripts/multi_place_zones.gd" id="1_iu1hw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
+
+[node name="MultiPlaceZone" type="Area3D" unique_id=1743039300]
+script = ExtResource("1_iu1hw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358614051]
+transform = Transform3D(2.595, 0, 0, 0, 2.595, 0, 0, 0, 2.595, 0, 0, 0)
+shape = SubResource("SphereShape3D_kgrkx")
+debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
+
+[node name="PickupText" type="Label3D" parent="." unique_id=342850726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5488042, 0)
+billboard = 1
+text = "Place?"
+
+[node name="RockSpot" type="Marker3D" parent="." unique_id=53644543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5261128, 0, 0)
+
+[node name="Axe Spot" type="Marker3D" parent="." unique_id=980734220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.535779, 0, 0)

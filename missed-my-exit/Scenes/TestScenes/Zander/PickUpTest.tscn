@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_0oac6"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_w1h60"]
-[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/TestScenes/Zander/PickupableObject.tscn" id="3_w1h60"]
-[ext_resource type="PackedScene" uid="uid://civkgy5xa0ny" path="res://Scenes/TestScenes/Zander/PlaceZones.tscn" id="4_7rgsu"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="3_w1h60"]
+[ext_resource type="PackedScene" uid="uid://civkgy5xa0ny" path="res://Scenes/Items/PlaceZones.tscn" id="4_7rgsu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a6iq2"]
 sky_top_color = Color(0.009769575, 0.014749108, 0.023307472, 1)
