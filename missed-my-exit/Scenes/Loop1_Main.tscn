@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="19_l27jq"]
 [ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="20_1aogm"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="21_yfuqy"]
+[ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="22_sm37y"]
+[ext_resource type="PackedScene" uid="uid://1mgmptt54kax" path="res://Assets/Old Models/Boulder_2.glb" id="23_na32f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcpsh"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -884,3 +886,50 @@ mesh = ExtResource("8_na32f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 visible = false
 mesh = ExtResource("5_sm37y")
+
+[node name="Rocks" type="Node3D" parent="." unique_id=864576577]
+
+[node name="Boulder_1" parent="Rocks" unique_id=1806608636 instance=ExtResource("22_sm37y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.32642, -0.053998232, -19.866734)
+
+[node name="Boulder_3" parent="Rocks" unique_id=212790673 instance=ExtResource("22_sm37y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.808685, -0.053998232, -21.041172)
+
+[node name="Boulder_2" parent="Rocks" unique_id=1038124029 instance=ExtResource("23_na32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.56433, -0.19617832, -20.852503)
+
+[node name="Boulder_4" parent="Rocks" unique_id=1983402788 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -183.1711, -0.053998232, -23.103863)
+
+[node name="Boulder_5" parent="Rocks" unique_id=2028387230 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -187.43402, -0.053998232, -21.287941)
+
+[node name="Boulder_6" parent="Rocks" unique_id=231070770 instance=ExtResource("23_na32f")]
+transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -185.54404, -0.19617832, -22.51298)
+
+[node name="Boulder_7" parent="Rocks" unique_id=40095414 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -262.0497, -0.053998232, 190.11336)
+
+[node name="Boulder_8" parent="Rocks" unique_id=166219200 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -266.51495, -0.053998232, 188.87575)
+
+[node name="Boulder_9" parent="Rocks" unique_id=1375233241 instance=ExtResource("23_na32f")]
+transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -264.27347, -0.19617832, 189.0961)
+
+[node name="Boulder_10" parent="Rocks" unique_id=55263624 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -124.774956, -0.053998232, 162.68767)
+
+[node name="Boulder_11" parent="Rocks" unique_id=575081526 instance=ExtResource("22_sm37y")]
+transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -128.18352, -0.053998232, 159.5489)
+
+[node name="Boulder_12" parent="Rocks" unique_id=1759274572 instance=ExtResource("23_na32f")]
+transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -126.28953, -0.19617832, 160.76778)
+
+[node name="Boulder_13" parent="Rocks" unique_id=1480878942 instance=ExtResource("22_sm37y")]
+transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -110.254074, -0.053998232, 237.55302)
+
+[node name="Boulder_14" parent="Rocks" unique_id=1968407719 instance=ExtResource("22_sm37y")]
+transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -108.291016, -0.053998232, 233.35582)
+
+[node name="Boulder_15" parent="Rocks" unique_id=1781151668 instance=ExtResource("23_na32f")]
+transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -108.88111, -0.19617832, 235.52945)
