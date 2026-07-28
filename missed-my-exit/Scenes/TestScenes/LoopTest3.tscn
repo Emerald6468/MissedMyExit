@@ -119,15 +119,13 @@ target = NodePath("../../../../Loop1")
 environment = SubResource("Environment_2rq0p")
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("9_ny4q5")]
-transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, -3.6970818, 0.831573, 1.4011242)
-collision_layer = 2
+transform = Transform3D(-0.0036796217, 0, 0.49998647, 0, 0.5, 0, -0.49998647, 0, -0.0036796217, -3.6970818, 0.831573, 1.4011242)
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("10_nmug1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.151239, 1.7096262)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=388845399]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
-visible = false
 light_energy = 0.001
 
 [node name="Tree1Mesh" type="MeshInstance3D" parent="." unique_id=862316326]
