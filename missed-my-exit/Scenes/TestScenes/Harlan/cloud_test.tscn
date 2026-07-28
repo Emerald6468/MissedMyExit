@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="5_x5511"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="6_bblvj"]
 [ext_resource type="Texture2D" uid="uid://d2kqdlfy44ad7" path="res://Assets/Textures/Nature/NewTreeLine.png" id="7_vruap"]
+[ext_resource type="Script" uid="uid://b3mu7ah4nvy8f" path="res://Scenes/TestScenes/Harlan/cloud_layer.gd" id="7_xytqx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mt1ur"]
 panorama = ExtResource("4_orwy2")
@@ -32,10 +33,13 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sn0t7"]
 noise = SubResource("FastNoiseLite_6f8o3")
 color_ramp = SubResource("Gradient_qr0ht")
+seamless = true
+in_3d_space = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riqys"]
 transparency = 1
 shading_mode = 0
+albedo_color = Color(0.4108, 0.46357995, 0.52, 1)
 albedo_texture = SubResource("NoiseTexture2D_sn0t7")
 proximity_fade_distance = 4096.0
 distance_fade_mode = 1
@@ -84,12 +88,14 @@ collision_mask = 3
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=965467563]
 transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
-visible = false
 light_energy = 0.001
+sky_mode = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=104088802]
+[node name="CloudLayer" type="MeshInstance3D" parent="." unique_id=104088802]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
 mesh = SubResource("PlaneMesh_bhunq")
+script = ExtResource("7_xytqx")
+scroll_speed = 0.05
 
 [node name="Path3D" type="Path3D" parent="." unique_id=722219482]
 curve = SubResource("Curve3D_xytqx")
