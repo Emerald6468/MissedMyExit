@@ -1,4 +1,4 @@
-#@tool
+@tool
 extends MeshInstance3D
 
 @export var scroll_speed: float
