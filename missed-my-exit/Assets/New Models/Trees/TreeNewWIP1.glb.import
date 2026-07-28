@@ -1,15 +1,15 @@
 [remap]
 
-importer="ArrayMesh"
+importer="scene"
 importer_version=1
-type="ArrayMesh"
-uid="uid://dx054q88wled0"
-path="res://.godot/imported/Shrub1.glb-692321bb8ab027a690ff8daf45d8a8b0.res"
+type="PackedScene"
+uid="uid://cwpw0il5dj365"
+path="res://.godot/imported/TreeNewWIP1.glb-27df5400afe2aae75fcd5043cd3b86a5.scn"
 
 [deps]
 
-source_file="res://Assets/New Models/Foliage/Trees/Shrub1.glb"
-dest_files=["res://.godot/imported/Shrub1.glb-692321bb8ab027a690ff8daf45d8a8b0.res"]
+source_file="res://Assets/New Models/Trees/TreeNewWIP1.glb"
+dest_files=["res://.godot/imported/TreeNewWIP1.glb-27df5400afe2aae75fcd5043cd3b86a5.scn"]
 
 [params]
 

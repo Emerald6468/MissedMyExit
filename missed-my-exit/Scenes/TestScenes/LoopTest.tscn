@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqhmf7553hylt"]
 
-[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="1_df030"]
-[ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Foliage/Trees/Tree1Mesh.obj" id="2_ig67w"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="1_df030"]
+[ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="2_ig67w"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="3_2jjn5"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="4_ct2dd"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="5_ct2dd"]

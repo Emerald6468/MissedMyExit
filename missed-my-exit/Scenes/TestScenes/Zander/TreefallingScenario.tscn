@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_ov7qb"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
-[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="3_80sl8"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="3_80sl8"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="4_ly7g8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eg3t"]

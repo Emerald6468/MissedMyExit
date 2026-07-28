@@ -1,6 +1,6 @@
 [gd_resource type="MultiMesh" format=3 uid="uid://uhealh18lrxx"]
 
-[ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Foliage/Trees/Tree1Mesh.obj" id="1_rpyag"]
+[ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Trees/Tree1Mesh.obj" id="1_rpyag"]
 
 [resource]
 transform_format = 1
