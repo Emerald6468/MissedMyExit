@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://758mvcn3f2d6"
-path.s3tc="res://.godot/imported/CityEmission1.png-76fcbeb36dc43afac3544afa96229f9b.s3tc.ctex"
+uid="uid://cmxe2ysevsibu"
+path.s3tc="res://.godot/imported/TreeNewWIP1_TreeTotal3.png-7803c702ca41d16b4db47f3c6e1eb8f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "c7d5fbffe63b3764aa177da6ed4a8634"
+}
 
 [deps]
 
-source_file="res://Assets/TEMP Textures/CityEmission1.png"
-dest_files=["res://.godot/imported/CityEmission1.png-76fcbeb36dc43afac3544afa96229f9b.s3tc.ctex"]
+source_file="res://Assets/New Models/Trees/TreeNewWIP1_TreeTotal3.png"
+dest_files=["res://.godot/imported/TreeNewWIP1_TreeTotal3.png-7803c702ca41d16b4db47f3c6e1eb8f1.s3tc.ctex"]
 
 [params]
 
