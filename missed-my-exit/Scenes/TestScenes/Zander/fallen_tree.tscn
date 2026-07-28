@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://0vlkoawichio"]
+
+[ext_resource type="Script" uid="uid://cfxb2vsykfi8a" path="res://Scripts/fallen_tree.gd" id="1_kt0ly"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="2_0d2b2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eg3t"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.23529412)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhunq"]
+size = Vector3(9.328491, 2.803772, 2.0999813)
+
+[node name="FallenTree" type="Node3D" unique_id=124688568]
+script = ExtResource("1_kt0ly")
+
+[node name="TreeNewWIP1" parent="." unique_id=76607289 instance=ExtResource("2_0d2b2")]
+transform = Transform3D(0.0063982443, 0.59996593, 0, -0.59996593, 0.0063982443, 0, 0, 0, 0.6, -3.665, 0.696, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=512990654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2673242, 2.3755646, 0)
+size = Vector3(11.176819, 5.2846985, 1)
+material = SubResource("StandardMaterial3D_8eg3t")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1024183391]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1308323066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019714355, 0.901886, 0.014334202)
+shape = SubResource("BoxShape3D_bhunq")

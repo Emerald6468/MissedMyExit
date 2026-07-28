@@ -16,6 +16,9 @@ var timer_started = false
 #Audio
 @onready var walking_on_gravel: AudioStreamPlayer = $WalkingOnGravel
 
+#axe
+var axe_swinging = false
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
@@ -75,6 +78,7 @@ func _physics_process(delta: float) -> void:
 		#Camera
 		on_foot_camera.make_current()
 		
+		
 		#Interactables
 		if Input.is_action_just_pressed("Interact"):
 			if Global.NearPickup and !Global.HasItem:
@@ -83,6 +87,11 @@ func _physics_process(delta: float) -> void:
 			elif Global.NearPlaceZone and Global.HasItem:
 				if on_foot_camera.is_position_in_frustum(Global.PlaceZonePosition):
 					Global.JustPlaced = true	
+			if Global.HasAxe and !Global.AxeSwing:
+				Global.AxeSwing = true
+				axe_swinging = true
+				AxeTimer()
+				
 		
 		# Add the gravity.
 		if not is_on_floor():
@@ -109,6 +118,13 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
+func AxeTimer():
+	if axe_swinging:
+		axe_swinging = false
+		await get_tree().create_timer(.5).timeout
+		print("test3")
+		Global.AxeSwing = false
+	
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity

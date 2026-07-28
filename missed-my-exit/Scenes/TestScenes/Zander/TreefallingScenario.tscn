@@ -4,13 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="2_80sl8"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
 [ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="3_8eg3t"]
-[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="3_80sl8"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="4_ly7g8"]
-[ext_resource type="Script" uid="uid://cfxb2vsykfi8a" path="res://Scripts/fallen_tree.gd" id="5_gd0fy"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8eg3t"]
-transparency = 1
-albedo_color = Color(1, 1, 1, 0.23529412)
+[ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="5_8eg3t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ov7qb"]
 
@@ -45,17 +40,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08968443, 0.30875397, 1.538
 [node name="Stump" parent="." unique_id=803317296 instance=ExtResource("2_ly7g8")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.889783, 1.1733444, 7.69771)
 
-[node name="FallenTree" type="Node3D" parent="." unique_id=1190182704]
+[node name="FallenTree" parent="." unique_id=124688568 instance=ExtResource("5_8eg3t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.604975)
-script = ExtResource("5_gd0fy")
-
-[node name="TreeNewWIP1" parent="FallenTree" unique_id=1210067845 instance=ExtResource("3_80sl8")]
-transform = Transform3D(0.0063982443, 0.59996593, 0, -0.59996593, 0.0063982443, 0, 0, 0, 0.6, -3.665, 0.696, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="FallenTree" unique_id=2088048531]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2673242, 2.3755646, 0)
-size = Vector3(11.176819, 5.2846985, 1)
-material = SubResource("StandardMaterial3D_8eg3t")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=328594683]
 environment = SubResource("Environment_80sl8")
