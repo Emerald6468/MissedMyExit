@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="4_orwy2"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="5_x5511"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="6_bblvj"]
+[ext_resource type="Texture2D" uid="uid://d2kqdlfy44ad7" path="res://Assets/Textures/Nature/NewTreeLine.png" id="7_vruap"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mt1ur"]
 panorama = ExtResource("4_orwy2")
@@ -44,6 +45,21 @@ distance_fade_max_distance = 0.0
 material = SubResource("StandardMaterial3D_riqys")
 size = Vector2(1000, 1000)
 
+[sub_resource type="Curve3D" id="Curve3D_xytqx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.15535164, -0.6196289, 0.079548694, 0, 0, 0, 0, 0, 0, -31.425156, -0.6196289, 0.19551168, 0, 0, 0, 0, 0, 0, -64.05633, -0.6196289, -3.0427969, 0, 0, 0, 0, 0, 0, -82.5911, -0.6196289, -19.416513, 0, 0, 0, 0, 0, 0, -110.59404, -0.6196289, -28.692163, 0, 0, 0, 0, 0, 0, -149.73091, -0.6196289, -26.974348, 0, 0, 0, 0, 0, 0, -182.43903, -0.6196289, -18.808735, 0, 0, 0, 0, 0, 0, -208.24895, -0.6196289, -1.2424959, 0, 0, 0, 0, 0, 0, -221.6671, -0.6196289, 16.50275, 0, 0, 0, 0, 0, 0, -225.12933, -0.6196289, 32.942284, 0, 0, 0, 0, 0, 0, -231.39014, -0.6196289, 47.97803, 0, 0, 0, 0, 0, 0, -250.35863, -0.6196289, 53.734936, 0, 0, 0, 0, 0, 0, -283.40338, -0.6196289, 52.33226, 0, 0, 0, 0, 0, 0, -308.98193, -0.6196289, 61.096474, 0, 0, 0, 0, 0, 0, -323.01065, -0.6196289, 78.15355, 0, 0, 0, 0, 0, 0, -323.09564, -0.6196289, 99.664604, 0, 0, 0, 0, 0, 0, -316.88324, -0.6196289, 119.36904, 0, 0, 0, 0, 0, 0, -299.06735, -0.6196289, 135.71501, 0, 0, 0, 0, 0, 0, -291.05417, -0.6196289, 149.80963, 0, 0, 0, 0, 0, 0, -289.26086, -0.6196289, 164.9219, 0, 0, 0, 0, 0, 0, -280.60376, -0.6196289, 179.80354, 0, 0, 0, 0, 0, 0, -258.1261, -0.6196289, 184.17413, 0, 0, 0, 0, 0, 0, -224.1878, -0.6196289, 181.11882, 0, 0, 0, 0, 0, 0, -197.44183, -0.6196289, 174.12213, 0, 0, 0, 0, 0, 0, -177.11842, -0.6196289, 159.15477, 0, 0, 0, 0, 0, 0, -156.87605, -0.6196289, 151.90399, 0, 0, 0, 0, 0, 0, -137.487, -0.6196289, 160.2749, 0, 0, 0, 0, 0, 0, -115.47827, -0.6196289, 175.33109, 0, 0, 0, 0, 0, 0, -110.79582, -0.6196289, 188.48978, 0, 0, 0, 0, 0, 0, -109.339455, -0.6196289, 203.59753, 0, 0, 0, 0, 0, 0, -108.50501, -0.6196289, 222.19054, 0, 0, 0, 0, 0, 0, -114.015976, -0.6196289, 236.97296, 0, 0, 0, 0, 0, 0, -126.61327, -0.6196289, 250.70993, 0, 0, 0, 0, 0, 0, -136.48666, -0.6196289, 260.36868, 0, 0, 0, 0, 0, 0, -143.925, -0.6196289, 278.5484, 0, 0, 0, 0, 0, 0, -140.53787, -0.6196289, 298.8241, 0, 0, 0, 0, 0, 0, -130.66449, -0.6196289, 310.9154, 0, 0, 0, 0, 0, 0, -114.16168, -0.6196289, 326.33154, 0, 0, 0, 0, 0, 0, -104.6276, -0.6196289, 343.44617, 0, 0, 0, 0, 0, 0, -107.17622, -0.6196289, 361.24207, 0, 0, 0, 0, 0, 0, -108.25336, -0.6196289, 380.87457, 0, 0, 0, 0, 0, 0, -107.00985, -0.6196289, 399.4733, 0, 0, 0, 0, 0, 0, -107.4455, -0.6196289, 430.80478, 0, 0, 0, 0, 0, 0, -108.685036, -0.6196289, 462.4127, 0, 0, 0, 0, 0, 0, -106.82572, -0.6196289, 489.06247, 0, 0, 0, 0, 0, 0, -108.065254, -0.6196289, 517.5716),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 46
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("7_vruap")
+uv1_scale = Vector3(0.034, 0.034, 0.034)
+uv1_triplanar = true
+
 [node name="CloudTest" type="Node3D" unique_id=1868052408]
 
 [node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("1_j53vc")]
@@ -71,3 +87,39 @@ light_energy = 0.001
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=104088802]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
 mesh = SubResource("PlaneMesh_bhunq")
+
+[node name="Path3D" type="Path3D" parent="." unique_id=722219482]
+curve = SubResource("Curve3D_xytqx")
+metadata/_edit_lock_ = true
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1024252201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+polygon = PackedVector2Array(20, 0, 20, 30, 21, 30, 21, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="." unique_id=262161551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+polygon = PackedVector2Array(-20, 0, -20, 30, -21, 30, -21, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
