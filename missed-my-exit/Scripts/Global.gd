@@ -2,7 +2,7 @@ extends Node
 #This is our global node make sure to be careful with resetting stuff
 
 #Switching Controls
-var OnFoot = true
+var OnFoot = false
 var JustSwitched = false
 var NearDoor = false
 

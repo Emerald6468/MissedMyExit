@@ -32,7 +32,7 @@ size = Vector3(0.76623535, 1, 0.3918457)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91128945, 0, 0)
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("3_bb8cp")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.1507142, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1507142, 0, 0)
 
 [node name="Wall" type="CSGBox3D" parent="." unique_id=1825729235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, -2.876808)
