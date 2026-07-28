@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bhgdbl7uglq47"]
+
+[ext_resource type="PackedScene" uid="uid://c3racmmd44n7e" path="res://Scenes/Loop1_Main.tscn" id="1_j53vc"]
+[ext_resource type="PackedScene" uid="uid://dxar0qvhkexte" path="res://Scenes/Loop1_Clearing.tscn" id="2_vruap"]
+[ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="3_xytqx"]
+[ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="4_orwy2"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="5_x5511"]
+[ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="6_bblvj"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mt1ur"]
+panorama = ExtResource("4_orwy2")
+
+[sub_resource type="Sky" id="Sky_rsxtw"]
+sky_material = SubResource("PanoramaSkyMaterial_mt1ur")
+
+[sub_resource type="Environment" id="Environment_2iqqs"]
+background_mode = 2
+background_color = Color(0.07450981, 0, 0.19215687, 1)
+background_energy_multiplier = 3.0
+sky = SubResource("Sky_rsxtw")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.1
+volumetric_fog_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_qr0ht"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sn0t7"]
+noise = SubResource("FastNoiseLite_6f8o3")
+color_ramp = SubResource("Gradient_qr0ht")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riqys"]
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("NoiseTexture2D_sn0t7")
+proximity_fade_distance = 4096.0
+distance_fade_mode = 1
+distance_fade_min_distance = 500.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
+material = SubResource("StandardMaterial3D_riqys")
+size = Vector2(1000, 1000)
+
+[node name="CloudTest" type="Node3D" unique_id=1868052408]
+
+[node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("1_j53vc")]
+
+[node name="Loop1_Clearing" parent="Loop1" unique_id=77879138 instance=ExtResource("2_vruap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392.66187, -0.6125488, 379.42218)
+
+[node name="Loop1_Entrance" parent="Loop1" unique_id=878268101 instance=ExtResource("3_xytqx")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=993602935]
+environment = SubResource("Environment_2iqqs")
+
+[node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("5_x5511")]
+transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, -3.6970818, 0.831573, 1.4011242)
+collision_layer = 2
+
+[node name="Player" parent="." unique_id=1477566545 instance=ExtResource("6_bblvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.151239, 1.7096262)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=965467563]
+transform = Transform3D(1, 0, 0, 0, -0.3829252, 0.92377937, 0, -0.92377937, -0.3829252, 0, 88.3518, 0)
+visible = false
+light_energy = 0.001
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=104088802]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
+mesh = SubResource("PlaneMesh_bhunq")
