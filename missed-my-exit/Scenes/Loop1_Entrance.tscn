@@ -8,6 +8,7 @@
 [ext_resource type="ArrayMesh" uid="uid://w2v3c11xv26e" path="res://Assets/New Models/Foliage/Ferns/Fern1.glb" id="6_7cq52"]
 [ext_resource type="Texture2D" uid="uid://c06bsq7dog0vr" path="res://Assets/TEMP Textures/Texturelabs_Concrete_151S.png" id="7_lb8d3"]
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Foliage/Trees/Tree1Mesh.obj" id="8_y72qc"]
+[ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="9_p0s2l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gibup"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -76,8 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01791954, -0.038985133, 0.0
 material_override = SubResource("StandardMaterial3D_gibup")
 mesh = ExtResource("2_p0s2l")
 
-[node name="Trees1" type="MultiMeshInstance3D" parent="Ground1" unique_id=790328488]
-visible = false
+[node name="Trees1" type="MultiMeshInstance3D" parent="Ground1" unique_id=47425236]
 material_override = SubResource("StandardMaterial3D_wh1ft")
 multimesh = ExtResource("4_q53qf")
 
@@ -99,3 +99,30 @@ mesh = ExtResource("8_y72qc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7670162, 0.58147043, -11.20449)
 visible = false
 mesh = ExtResource("6_7cq52")
+
+[node name="Light Poles" type="Node3D" parent="." unique_id=204768585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6906505, -0.296103, 2.8048944)
+
+[node name="Pole6" parent="Light Poles" unique_id=1282755446 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(-0.042617492, 0, 0.9990915, 0, 1, 0, -0.9990915, 0, -0.042617492, 14.88167, -0.27091646, -2.3928404)
+
+[node name="Pole7" parent="Light Poles" unique_id=620356405 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(0.028197072, 0, 0.9996024, 0, 1, 0, -0.9996024, 0, 0.028197072, 15.086733, -0.27091646, -19.904564)
+
+[node name="Pole11" parent="Light Poles" unique_id=72680781 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(-0.047138166, 0, 0.9988884, 0, 1, 0, -0.9988884, 0, -0.047138166, 15.829386, -0.27091646, 19.09314)
+
+[node name="Pole12" parent="Light Poles" unique_id=97360775 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(-0.27278686, 0, 0.96207446, 0, 1, 0, -0.96207446, 0, -0.27278686, 19.605566, -0.27091646, 39.528393)
+
+[node name="Pole13" parent="Light Poles" unique_id=1564673631 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(-0.31838453, 0, 0.9479616, 0, 1, 0, -0.9479616, 0, -0.31838453, 26.7287, -0.27091646, 65.11007)
+
+[node name="Pole8" parent="Light Poles" unique_id=1775769833 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(0.27061898, 0, 0.96268654, 0, 1, 0, -0.96268654, 0, 0.27061898, 17.241867, -0.27091837, -40.892452)
+
+[node name="Pole9" parent="Light Poles" unique_id=190930539 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(0.27061898, 0, 0.96268654, 0, 1, 0, -0.96268654, 0, 0.27061898, 19.959623, -0.27091837, -61.004017)
+
+[node name="Pole10" parent="Light Poles" unique_id=547892852 instance=ExtResource("9_p0s2l")]
+transform = Transform3D(0.3988169, 0, 0.91703063, 0, 1, 0, -0.91703063, 0, 0.3988169, 25.533281, -0.08263397, -77.882256)
