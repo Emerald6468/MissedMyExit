@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="7_j0y78"]
 [ext_resource type="PackedScene" uid="uid://dkkxa1uffsa3l" path="res://Assets/New Models/Light Poles/Pole1.glb" id="7_lravs"]
 [ext_resource type="PackedScene" uid="uid://cd0qvg7k1fm4a" path="res://Scenes/Events/move_event.tscn" id="7_xtx70"]
-[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Trees/TreeNewWIP1.glb" id="9_lm584"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="9_lm584"]
 [ext_resource type="PackedScene" uid="uid://bnd2ts3vy3unt" path="res://Assets/New Models/Light Poles/PoleArm1.glb" id="10_rydv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7m4yd"]
