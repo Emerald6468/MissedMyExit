@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c073k58ceqv5v"]
+
+[ext_resource type="PackedScene" uid="uid://dm774q5yrvca" path="res://Scenes/UI/camera_effects.tscn" id="1_ahcct"]
+[ext_resource type="Script" uid="uid://dpoyml355f7db" path="res://Scripts/closed_captions.gd" id="2_de23q"]
+
+[node name="UI" type="Control" unique_id=322208040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CameraEffects" parent="." unique_id=957742026 instance=ExtResource("1_ahcct")]
+layout_mode = 1
+
+[node name="ClosedCaptions" type="Control" parent="." unique_id=99892087]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_de23q")
+
+[node name="Dialog" type="RichTextLabel" parent="ClosedCaptions" unique_id=618375277]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50600004
+anchor_top = 0.837
+anchor_right = 0.50600004
+anchor_bottom = 0.837
+offset_left = 398.76
+offset_top = 768.52
+offset_right = 1511.76
+offset_bottom = 973.52
+grow_horizontal = 0
+bbcode_enabled = true
