@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b1bl1i6fk4tjp"]
+
+[ext_resource type="Script" uid="uid://x2memt8ssqeh" path="res://Scenes/TestScenes/Harlan/surface.gd" id="1_exuij"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o5qli"]
+
+[node name="surface" type="Node3D" unique_id=1926810802]
+script = ExtResource("1_exuij")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=753212887]
+mesh = SubResource("ArrayMesh_o5qli")
