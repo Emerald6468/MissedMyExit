@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b16nij4bfwsce"
-path.s3tc="res://.godot/imported/Ground2Flat_0.png-5f6585207808071bc72890f999396652.s3tc.ctex"
+path.s3tc="res://.godot/imported/Ground2Flat_0.png-9d82fec86a7e19add4cfd031b7e56416.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/New Models/Ground2Flat_0.png"
-dest_files=["res://.godot/imported/Ground2Flat_0.png-5f6585207808071bc72890f999396652.s3tc.ctex"]
+source_file="res://Assets/New Models/Ground/Ground2Flat_0.png"
+dest_files=["res://.godot/imported/Ground2Flat_0.png-9d82fec86a7e19add4cfd031b7e56416.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="ArrayMesh"
 importer_version=1
 type="ArrayMesh"
-uid="uid://ohwiaq4ohj"
-path="res://.godot/imported/Ground2Flat.glb-a143d1a4784ccd638bb831e8addc3670.res"
+uid="uid://bqosult284ehq"
+path="res://.godot/imported/RockWall_VertWide.glb-7f09d39183212dad6645c765bc1b58b2.res"
 
 [deps]
 
-source_file="res://Assets/New Models/Ground2Flat.glb"
-dest_files=["res://.godot/imported/Ground2Flat.glb-a143d1a4784ccd638bb831e8addc3670.res"]
+source_file="res://Assets/New Models/Rocks/RockWall_VertWide.glb"
+dest_files=["res://.godot/imported/RockWall_VertWide.glb-7f09d39183212dad6645c765bc1b58b2.res"]
 
 [params]
 

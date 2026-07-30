@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://mkjngcbtdvyb"]
 
 [ext_resource type="Texture2D" uid="uid://bbqfrppaa71n0" path="res://Assets/TEMP Textures/Texturelabs_Soil_135S2.png" id="1_22fe0"]
-[ext_resource type="ArrayMesh" uid="uid://ohwiaq4ohj" path="res://Assets/New Models/Ground2Flat.glb" id="2_hw7cb"]
+[ext_resource type="ArrayMesh" uid="uid://ohwiaq4ohj" path="res://Assets/New Models/Ground/Ground2Flat.glb" id="2_hw7cb"]
 [ext_resource type="Texture2D" uid="uid://cmxe2ysevsibu" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1_TreeTotal3.png" id="3_afrrb"]
 [ext_resource type="MultiMesh" uid="uid://cijc38x00ke3q" path="res://Assets/MultiMeshs/LoopTest3_Trees2.tres" id="4_nibkx"]
 [ext_resource type="Texture2D" uid="uid://cirvapbk242fi" path="res://Assets/New Models/Foliage/Ferns/Fern1_Untitled.png" id="5_3c8nk"]
@@ -15,6 +15,14 @@
 [ext_resource type="ArrayMesh" uid="uid://chfulklusue0m" path="res://Assets/New Models/Foliage/Trees/Tree1Mesh.obj" id="11_nibkx"]
 [ext_resource type="ArrayMesh" uid="uid://w2v3c11xv26e" path="res://Assets/New Models/Foliage/Ferns/Fern1.glb" id="12_3c8nk"]
 [ext_resource type="ArrayMesh" uid="uid://dx054q88wled0" path="res://Assets/New Models/Foliage/Trees/Shrub1.glb" id="13_l7hjs"]
+[ext_resource type="Texture2D" uid="uid://c6jxe4jn6h15s" path="res://Assets/TEMP Textures/DirtPath2.png" id="16_bqx28"]
+[ext_resource type="Texture2D" uid="uid://c6bqxx50h3gau" path="res://Assets/TEMP Textures/Texturelabs_Wood_156S2.png" id="17_otr88"]
+[ext_resource type="Texture2D" uid="uid://uhajwq6h1bjk" path="res://Assets/TEMP Textures/Texturelabs_Brick_126S2.png" id="18_6vbjh"]
+[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="19_rb32r"]
+[ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="20_kuiug"]
+[ext_resource type="Texture2D" uid="uid://dqvjoju1a4ljd" path="res://Assets/TEMP Textures/Texturelabs_Soil_128S.png" id="21_6vbjh"]
+[ext_resource type="Texture2D" uid="uid://5blv1d8aqmmo" path="res://Assets/TEMP Textures/Texturelabs_Stone_138S.png" id="22_kuiug"]
+[ext_resource type="ArrayMesh" uid="uid://bqosult284ehq" path="res://Assets/New Models/Rocks/RockWall_VertWide.glb" id="23_ihj1m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcpsh"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -23,9 +31,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="Curve3D" id="Curve3D_duwrd"]
 _data = {
@@ -83,9 +88,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1tos"]
 albedo_texture = ExtResource("8_05rny")
@@ -240,6 +242,75 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("3_afrrb")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhy7d"]
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("1_22fe0")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sn0t7"]
+size = Vector2(100, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqnl4"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("16_bqx28")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.25, 10, 1)
+uv1_offset = Vector3(0, -0.74, 1)
+texture_filter = 0
+distance_fade_mode = 2
+distance_fade_min_distance = 75.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="Curve3D" id="Curve3D_otr88"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -95.40801, -0.5805664, 100.81407, 0, 0, 0, 0, 0, 0, -97.084724, -0.5805664, 107.760506, 0, 0, 0, 0, 0, 0, -100.6777, -0.5805664, 114.70694, 0, 0, 0, 0, 0, 0, -105.94741, -0.5805664, 122.37196, 0, 0, 0, 0, 0, 0, -108.342735, -0.5805664, 128.83934, 0, 0, 0, 0, 0, 0, -107.14507, -0.5805664, 136.98343, 0, 0, 0, 0, 0, 0, -102.35444, -0.5805664, 142.49268, 0, 0, 0, 0, 0, 0, -93.252205, -0.5805664, 147.04378, 0, 0, 0, 0, 0, 0, -86.30578, -0.5805664, 150.39723, 0, 0, 0, 0, 0, 0, -83.67092, -0.5805664, 157.82272, 0, 0, 0, 0, 0, 0, -86.54531, -0.5805664, 164.76915, 0, 0, 0, 0, 0, 0, -88.94062, -0.5805664, 171.23653, 0, 0, 0, 0, 0, 0, -87.982506, -0.5805664, 178.42249, 0, 0, 0, 0, 0, 0, -86.30578, -0.5805664, 184.41078, 0, 0, 0, 0, 0, 0, -82.23373, -0.5805664, 189.44096, 0, 0, 0, 0, 0, 0, -76.24543, -0.5805664, 194.71066, 0, 0, 0, 0, 0, 0, -69.299, -0.5805664, 199.74084, 0, 0, 0, 0, 0, 0, -65.22695, -0.5805664, 207.16635, 0, 0, 0, 0, 0, 0, -65.706, -0.5805664, 213.39418, 0, 0, 0, 0, 0, 0, -72.17338, -0.5805664, 218.18483, 0, 0, 0, 0, 0, 0, -78.40121, -0.5805664, 218.18483, 0, 0, 0, 0, 0, 0, -84.15, -0.5805664, 216.74763, 0, 0, 0, 0, 0, 0, -88.22202, -0.5805664, 212.43605, 0, 0, 0, 0, 0, 0, -90.1383, -0.5805664, 206.20822, 0, 0, 0, 0, 0, 0, -87.982506, -0.5805664, 200.9385, 0, 0, 0, 0, 0, 0, -86.066246, -0.5805664, 195.42928, 0, 0, 0, 0, 0, 0, -83.31898, -0.5805664, 188.59619),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 27
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihj1m"]
+albedo_texture = ExtResource("17_otr88")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_offset = Vector3(0, 0.5, 0)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhw8q"]
+albedo_texture = ExtResource("18_6vbjh")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_offset = Vector3(0, 0, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_144x3"]
+albedo_texture = ExtResource("19_rb32r")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_offset = Vector3(0, 0, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwpg1"]
+albedo_texture = ExtResource("20_kuiug")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb32r"]
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("21_6vbjh")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o82vf"]
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("22_kuiug")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_offset = Vector3(0, -0.315, 0)
+uv1_triplanar = true
 texture_filter = 0
 
 [node name="Loop2" type="Node3D" unique_id=378762720]
@@ -555,3 +626,237 @@ mesh = ExtResource("13_l7hjs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 visible = false
 mesh = ExtResource("5_l7hjs")
+
+[node name="OnFoot" type="Node3D" parent="." unique_id=480099808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.20424, 0, 144.66196)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OnFoot" unique_id=1241729744]
+transform = Transform3D(0.94512004, 0, 0.3267233, 0, 1, 0, -0.3267233, 0, 0.94512004, 12.605022, -0.7236972, 48.48082)
+material_override = SubResource("StandardMaterial3D_xhy7d")
+mesh = SubResource("PlaneMesh_sn0t7")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="OnFoot" unique_id=128546247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.20424, 0, -144.66196)
+polygon = PackedVector2Array(-2.1, 0, -2, 0, 2, 0, 2.1, 0, 2.1, -1, -2.1, -1)
+mode = 2
+path_node = NodePath("Path3D12")
+path_interval_type = 1
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 1
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.56
+path_joined = false
+material = SubResource("StandardMaterial3D_tqnl4")
+metadata/_edit_lock_ = true
+
+[node name="Path3D12" type="Path3D" parent="OnFoot/CSGPolygon3D2" unique_id=368819726]
+curve = SubResource("Curve3D_otr88")
+metadata/_edit_lock_ = true
+
+[node name="Cabin1" type="Node3D" parent="OnFoot" unique_id=1717880751]
+transform = Transform3D(0.8104988, 0, 0.39126927, 0, 0.9, 0, -0.39126927, 0, 0.8104988, 29.716095, 3.8236694, 65.17207)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1104446059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1445923, -2.9240718, -6.495941)
+size = Vector3(1.6685867, 2.7560754, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=362685316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695831, -2.3717144, -6.495941)
+size = Vector3(2.9272618, 1.7081499, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=610984987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4871826, -2.3774517, -6.4959717)
+size = Vector3(1.9569397, 1.6966753, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=425246474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445087, -0.5372381, -6.4959593)
+size = Vector3(9.441475, 2.0343418, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=121581117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7326355, -4.9169188, -2.4713135)
+size = Vector3(9.5871315, 1.338459, 8.365524)
+material = SubResource("StandardMaterial3D_dhw8q")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=854940681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7327805, -4.380644, -8.748859)
+size = Vector3(9.586765, 0.2659092, 4.270672)
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1594766214]
+transform = Transform3D(1, -1.3123805e-08, -2.0166482e-09, 1.3123804e-08, 0.95386446, 0.30023766, -2.0166517e-09, -0.30023766, 0.95386446, -1.7454367, -0.5368614, -8.633818)
+size = Vector3(9.054345, 0.2659092, 4.5064907)
+material = SubResource("StandardMaterial3D_rwpg1")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=196273492]
+transform = Transform3D(1, -2.8042116e-08, -1.0180429e-08, 2.8042118e-08, 0.7670989, 0.64152884, -1.01804325e-08, -0.64152884, 0.7670989, -1.7220888, 2.174458, -4.5277395)
+size = Vector3(9.784338, 0.2659092, 5.535472)
+material = SubResource("StandardMaterial3D_rwpg1")
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1755150165]
+transform = Transform3D(-1, -2.8042109e-08, 7.724234e-08, 2.804212e-08, 0.7670989, 0.64152884, -7.724234e-08, 0.64152884, -0.7670989, -1.7220898, 2.174458, -0.441123)
+size = Vector3(9.784338, 0.2659092, 5.535472)
+material = SubResource("StandardMaterial3D_rwpg1")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=712329529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4372034, -3.7936106, -6.4959564)
+size = Vector3(6.059433, 1.1280899, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1179353937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, -1.9378252, 1.5663042)
+size = Vector3(9.449097, 4.8396606, 0.19238281)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1192236944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3627014, -1.9386187, -2.4494934)
+size = Vector3(0.2084961, 4.8380737, 7.9356995)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1091287910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619623, -0.45271015, -2.4988375)
+size = Vector3(0.9058838, 10.450882, 1.523386)
+material = SubResource("StandardMaterial3D_dhw8q")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=411880767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5932322, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=58497415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1263895, -3.4650278, -10.601679)
+size = Vector3(0.11798096, 4.4262466, 0.23190784)
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=113594549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667603, -1.9459429, -2.4662476)
+size = Vector3(0.2084961, 4.8234253, 7.9022675)
+material = SubResource("StandardMaterial3D_ihj1m")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="OnFoot/Cabin1" unique_id=1198772238]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9569502, 0.440269, -2.43369)
+polygon = PackedVector2Array(4, 0, -4, 0, 0, 3.5)
+depth = 0.19
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="OnFoot/Cabin1" unique_id=208134939]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.2940626, 0.440269, -2.43369)
+polygon = PackedVector2Array(4, 0, -4, 0, 0, 3.5)
+depth = 0.19
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="OnFoot/Cabin1" unique_id=330504779]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0147753, -1.1950011, -6.50112)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="OnFoot/Cabin1" unique_id=956174113]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6514978, -1.1950011, -6.501122)
+polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
+depth = 0.19
+material = SubResource("StandardMaterial3D_144x3")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="OnFoot" unique_id=1044385611]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 24.651154, -0.58119226, 60.94377)
+material_override = SubResource("StandardMaterial3D_rb32r")
+polygon = PackedVector2Array(-10.20903, -1.399704, -8.19413, 5.0865173, -4.6044083, 15.107071, 3.6130219, 9.008591, 9.06945, 4.060425, 12.254753, -2.2812958, 11.831535, -6.3376923, 8.805923, -10.080566, 4.865593, -11.900757, -4.2336426, -10.587173, -8.190475, -6.7488556, -9.809662, -4.262741)
+depth = 0.1
+
+[node name="Rocks" type="Node3D" parent="." unique_id=639867754]
+
+[node name="RockWallVertWide" type="MeshInstance3D" parent="Rocks" unique_id=1529972151]
+transform = Transform3D(0.50580907, -0.2037663, -0.8382342, 7.450581e-09, 0.9717018, -0.23621096, 0.8626455, 0.11947763, 0.49149558, -138.70512, -11.969395, -163.07253)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide7" type="MeshInstance3D" parent="Rocks" unique_id=721104145]
+transform = Transform3D(0.74109846, 0.15859115, 0.652397, 2.4770817e-08, 0.97170186, -0.23621099, -0.6713964, 0.17505556, 0.7201267, -133.41924, -11.522575, -162.50266)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide8" type="MeshInstance3D" parent="Rocks" unique_id=916628281]
+transform = Transform3D(0.9995887, -0.0067737536, -0.02786517, -0.01934971, 0.55783516, -0.82972616, 0.021164455, 0.8299242, 0.55747443, -135.23456, -9.693594, -170.66585)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide2" type="MeshInstance3D" parent="Rocks" unique_id=721653088]
+transform = Transform3D(0.8030589, -0.14075798, -0.5790368, 2.3250667e-08, 0.9717019, -0.23621097, 0.59589964, 0.18969129, 0.7803338, -149.92738, -11.969395, -176.77263)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide3" type="MeshInstance3D" parent="Rocks" unique_id=17501829]
+transform = Transform3D(0.94233865, -0.07905057, -0.32519078, 2.3250667e-08, 0.9717019, -0.23621097, 0.334661, 0.22259067, 0.9156722, -166.29771, -11.969391, -185.75102)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide4" type="MeshInstance3D" parent="Rocks" unique_id=1446680452]
+transform = Transform3D(0.9990623, -0.01022806, -0.042075314, 2.8237505e-08, 0.9717019, -0.23621096, 0.04330053, 0.23598936, 0.9707905, -183.7663, -11.969391, -189.23907)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide5" type="MeshInstance3D" parent="Rocks" unique_id=1577153564]
+transform = Transform3D(0.991956, 0.02990054, 0.12300189, 2.8237503e-08, 0.97170186, -0.23621094, -0.12658413, 0.23431078, 0.9638853, -201.8048, -11.969391, -189.15884)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide6" type="MeshInstance3D" parent="Rocks" unique_id=832296147]
+transform = Transform3D(0.956011, 0.069287956, 0.2850301, 2.635125e-08, 0.9717018, -0.23621091, -0.29333097, 0.22582017, 0.92895746, -219.5619, -11.969391, -185.58374)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide9" type="MeshInstance3D" parent="Rocks" unique_id=139027189]
+transform = Transform3D(0.7728449, 0.1498982, 0.616637, 2.9103116e-08, 0.9717018, -0.2362109, -0.634595, 0.18255436, 0.7509747, -235.3945, -11.969395, -177.85283)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide10" type="MeshInstance3D" parent="Rocks" unique_id=91464709]
+transform = Transform3D(0.6038043, 0.18829137, 0.7745751, 3.8559318e-08, 0.9717018, -0.23621091, -0.7971326, 0.14262515, 0.58671767, -247.93213, -11.969395, -165.50314)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide11" type="MeshInstance3D" parent="Rocks" unique_id=150131656]
+transform = Transform3D(0.5222777, 0.2014348, 0.8286434, 3.8559318e-08, 0.9717018, -0.23621091, -0.85277545, 0.1233677, 0.5074982, -257.70404, -11.969395, -150.99341)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide12" type="MeshInstance3D" parent="Rocks" unique_id=1006316949]
+transform = Transform3D(0.38816154, 0.21768986, 0.8955118, 4.5358277e-08, 0.9717018, -0.23621091, -0.92159134, 0.09168802, 0.37717736, -266.07587, -11.969395, -135.28918)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide13" type="MeshInstance3D" parent="Rocks" unique_id=1740587967]
+transform = Transform3D(0.38816154, 0.21768986, 0.8955118, 4.5358277e-08, 0.9717018, -0.23621091, -0.92159134, 0.09168802, 0.37717736, -273.18942, -11.969397, -119.00321)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide14" type="MeshInstance3D" parent="Rocks" unique_id=879978268]
+transform = Transform3D(0.5473727, 0.19768223, 0.8132063, 5.9091057e-08, 0.9717018, -0.23621091, -0.8368889, 0.12929541, 0.5318831, -281.66693, -11.969397, -104.048294)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide15" type="MeshInstance3D" parent="Rocks" unique_id=1289951898]
+transform = Transform3D(0.6570529, 0.17806621, 0.7325118, 5.9091057e-08, 0.9717018, -0.23621091, -0.7538444, 0.15520306, 0.6384595, -292.6993, -11.969397, -90.28748)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide16" type="MeshInstance3D" parent="Rocks" unique_id=442866622]
+transform = Transform3D(0.72403896, 0.16292854, 0.6702399, 7.032421e-08, 0.9717018, -0.23621093, -0.689759, 0.1710259, 0.70355, -304.95966, -11.969397, -77.86983)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide17" type="MeshInstance3D" parent="Rocks" unique_id=1679635150]
+transform = Transform3D(0.64490527, 0.18052708, 0.7426351, 7.0324205e-08, 0.97170174, -0.23621091, -0.7642626, 0.15233363, 0.6266557, -317.50537, -11.969397, -65.36188)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")
+
+[node name="RockWallVertWide18" type="MeshInstance3D" parent="Rocks" unique_id=741413347]
+transform = Transform3D(0.44447452, 0.21159562, 0.8704419, 7.210277e-08, 0.97170174, -0.23621094, -0.89579153, 0.10498975, 0.43189687, -327.6809, -11.969397, -50.36175)
+material_override = SubResource("StandardMaterial3D_o82vf")
+mesh = ExtResource("23_ihj1m")

@@ -3,13 +3,13 @@
 importer="ArrayMesh"
 importer_version=1
 type="ArrayMesh"
-uid="uid://brc0idkbq0mwm"
-path="res://.godot/imported/Ground1Flat.glb-9c7a78ef63149da8a7322ef217906b20.res"
+uid="uid://ohwiaq4ohj"
+path="res://.godot/imported/Ground2Flat.glb-50c8e64b25e9c1d1199e571bb7670dc2.res"
 
 [deps]
 
-source_file="res://Assets/New Models/Ground1Flat.glb"
-dest_files=["res://.godot/imported/Ground1Flat.glb-9c7a78ef63149da8a7322ef217906b20.res"]
+source_file="res://Assets/New Models/Ground/Ground2Flat.glb"
+dest_files=["res://.godot/imported/Ground2Flat.glb-50c8e64b25e9c1d1199e571bb7670dc2.res"]
 
 [params]
 

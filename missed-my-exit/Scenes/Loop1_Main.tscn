@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c3racmmd44n7e"]
 
 [ext_resource type="Texture2D" uid="uid://bbqfrppaa71n0" path="res://Assets/TEMP Textures/Texturelabs_Soil_135S2.png" id="1_mh5qh"]
-[ext_resource type="ArrayMesh" uid="uid://brc0idkbq0mwm" path="res://Assets/New Models/Ground1Flat.glb" id="2_ui3fn"]
+[ext_resource type="ArrayMesh" uid="uid://brc0idkbq0mwm" path="res://Assets/New Models/Ground/Ground1Flat.glb" id="2_ui3fn"]
 [ext_resource type="Texture2D" uid="uid://cmxe2ysevsibu" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1_TreeTotal3.png" id="3_sm37y"]
 [ext_resource type="MultiMesh" uid="uid://uhealh18lrxx" path="res://Assets/MultiMeshs/LoopTest3_Trees1.tres" id="4_na32f"]
 [ext_resource type="Texture2D" uid="uid://cirvapbk242fi" path="res://Assets/New Models/Foliage/Ferns/Fern1_Untitled.png" id="5_akdfh"]
@@ -31,9 +31,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
 transparency = 2
@@ -75,9 +72,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1tos"]
 albedo_texture = ExtResource("10_wijvg")
@@ -85,9 +79,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="Curve3D" id="Curve3D_4v7s2"]
 _data = {

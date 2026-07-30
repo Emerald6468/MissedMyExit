@@ -45,6 +45,7 @@ texture_filter = 0
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
 [node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("2_e6hmg")]
+visible = false
 
 [node name="Events" type="Node3D" parent="Loop1" unique_id=128377468]
 
@@ -94,7 +95,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392.66187, -0.6125488, 379.4
 [node name="Loop1_Entrance" parent="Loop1" unique_id=878268101 instance=ExtResource("6_slsem")]
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
-visible = false
 
 [node name="Events" type="Node3D" parent="Loop2" unique_id=649250298]
 
@@ -114,6 +114,9 @@ debug_color = Color(0, 11.708403, 13.469126, 1)
 action = "Hide"
 trigger = NodePath("..")
 target = NodePath("../../../../Loop1")
+
+[node name="Loop1_Clearing" parent="Loop2" unique_id=256311221 instance=ExtResource("5_slsem")]
+transform = Transform3D(0.67406327, 0, 0.7386736, 0, 1, 0, -0.7386736, 0, 0.67406327, -179.89255, -0.6125488, 48.13731)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
 environment = SubResource("Environment_2rq0p")

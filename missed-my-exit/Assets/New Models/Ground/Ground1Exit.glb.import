@@ -4,12 +4,12 @@ importer="ArrayMesh"
 importer_version=1
 type="ArrayMesh"
 uid="uid://c1suloi2eomnd"
-path="res://.godot/imported/Ground1Exit.glb-e138c8a3e1eec8b6fe3bdf79a1c9689d.res"
+path="res://.godot/imported/Ground1Exit.glb-51b2b22a36f0f0ac541e81ce597fdece.res"
 
 [deps]
 
-source_file="res://Assets/New Models/Ground1Exit.glb"
-dest_files=["res://.godot/imported/Ground1Exit.glb-e138c8a3e1eec8b6fe3bdf79a1c9689d.res"]
+source_file="res://Assets/New Models/Ground/Ground1Exit.glb"
+dest_files=["res://.godot/imported/Ground1Exit.glb-51b2b22a36f0f0ac541e81ce597fdece.res"]
 
 [params]
 
