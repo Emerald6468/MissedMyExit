@@ -153,6 +153,8 @@ stream = ExtResource("7_63ty5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0043018, 0.6006232, 0)
 
 [node name="DriversDoor" type="Area3D" parent="PlayerPoint" unique_id=508734790]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerPoint/DriversDoor" unique_id=690483299]
 transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 0, 0, 0)
