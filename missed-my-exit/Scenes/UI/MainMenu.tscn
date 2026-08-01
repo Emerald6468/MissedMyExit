@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://dho2m32wvc282"]
 
+[ext_resource type="Script" uid="uid://d3gnect0uwo1q" path="res://Scripts/main_menu.gd" id="1_72sra"]
+[ext_resource type="Texture2D" uid="uid://cmxror6peafu" path="res://Assets/UI/titlebacking5.png" id="1_mjmdf"]
+[ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="2_72sra"]
+
 [node name="MainMenu" type="Control" unique_id=1253760560]
 layout_mode = 3
 anchors_preset = 15
@@ -7,18 +11,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_72sra")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=938445889]
 
-[node name="tempbackground" type="ColorRect" parent="CanvasLayer" unique_id=1241944163]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.3882353, 0.19215687, 0.16862746, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/tempbackground" unique_id=255597846]
-layout_mode = 0
+[node name="Title" type="Control" parent="." unique_id=968000715]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Title" unique_id=1270834829]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 132.0
+offset_right = 3513.0
+offset_bottom = 1027.0
+scale = Vector2(0.246, 0.246)
+texture = ExtResource("1_mjmdf")
+region_rect = Rect2(0, 0, 500, 500)
+patch_margin_left = 157
+patch_margin_top = 158
+patch_margin_right = 166
+patch_margin_bottom = 160
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Title/NinePatchRect" unique_id=474949895]
+layout_mode = 0
+offset_left = 211.38202
+offset_top = 256.09753
+offset_right = 838.382
+offset_bottom = 343.09753
+scale = Vector2(4.253282, 4.253282)
+theme = ExtResource("2_72sra")
+theme_override_font_sizes/normal_font_size = 100
+text = "MISSED MY EXIT"
+scroll_active = false
+
+[node name="ButtonBox" type="VBoxContainer" parent="." unique_id=1414278138]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 412.0
+offset_right = 1306.0
+offset_bottom = 1002.0
+theme = ExtResource("2_72sra")
+theme_override_constants/separation = 57
+
+[node name="StartButton" type="Button" parent="ButtonBox" unique_id=1997845327]
+layout_mode = 2
+theme = ExtResource("2_72sra")
+text = "START"
+
+[node name="SettingsButton" type="Button" parent="ButtonBox" unique_id=673568276]
+layout_mode = 2
+theme = ExtResource("2_72sra")
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="ButtonBox" unique_id=764440848]
+layout_mode = 2
+theme = ExtResource("2_72sra")
+text = "QUIT"
+
+[connection signal="pressed" from="ButtonBox/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ButtonBox/QuitButton" to="." method="_on_quit_button_pressed"]
