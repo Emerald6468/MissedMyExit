@@ -13,6 +13,9 @@ extends Node3D
 @export_tool_button("Generate") var button = generate
 @export_tool_button("Create Map") var button2 = create_map
 
+func _ready() -> void:
+	generate()
+
 func generate():
 	$MeshInstance3D.mesh = ArrayMesh.new()
 	mesh = $MeshInstance3D.mesh
