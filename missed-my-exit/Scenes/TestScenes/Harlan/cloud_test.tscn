@@ -9,6 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://d2kqdlfy44ad7" path="res://Assets/Textures/Nature/NewTreeLine.png" id="7_vruap"]
 [ext_resource type="Script" uid="uid://b3mu7ah4nvy8f" path="res://Scenes/TestScenes/Harlan/cloud_layer.gd" id="7_xytqx"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("7_vruap")
+uv1_scale = Vector3(0.034, 0.034, 0.034)
+uv1_triplanar = true
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mt1ur"]
 panorama = ExtResource("4_orwy2")
 
@@ -29,7 +37,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(876.00964, 0, 0)
+offset = Vector3(154.1048, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sn0t7"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -58,22 +66,45 @@ _data = {
 }
 point_count = 46
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("7_vruap")
-uv1_scale = Vector3(0.034, 0.034, 0.034)
-uv1_triplanar = true
-
 [node name="CloudTest" type="Node3D" unique_id=1868052408]
 
 [node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("1_j53vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -136.03854, -10.2818985, -8.152693)
 
 [node name="Loop1_Clearing" parent="Loop1" unique_id=77879138 instance=ExtResource("2_vruap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392.66187, -0.6125488, 379.42218)
 
-[node name="Loop1_Entrance" parent="Loop1" unique_id=878268101 instance=ExtResource("3_xytqx")]
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Loop1" unique_id=1024252201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+polygon = PackedVector2Array(20, 0, 20, 30, 21, 30, 21, 0)
+mode = 2
+path_node = NodePath("../../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Loop1" unique_id=262161551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
+material_override = SubResource("StandardMaterial3D_bhunq")
+polygon = PackedVector2Array(-20, 0, -20, 30, -21, 30, -21, 0)
+mode = 2
+path_node = NodePath("../../Path3D")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=993602935]
 environment = SubResource("Environment_2iqqs")
@@ -81,6 +112,7 @@ environment = SubResource("Environment_2iqqs")
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("5_x5511")]
 transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, -3.6970818, 0.831573, 1.4011242)
 collision_layer = 2
+axis_lock_angular_z = false
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("6_bblvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.151239, 1.7096262)
@@ -102,34 +134,4 @@ scroll_speed = 0.05
 curve = SubResource("Curve3D_xytqx")
 metadata/_edit_lock_ = true
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1024252201]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
-material_override = SubResource("StandardMaterial3D_bhunq")
-polygon = PackedVector2Array(20, 0, 20, 30, 21, 30, 21, 0)
-mode = 2
-path_node = NodePath("../Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="." unique_id=262161551]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7065859, 0)
-material_override = SubResource("StandardMaterial3D_bhunq")
-polygon = PackedVector2Array(-20, 0, -20, 30, -21, 30, -21, 0)
-mode = 2
-path_node = NodePath("../Path3D")
-path_interval_type = 1
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
+[node name="Loop1_Entrance" parent="." unique_id=878268101 instance=ExtResource("3_xytqx")]

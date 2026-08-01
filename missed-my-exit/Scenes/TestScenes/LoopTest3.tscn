@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="12_8lrox"]
 [ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="13_27tf7"]
+[ext_resource type="PackedScene" uid="uid://cblcjjch06cra" path="res://Scenes/Vista.tscn" id="13_slsem"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
 size = Vector3(1, 5.1224365, 9.735809)
@@ -45,7 +46,6 @@ texture_filter = 0
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
 [node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("2_e6hmg")]
-visible = false
 
 [node name="Events" type="Node3D" parent="Loop1" unique_id=128377468]
 
@@ -95,6 +95,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -392.66187, -0.6125488, 379.4
 [node name="Loop1_Entrance" parent="Loop1" unique_id=878268101 instance=ExtResource("6_slsem")]
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
+visible = false
 
 [node name="Events" type="Node3D" parent="Loop2" unique_id=649250298]
 
@@ -143,6 +144,8 @@ mesh = ExtResource("5_jwy6e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7670162, 0.58147043, -11.20449)
 visible = false
 mesh = ExtResource("7_tl8tx")
+
+[node name="Vista" parent="." unique_id=356840638 instance=ExtResource("13_slsem")]
 
 [connection signal="body_entered" from="Loop1/Events/HideEntrance" to="Loop1/Events/HideEntrance" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop1/Events/ShowLoop2" to="Loop1/Events/ShowLoop2" method="_on_body_entered"]
