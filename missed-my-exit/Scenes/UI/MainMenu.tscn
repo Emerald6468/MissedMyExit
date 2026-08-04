@@ -16,16 +16,24 @@ script = ExtResource("1_72sra")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=938445889]
 
 [node name="Title" type="Control" parent="." unique_id=968000715]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -399.0
+offset_right = -316.0
+offset_bottom = -359.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(337, 97)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Title" unique_id=1270834829]
-layout_mode = 0
-offset_left = 531.0
-offset_top = 132.0
-offset_right = 3513.0
-offset_bottom = 1027.0
+layout_mode = 1
+offset_right = 2982.0
+offset_bottom = 895.0
 scale = Vector2(0.246, 0.246)
 texture = ExtResource("1_mjmdf")
 region_rect = Rect2(0, 0, 500, 500)
@@ -47,13 +55,21 @@ text = "MISSED MY EXIT"
 scroll_active = false
 
 [node name="ButtonBox" type="VBoxContainer" parent="." unique_id=1414278138]
-layout_mode = 0
-offset_left = 527.0
-offset_top = 412.0
-offset_right = 1306.0
-offset_bottom = 1002.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.5
+offset_top = -61.0
+offset_right = 101.5
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("2_72sra")
 theme_override_constants/separation = 57
+alignment = 1
 
 [node name="StartButton" type="Button" parent="ButtonBox" unique_id=1997845327]
 layout_mode = 2
