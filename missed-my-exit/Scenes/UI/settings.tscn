@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dacnxvh5sonxi"]
+
+[ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="1_p46qs"]
+[ext_resource type="Script" uid="uid://bi1iyalebps13" path="res://Scripts/settings.gd" id="2_ygnii"]
+[ext_resource type="AudioStream" uid="uid://c4hjdg0o7days" path="res://Assets/AUDIO/Music/skyline.mp3" id="3_p46qs"]
+
+[node name="Settings" type="Control" unique_id=961389123]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_p46qs")
+script = ExtResource("2_ygnii")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1972603081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1231493468]
+layout_mode = 2
+
+[node name="Vol_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2045215658]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=870542483]
+layout_mode = 2
+
+[node name="Mute_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2088491415]
+layout_mode = 2
+text = "Mute
+"
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=363570744]
+layout_mode = 2
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=259257391]
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=446553917]
+stream = ExtResource("3_p46qs")
+autoplay = true
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
