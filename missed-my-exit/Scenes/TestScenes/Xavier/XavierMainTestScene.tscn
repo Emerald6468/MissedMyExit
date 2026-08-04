@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c6ivtavog5mq1" path="res://Assets/New Models/Car Parts/Steering Wheel/SteeringWheel.glb" id="8_axo4d"]
 [ext_resource type="PackedScene" uid="uid://dhl7uvyaqnrq2" path="res://Assets/New Models/Car Parts/Dashboard/Dashboard.glb" id="9_yeci8"]
 [ext_resource type="PackedScene" uid="uid://c368ffp70oslf" path="res://Assets/New Models/Tools/Axe/Axe.glb" id="10_yeci8"]
+[ext_resource type="PackedScene" uid="uid://m384o3sk0ov4" path="res://Assets/New Models/Tools/Surveying Camera/Camera.glb" id="11_twi4o"]
+[ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="12_u8usa"]
 
 [node name="MainTestScene" type="Node2D" unique_id=1211951512]
 
@@ -62,3 +64,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32314, -3.2742417, -4.47959
 
 [node name="Axe" parent="." unique_id=381552103 instance=ExtResource("10_yeci8")]
 transform = Transform3D(0.38531575, 0, -0.9227848, 0, 1, 0, 0.9227848, 0, 0.38531575, 9.766832, -0.42900658, -0.2133112)
+
+[node name="Camera" parent="." unique_id=1830799456 instance=ExtResource("11_twi4o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62996006, 1.0441182, 5.2564077)
+
+[node name="Wheel5" parent="." unique_id=1645380549 instance=ExtResource("12_u8usa")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.7491641, 0.69997406, 6.906412)
