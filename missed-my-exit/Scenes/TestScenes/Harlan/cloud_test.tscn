@@ -37,7 +37,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(154.1048, 0, 0)
+offset = Vector3(353.23727, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_sn0t7"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -50,6 +50,7 @@ transparency = 1
 shading_mode = 0
 albedo_color = Color(0.4108, 0.46357995, 0.52, 1)
 albedo_texture = SubResource("NoiseTexture2D_sn0t7")
+uv1_scale = Vector3(10, 10, 10)
 proximity_fade_distance = 4096.0
 distance_fade_mode = 1
 distance_fade_min_distance = 500.0
@@ -57,7 +58,7 @@ distance_fade_max_distance = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
 material = SubResource("StandardMaterial3D_riqys")
-size = Vector2(1000, 1000)
+size = Vector2(10000, 10000)
 
 [sub_resource type="Curve3D" id="Curve3D_xytqx"]
 _data = {

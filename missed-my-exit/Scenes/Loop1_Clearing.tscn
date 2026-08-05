@@ -7,6 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dw02x1o0l3etp" path="res://Assets/New Models/Foliage/Trees/ShortTree.glb" id="4_q0q7q"]
 [ext_resource type="ArrayMesh" uid="uid://w2v3c11xv26e" path="res://Assets/New Models/Foliage/Ferns/Fern1.glb" id="7_gpwek"]
 [ext_resource type="ArrayMesh" uid="uid://dx054q88wled0" path="res://Assets/New Models/Foliage/Trees/Shrub1.glb" id="8_ccjhu"]
+[ext_resource type="Texture2D" uid="uid://d2kqdlfy44ad7" path="res://Assets/Textures/Nature/NewTreeLine.png" id="8_xogdk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb3kg"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -15,9 +16,6 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 texture_filter = 0
-distance_fade_mode = 2
-distance_fade_min_distance = 75.0
-distance_fade_max_distance = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
 size = Vector2(100, 100)
@@ -135,6 +133,36 @@ cull_mode = 2
 albedo_texture = ExtResource("2_xogdk")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm785"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("8_xogdk")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.026, 0.026, 0.026)
+uv1_offset = Vector3(0, 0, 0.46)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_86pfd"]
+size = Vector2(90, 35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ak8am"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("8_xogdk")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.027, 0.027, 0.027)
+uv1_offset = Vector3(0, 0, -0.45)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q48x2"]
+size = Vector2(50, 35)
+
 [node name="Loop1_Clearing" type="Node3D" unique_id=77879138]
 
 [node name="Ground1" type="MeshInstance3D" parent="." unique_id=1095003082]
@@ -237,3 +265,25 @@ mesh = ExtResource("8_ccjhu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 visible = false
 mesh = ExtResource("4_q0q7q")
+
+[node name="Walls" type="Node3D" parent="." unique_id=1429988923]
+
+[node name="Wall1" type="MeshInstance3D" parent="Walls" unique_id=725929865]
+transform = Transform3D(0.94107574, -0.33819574, -5.9614145e-08, -5.9967654e-08, -2.980233e-08, -1, 0.3381957, 0.9410761, -4.3585814e-08, 10.498243, 17.07403, -37.684742)
+material_override = SubResource("StandardMaterial3D_nm785")
+mesh = SubResource("PlaneMesh_86pfd")
+
+[node name="Wall3" type="MeshInstance3D" parent="Walls" unique_id=1639686986]
+transform = Transform3D(-0.14644176, 0.98921955, -1.025723e-08, -5.996765e-08, -2.9802326e-08, -1, -0.98921925, -0.14644192, 7.313248e-08, -47.978466, 17.07403, 6.0708733)
+material_override = SubResource("StandardMaterial3D_nm785")
+mesh = SubResource("PlaneMesh_86pfd")
+
+[node name="Wall5" type="MeshInstance3D" parent="Walls" unique_id=1371872621]
+transform = Transform3D(0.9265783, 0.37610215, 2.9802322e-08, 5.536899e-09, 2.982349e-08, -1, -0.3761021, 0.9265783, 2.9802322e-08, -31.899113, 16.417612, -41.555763)
+material_override = SubResource("StandardMaterial3D_ak8am")
+mesh = SubResource("PlaneMesh_q48x2")
+
+[node name="Wall2" type="MeshInstance3D" parent="Walls" unique_id=779255614]
+transform = Transform3D(-0.98405355, -0.17787261, 5.1941193e-08, -4.47729e-08, -4.2840842e-08, -1, 0.17787261, -0.98405355, 3.4977067e-08, 0.70475674, 17.279259, 44.119278)
+material_override = SubResource("StandardMaterial3D_nm785")
+mesh = SubResource("PlaneMesh_86pfd")

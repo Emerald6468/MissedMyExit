@@ -16,15 +16,22 @@ func _ready() -> void:
 		$Sprite3D.visible = true
 		get_tree().root.add_child(line1)
 		get_tree().root.add_child(line2)
+	else:
+		$Sprite3D.visible = false
 
 func _process(delta: float) -> void:
 	# Code to execute in editor.
 	if Engine.is_editor_hint():
-		if trigger != null:
+		if trigger != null && is_visible_in_tree():
 			line1.drawDebugLine(trigger.global_position, global_position)
 		else:
 			line1.clearDebugLine()
-		if target != null:
+		if target != null && is_visible_in_tree():
 			line2.drawDebugLine(global_position, target.global_position)
 		else:
 			line2.clearDebugLine()
+
+func _exit_tree() -> void:
+	if Engine.is_editor_hint():
+		line1.clearDebugLine()
+		line2.clearDebugLine()
