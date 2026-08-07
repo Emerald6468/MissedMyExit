@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Escape") and !one_time:
 		one_time = true
 		paused = !paused
-	if Input.is_action_just_released("Escape"): one_time = false
+	if Input.is_action_just_released("Escape"): queue_
 	if paused:
 		visible = true
 		animation_player.play("FadeIn")
