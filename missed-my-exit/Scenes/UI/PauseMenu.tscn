@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b603q7kfy1o2n"]
 
 [ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="1_n4i8v"]
+[ext_resource type="Script" uid="uid://ccu2ckhkpojhh" path="res://Scripts/pause_menu.gd" id="2_2bpff"]
 [ext_resource type="Texture2D" uid="uid://cmxror6peafu" path="res://Assets/UI/titlebacking5.png" id="2_238ko"]
 
 [sub_resource type="Animation" id="Animation_n4i8v"]
@@ -9,7 +10,7 @@ length = 1.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -21,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/path = NodePath("CanvasLayer/NinePatchRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -33,7 +34,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("NinePatchRect2:visible")
+tracks/2/path = NodePath("CanvasLayer/NinePatchRect2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -45,7 +46,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("NinePatchRect3:visible")
+tracks/3/path = NodePath("CanvasLayer/NinePatchRect3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -57,7 +58,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("RichTextLabel:visible")
+tracks/4/path = NodePath("CanvasLayer/RichTextLabel:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -72,7 +73,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -84,7 +85,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/path = NodePath("CanvasLayer/NinePatchRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -96,7 +97,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("NinePatchRect2:visible")
+tracks/2/path = NodePath("CanvasLayer/NinePatchRect2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -108,7 +109,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("NinePatchRect3:visible")
+tracks/3/path = NodePath("CanvasLayer/NinePatchRect3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -120,7 +121,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("RichTextLabel:visible")
+tracks/4/path = NodePath("CanvasLayer/RichTextLabel:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -137,6 +138,7 @@ _data = {
 }
 
 [node name="PauseMenu" type="Control" unique_id=740504894]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,9 +146,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_n4i8v")
+script = ExtResource("2_2bpff")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=661103291]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1213368174]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=661103291]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -154,8 +158,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.23921569, 0.23921569, 0.23921569, 0)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1902694631]
-layout_mode = 0
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=1902694631]
 offset_left = 559.0
 offset_top = 226.0
 offset_right = 3541.0
@@ -168,7 +171,7 @@ patch_margin_top = 158
 patch_margin_right = 166
 patch_margin_bottom = 160
 
-[node name="Button" type="Button" parent="NinePatchRect" unique_id=1406409301]
+[node name="ResumeButton" type="Button" parent="CanvasLayer/NinePatchRect" unique_id=1406409301]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -184,8 +187,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 500
 text = "Resume"
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=823365158]
-layout_mode = 0
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer" unique_id=823365158]
 offset_left = 559.0
 offset_top = 496.0
 offset_right = 3541.0
@@ -198,7 +200,7 @@ patch_margin_top = 158
 patch_margin_right = 166
 patch_margin_bottom = 160
 
-[node name="Button" type="Button" parent="NinePatchRect2" unique_id=1551625527]
+[node name="SettingsButton" type="Button" parent="CanvasLayer/NinePatchRect2" unique_id=1551625527]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -214,8 +216,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 500
 text = "Settings"
 
-[node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=805769172]
-layout_mode = 0
+[node name="NinePatchRect3" type="NinePatchRect" parent="CanvasLayer" unique_id=805769172]
 offset_left = 564.0
 offset_top = 773.0
 offset_right = 3546.0
@@ -228,7 +229,7 @@ patch_margin_top = 158
 patch_margin_right = 166
 patch_margin_bottom = 160
 
-[node name="Button" type="Button" parent="NinePatchRect3" unique_id=151092714]
+[node name="ExitButton" type="Button" parent="CanvasLayer/NinePatchRect3" unique_id=151092714]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -244,8 +245,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 500
 text = "Exit"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1694688464]
-layout_mode = 1
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1694688464]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -259,5 +259,10 @@ text = "PAUSED"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=202877247]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=202877247]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_2bpff")
+
+[connection signal="pressed" from="CanvasLayer/NinePatchRect/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/NinePatchRect2/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/NinePatchRect3/ExitButton" to="." method="_on_exit_button_pressed"]
