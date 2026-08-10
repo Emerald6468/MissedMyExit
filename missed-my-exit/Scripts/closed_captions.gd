@@ -15,3 +15,7 @@ func display_text(text : String):
 		_typing_time += get_process_delta_time()
 		_dialog.visible_characters = _typing_speed * _typing_time as int
 		await get_tree().process_frame
+		
+func _process(delta: float) -> void:
+	if !Global.ClosedCaptions: visible = false
+	else: visible = true

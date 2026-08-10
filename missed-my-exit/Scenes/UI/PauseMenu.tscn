@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="1_n4i8v"]
 [ext_resource type="Script" uid="uid://ccu2ckhkpojhh" path="res://Scripts/pause_menu.gd" id="2_2bpff"]
 [ext_resource type="Texture2D" uid="uid://cmxror6peafu" path="res://Assets/UI/titlebacking5.png" id="2_238ko"]
+[ext_resource type="PackedScene" uid="uid://dacnxvh5sonxi" path="res://Scenes/UI/settings.tscn" id="4_2bpff"]
 
 [sub_resource type="Animation" id="Animation_n4i8v"]
 resource_name = "FadeIn"
@@ -269,6 +270,9 @@ horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=202877247]
 libraries/ = SubResource("AnimationLibrary_2bpff")
+
+[node name="Settings" parent="." unique_id=961389123 instance=ExtResource("4_2bpff")]
+layout_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/NinePatchRect/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/NinePatchRect2/SettingsButton" to="." method="_on_settings_button_pressed"]

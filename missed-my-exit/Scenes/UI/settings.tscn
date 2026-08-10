@@ -3,8 +3,10 @@
 [ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="1_p46qs"]
 [ext_resource type="Script" uid="uid://bi1iyalebps13" path="res://Scripts/settings.gd" id="2_ygnii"]
 [ext_resource type="AudioStream" uid="uid://c4hjdg0o7days" path="res://Assets/AUDIO/Music/skyline.mp3" id="3_p46qs"]
+[ext_resource type="Texture2D" uid="uid://cmxror6peafu" path="res://Assets/UI/titlebacking5.png" id="3_ygnii"]
 
 [node name="Settings" type="Control" unique_id=961389123]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,33 +16,43 @@ grow_vertical = 2
 theme = ExtResource("1_p46qs")
 script = ExtResource("2_ygnii")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1972603081]
-layout_mode = 1
+[node name="Settings" type="CanvasLayer" parent="." unique_id=1814240045]
+
+[node name="ColorRect" type="ColorRect" parent="Settings" unique_id=1109469710]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4178962, 0.4178962, 0.4178962, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings" unique_id=1972603081]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1231493468]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/MarginContainer" unique_id=1231493468]
 layout_mode = 2
 
-[node name="Vol_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2045215658]
+[node name="Vol_Label" type="Label" parent="Settings/MarginContainer/VBoxContainer" unique_id=2045215658]
 layout_mode = 2
 text = "Volume"
 
-[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=870542483]
+[node name="Volume" type="HSlider" parent="Settings/MarginContainer/VBoxContainer" unique_id=870542483]
 layout_mode = 2
+value = 50.0
 
-[node name="Mute_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2088491415]
+[node name="Mute_Label" type="Label" parent="Settings/MarginContainer/VBoxContainer" unique_id=2088491415]
 layout_mode = 2
 text = "Mute
 "
 
-[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=363570744]
+[node name="Mute" type="CheckBox" parent="Settings/MarginContainer/VBoxContainer" unique_id=363570744]
 layout_mode = 2
 
-[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=259257391]
+[node name="Resolutions" type="OptionButton" parent="Settings/MarginContainer/VBoxContainer" unique_id=259257391]
 layout_mode = 2
 selected = 0
 item_count = 3
@@ -51,10 +63,41 @@ popup/item_1/id = 1
 popup/item_2/text = "1280x720"
 popup/item_2/id = 2
 
+[node name="NinePatchRect3" type="NinePatchRect" parent="Settings" unique_id=653505786]
+offset_left = 564.0
+offset_top = 773.0
+offset_right = 3546.0
+offset_bottom = 1668.0
+scale = Vector2(0.246, 0.246)
+texture = ExtResource("3_ygnii")
+region_rect = Rect2(0, 0, 500, 500)
+patch_margin_left = 157
+patch_margin_top = 158
+patch_margin_right = 166
+patch_margin_bottom = 160
+
+[node name="ExitButton" type="Button" parent="Settings/NinePatchRect3" unique_id=1576281562]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -675.5001
+offset_top = -250.5
+offset_right = 675.5001
+offset_bottom = 250.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_p46qs")
+theme_override_font_sizes/font_size = 500
+text = "Exit"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=446553917]
 stream = ExtResource("3_p46qs")
 autoplay = true
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="Settings/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="Settings/MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="pressed" from="Settings/NinePatchRect3/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d3gnect0uwo1q" path="res://Scripts/main_menu.gd" id="1_72sra"]
 [ext_resource type="Texture2D" uid="uid://cmxror6peafu" path="res://Assets/UI/titlebacking5.png" id="1_mjmdf"]
 [ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="2_72sra"]
+[ext_resource type="PackedScene" uid="uid://dacnxvh5sonxi" path="res://Scenes/UI/settings.tscn" id="4_t6w0q"]
 
 [node name="MainMenu" type="Control" unique_id=1253760560]
 process_mode = 3
@@ -86,5 +87,9 @@ layout_mode = 2
 theme = ExtResource("2_72sra")
 text = "QUIT"
 
+[node name="Settings" parent="." unique_id=961389123 instance=ExtResource("4_t6w0q")]
+layout_mode = 1
+
 [connection signal="pressed" from="CanvasLayer/ButtonBox/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonBox/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ButtonBox/QuitButton" to="." method="_on_quit_button_pressed"]

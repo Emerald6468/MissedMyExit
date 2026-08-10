@@ -1,9 +1,12 @@
 extends Control
 
+@onready var settings: CanvasLayer = $Settings
 
+func _ready() -> void:
+	settings.visible = false
 
 func _on_volume_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0,value/5)
+	AudioServer.set_bus_volume_db(0,(value-50)/5)
 
 
 func _on_mute_toggled(toggled_on: bool) -> void:
@@ -19,3 +22,7 @@ func _on_resolutions_item_selected(index: int) -> void:
 			DisplayServer.window_set_size(Vector2i(160,900))
 		2:
 			DisplayServer.window_set_size(Vector2i(1280,720))
+
+
+func _on_exit_button_pressed() -> void:
+	settings.visible = false

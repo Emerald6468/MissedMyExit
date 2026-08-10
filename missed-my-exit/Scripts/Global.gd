@@ -23,6 +23,9 @@ var ObjectPosition: Vector3
 var PlaceZonePosition: Vector3
 var PlayerPosition: Vector3
 
+#UI and Settings
+var ClosedCaptions = true
+
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = false
@@ -36,6 +39,8 @@ func reset_vars():
 	JustPlaced = false
 	HasItem = false
 	ClosestDistance = 100.0
+	ClosedCaptions = true
 	#temp ones prob delete later
 	HasRock = false
+	
 	
