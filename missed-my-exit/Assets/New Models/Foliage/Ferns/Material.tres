@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bx41bet3erin8"]
+
+[ext_resource type="Texture2D" uid="uid://cirvapbk242fi" path="res://Assets/New Models/Foliage/Ferns/Fern1_Untitled.png" id="1_87b0r"]
+
+[resource]
+resource_name = "Material"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_87b0r")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

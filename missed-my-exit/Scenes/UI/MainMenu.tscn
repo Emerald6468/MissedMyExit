@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="2_72sra"]
 
 [node name="MainMenu" type="Control" unique_id=1253760560]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,8 +16,8 @@ script = ExtResource("1_72sra")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=938445889]
 
-[node name="Title" type="Control" parent="." unique_id=968000715]
-layout_mode = 1
+[node name="Title" type="Control" parent="CanvasLayer" unique_id=968000715]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(337, 97)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Title" unique_id=1270834829]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Title" unique_id=1270834829]
 layout_mode = 1
 offset_right = 2982.0
 offset_bottom = 895.0
@@ -42,7 +43,7 @@ patch_margin_top = 158
 patch_margin_right = 166
 patch_margin_bottom = 160
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Title/NinePatchRect" unique_id=474949895]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Title/NinePatchRect" unique_id=474949895]
 layout_mode = 0
 offset_left = 211.38202
 offset_top = 256.09753
@@ -54,8 +55,7 @@ theme_override_font_sizes/normal_font_size = 100
 text = "MISSED MY EXIT"
 scroll_active = false
 
-[node name="ButtonBox" type="VBoxContainer" parent="." unique_id=1414278138]
-layout_mode = 1
+[node name="ButtonBox" type="VBoxContainer" parent="CanvasLayer" unique_id=1414278138]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -71,20 +71,20 @@ theme = ExtResource("2_72sra")
 theme_override_constants/separation = 57
 alignment = 1
 
-[node name="StartButton" type="Button" parent="ButtonBox" unique_id=1997845327]
+[node name="StartButton" type="Button" parent="CanvasLayer/ButtonBox" unique_id=1997845327]
 layout_mode = 2
 theme = ExtResource("2_72sra")
 text = "START"
 
-[node name="SettingsButton" type="Button" parent="ButtonBox" unique_id=673568276]
+[node name="SettingsButton" type="Button" parent="CanvasLayer/ButtonBox" unique_id=673568276]
 layout_mode = 2
 theme = ExtResource("2_72sra")
 text = "SETTINGS"
 
-[node name="QuitButton" type="Button" parent="ButtonBox" unique_id=764440848]
+[node name="QuitButton" type="Button" parent="CanvasLayer/ButtonBox" unique_id=764440848]
 layout_mode = 2
 theme = ExtResource("2_72sra")
 text = "QUIT"
 
-[connection signal="pressed" from="ButtonBox/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="ButtonBox/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonBox/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonBox/QuitButton" to="." method="_on_quit_button_pressed"]

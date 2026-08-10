@@ -4,9 +4,12 @@ extends Control
 #@onready var credits: Control = $CanvasLayer/Credits
 
 func _ready() -> void:
-	focus_button()
+	get_tree().paused = false
+	#focus_button()
 	#credits.hide()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
 
 func _on_quit_button_pressed() -> void:
 	#$AudioStreamPlayer2.play()

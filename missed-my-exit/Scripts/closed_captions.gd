@@ -5,7 +5,7 @@ var _typing_speed : float = 60
 var _typing_time : float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	display_text("ASDHKJASDHJKKHJASDHJK asdsdaasd asdjdasdas hello ASDdasasdasddas adsdsajjl world dsaasdasdasdads adsasdasdadsasdasd asdasdasd harlen should die")
+	display_text("ASDHKJASDHJKKHJASDHJK asdsdaasd asdjdasdas hello ASDdasasdasddas adsdsajjl world dsaasdasdasdads adsasdasdadsasdasd asdasdasd harlen should live :D")
 
 func display_text(text : String):
 	_dialog.text = text
