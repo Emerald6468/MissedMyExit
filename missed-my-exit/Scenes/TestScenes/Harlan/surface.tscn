@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://b1bl1i6fk4tjp"]
 
 [ext_resource type="Script" uid="uid://x2memt8ssqeh" path="res://Scenes/TestScenes/Harlan/surface.gd" id="1_exuij"]
+[ext_resource type="Texture2D" uid="uid://bbqfrppaa71n0" path="res://Assets/TEMP Textures/Texturelabs_Soil_135S2.png" id="2_sjjym"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_o5qli"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epeal"]
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("2_sjjym")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wwwk3"]
 
 [node name="surface" type="Node3D" unique_id=1926810802]
 script = ExtResource("1_exuij")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=753212887]
-mesh = SubResource("ArrayMesh_o5qli")
+material_override = SubResource("StandardMaterial3D_epeal")
+mesh = SubResource("ArrayMesh_wwwk3")

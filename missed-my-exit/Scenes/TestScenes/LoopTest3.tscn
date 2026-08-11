@@ -7,8 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="6_slsem"]
 [ext_resource type="PackedScene" uid="uid://d0ggbph67bh0y" path="res://Scenes/Loop2_Intro.tscn" id="7_e6s4m"]
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="8_1x04j"]
+[ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="9_e6s4m"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="9_ny4q5"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_qabrb"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="12_8lrox"]
 [ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="13_27tf7"]
 [ext_resource type="PackedScene" uid="uid://cblcjjch06cra" path="res://Scenes/Vista.tscn" id="13_slsem"]
@@ -40,7 +42,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(573.1836, 0, 0)
+offset = Vector3(3020.8215, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -166,6 +168,13 @@ transform = Transform3D(0.67406327, 0, 0.7386736, 0, 1, 0, -0.7386736, 0, 0.6740
 visible = false
 
 [node name="Loop2_Intro" parent="Loop2" unique_id=193075106 instance=ExtResource("7_e6s4m")]
+
+[node name="FallenTree" parent="Loop2" unique_id=124688568 instance=ExtResource("9_e6s4m")]
+transform = Transform3D(0.020355254, 0.017022144, -0.99964786, -0.059802257, 0.9980856, 0.01577782, 0.9980027, 0.05946004, 0.021334246, -89.98376, -0.76393133, 93.09948)
+
+[node name="PickupableObject2" parent="Loop2" unique_id=1743039300 instance=ExtResource("10_qabrb")]
+transform = Transform3D(-0.21552686, 0.10272676, -0.07413085, 0.0019795038, 0.149007, 0.20073119, 0.12666589, 0.17246488, -0.12927344, -77.37526, 1.4963431, 205.50055)
+ObjectType = "Axe"
 
 [node name="Loop2b" parent="." unique_id=1817203411 instance=ExtResource("2_e6hmg")]
 transform = Transform3D(0.9576221, 0, 0.28802764, 0, 1, 0, -0.28802764, 0, 0.9576221, 168.71039, -6.942852, -375.645)

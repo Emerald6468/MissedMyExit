@@ -460,31 +460,37 @@ transform = Transform3D(0.8104988, 0, 0.39126927, 0, 0.9, 0, -0.39126927, 0, 0.8
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1104446059]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1445923, -2.9240718, -6.495941)
+use_collision = true
 size = Vector3(1.6685867, 2.7560754, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=362685316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695831, -2.3717144, -6.495941)
+use_collision = true
 size = Vector3(2.9272618, 1.7081499, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=610984987]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4871826, -2.3774517, -6.4959717)
+use_collision = true
 size = Vector3(1.9569397, 1.6966753, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=425246474]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445087, -0.5372381, -6.4959593)
+use_collision = true
 size = Vector3(9.441475, 2.0343418, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=121581117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7326355, -4.9169188, -2.4713135)
+use_collision = true
 size = Vector3(9.5871315, 1.338459, 8.365524)
 material = SubResource("StandardMaterial3D_dhw8q")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=854940681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7327805, -4.380644, -8.748859)
+use_collision = true
 size = Vector3(9.586765, 0.2659092, 4.270672)
 material = SubResource("StandardMaterial3D_144x3")
 
@@ -505,36 +511,43 @@ material = SubResource("StandardMaterial3D_rwpg1")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=712329529]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4372034, -3.7936106, -6.4959564)
+use_collision = true
 size = Vector3(6.059433, 1.1280899, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1179353937]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, -1.9378252, 1.5663042)
+use_collision = true
 size = Vector3(9.449097, 4.8396606, 0.19238281)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1192236944]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3627014, -1.9386187, -2.4494934)
+use_collision = true
 size = Vector3(0.2084961, 4.8380737, 7.9356995)
 material = SubResource("StandardMaterial3D_ihj1m")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=1091287910]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619623, -0.45271015, -2.4988375)
+use_collision = true
 size = Vector3(0.9058838, 10.450882, 1.523386)
 material = SubResource("StandardMaterial3D_dhw8q")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=411880767]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5932322, -3.4650278, -10.601679)
+use_collision = true
 size = Vector3(0.11798096, 4.4262466, 0.23190784)
 material = SubResource("StandardMaterial3D_144x3")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=58497415]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1263895, -3.4650278, -10.601679)
+use_collision = true
 size = Vector3(0.11798096, 4.4262466, 0.23190784)
 material = SubResource("StandardMaterial3D_144x3")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="OnFoot/Cabin1" unique_id=113594549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667603, -1.9459429, -2.4662476)
+use_collision = true
 size = Vector3(0.2084961, 4.8234253, 7.9022675)
 material = SubResource("StandardMaterial3D_ihj1m")
 
