@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvf7dlet43vir" path="res://Assets/New Models/Light Poles/Pole2_street_Light_Street Light Textures2.png" id="1_y8gof"]
 [ext_resource type="PackedScene" uid="uid://7bjxl6tt2oyu" path="res://Assets/New Models/Light Poles/Light2.glb" id="2_5f4ys"]
 [ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="3_cjowd"]
+[ext_resource type="Texture2D" uid="uid://bk34ngor3s8kn" path="res://Assets/Other/Glare3.png" id="4_5f4ys"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oar36"]
 resource_name = "Material.002"
@@ -42,14 +43,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2knkw")
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5f4ys"]
+
 [node name="Pole6" type="Node3D" unique_id=1282755446]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="." unique_id=1483332354]
+transform = Transform3D(0.5, 0, 0, 0, 0.85, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ksjie")
 
 [node name="Light2" parent="." unique_id=1615628739 instance=ExtResource("2_5f4ys")]
-transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 11.991806, 0)
+transform = Transform3D(0.7999998, 0, -2.3841851e-08, 0, 0.8, 0, 2.3841851e-08, 0, 0.7999998, 0, 9.991806, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light2" unique_id=272216488]
 transform = Transform3D(1.0000001, 2.9802322e-08, 0, 0, -4.3711392e-08, 1, 2.9802322e-08, -1.0000001, -4.3711395e-08, 0, 0.35469913, -3.3739004)
@@ -65,9 +69,23 @@ shadow_enabled = true
 omni_range = 1.0380461
 
 [node name="Sprite3D" type="Sprite3D" parent="Light2/SpotLight3D" unique_id=908206682]
+visible = false
 pixel_size = 0.015
 billboard = 1
-shaded = true
 double_sided = false
 texture_filter = 2
 texture = ExtResource("3_cjowd")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Light2/SpotLight3D" unique_id=289352677]
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 1.644068e-09, -0.027583122, -4.1820574)
+modulate = Color(1, 1, 1, 0.07450981)
+pixel_size = 0.025
+billboard = 2
+double_sided = false
+texture_filter = 2
+texture = ExtResource("4_5f4ys")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=192371183]
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, 0, 10, -1.9999994)
+visible = false
+mesh = SubResource("CapsuleMesh_5f4ys")
