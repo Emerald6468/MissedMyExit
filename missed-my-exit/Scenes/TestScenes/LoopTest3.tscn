@@ -42,7 +42,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(349.0883, 0, 0)
+offset = Vector3(1005.02814, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")

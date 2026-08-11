@@ -1,7 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cml76qid1nlce"]
 
 [ext_resource type="Texture2D" uid="uid://cmxe2ysevsibu" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1_TreeTotal3.png" id="1_t2w1d"]
-[ext_resource type="Texture2D" uid="uid://bh0n3yvscmwwr" path="res://Assets/New Models/Foliage/Trees/Tree1_SubSur.png" id="2_4f862"]
 
 [resource]
 transparency = 2
@@ -11,5 +10,4 @@ cull_mode = 2
 albedo_texture = ExtResource("1_t2w1d")
 backlight_enabled = true
 backlight = Color(0.18431373, 0.43529412, 0, 1)
-backlight_texture = ExtResource("2_4f862")
 texture_filter = 0

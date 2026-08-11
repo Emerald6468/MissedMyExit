@@ -318,6 +318,7 @@ size = Vector3(20.750488, 3.2109375, 51.89157)
 
 [node name="Ground1Mesh" type="MeshInstance3D" parent="." unique_id=1628407473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
+visible = false
 material_override = SubResource("StandardMaterial3D_xcpsh")
 mesh = ExtResource("2_ui3fn")
 
@@ -489,6 +490,7 @@ operation = 2
 size = Vector3(20.750488, 3.2109375, 10.221558)
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=752268020]
+visible = false
 mesh = SubResource("ArrayMesh_sm37y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="CSGBakedMeshInstance3D" unique_id=2018522218]
@@ -888,7 +890,6 @@ transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18
 transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -108.88111, -0.19617832, 235.52945)
 
 [node name="Prefabs" type="Node3D" parent="." unique_id=439888227]
-visible = false
 
 [node name="Road_Straight_Flat" parent="Prefabs" unique_id=445961336 instance=ExtResource("24_akdfh")]
 
@@ -901,8 +902,14 @@ transform = Transform3D(-0.9990702, 0, -0.04311304, 0, 1, 0, 0.04311304, 0, -0.9
 [node name="Road_45_Flat3" parent="Prefabs" unique_id=1125677207 instance=ExtResource("25_b3qce")]
 transform = Transform3D(-0.101710744, 0, -0.99481404, 0, 1, 0, 0.99481404, 0, -0.101710744, -218.17232, 7.6293945e-06, 17.234669)
 
+[node name="Road_45_Flat4" parent="Prefabs" unique_id=836638699 instance=ExtResource("25_b3qce")]
+transform = Transform3D(0.09534455, 0, 0.99544436, 0, 1, 0, -0.99544436, 0, 0.09534455, -218.60526, 7.6293945e-06, 17.551594)
+
 [node name="Road_20_Flat" parent="Prefabs" unique_id=1575065925 instance=ExtResource("26_b3qce")]
 transform = Transform3D(-0.97197056, 0, -0.23510303, 0, 1, 0, 0.23510303, 0, -0.97197056, -154.95451, 0, -29.901209)
 
 [node name="Road_20_Flat2" parent="Prefabs" unique_id=466468237 instance=ExtResource("26_b3qce")]
 transform = Transform3D(-0.8845436, 0, -0.46645755, 0, 1, 0, 0.46645755, 0, -0.8845436, -196.23604, 0, -14.149801)
+
+[node name="Road_20_Flat3" parent="Prefabs" unique_id=1204557032 instance=ExtResource("26_b3qce")]
+transform = Transform3D(0.8751076, 0, 0.48392844, 0, 1, 0, -0.48392844, 0, 0.8751076, -240.32997, 0, 48.82324)
