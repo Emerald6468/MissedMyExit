@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/road_straight_flat.tscn" id="24_akdfh"]
 [ext_resource type="PackedScene" uid="uid://b0rbtxxixoc7k" path="res://Scenes/Prefabs/road_45_flat.tscn" id="25_b3qce"]
 [ext_resource type="PackedScene" uid="uid://c5vtvavrtrw11" path="res://Scenes/Prefabs/road_20_flat.tscn" id="26_b3qce"]
+[ext_resource type="PackedScene" uid="uid://dsw24vf51qcwr" path="res://Scenes/Loop1_GasStation.tscn" id="28_oq4vg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcpsh"]
 albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
@@ -503,6 +504,7 @@ transform = Transform3D(0.53321874, 0, 1.9276093, 0, 2, 0, -1.9276093, 0, 0.5332
 
 [node name="Gas1" type="Node3D" parent="." unique_id=1429680745]
 transform = Transform3D(0.7966901, 0, 0.07269722, 0, 0.8, 0, -0.07269722, 0, 0.7966901, -254.32918, 2.9450445, 78.62981)
+visible = false
 
 [node name="Pole6" parent="Gas1" unique_id=1282755446 instance=ExtResource("12_xdxsx")]
 transform = Transform3D(-0.09745266, 0, -0.6931832, 0, 0.69999987, 0, 0.6931834, 0, -0.09745267, -22.759428, -4.265997, -23.745575)
@@ -913,3 +915,7 @@ transform = Transform3D(-0.8845436, 0, -0.46645755, 0, 1, 0, 0.46645755, 0, -0.8
 
 [node name="Road_20_Flat3" parent="Prefabs" unique_id=1204557032 instance=ExtResource("26_b3qce")]
 transform = Transform3D(0.8751076, 0, 0.48392844, 0, 1, 0, -0.48392844, 0, 0.8751076, -240.32997, 0, 48.82324)
+visible = false
+
+[node name="Road_Straight_Flat2" parent="Prefabs" unique_id=1525736646 instance=ExtResource("28_oq4vg")]
+transform = Transform3D(0.8818358, 0, 0.47155663, 0, 1, 0, -0.47155663, 0, 0.8818358, -257.74127, -3.8146973e-06, 58.206066)

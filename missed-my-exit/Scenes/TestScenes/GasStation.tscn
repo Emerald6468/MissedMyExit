@@ -464,48 +464,18 @@ size = Vector3(36.30049, 1, 29.234818)
 material = SubResource("StandardMaterial3D_i5ijr")
 
 [node name="Gas2" type="Node3D" parent="." unique_id=1248397963]
-transform = Transform3D(0.7974774, 0, -0.06348073, 0, 0.8, 0, 0.06348073, 0, 0.7974774, 45.142094, 4.346669, 92.825836)
-
-[node name="Pole6" parent="Gas2" unique_id=824963925 instance=ExtResource("4_wbiwg")]
-transform = Transform3D(-0.09745266, 0, -0.6931832, 0, 0.69999987, 0, 0.6931834, 0, -0.09745267, -22.759428, -4.265997, -23.745575)
-
-[node name="Pole7" type="Node3D" parent="Gas2" unique_id=904426662]
-transform = Transform3D(0.6931832, 0, -0.09745263, 0, 0.69999987, 0, 0.09745264, 0, 0.69318336, -22.74874, 4.1875505, -23.785843)
-
-[node name="Light2" parent="Gas2/Pole7" unique_id=1578038430 instance=ExtResource("5_p5t3n")]
-transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0, 0)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Gas2/Pole7/Light2" unique_id=1537503788]
-transform = Transform3D(1.0000001, 2.9802322e-08, 0, 0, -4.3711392e-08, 1, 2.9802322e-08, -1.0000001, -4.3711395e-08, 0, 0.35469913, -3.3739004)
-light_energy = 3.0
-shadow_enabled = true
-spot_range = 22.082327
-spot_angle = 57.883698
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Gas2/Pole7/Light2/SpotLight3D" unique_id=639726538]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
-light_energy = 4.048
-shadow_enabled = true
-omni_range = 1.0380461
-
-[node name="Sprite3D" type="Sprite3D" parent="Gas2/Pole7/Light2/SpotLight3D" unique_id=329902286]
-pixel_size = 0.015
-billboard = 1
-shaded = true
-double_sided = false
-texture_filter = 2
-texture = ExtResource("6_0xn84")
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 45.142094, 4.346669, 92.825836)
 
 [node name="GasPumps" type="Node3D" parent="Gas2" unique_id=1440517716]
-transform = Transform3D(0.9891676, 0, -0.14679094, 0, 1, 0, 0.14679089, 0, 0.9891676, -17.005228, 1.8256493, -6.7828217)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.94342, 1.8256493, -4.5458603)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Gas2/GasPumps" unique_id=1590942044]
-transform = Transform3D(0.98899585, 0, 0.14794406, 0, 1, 0, -0.14794406, 0, 0.98899585, 15.776081, -1.3975158, -10.71096)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 15.776081, -1.3975158, -10.71096)
 size = Vector3(10.290665, 0.7233658, 16.397373)
 material = SubResource("StandardMaterial3D_07afh")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Gas2/GasPumps" unique_id=426432919]
-transform = Transform3D(0.98792386, 0, 0.15494008, 0, 0.9999998, 0, -0.15494016, 0, 0.98792386, 15.626686, -3.952911, -12.6886215)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 1, 15.626686, -3.952911, -12.6886215)
 size = Vector3(1, 4.713257, 1)
 
 [node name="Store" type="Node3D" parent="Gas2" unique_id=1412165291]
@@ -648,9 +618,3 @@ size = Vector3(0.63479614, 1.1280899, 3.8256836)
 [node name="CSGBox3D15" type="CSGBox3D" parent="Gas2/Store/Shelves" unique_id=607843811]
 transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 1.492073, 2.1773255, 3.409134)
 size = Vector3(0.63479614, 1.1280899, 3.8256836)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Gas2" unique_id=176262189]
-transform = Transform3D(0.997987, 0, -0.06344782, 0, 1, 0, 0.063447796, 0, 0.9979869, -8.53347, -4.724612, -8.339783)
-use_collision = true
-size = Vector3(37.730824, 1, 41.006935)
-material = SubResource("StandardMaterial3D_i5ijr")

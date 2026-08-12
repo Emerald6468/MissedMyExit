@@ -77,7 +77,7 @@ texture_filter = 2
 texture = ExtResource("3_cjowd")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Light2/SpotLight3D" unique_id=289352677]
-transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 1.644068e-09, -0.027583122, -4.1820574)
+transform = Transform3D(6, 0, 0, 0, 2, 0, 0, 0, 1, 1.644068e-09, -0.027583122, -4.333846)
 modulate = Color(1, 1, 1, 0.07450981)
 pixel_size = 0.025
 billboard = 2
