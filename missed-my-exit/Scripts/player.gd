@@ -19,6 +19,11 @@ var timer_started = false
 #axe
 var axe_swinging = false
 
+#Headbob
+const BOB_FREQ: float = 1.2
+const BOB_AMP: float = 0.05
+var t_bob:float = 0.0
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
@@ -78,6 +83,8 @@ func _physics_process(delta: float) -> void:
 		#Camera
 		on_foot_camera.make_current()
 		
+
+		
 		
 		#Interactables
 		if Input.is_action_just_pressed("Interact"):
@@ -115,8 +122,18 @@ func _physics_process(delta: float) -> void:
 			walking_on_gravel.stop()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		
+		#Head bob
+		t_bob += delta * velocity.length() * float(is_on_floor())
+		on_foot_camera.transform.origin = _headbob(t_bob)
+		
+		
 		move_and_slide()
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * BOB_FREQ) * BOB_AMP
+	return pos
 
 func AxeTimer():
 	if axe_swinging:

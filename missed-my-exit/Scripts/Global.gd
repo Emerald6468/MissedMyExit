@@ -24,7 +24,10 @@ var PlaceZonePosition: Vector3
 var PlayerPosition: Vector3
 
 #UI and Settings
+#not added to reset as they should stay even if everything else is reset
 var ClosedCaptions = true
+var muted = true
+var volume = 50.0
 
 #make sure to add every var to reset
 func reset_vars():
@@ -39,7 +42,6 @@ func reset_vars():
 	JustPlaced = false
 	HasItem = false
 	ClosestDistance = 100.0
-	ClosedCaptions = true
 	#temp ones prob delete later
 	HasRock = false
 	

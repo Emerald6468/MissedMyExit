@@ -42,7 +42,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(1005.02814, 0, 0)
+offset = Vector3(383.03, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -68,6 +68,7 @@ size = Vector2(10000, 10000)
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
 [node name="Loop1" parent="." unique_id=1796093272 instance=ExtResource("2_e6hmg")]
+visible = false
 
 [node name="Events" type="Node3D" parent="Loop1" unique_id=128377468]
 
@@ -120,7 +121,6 @@ transform = Transform3D(0.9981988, 0, 0.05999333, 0, 1, 0, -0.05999333, 0, 0.998
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.658524, -6.9428215, -1.75841)
-visible = false
 
 [node name="Events" type="Node3D" parent="Loop2" unique_id=649250298]
 
@@ -178,7 +178,6 @@ ObjectType = "Axe"
 
 [node name="Loop2b" parent="." unique_id=1817203411 instance=ExtResource("2_e6hmg")]
 transform = Transform3D(0.9576221, 0, 0.28802764, 0, 1, 0, -0.28802764, 0, 0.9576221, 168.71039, -6.942852, -375.645)
-visible = false
 
 [node name="Events" type="Node3D" parent="Loop2b" unique_id=1388401883]
 

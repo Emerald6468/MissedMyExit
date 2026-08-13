@@ -4,6 +4,7 @@ extends Control
 #@onready var credits: Control = $CanvasLayer/Credits
 
 func _ready() -> void:
+	Global.reset_vars()
 	get_tree().paused = false
 	focus_button()
 	#credits.hide()

@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4178962, 0.4178962, 0.4178962, 1)
+color = Color(0.04933594, 0.12451821, 0.10149676, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="Settings" unique_id=1972603081]
 anchors_preset = 15
@@ -32,6 +32,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 350
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Settings/MarginContainer" unique_id=1231493468]
 layout_mode = 2
@@ -51,9 +55,25 @@ text = "Mute
 
 [node name="Mute" type="CheckBox" parent="Settings/MarginContainer/VBoxContainer" unique_id=363570744]
 layout_mode = 2
+button_pressed = true
+
+[node name="CC_Label" type="Label" parent="Settings/MarginContainer/VBoxContainer" unique_id=1849301425]
+layout_mode = 2
+text = "Closed Captions
+"
+
+[node name="CC" type="CheckBox" parent="Settings/MarginContainer/VBoxContainer" unique_id=1086772727]
+layout_mode = 2
+button_pressed = true
+
+[node name="Resolution" type="Label" parent="Settings/MarginContainer/VBoxContainer" unique_id=2113254250]
+layout_mode = 2
+text = "Resolution
+"
 
 [node name="Resolutions" type="OptionButton" parent="Settings/MarginContainer/VBoxContainer" unique_id=259257391]
 layout_mode = 2
+theme = ExtResource("1_p46qs")
 selected = 0
 item_count = 3
 popup/item_0/text = "1920x1080"
@@ -99,5 +119,6 @@ autoplay = true
 
 [connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="Settings/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="toggled" from="Settings/MarginContainer/VBoxContainer/CC" to="." method="_on_cc_toggled"]
 [connection signal="item_selected" from="Settings/MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
 [connection signal="pressed" from="Settings/NinePatchRect3/ExitButton" to="." method="_on_exit_button_pressed"]
