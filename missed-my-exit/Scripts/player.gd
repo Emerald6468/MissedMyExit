@@ -20,7 +20,7 @@ var timer_started = false
 var axe_swinging = false
 
 #Headbob
-const BOB_FREQ: float = 1.2
+const BOB_FREQ: float = 3
 const BOB_AMP: float = 0.05
 var t_bob:float = 0.0
 
