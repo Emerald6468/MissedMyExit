@@ -115,7 +115,6 @@ text = "Exit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=446553917]
 stream = ExtResource("3_p46qs")
-autoplay = true
 
 [connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="Settings/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]

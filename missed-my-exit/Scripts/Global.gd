@@ -26,7 +26,7 @@ var PlayerPosition: Vector3
 #UI and Settings
 #not added to reset as they should stay even if everything else is reset
 var ClosedCaptions = true
-var muted = true
+var muted = false
 var volume = 50.0
 
 #make sure to add every var to reset

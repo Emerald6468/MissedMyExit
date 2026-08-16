@@ -15,6 +15,7 @@ var timer_started = false
 
 #Audio
 @onready var walking_on_gravel: AudioStreamPlayer = $WalkingOnGravel
+@onready var outside_ambience: AudioStreamPlayer = $OutsideAmbience
 
 #axe
 var axe_swinging = false
@@ -76,6 +77,7 @@ func _physics_process(delta: float) -> void:
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:
 		Global.PlayerPosition = global_position
+		if !outside_ambience.playing: outside_ambience.play()
 		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls") and Global.NearDoor:
 			Global.NearDoor = false
 			Global.OnFoot = false
@@ -129,7 +131,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 		move_and_slide()
-
+	else: outside_ambience.stop()
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP

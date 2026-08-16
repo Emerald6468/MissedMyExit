@@ -28,6 +28,7 @@ var direction_held = false
 @onready var car_idle: AudioStreamPlayer = $Head/CarIdle
 @onready var car_moving: AudioStreamPlayer = $Head/CarMoving
 @onready var car_accelerate: AudioStreamPlayer = $Head/CarAccelerate
+@onready var outside_ambience: AudioStreamPlayer = $Head/OutsideAmbience
 
 
 func headlights():
@@ -49,6 +50,7 @@ func _process(delta: float) -> void:
 	Global.PlayerMarker = player_point.global_position
 	#Switching
 	if !Global.OnFoot:
+		if !outside_ambience.playing: outside_ambience.play()
 		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls"):
 			Global.OnFoot = true
 			Global.JustSwitched = true
@@ -91,6 +93,7 @@ func _process(delta: float) -> void:
 			if !car_idle.playing: car_idle.play()
 	else: 
 		#Audio
+		outside_ambience.stop()
 		car_idle.stop()
 		car_moving.stop()
 		car_accelerate.stop()

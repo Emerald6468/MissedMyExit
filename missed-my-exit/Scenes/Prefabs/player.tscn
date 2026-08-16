@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cmwcetyhkdsry" path="res://Scripts/player.gd" id="1_er31s"]
 [ext_resource type="PackedScene" uid="uid://c073k58ceqv5v" path="res://Scenes/UI/ui.tscn" id="2_v1l4e"]
 [ext_resource type="AudioStream" uid="uid://bthf6pwfo7oka" path="res://Assets/AUDIO/Player/Gravel_Walking.WAV" id="3_v1l4e"]
+[ext_resource type="AudioStream" uid="uid://cf4skp4oyxcfe" path="res://Assets/AUDIO/Ambience/Base Ambience Loop_first_try.wav" id="4_0ctox"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mwclm"]
 
@@ -37,3 +38,6 @@ shape = SubResource("SphereShape3D_lu0ho")
 
 [node name="WalkingOnGravel" type="AudioStreamPlayer" parent="." unique_id=890749638]
 stream = ExtResource("3_v1l4e")
+
+[node name="OutsideAmbience" type="AudioStreamPlayer" parent="." unique_id=1865019057]
+stream = ExtResource("4_0ctox")
