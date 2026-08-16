@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="8_1x04j"]
 [ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="9_e6s4m"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="9_ny4q5"]
+[ext_resource type="PackedScene" uid="uid://cbjs2rtwxc68o" path="res://Scenes/Loop1_Clearing2.tscn" id="10_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_qabrb"]
 [ext_resource type="PackedScene" uid="uid://dqkbserk206ku" path="res://Scenes/Loop3_Main.tscn" id="11_nclww"]
@@ -80,14 +81,21 @@ background_energy_multiplier = 3.0
 sky = SubResource("Sky_rsxtw")
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.1
-volumetric_fog_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 5.9
+fog_sky_affect = 0.0
+fog_depth_curve = 6.062854
+fog_depth_begin = 0.0
+fog_depth_end = 50.0
 volumetric_fog_density = 0.025
 
 [sub_resource type="Gradient" id="Gradient_qr0ht"]
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(2825.8313, 0, 0)
+offset = Vector3(122.40287, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -108,6 +116,22 @@ distance_fade_max_distance = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xsjvs"]
 material = SubResource("StandardMaterial3D_riqys")
+size = Vector2(10000, 10000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxc82"]
+transparency = 1
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.17674422, 0.20949045, 0.24223354, 1)
+albedo_texture = SubResource("NoiseTexture2D_nclww")
+uv1_scale = Vector3(10, 10, 10)
+proximity_fade_distance = 4096.0
+distance_fade_mode = 1
+distance_fade_min_distance = 500.0
+distance_fade_max_distance = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jwy6e"]
+material = SubResource("StandardMaterial3D_kxc82")
 size = Vector2(10000, 10000)
 
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
@@ -160,14 +184,15 @@ target = NodePath("../../../../Loop2")
 
 [node name="Loop1_Clearing" parent="Loop1" unique_id=77879138 instance=ExtResource("5_slsem")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -359.57883, 0.030643463, 382.63516)
+visible = false
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing" unique_id=833146961]
-transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.482212, 0.0031005815, 4.084198)
+transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.48221, 0.003100574, 4.084198)
 material_override = SubResource("StandardMaterial3D_4v7s2")
 mesh = SubResource("PlaneMesh_kxc82")
 
 [node name="Van_Prefab" type="Node3D" parent="Loop1/Loop1_Clearing" unique_id=1136036944]
-transform = Transform3D(0.23676665, 0, 0.97156656, 0, 1, 0, -0.97156656, 0, 0.23676665, -4.5652466, 0.50243247, -11.7247925)
+transform = Transform3D(0.16573666, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.16573666, -4.5652466, 0.41596818, -11.7247925)
 
 [node name="Van" parent="Loop1/Loop1_Clearing/Van_Prefab" unique_id=233212115 instance=ExtResource("18_kxc82")]
 transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0, 0, 0)
@@ -241,7 +266,7 @@ transform = Transform3D(0.9218875, -2.9347463e-08, 0.38745737, -0.38745737, -3.2
 mesh = SubResource("PlaneMesh_nmug1")
 
 [node name="RightHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing/Van_Prefab" unique_id=22982333]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3192792, 0.45503318, 0.45514506)
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 1.3192792, 0.45503318, 0.45514506)
 light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
 light_volumetric_fog_energy = 0.25
 shadow_enabled = true
@@ -249,7 +274,7 @@ spot_range = 40.0
 spot_attenuation = 0.25
 
 [node name="LeftHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing/Van_Prefab" unique_id=1489550412]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3275645, 0.5024775, 0.43094856)
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, -1.3275645, 0.5024775, 0.43094856)
 light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
 light_volumetric_fog_energy = 0.25
 shadow_enabled = true
@@ -258,6 +283,104 @@ spot_attenuation = 0.25
 
 [node name="Loop1_Entrance" parent="Loop1" unique_id=878268101 instance=ExtResource("6_slsem")]
 transform = Transform3D(0.9981988, 0, 0.05999333, 0, 1, 0, -0.05999333, 0, 0.9981988, 137.67384, 11.006775, -1.4461937)
+
+[node name="Loop1_Clearing2" parent="Loop1" unique_id=1325511302 instance=ExtResource("10_jwy6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -359.39548, 3.0517578e-05, 382.9448)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2" unique_id=329859387]
+transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.26718, 0.033744037, 3.6667786)
+material_override = SubResource("StandardMaterial3D_4v7s2")
+mesh = SubResource("PlaneMesh_kxc82")
+
+[node name="Van_Prefab" type="Node3D" parent="Loop1/Loop1_Clearing2" unique_id=1287726481]
+transform = Transform3D(0.16573666, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.16573666, 29.918304, 0.44661164, -1.6661377)
+
+[node name="Van" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=539157743 instance=ExtResource("18_kxc82")]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1287832419]
+transform = Transform3D(1.2, 0, 0, 0, 0.75592285, -0.5891947, 0, 0.6546607, 0.6803305, -0.005493164, 1.5000701, -1.0403748)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_bhunq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=2011139055]
+transform = Transform3D(1.2, 0, 0, 0, 0.75592285, -0.5891947, 0, 0.6546607, 0.6803305, -0.005493164, 1.8640985, -1.4606934)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_54jx7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1675384501]
+transform = Transform3D(-4.538783e-08, -0.9453917, -0.2933428, -2.629321e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738192e-08, -1.4281006, 1.318263, -1.909668)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_tl8tx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=867963656]
+transform = Transform3D(-4.538783e-08, -0.9453917, -0.2933428, -2.629321e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738192e-08, -1.2468567, 1.8439457, -2.1236877)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=463220513]
+transform = Transform3D(-0.28283876, -0.9453917, -0.2026111, -0.82038504, 0.3259365, -0.5876818, 0.82883704, -1.976509e-08, -0.6508295, -1.3152771, 1.6454847, -1.7702942)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1817746885]
+transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.8494229, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.4083252, 1.380091, -1.909668)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_tl8tx")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=151952732]
+transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.8494229, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.2526855, 1.8246397, -2.1236877)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1058612107]
+transform = Transform3D(0.2868064, 0.9438029, 0.20545357, -0.8190062, 0.3305089, -0.58669394, 0.8288369, 1.5248065e-07, -0.6508294, 1.322052, 1.6265131, -1.7702942)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="Wheel" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1893585879 instance=ExtResource("19_jwy6e")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.2731628, -0.0704633, -0.72576904)
+
+[node name="Wheel2" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1801977789 instance=ExtResource("19_jwy6e")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.2731628, -0.0704633, -5.365082)
+
+[node name="Wheel3" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1643368691 instance=ExtResource("19_jwy6e")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.3165588, -0.0704633, -0.72576904)
+
+[node name="Wheel4" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1177828545 instance=ExtResource("19_jwy6e")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.3165588, -0.0704633, -5.365082)
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1649557608]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.060333252, 0.6971779, -3)
+mesh = SubResource("PlaneMesh_sn0t7")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=25994604]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.020721436, 1.6971779, -3)
+mesh = SubResource("PlaneMesh_ny4q5")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1331485955]
+transform = Transform3D(0.94334906, 0, -0.33180195, 0.33180195, -4.371139e-08, 0.94334906, -1.45035255e-08, -1, -4.1235097e-08, 1.0395277, 1.5820556, -3)
+mesh = SubResource("PlaneMesh_nmug1")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1051426987]
+transform = Transform3D(0.9218875, -2.9347463e-08, 0.38745737, -0.38745737, -3.2394627e-08, 0.9218875, -1.45035255e-08, -1, -4.12351e-08, -1.0835801, 1.5765182, -3)
+mesh = SubResource("PlaneMesh_nmug1")
+
+[node name="RightHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1829591211]
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 1.3192792, 0.45503318, 0.45514506)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+shadow_enabled = true
+spot_range = 40.0
+spot_attenuation = 0.25
+
+[node name="LeftHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1204923959]
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, -1.3275645, 0.5024775, 0.43094856)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+shadow_enabled = true
+spot_range = 40.0
+spot_attenuation = 0.25
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.658524, -6.9428215, -1.75841)
@@ -372,7 +495,14 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -11.390015, 0)
 
 [node name="CloudLayer" type="MeshInstance3D" parent="." unique_id=730650308]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
+visible = false
 mesh = SubResource("PlaneMesh_xsjvs")
+script = ExtResource("15_qabrb")
+scroll_speed = 0.05
+
+[node name="CloudLayer2" type="MeshInstance3D" parent="." unique_id=486845042]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
+mesh = SubResource("PlaneMesh_jwy6e")
 script = ExtResource("15_qabrb")
 scroll_speed = 0.05
 

@@ -166,7 +166,7 @@ shape = SubResource("SphereShape3D_qn5rq")
 debug_color = Color(0.7176471, 0.48235294, 0, 0.7647059)
 
 [node name="RightHeadlight" type="SpotLight3D" parent="." unique_id=431231350]
-transform = Transform3D(1, 0, 0, 0, 0.988694, 0.14994702, 0, -0.14994702, 0.988694, 0.52447927, 0.45503318, -1.6965883)
+transform = Transform3D(1, 0, 0, 0, 0.916196, 0.4007306, 0, -0.4007306, 0.916196, 0.52447927, 0.45897278, -1.6908607)
 light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
 light_volumetric_fog_energy = 0.25
 shadow_enabled = true
@@ -174,7 +174,7 @@ spot_range = 40.0
 spot_attenuation = 0.25
 
 [node name="LeftHeadlight" type="SpotLight3D" parent="." unique_id=680538823]
-transform = Transform3D(1, 0, 0, 0, 0.988694, 0.14994702, 0, -0.14994702, 0.988694, -0.6233411, 0.5024775, -1.7207849)
+transform = Transform3D(1, 0, 0, 0, 0.916196, 0.4007306, 0, -0.4007306, 0.916196, -0.6233411, 0.49853793, -1.7265124)
 light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
 light_volumetric_fog_energy = 0.25
 shadow_enabled = true
