@@ -38,6 +38,7 @@ shape = SubResource("SphereShape3D_lu0ho")
 
 [node name="WalkingOnGravel" type="AudioStreamPlayer" parent="." unique_id=890749638]
 stream = ExtResource("3_v1l4e")
+volume_db = -2.0
 
 [node name="OutsideAmbience" type="AudioStreamPlayer" parent="." unique_id=1865019057]
 stream = ExtResource("4_0ctox")

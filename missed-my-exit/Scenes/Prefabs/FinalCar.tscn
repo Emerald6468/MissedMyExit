@@ -146,9 +146,11 @@ volume_db = -8.602
 
 [node name="CarMoving" type="AudioStreamPlayer" parent="Head" unique_id=1177200410]
 stream = ExtResource("6_nnj4n")
+volume_db = -2.0
 
 [node name="CarAccelerate" type="AudioStreamPlayer" parent="Head" unique_id=1022586349]
 stream = ExtResource("7_63ty5")
+volume_db = -10.0
 
 [node name="OutsideAmbience" type="AudioStreamPlayer" parent="Head" unique_id=1919411966]
 stream = ExtResource("8_63ty5")

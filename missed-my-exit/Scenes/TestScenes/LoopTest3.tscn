@@ -85,6 +85,7 @@ fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_light_energy = 5.9
+fog_density = 1.0
 fog_sky_affect = 0.0
 fog_depth_curve = 6.062854
 fog_depth_begin = 0.0
@@ -95,7 +96,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(122.40287, 0, 0)
+offset = Vector3(174.10602, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
