@@ -96,7 +96,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(1788.4694, 0, 0)
+offset = Vector3(16531.197, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -384,7 +384,7 @@ spot_range = 40.0
 spot_attenuation = 0.25
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.658524, -6.9428215, -1.75841)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.00335, -6.9428215, -1.82419)
 visible = false
 
 [node name="Events" type="Node3D" parent="Loop2" unique_id=649250298]
@@ -442,13 +442,13 @@ transform = Transform3D(-0.21552686, 0.10272676, -0.07413085, 0.0019795038, 0.14
 ObjectType = "Axe"
 
 [node name="Loop2b" parent="." unique_id=1817203411 instance=ExtResource("2_e6hmg")]
-transform = Transform3D(0.9576221, 0, 0.28802764, 0, 1, 0, -0.28802764, 0, 0.9576221, 168.71039, -6.942852, -375.645)
+transform = Transform3D(0.9576221, 0, 0.28802764, 0, 1, 0, -0.28802764, 0, 0.9576221, 203.98557, -6.942852, -374.77405)
 visible = false
 
 [node name="Events" type="Node3D" parent="Loop2b" unique_id=1388401883]
 
 [node name="HideLoop2Main" type="Area3D" parent="Loop2b/Events" unique_id=1490449351]
-transform = Transform3D(0.5742471, 0, -0.8186821, 0, 1, 0, 0.8186821, 0, 0.5742471, -112.58937, -4.2915344e-06, 330.60452)
+transform = Transform3D(0.992555, 0, 0.12179765, 0, 1, 0, -0.12179765, 0, 0.992555, -102.121, -4.2915344e-06, 339.67712)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("12_8lrox")
@@ -470,7 +470,7 @@ trigger = NodePath("..")
 target = NodePath("../../../../Loop3")
 
 [node name="Loop3" parent="." unique_id=982542341 instance=ExtResource("11_nclww")]
-transform = Transform3D(-0.951434, 0, -0.3078528, 0, 1, 0, 0.3078528, 0, -0.951434, 149.54147, -7.587615, -369.69247)
+transform = Transform3D(-0.951434, 0, -0.3078528, 0, 1, 0, 0.3078528, 0, -0.951434, 203.17177, -6.843667, -374.67548)
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
