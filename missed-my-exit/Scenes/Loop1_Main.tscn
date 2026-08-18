@@ -17,16 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="14_kvbma"]
 [ext_resource type="Texture2D" uid="uid://dgtfad0ua1in4" path="res://Assets/TEMP Textures/Texturelabs_Metal_222S2.png" id="15_f72v8"]
 [ext_resource type="Texture2D" uid="uid://c0ldd1wtdv7mt" path="res://Assets/TEMP Textures/Texturelabs_Brick_158S2.png" id="16_0v45g"]
-[ext_resource type="Texture2D" uid="uid://c6bqxx50h3gau" path="res://Assets/TEMP Textures/Texturelabs_Wood_156S2.png" id="17_mvd0e"]
-[ext_resource type="Texture2D" uid="uid://uhajwq6h1bjk" path="res://Assets/TEMP Textures/Texturelabs_Brick_126S2.png" id="18_7cb3v"]
-[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="19_l27jq"]
-[ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="20_1aogm"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="21_yfuqy"]
 [ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="22_sm37y"]
 [ext_resource type="PackedScene" uid="uid://1mgmptt54kax" path="res://Assets/Old Models/Boulder_2.glb" id="23_na32f"]
 [ext_resource type="PackedScene" uid="uid://b0rbtxxixoc7k" path="res://Scenes/Prefabs/Roads/road_45_flat.tscn" id="25_b3qce"]
 [ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="25_cls3s"]
 [ext_resource type="PackedScene" uid="uid://c5vtvavrtrw11" path="res://Scenes/Prefabs/Roads/r_20deg_long.tscn" id="26_b3qce"]
+[ext_resource type="PackedScene" uid="uid://cfwjrlo6uuarr" path="res://Scenes/Prefabs/cabin1_road.tscn" id="27_txsyh"]
 [ext_resource type="PackedScene" uid="uid://dsw24vf51qcwr" path="res://Scenes/Loop1_GasStation.tscn" id="28_oq4vg"]
 [ext_resource type="PackedScene" uid="uid://rgevfgejmet0" path="res://Scenes/Prefabs/Roads/r_45deg.tscn" id="29_wijvg"]
 [ext_resource type="PackedScene" uid="uid://oxby8e805mug" path="res://Scenes/Prefabs/Roads/r_3way.tscn" id="30_txsyh"]
@@ -174,27 +171,6 @@ albedo_texture = ExtResource("16_0v45g")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_offset = Vector3(0, 0.5, 0)
 uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6da8v"]
-albedo_texture = ExtResource("17_mvd0e")
-uv1_scale = Vector3(0.2, 0.2, 0.2)
-uv1_offset = Vector3(0, 0.5, 0)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl8tx"]
-albedo_texture = ExtResource("18_7cb3v")
-uv1_scale = Vector3(0.2, 0.2, 0.2)
-uv1_offset = Vector3(0, 0, 0.5)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54jx7"]
-albedo_texture = ExtResource("19_l27jq")
-uv1_scale = Vector3(0.2, 0.2, 0.2)
-uv1_offset = Vector3(0, 0, 0.5)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1x04j"]
-albedo_texture = ExtResource("20_1aogm")
 
 [node name="Loop1" type="Node3D" unique_id=1796093272]
 
@@ -715,113 +691,6 @@ use_collision = true
 size = Vector3(37.730824, 1, 41.006935)
 material = SubResource("StandardMaterial3D_kxc82")
 
-[node name="Cabin1" type="Node3D" parent="." unique_id=1381816161]
-transform = Transform3D(0.5044115, 0, -0.745365, 0, 0.9, 0, 0.745365, 0, 0.5044115, -118.58655, 4.2168427, 332.9754)
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="Cabin1" unique_id=1196630141]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1445923, -2.9240718, -6.495941)
-size = Vector3(1.6685867, 2.7560754, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="Cabin1" unique_id=1871186025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8695831, -2.3717144, -6.495941)
-size = Vector3(2.9272618, 1.7081499, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="Cabin1" unique_id=830770550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4871826, -2.3774517, -6.4959717)
-size = Vector3(1.9569397, 1.6966753, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="Cabin1" unique_id=226307538]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7445087, -0.5372381, -6.4959593)
-size = Vector3(9.441475, 2.0343418, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="Cabin1" unique_id=1450651963]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7326355, -4.9169188, -2.4713135)
-size = Vector3(9.5871315, 1.338459, 8.365524)
-material = SubResource("StandardMaterial3D_tl8tx")
-
-[node name="CSGBox3D16" type="CSGBox3D" parent="Cabin1" unique_id=967485641]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7327805, -4.380644, -8.748859)
-size = Vector3(9.586765, 0.2659092, 4.270672)
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGBox3D17" type="CSGBox3D" parent="Cabin1" unique_id=599718252]
-transform = Transform3D(1, -1.3123805e-08, -2.0166482e-09, 1.3123804e-08, 0.95386446, 0.30023766, -2.0166517e-09, -0.30023766, 0.95386446, -1.7454367, -0.5368614, -8.633818)
-size = Vector3(9.054345, 0.2659092, 4.5064907)
-material = SubResource("StandardMaterial3D_1x04j")
-
-[node name="CSGBox3D18" type="CSGBox3D" parent="Cabin1" unique_id=1851931956]
-transform = Transform3D(1, -2.8042116e-08, -1.0180429e-08, 2.8042118e-08, 0.7670989, 0.64152884, -1.01804325e-08, -0.64152884, 0.7670989, -1.7220888, 2.174458, -4.5277395)
-size = Vector3(9.784338, 0.2659092, 5.535472)
-material = SubResource("StandardMaterial3D_1x04j")
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="Cabin1" unique_id=157340819]
-transform = Transform3D(-1, -2.8042109e-08, 7.724234e-08, 2.804212e-08, 0.7670989, 0.64152884, -7.724234e-08, 0.64152884, -0.7670989, -1.7220898, 2.174458, -0.441123)
-size = Vector3(9.784338, 0.2659092, 5.535472)
-material = SubResource("StandardMaterial3D_1x04j")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="Cabin1" unique_id=567748093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4372034, -3.7936106, -6.4959564)
-size = Vector3(6.059433, 1.1280899, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="Cabin1" unique_id=146821996]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7423706, -1.9378252, 1.5663042)
-size = Vector3(9.449097, 4.8396606, 0.19238281)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Cabin1" unique_id=1016196642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3627014, -1.9386187, -2.4494934)
-size = Vector3(0.2084961, 4.8380737, 7.9356995)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Cabin1" unique_id=1171588363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8619623, -0.45271015, -2.4988375)
-size = Vector3(0.9058838, 10.450882, 1.523386)
-material = SubResource("StandardMaterial3D_tl8tx")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="Cabin1" unique_id=1958420841]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5932322, -3.4650278, -10.601679)
-size = Vector3(0.11798096, 4.4262466, 0.23190784)
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="Cabin1" unique_id=1853161030]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1263895, -3.4650278, -10.601679)
-size = Vector3(0.11798096, 4.4262466, 0.23190784)
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Cabin1" unique_id=412188562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8667603, -1.9459429, -2.4662476)
-size = Vector3(0.2084961, 4.8234253, 7.9022675)
-material = SubResource("StandardMaterial3D_6da8v")
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Cabin1" unique_id=148027989]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9569502, 0.440269, -2.43369)
-polygon = PackedVector2Array(4, 0, -4, 0, 0, 3.5)
-depth = 0.19
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Cabin1" unique_id=1810878495]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.2940626, 0.440269, -2.43369)
-polygon = PackedVector2Array(4, 0, -4, 0, 0, 3.5)
-depth = 0.19
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="Cabin1" unique_id=1171482708]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0147753, -1.1950011, -6.50112)
-polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
-depth = 0.19
-material = SubResource("StandardMaterial3D_54jx7")
-
-[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="Cabin1" unique_id=433099969]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6514978, -1.1950011, -6.501122)
-polygon = PackedVector2Array(4, 0, 0, 0, 0, 1.25)
-depth = 0.19
-material = SubResource("StandardMaterial3D_54jx7")
-
 [node name="Light Poles" type="Node3D" parent="." unique_id=1918671008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6906505, -0.296103, 2.8048944)
 visible = false
@@ -947,65 +816,68 @@ transform = Transform3D(-0.9697352, 0, 0.24415943, 0, 1, 0, -0.24415943, 0, -0.9
 [node name="Road_45_Flat9" parent="Prefabs" unique_id=346286124 instance=ExtResource("25_b3qce")]
 transform = Transform3D(-0.97455394, 0, 0.22415301, 0, 1, 0, -0.22415301, 0, -0.97455394, -134.36938, 0.66073227, 154.21353)
 
-[node name="Road_20_Flat5" parent="Prefabs" unique_id=121559600 instance=ExtResource("26_b3qce")]
-transform = Transform3D(-0.36249572, 0, 0.9319853, 0, 1, 0, -0.9319853, 0, -0.36249572, -106.06796, 0.6607208, 179.58095)
-
 [node name="Road_45_Flat10" parent="Prefabs" unique_id=2142839273 instance=ExtResource("25_b3qce")]
-transform = Transform3D(-0.17542678, 0, 0.9844926, 0, 1, 0, -0.9844926, 0, -0.17542678, -95.2402, 0.66073227, 222.058)
+transform = Transform3D(-0.35526437, 0, 0.93476605, 0, 1, 0, -0.93476605, 0, -0.35526437, -106.38322, 0.66073227, 178.9666)
 
 [node name="Road_45_Flat11" parent="Prefabs" unique_id=1580823772 instance=ExtResource("25_b3qce")]
-transform = Transform3D(-0.17542678, 0, 0.9844926, 0, 1, 0, -0.9844926, 0, -0.17542678, -95.2402, 0.66073227, 222.058)
+transform = Transform3D(-0.35526437, 0, 0.93476605, 0, 1, 0, -0.93476605, 0, -0.35526437, -106.38322, 0.66073227, 178.9666)
 
 [node name="Road_45_Flat12" parent="Prefabs" unique_id=702345458 instance=ExtResource("25_b3qce")]
-transform = Transform3D(0.16627014, 0, -0.9860804, 0, 1, 0, 0.9860804, 0, 0.16627014, -120.00206, 0.66073227, 293.61545)
+transform = Transform3D(0.3465621, 0, -0.9380272, 0, 1, 0, 0.9380272, 0, 0.3465621, -117.42067, 0.66073227, 253.87851)
 
 [node name="r_45deg" parent="Prefabs" unique_id=1524773122 instance=ExtResource("29_wijvg")]
-transform = Transform3D(0.7975137, 0, -0.6033007, 0, 1, 0, 0.6033007, 0, 0.7975137, -112.44493, 0, 306.84375)
+transform = Transform3D(0.89570785, 0, -0.4446432, 0, 1, 0, 0.4446432, 0, 0.89570785, -107.537636, 0, 265.47263)
 
 [node name="r_45deg2" parent="Prefabs" unique_id=892053365 instance=ExtResource("29_wijvg")]
-transform = Transform3D(-0.7975138, 0, 0.6033008, 0, 1, 0, -0.6033008, 0, -0.7975138, -112.55359, 0, 306.60886)
+transform = Transform3D(-0.8957078, 0, 0.44464326, 0, 1, 0, -0.44464326, 0, -0.8957078, -107.68804, 0, 265.26202)
+
+[node name="Road_20_Flat5" parent="Prefabs" unique_id=952715508 instance=ExtResource("26_b3qce")]
+transform = Transform3D(-0.23509666, 0, 0.97197205, 0, 1, 0, -0.97197205, 0, -0.23509666, -98.04567, 0.66072464, 276.0343)
 
 [node name="r_45deg3" parent="Prefabs" unique_id=1407639414 instance=ExtResource("29_wijvg")]
-transform = Transform3D(0.7975138, 0, -0.60330063, 0, 1, 0, 0.60330063, 0, 0.7975138, -92.13312, 0, 372.36478)
+transform = Transform3D(0.76141, 0, -0.64827055, 0, 1, 0, 0.64827055, 0, 0.76141, -83.311066, 0, 372.62823)
 
 [node name="r_3way" parent="Prefabs" unique_id=1154746067 instance=ExtResource("30_txsyh")]
-transform = Transform3D(-0.12412554, 0, 0.99226654, 0, 1, 0, -0.99226654, 0, -0.12412554, -104.826454, 0, 319.61856)
+transform = Transform3D(-0.06671943, 0, 0.9977718, 0, 1, 0, -0.9977718, 0, -0.06671943, -92.94271, 0, 319.23804)
 
 [node name="r_40m2" parent="Prefabs" unique_id=648931134 instance=ExtResource("25_cls3s")]
-transform = Transform3D(-0.8033285, 0, 0.5955362, 0, 1, 0, -0.5955362, 0, -0.8033285, -92.328094, 0, 372.18796)
+transform = Transform3D(-0.76766264, 0, 0.6408541, 0, 1, 0, -0.6408541, 0, -0.76766264, -83.49552, 0, 372.4405)
+
+[node name="cabin1_road" parent="Prefabs" unique_id=1633421192 instance=ExtResource("27_txsyh")]
+transform = Transform3D(-0.99723524, 0, 0.074309535, 0, 1, 0, 0.074309535, 0, 0.99723524, -171.07457, -1.9073486e-06, 345.0587)
 
 [node name="r_20m_gravel" parent="Prefabs" unique_id=1940124849 instance=ExtResource("31_kvbma")]
-transform = Transform3D(0.9917304, 0, 0.12833884, 0, 1, 0, -0.12833884, 0, 0.9917304, -122.14183, 0, 342.12982)
+transform = Transform3D(0.9974794, 0, 0.07095663, 0, 1, 0, -0.07095663, 0, 0.9974794, -170.83134, 0, 345.09158)
 
 [node name="r_45deg_gravel" parent="Prefabs" unique_id=1132793377 instance=ExtResource("32_f72v8")]
-transform = Transform3D(-0.6057468, 0, -0.7956574, 0, 1, 0, 0.7956574, 0, -0.6057468, -155.0589, 8.583069e-06, 352.41534)
+transform = Transform3D(-0.65060556, 0, -0.7594157, 0, 1, 0, 0.7594157, 0, -0.65060556, -204.28659, 8.583069e-06, 353.46246)
 
 [node name="r_10m_gravel" parent="Prefabs" unique_id=808998443 instance=ExtResource("33_0v45g")]
-transform = Transform3D(0.5917714, 0, 0.8061058, 0, 1, 0, -0.8061058, 0, 0.5917714, -154.61725, 0, 352.3315)
+transform = Transform3D(0.6372557, 0, 0.7706523, 0, 1, 0, -0.7706523, 0, 0.6372557, -203.84084, 0, 353.40424)
 
 [node name="r_45deg_gravel2" parent="Prefabs" unique_id=118297612 instance=ExtResource("32_f72v8")]
-transform = Transform3D(0.15722989, 0, -0.987562, 0, 1, 0, 0.987562, 0, 0.15722989, -163.86789, 8.583069e-06, 375.08783)
+transform = Transform3D(0.10003992, 0, -0.9949834, 0, 1, 0, 0.9949834, 0, 0.10003992, -214.3879, 8.583069e-06, 375.58945)
 
 [node name="r_45deg_gravel3" parent="Prefabs" unique_id=578066563 instance=ExtResource("32_f72v8")]
-transform = Transform3D(-0.15722978, 0, 0.987562, 0, 1, 0, -0.987562, 0, -0.15722978, -163.86789, 8.583069e-06, 375.08783)
+transform = Transform3D(-0.10003983, 0, 0.9949834, 0, 1, 0, -0.9949834, 0, -0.10003983, -214.3879, 8.583069e-06, 375.58945)
 
 [node name="r_10m_gravel2" parent="Prefabs" unique_id=962336849 instance=ExtResource("33_0v45g")]
-transform = Transform3D(0.5917714, 0, 0.8061058, 0, 1, 0, -0.8061058, 0, 0.5917714, -167.32945, 0, 389.77457)
+transform = Transform3D(0.6372557, 0, 0.7706523, 0, 1, 0, -0.7706523, 0, 0.6372557, -218.69032, 0, 390.05222)
 
 [node name="r_45deg_gravel4" parent="Prefabs" unique_id=1391727435 instance=ExtResource("32_f72v8")]
-transform = Transform3D(0.5871335, 0, 0.80948997, 0, 1, 0, -0.80948997, 0, 0.5871335, -173.07912, 8.583069e-06, 397.5059)
+transform = Transform3D(0.63282067, 0, 0.77429825, 0, 1, 0, -0.77429825, 0, 0.63282067, -224.87611, 8.583069e-06, 397.43924)
 
 [node name="r_45deg_gravel5" parent="Prefabs" unique_id=308823457 instance=ExtResource("32_f72v8")]
-transform = Transform3D(0.98756194, 0, 0.15722978, 0, 1, 0, -0.15722978, 0, 0.98756194, -185.7269, 8.583069e-06, 405.24277)
+transform = Transform3D(0.9949833, 0, 0.10003981, 0, 1, 0, -0.10003981, 0, 0.9949833, -237.94885, 8.583069e-06, 404.43417)
 
 [node name="r_20m_gravel2" parent="Prefabs" unique_id=190175232 instance=ExtResource("31_kvbma")]
-transform = Transform3D(0.8001979, 0, -0.599736, 0, 1, 0, 0.599736, 0, 0.8001979, -200.49005, 0, 401.9406)
+transform = Transform3D(0.7642951, 0, -0.6448665, 0, 1, 0, 0.6448665, 0, 0.7642951, -252.4971, 0, 400.28647)
 
 [node name="r_45deg_gravel6" parent="Prefabs" unique_id=1690756187 instance=ExtResource("32_f72v8")]
-transform = Transform3D(-0.98756194, 0, -0.15722969, 0, 1, 0, 0.15722969, 0, -0.98756194, -231.06612, 8.583069e-06, 386.42688)
+transform = Transform3D(-0.9949833, 0, -0.10003972, 0, 1, 0, 0.10003972, 0, -0.9949833, -282.12805, 8.583069e-06, 383.03598)
 
 [node name="r_40m_gravel" parent="Prefabs" unique_id=1375179786 instance=ExtResource("34_mvd0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -230.17796, 0, 386.58212)
+transform = Transform3D(0.9983371, 0, -0.057645503, 0, 1, 0, 0.057645503, 0, 0.9983371, -281.2503, 0, 383.24216)
 
 [node name="r_40m_gravel2" parent="Prefabs" unique_id=283417261 instance=ExtResource("34_mvd0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -270.17798, 0, 386.58212)
+transform = Transform3D(0.9983371, 0, -0.057645503, 0, 1, 0, 0.057645503, 0, 0.9983371, -321.18384, 0, 380.93634)

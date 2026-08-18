@@ -96,7 +96,7 @@ volumetric_fog_density = 0.025
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6f8o3"]
-offset = Vector3(174.10602, 0, 0)
+offset = Vector3(1289.8829, 0, 0)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nclww"]
 noise = SubResource("FastNoiseLite_6f8o3")
@@ -123,7 +123,7 @@ size = Vector2(10000, 10000)
 transparency = 1
 shading_mode = 0
 disable_fog = true
-albedo_color = Color(0.17674422, 0.20949045, 0.24223354, 1)
+albedo_color = Color(0.1419887, 0.16889194, 0.19915497, 1)
 albedo_texture = SubResource("NoiseTexture2D_nclww")
 uv1_scale = Vector3(10, 10, 10)
 proximity_fade_distance = 4096.0
@@ -143,7 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9297848, 0)
 [node name="Events" type="Node3D" parent="Loop1" unique_id=128377468]
 
 [node name="HideEntrance" type="Area3D" parent="Loop1/Events" unique_id=1169108329]
-transform = Transform3D(0.9631755, 0, 0.26887363, 0, 1, 0, -0.26887363, 0, 0.9631755, -245.65727, -0.2378582, 52.514523)
+transform = Transform3D(0.8695642, 0, 0.49381995, 0, 1, 0, -0.49381995, 0, 0.8695642, -245.00511, -0.23785818, 53.78464)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("12_8lrox")
@@ -166,7 +166,7 @@ trigger = NodePath("..")
 target = NodePath("../../ShowLoop2")
 
 [node name="ShowLoop2" type="Area3D" parent="Loop1/Events" unique_id=144929253]
-transform = Transform3D(0.7526142, 0, -0.6584618, 0, 1, 0, 0.6584618, 0, 0.7526142, -76.75736, -0.2378582, -13.986661)
+transform = Transform3D(0.57044095, 0, -0.82133865, 0, 1, 0, 0.82133865, 0, 0.57044095, -72.04688, -0.23785818, -16.786777)
 collision_layer = 0
 collision_mask = 2
 monitoring = false
@@ -286,7 +286,7 @@ spot_attenuation = 0.25
 transform = Transform3D(0.9981988, 0, 0.05999333, 0, 1, 0, -0.05999333, 0, 0.9981988, 137.67384, 11.006775, -1.4461937)
 
 [node name="Loop1_Clearing2" parent="Loop1" unique_id=1325511302 instance=ExtResource("10_jwy6e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -359.39548, 3.0517578e-05, 382.9448)
+transform = Transform3D(0.99972165, 0, -0.023593394, 0, 1, 0, 0.023593394, 0, 0.99972165, -409.98892, 3.0517578e-05, 373.65683)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2" unique_id=329859387]
 transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.26718, 0.033744037, 3.6667786)
