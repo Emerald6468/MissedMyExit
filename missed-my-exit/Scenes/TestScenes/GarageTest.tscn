@@ -5,13 +5,28 @@
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="3_bb8cp"]
 [ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]
 [ext_resource type="PackedScene" uid="uid://b863pqxvtd2gm" path="res://Scenes/UI/tutorial/go_to_circle.tscn" id="5_bb8cp"]
-[ext_resource type="Texture2D" uid="uid://vm5ykdnkq0jm" path="res://Assets/UI/Tutorial/ArrowSign_1.png" id="6_u6dgh"]
+[ext_resource type="PackedScene" uid="uid://dcm8c1q4uktii" path="res://Scenes/UI/tutorial/point_arrow.tscn" id="6_u6dgh"]
+[ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="7_ligur"]
+[ext_resource type="PackedScene" uid="uid://dcjny86ttjuob" path="res://Assets/New Models/Light Poles/Light1.glb" id="8_ob34o"]
+[ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_fqvrc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6dgh"]
 albedo_texture = ExtResource("1_y4rai")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0ww7"]
+albedo_color = Color(0.33793393, 0.28034684, 0.06944304, 1)
+albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ligur"]
+albedo_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
+albedo_texture = ExtResource("1_y4rai")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4rai"]
-albedo_color = Color(0.35686275, 1, 1, 1)
+albedo_color = Color(0.9516799, 0.86153966, 0.6452286, 1)
+albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3ya4"]
+albedo_color = Color(0.33692408, 0.41580406, 0.36826047, 1)
 albedo_texture = ExtResource("1_y4rai")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr836"]
@@ -30,8 +45,20 @@ material_override = SubResource("StandardMaterial3D_u6dgh")
 use_collision = true
 size = Vector3(0.76623535, 1, 0.3918457)
 
+[node name="Roof" type="CSGBox3D" parent="." unique_id=1907533677]
+transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.7591937, 3.7998233, 0.16803229)
+material_override = SubResource("StandardMaterial3D_f0ww7")
+use_collision = true
+size = Vector3(0.76623535, 1, 0.3918457)
+
+[node name="Road" type="CSGBox3D" parent="." unique_id=2014676650]
+transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.8172338, -0.51424086, 10.368308)
+material_override = SubResource("StandardMaterial3D_ligur")
+use_collision = true
+size = Vector3(0.76623535, 1, 0.8911133)
+
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("2_jr836")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91128945, 0, 0)
+transform = Transform3D(-0.99476343, 0, -0.10220417, 0, 1, 0, 0.10220417, 0, -0.99476343, 0.6635351, 0, -2.3159587)
 collision_layer = 4
 collision_mask = 3
 
@@ -42,6 +69,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1507142, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, -2.876808)
 size = Vector3(5.8730164, 3.5303345, 0.41882324)
 material = SubResource("StandardMaterial3D_y4rai")
+
+[node name="GarageDoor" type="CSGBox3D" parent="." unique_id=956416643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, 3.4409602)
+size = Vector3(5.8730164, 3.5303345, 0.41882324)
+material = SubResource("StandardMaterial3D_n3ya4")
 
 [node name="Wall2" type="CSGBox3D" parent="." unique_id=1939912211]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.292947, 1.77792, 0.07848477)
@@ -78,10 +110,47 @@ show_num = 6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41112447, -4.7683716e-07, 2.471313)
 show_num = 4
 
-[node name="PointArrow" type="Node3D" parent="." unique_id=2067055469]
-transform = Transform3D(0.104417905, -0.99453366, 3.3057075e-09, 0.03924444, 0.004120342, -0.99922115, 0.99375904, 0.10433658, 0.03946014, 3.7044384, 1.428466, 2.4037855)
+[node name="PointArrow" parent="." unique_id=952205465 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.104417905, -0.99453366, 3.3057075e-09, 0.03924444, 0.004120342, -0.99922115, 0.99375904, 0.10433658, 0.03946014, 3.1039002, 1.4300958, 2.4450548)
+show_num = 2
 
-[node name="Sprite3d" type="Sprite3D" parent="PointArrow" unique_id=971558717]
-transform = Transform3D(0.50791, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-billboard = 2
-texture = ExtResource("6_u6dgh")
+[node name="PointArrow2" parent="." unique_id=1393243636 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, 3.0201387, 1.0002201, 1.6636186)
+show_num = 3
+
+[node name="PointArrow3" parent="." unique_id=1027369361 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, 3.0201387, 1.0002201, 1.6636186)
+show_num = 7
+
+[node name="PointArrow4" parent="." unique_id=398380979 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, -1.0100247, 2.4799685, 2.6917474)
+show_num = 5
+
+[node name="Wheel" parent="." unique_id=760245031 instance=ExtResource("7_ligur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991859, 1.8543503, 2.624121)
+
+[node name="Light1" parent="." unique_id=1115778773 instance=ExtResource("8_ob34o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6022282, 3.2762861, -1.1249442)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light1" unique_id=1718633980]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.26587963, -0.005867958)
+light_color = Color(1, 0.57, 0.13999999, 1)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 12.439801
+spot_angle = 57.883698
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light1/SpotLight3D" unique_id=95960783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16770124)
+light_color = Color(1, 0.7041031, 0.47365624, 1)
+light_energy = 4.048
+shadow_enabled = true
+omni_range = 1.0380461
+
+[node name="Sprite3D" type="Sprite3D" parent="Light1/SpotLight3D" unique_id=1278445726]
+pixel_size = 0.015
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+texture = ExtResource("9_fqvrc")

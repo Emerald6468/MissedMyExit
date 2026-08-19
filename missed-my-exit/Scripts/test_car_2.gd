@@ -38,7 +38,7 @@ var trunk_open = false
 
 
 func open_trunk():
-	if Global.tutorial_num == 4: Global.CurrentCheck = true
+	if Global.tutorial_num == 3: Global.CurrentCheck = true
 	trunk_animations.play("Trunk_Open")
 	trunk_open = true
 	

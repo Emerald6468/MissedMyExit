@@ -15,6 +15,9 @@ offset_bottom = 40.0
 [node name="CameraEffects" parent="." unique_id=957742026 instance=ExtResource("1_ahcct")]
 layout_mode = 1
 
+[node name="WASD" parent="." unique_id=290457437 instance=ExtResource("5_alcrr")]
+layout_mode = 1
+
 [node name="ClosedCaptions" type="Control" parent="." unique_id=99892087]
 anchors_preset = 0
 offset_right = 40.0
@@ -51,7 +54,4 @@ scroll_active = false
 horizontal_alignment = 1
 
 [node name="PauseMenu" parent="." unique_id=740504894 instance=ExtResource("3_c7mb3")]
-layout_mode = 1
-
-[node name="WASD" parent="." unique_id=290457437 instance=ExtResource("5_alcrr")]
 layout_mode = 1

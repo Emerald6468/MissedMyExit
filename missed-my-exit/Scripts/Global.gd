@@ -2,7 +2,7 @@ extends Node
 #This is our global node make sure to be careful with resetting stuff
 
 #Switching Controls
-var OnFoot = false
+var OnFoot = true
 var JustSwitched = false
 var NearDoor = false
 
@@ -34,7 +34,7 @@ var CurrentCheck = false
 var tutorial_num: int = 0
 #make sure to add every var to reset
 func reset_vars():
-	OnFoot = false
+	OnFoot = true
 	JustSwitched = false
 	NearDoor = false
 	NearPickup = false

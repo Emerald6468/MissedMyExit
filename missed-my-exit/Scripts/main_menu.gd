@@ -30,7 +30,7 @@ func focus_button() -> void:
 
 func _on_start_button_pressed() -> void:
 	#$AudioStreamPlayer2.play()
-	get_tree().change_scene_to_file("res://Scenes/TestScenes/Harlan/cloud_test.tscn")
+	get_tree().change_scene_to_file("res://Scenes/TestScenes/GarageTest.tscn")
 
 
 func _on_settings_button_pressed() -> void:

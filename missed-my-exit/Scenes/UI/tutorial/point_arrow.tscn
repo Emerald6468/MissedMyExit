@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dcm8c1q4uktii"]
+
+[ext_resource type="Texture2D" uid="uid://vm5ykdnkq0jm" path="res://Assets/UI/Tutorial/ArrowSign_1.png" id="1_1tgso"]
+[ext_resource type="Script" uid="uid://bkoopbrgtcme7" path="res://Scripts/tutorial/point_arrow.gd" id="1_gewbv"]
+
+[node name="PointArrow" type="Node3D" unique_id=952205465]
+transform = Transform3D(0.104417905, -0.99453366, 3.3057075e-09, 0.03924444, 0.004120342, -0.99922115, 0.99375904, 0.10433658, 0.03946014, 0, 0, 0)
+script = ExtResource("1_gewbv")
+
+[node name="Sprite3d" type="Sprite3D" parent="." unique_id=699946553]
+transform = Transform3D(0.50791, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_1tgso")
