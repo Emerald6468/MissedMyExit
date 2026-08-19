@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MissedMyExit"
-run/main_scene="uid://dho2m32wvc282"
+run/main_scene="uid://2ks3tptvwum3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/stretch_mode=4
 boot_splash/image="uid://cad4acnkm8y5d"
