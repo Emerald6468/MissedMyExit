@@ -31,7 +31,7 @@ var volume = 50.0
 
 #UI that will reset
 var CurrentCheck = false
-
+var tutorial_num: int = 0
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = false
@@ -46,6 +46,7 @@ func reset_vars():
 	HasItem = false
 	ClosestDistance = 100.0
 	CurrentCheck = false
+	tutorial_num = 0
 	#temp ones prob delete later
 	HasRock = false
 	

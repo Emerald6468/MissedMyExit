@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dxar0qvhkexte" path="res://Scenes/Loop1_Clearing.tscn" id="2_vruap"]
 [ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="3_xytqx"]
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="4_orwy2"]
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="5_x5511"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="5_x5511"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="6_bblvj"]
 [ext_resource type="Texture2D" uid="uid://d2kqdlfy44ad7" path="res://Assets/Textures/Nature/NewTreeLine.png" id="7_vruap"]
 [ext_resource type="Script" uid="uid://b3mu7ah4nvy8f" path="res://Scenes/TestScenes/Harlan/cloud_layer.gd" id="7_xytqx"]

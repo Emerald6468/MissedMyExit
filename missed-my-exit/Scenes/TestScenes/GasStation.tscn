@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://h14eqrm38lng"]
 
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_yjphe"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="1_yjphe"]
 [ext_resource type="PackedScene" uid="uid://wf7ir14dexn1" path="res://Scenes/Prefabs/LightPole.tscn" id="2_07afh"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="3_rx4uf"]
 [ext_resource type="PackedScene" uid="uid://bs5glgy3sy1do" path="res://Scenes/Prefabs/LightPole_Metal.tscn" id="4_wbiwg"]

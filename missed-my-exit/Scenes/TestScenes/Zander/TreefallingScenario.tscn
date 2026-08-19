@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c28wun86yl402"]
 
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_ov7qb"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="1_ov7qb"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="2_80sl8"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
 [ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="3_8eg3t"]

@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_y4rai"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_jr836"]
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="3_bb8cp"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="3_bb8cp"]
 [ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]
+[ext_resource type="PackedScene" uid="uid://b863pqxvtd2gm" path="res://Scenes/UI/tutorial/go_to_circle.tscn" id="5_bb8cp"]
+[ext_resource type="Texture2D" uid="uid://vm5ykdnkq0jm" path="res://Assets/UI/Tutorial/ArrowSign_1.png" id="6_u6dgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6dgh"]
 albedo_texture = ExtResource("1_y4rai")
@@ -30,6 +32,8 @@ size = Vector3(0.76623535, 1, 0.3918457)
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("2_jr836")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91128945, 0, 0)
+collision_layer = 4
+collision_mask = 3
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("3_bb8cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1507142, 0, 0)
@@ -61,3 +65,23 @@ material = SubResource("StandardMaterial3D_bb8cp")
 
 [node name="Toolcart" parent="." unique_id=1789723979 instance=ExtResource("4_jr836")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7531284, 0.18778333, 1.642514)
+
+[node name="GoToCircle" parent="." unique_id=1194643824 instance=ExtResource("5_bb8cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1382802, -4.7683716e-07, 2.471313)
+show_num = 2
+
+[node name="GoToCircle2" parent="." unique_id=1229912734 instance=ExtResource("5_bb8cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1382802, -4.7683716e-07, 2.471313)
+show_num = 6
+
+[node name="GoToCircle3" parent="." unique_id=1588636742 instance=ExtResource("5_bb8cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41112447, -4.7683716e-07, 2.471313)
+show_num = 4
+
+[node name="PointArrow" type="Node3D" parent="." unique_id=2067055469]
+transform = Transform3D(0.104417905, -0.99453366, 3.3057075e-09, 0.03924444, 0.004120342, -0.99922115, 0.99375904, 0.10433658, 0.03946014, 3.7044384, 1.428466, 2.4037855)
+
+[node name="Sprite3d" type="Sprite3D" parent="PointArrow" unique_id=971558717]
+transform = Transform3D(0.50791, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+billboard = 2
+texture = ExtResource("6_u6dgh")

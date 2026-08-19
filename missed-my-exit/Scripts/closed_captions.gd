@@ -8,7 +8,6 @@ var _typing_time : float
 
 var just_changed = true
 var tutorial_done = false
-var tutorial_num = 0
 var tutorial_text: Array = [
 	"WASD TO MOVE",
 	"Move Mouse to look around",
@@ -49,17 +48,17 @@ func display_text(type: RichTextLabel, text : String):
 var temp = false
 var check = false
 func run_tutorial():
+	if just_changed:
+		just_changed = false
+		display_text(tutorial,tutorial_text[Global.tutorial_num])
 	if Global.CurrentCheck:
 		Global.CurrentCheck = false
 		temp = true
-	if just_changed:
-		just_changed = false
-		display_text(tutorial,tutorial_text[tutorial_num])
-	match tutorial_num:
+	match Global.tutorial_num:
 		0: 
 			if temp: check = true
 		1: 
-			if temp: check = true
+			if mouse_moved: check = true
 		2: 
 			if temp: check = true
 		3: 
@@ -93,11 +92,17 @@ func run_tutorial():
 	
 	if check:
 		check = false
-		var last_item = tutorial_num >= tutorial_text.size()-1
-		if !last_item: tutorial_num += 1
+		var last_item = Global.tutorial_num >= tutorial_text.size()-1
+		if !last_item: Global.tutorial_num += 1
 		else: tutorial_done = true
 		just_changed = true
 	if temp: temp = false
+
+var mouse_moved = false
+func _input(event):
+	if event is InputEventMouseMotion:
+		if abs(event.screen_relative) > Vector2(1.5,1.5) and Global.tutorial_num == 1:
+			mouse_moved = true
 
 func _process(delta: float) -> void:
 	if !Global.ClosedCaptions: visible = false

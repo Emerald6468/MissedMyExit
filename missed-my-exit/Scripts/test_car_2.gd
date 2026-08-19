@@ -1,5 +1,5 @@
 extends VehicleBody3D
-
+class_name Car
 var max_RPM = 450
 var max_torque = 300
 var turn_speed = 3
@@ -30,6 +30,24 @@ var direction_held = false
 @onready var car_accelerate: AudioStreamPlayer = $Head/CarAccelerate
 @onready var outside_ambience: AudioStreamPlayer = $Head/OutsideAmbience
 
+
+#Trunk
+var trunk_open = false
+@onready var trunk_animations: AnimationPlayer = $Trunk/TrunkAnimations
+@onready var trunk_area: Area3D = $Trunk/TrunkArea
+
+
+func open_trunk():
+	if Global.tutorial_num == 4: Global.CurrentCheck = true
+	trunk_animations.play("Trunk_Open")
+	trunk_open = true
+	
+func close_trunk():
+	trunk_animations.play("Trunk_Close")
+	trunk_open = false
+	
+func get_trunk():
+	return trunk_open
 
 func headlights():
 	if headlight: 
@@ -97,13 +115,20 @@ func _process(delta: float) -> void:
 		car_idle.stop()
 		car_moving.stop()
 		car_accelerate.stop()
-		var body_list = drivers_door.get_overlapping_bodies()
+		var door_list = drivers_door.get_overlapping_bodies()
+		var trunk_list = trunk_area.get_overlapping_bodies()
 		if drivers_door.has_overlapping_bodies():
-			for body in body_list:
+			for body in door_list:
 				if body.is_in_group("Player"):
 					Global.NearDoor = true
 				else: Global.NearDoor = false
 		else: Global.NearDoor = false
+		if trunk_area.has_overlapping_bodies():
+			for body in trunk_list:
+				if body.is_in_group("Player"):
+					if Input.is_action_just_pressed("Interact"):
+						if trunk_open: close_trunk()
+						else: open_trunk()
 
 func _input(event):
 	if event is InputEventMouseMotion:

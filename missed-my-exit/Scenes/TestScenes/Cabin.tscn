@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cafing7sf04be"]
 
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="1_021su"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="1_021su"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_gq26x"]
 [ext_resource type="PackedScene" uid="uid://bxptiqv55wt5c" path="res://Scenes/Prefabs/cabin1.tscn" id="3_c3jc1"]
 [ext_resource type="PackedScene" uid="uid://dbxdaql801jal" path="res://Scenes/Prefabs/cabin2.tscn" id="4_i1co4"]

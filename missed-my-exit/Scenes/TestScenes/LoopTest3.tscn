@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d0ggbph67bh0y" path="res://Scenes/Loop2_Intro.tscn" id="7_e6s4m"]
 [ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="8_1x04j"]
 [ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="9_e6s4m"]
-[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Scenes/Prefabs/FinalCar.tscn" id="9_ny4q5"]
+[ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="9_ny4q5"]
 [ext_resource type="PackedScene" uid="uid://cbjs2rtwxc68o" path="res://Scenes/Loop1_Clearing2.tscn" id="10_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_qabrb"]
