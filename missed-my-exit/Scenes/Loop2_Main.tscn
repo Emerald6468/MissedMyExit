@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="20_kuiug"]
 [ext_resource type="Texture2D" uid="uid://dqvjoju1a4ljd" path="res://Assets/TEMP Textures/Texturelabs_Soil_128S.png" id="21_6vbjh"]
 [ext_resource type="Texture2D" uid="uid://5blv1d8aqmmo" path="res://Assets/TEMP Textures/Texturelabs_Stone_138S.png" id="22_kuiug"]
+[ext_resource type="PackedScene" uid="uid://byf2nidlieewq" path="res://Scenes/Loop2_Cabin.tscn" id="22_rb32r"]
 [ext_resource type="ArrayMesh" uid="uid://bqosult284ehq" path="res://Assets/New Models/Rocks/RockWall_VertWide.glb" id="23_ihj1m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcpsh"]
@@ -423,6 +424,7 @@ mesh = ExtResource("5_l7hjs")
 
 [node name="OnFoot" type="Node3D" parent="." unique_id=480099808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.20424, 0, 144.66196)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="OnFoot" unique_id=1241729744]
 transform = Transform3D(0.94512004, 0, 0.3267233, 0, 1, 0, -0.3267233, 0, 0.94512004, 12.605022, -0.7236972, 48.48082)
@@ -672,3 +674,6 @@ mesh = ExtResource("23_ihj1m")
 transform = Transform3D(0.44447452, 0.21159562, 0.8704419, 7.210277e-08, 0.97170174, -0.23621094, -0.89579153, 0.10498975, 0.43189687, -327.6809, -11.969397, -50.36175)
 material_override = SubResource("StandardMaterial3D_o82vf")
 mesh = ExtResource("23_ihj1m")
+
+[node name="Loop2_Cabin" parent="." unique_id=445961336 instance=ExtResource("22_rb32r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -131.4429, 1.5258789e-05, 114.3167)
