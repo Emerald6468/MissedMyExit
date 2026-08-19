@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dm774q5yrvca" path="res://Scenes/UI/camera_effects.tscn" id="1_ahcct"]
 [ext_resource type="Script" uid="uid://dpoyml355f7db" path="res://Scripts/closed_captions.gd" id="2_de23q"]
 [ext_resource type="PackedScene" uid="uid://b603q7kfy1o2n" path="res://Scenes/UI/PauseMenu.tscn" id="3_c7mb3"]
+[ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="3_fo61o"]
 
 [node name="UI" type="Control" unique_id=322208040]
 layout_mode = 3
@@ -32,6 +33,17 @@ offset_right = 1511.76
 offset_bottom = 973.52
 grow_horizontal = 0
 bbcode_enabled = true
+
+[node name="Tutorial" type="RichTextLabel" parent="ClosedCaptions" unique_id=490039017]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 31.0
+offset_right = 1347.0
+offset_bottom = 137.0
+theme = ExtResource("3_fo61o")
+theme_override_font_sizes/normal_font_size = 60
+scroll_active = false
+horizontal_alignment = 1
 
 [node name="PauseMenu" parent="." unique_id=740504894 instance=ExtResource("3_c7mb3")]
 layout_mode = 1

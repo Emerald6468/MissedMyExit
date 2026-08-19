@@ -1,8 +1,13 @@
 extends CharacterBody3D
 class_name Player
 
-const SPEED = 5.0
+#Base Speed
+var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+
+#Sprinting
+const RUN_SPEED: float = 5.0
+var WALK_SPEED = 2.5
 
 #Camera stuff
 var mouse_sensitivity = 0.3
@@ -21,8 +26,12 @@ var timer_started = false
 var axe_swinging = false
 
 #Headbob
-const BOB_FREQ: float = 3
-const BOB_AMP: float = 0.05
+var BOB_FREQ: float = 3
+const RUN_FREQ: float = 3
+const WALK_FREQ: float = 5
+var BOB_AMP: float = 0.05
+const RUN_AMP: float = 0.05
+const WALK_AMP: float = 0.025
 var t_bob:float = 0.0
 
 func _ready():
@@ -85,6 +94,18 @@ func _physics_process(delta: float) -> void:
 		#Camera
 		on_foot_camera.make_current()
 		
+		#running
+		if Input.is_action_pressed("Sprint"):
+			BOB_FREQ = RUN_FREQ
+			BOB_AMP = RUN_AMP
+			SPEED = RUN_SPEED
+			walking_on_gravel.volume_db = 0.0
+		else: 
+			BOB_FREQ = WALK_FREQ
+			BOB_AMP = WALK_AMP
+			SPEED = WALK_SPEED
+			walking_on_gravel.volume_db = -3.0
+		
 
 		
 		
@@ -132,6 +153,8 @@ func _physics_process(delta: float) -> void:
 		
 		move_and_slide()
 	else: outside_ambience.stop()
+
+
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
