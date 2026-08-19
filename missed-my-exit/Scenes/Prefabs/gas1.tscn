@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dgtfad0ua1in4" path="res://Assets/TEMP Textures/Texturelabs_Metal_222S2.png" id="1_qpdhx"]
 [ext_resource type="Texture2D" uid="uid://c0ldd1wtdv7mt" path="res://Assets/TEMP Textures/Texturelabs_Brick_158S2.png" id="2_pvxwy"]
+[ext_resource type="Texture2D" uid="uid://dcvfma36hgy28" path="res://Assets/Textures/gas_window1.png" id="3_pvxwy"]
+[ext_resource type="Texture2D" uid="uid://62u4ygl4y30n" path="res://Assets/Textures/gas_door1.png" id="4_g16hy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w87rj"]
 albedo_color = Color(0.6, 0.234, 0.24009992, 1)
@@ -10,12 +12,43 @@ metallic_specular = 0.0
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_offset = Vector3(0, 0.5, 0)
 uv1_triplanar = true
+texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rd3an"]
 albedo_texture = ExtResource("2_pvxwy")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_offset = Vector3(0, 0.5, 0)
 uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g16hy"]
+albedo_texture = ExtResource("3_pvxwy")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("3_pvxwy")
+uv1_scale = Vector3(1.15, 1.15, 1.15)
+uv1_offset = Vector3(-0.08, -0.08, 0)
+texture_filter = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
+size = Vector2(4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riqys"]
+albedo_texture = ExtResource("4_g16hy")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("4_g16hy")
+uv1_scale = Vector3(1.03, 1.03, 1.03)
+uv1_offset = Vector3(-0.02, 0, 0)
+texture_filter = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fgn7s"]
+size = Vector2(2, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g16hy"]
+size = Vector3(18.413181, 5.3075943, 14.051148)
 
 [node name="Gas1" type="Node3D" unique_id=147800673]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -30,6 +63,7 @@ material = SubResource("StandardMaterial3D_w87rj")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="GasPumps" unique_id=1461706401]
 transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 1, 15.626686, -3.952911, -12.6886215)
+use_collision = true
 size = Vector3(1, 4.713257, 1)
 material = SubResource("StandardMaterial3D_rd3an")
 
@@ -41,8 +75,8 @@ size = Vector3(5.505005, 1.1280899, 0.19238281)
 material = SubResource("StandardMaterial3D_rd3an")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Store" unique_id=1196810123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3327942, -2.263611, -6.4959564)
-size = Vector3(0.9805298, 1.9243565, 0.19238281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3327943, -2.3721416, -6.495957)
+size = Vector3(0.9805298, 1.7072954, 0.19238281)
 material = SubResource("StandardMaterial3D_rd3an")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Store" unique_id=52298927]
@@ -51,8 +85,8 @@ size = Vector3(0.9805298, 1.6740923, 0.19238281)
 material = SubResource("StandardMaterial3D_rd3an")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Store" unique_id=321559034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4640617, -2.263611, -6.4959564)
-size = Vector3(0.9805298, 1.9243565, 0.19238281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4640617, -2.378245, -6.495957)
+size = Vector3(0.9805298, 1.6950884, 0.19238281)
 material = SubResource("StandardMaterial3D_rd3an")
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Store" unique_id=1459353032]
@@ -140,6 +174,7 @@ omni_attenuation = 0.07
 
 [node name="Shelves" type="Node3D" parent="Store" unique_id=1789776398]
 transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1, 0, -0.99999994, 0, -4.371139e-08, 0.41674423, -3.4476013, 2.022644)
+visible = false
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Store/Shelves" unique_id=1944529460]
 size = Vector3(0.63479614, 1.8201084, 3.8256836)
@@ -191,3 +226,27 @@ size = Vector3(0.63479614, 1.1280899, 3.8256836)
 [node name="CSGBox3D15" type="CSGBox3D" parent="Store/Shelves" unique_id=348871826]
 transform = Transform3D(-4.371139e-08, 0, -1.0000001, 0, 1, 0, 0.99999994, 0, -4.371139e-08, 1.492073, 2.1773255, 3.409134)
 size = Vector3(0.63479614, 1.1280899, 3.8256836)
+
+[node name="Windows" type="Node3D" parent="Store" unique_id=1471041304]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Store/Windows" unique_id=1769016135]
+transform = Transform3D(-1, 0, 8.742278e-08, -8.742278e-08, -4.371139e-08, -1, 3.821371e-15, -1, 4.371139e-08, 3.5862455, -2.4090452, -6.4736037)
+material_override = SubResource("StandardMaterial3D_g16hy")
+mesh = SubResource("PlaneMesh_bhunq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Store/Windows" unique_id=1716315362]
+transform = Transform3D(-1, 0, 8.742278e-08, -8.742278e-08, -4.371139e-08, -1, 3.821371e-15, -1, 4.371139e-08, -3.7252924, -2.4090452, -6.4736037)
+material_override = SubResource("StandardMaterial3D_g16hy")
+mesh = SubResource("PlaneMesh_bhunq")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Store/Windows" unique_id=1736628410]
+transform = Transform3D(-1, 0, 8.742278e-08, -8.742278e-08, -4.371139e-08, -1, 3.821371e-15, -1, 4.371139e-08, -0.068407826, -2.9929082, -6.4736037)
+material_override = SubResource("StandardMaterial3D_riqys")
+mesh = SubResource("PlaneMesh_fgn7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=93248819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8587418, -4.977162, 0.42400745)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1357270523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0200312, 0)
+shape = SubResource("BoxShape3D_g16hy")
