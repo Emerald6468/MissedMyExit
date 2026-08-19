@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://cryvl88lp2736"]
+
+[ext_resource type="Script" uid="uid://dicr6a7b80k41" path="res://Scripts/tutorial/wasd.gd" id="1_asvgq"]
+[ext_resource type="Theme" uid="uid://dtvccnvh3wlk8" path="res://Assets/UI/Themes/MainUI.tres" id="1_u1cco"]
+
+[node name="WASD" type="Control" unique_id=290457437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_asvgq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1491827557]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=163744593]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 928.0
+offset_top = 249.0
+offset_right = 968.0
+offset_bottom = 289.0
+scale = Vector2(0.15, 0.15)
+
+[node name="W" type="Control" parent="CanvasLayer/Control" unique_id=453561924]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/W" unique_id=1772107890]
+layout_mode = 0
+offset_left = -302.0
+offset_top = -321.0
+offset_right = 306.9038
+offset_bottom = 287.9038
+color = Color(0.043137256, 0.44313726, 0.35686275, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/W/ColorRect" unique_id=925125468]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53800005
+anchor_right = 0.5
+anchor_bottom = 0.53800005
+offset_left = -175.4519
+offset_top = -285.59027
+offset_right = 171.5481
+offset_bottom = 355.40973
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 640
+text = "W"
+
+[node name="A" type="Control" parent="CanvasLayer/Control" unique_id=473074039]
+anchors_preset = 0
+offset_left = -675.0
+offset_top = 675.0
+offset_right = -635.0
+offset_bottom = 715.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/A" unique_id=1803880921]
+layout_mode = 0
+offset_left = -302.0
+offset_top = -321.0
+offset_right = 306.9038
+offset_bottom = 287.9038
+color = Color(0.043137256, 0.44313726, 0.35686275, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/A/ColorRect" unique_id=981168722]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53800005
+anchor_right = 0.5
+anchor_bottom = 0.53800005
+offset_left = -175.4519
+offset_top = -285.59027
+offset_right = 171.5481
+offset_bottom = 355.40973
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 640
+text = "A"
+
+[node name="S" type="Control" parent="CanvasLayer/Control" unique_id=1885507746]
+anchors_preset = 0
+offset_top = 675.0
+offset_right = 40.0
+offset_bottom = 715.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/S" unique_id=396012782]
+layout_mode = 0
+offset_left = -302.0
+offset_top = -321.0
+offset_right = 306.9038
+offset_bottom = 287.9038
+color = Color(0.043137256, 0.44313726, 0.35686275, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/S/ColorRect" unique_id=1570144901]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53800005
+anchor_right = 0.5
+anchor_bottom = 0.53800005
+offset_left = -175.4519
+offset_top = -285.59027
+offset_right = 171.5481
+offset_bottom = 355.40973
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 640
+text = "S"
+
+[node name="D" type="Control" parent="CanvasLayer/Control" unique_id=1132043353]
+anchors_preset = 0
+offset_left = 678.0
+offset_top = 675.0
+offset_right = 718.0
+offset_bottom = 715.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/D" unique_id=1387818924]
+layout_mode = 0
+offset_left = -302.0
+offset_top = -321.0
+offset_right = 306.9038
+offset_bottom = 287.9038
+color = Color(0.043137256, 0.44313726, 0.35686275, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/D/ColorRect" unique_id=1189626179]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53800005
+anchor_right = 0.5
+anchor_bottom = 0.53800005
+offset_left = -175.4519
+offset_top = -285.59027
+offset_right = 171.5481
+offset_bottom = 355.40973
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 640
+text = "D"

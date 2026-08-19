@@ -29,6 +29,9 @@ var ClosedCaptions = true
 var muted = false
 var volume = 50.0
 
+#UI that will reset
+var CurrentCheck = false
+
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = false
@@ -42,6 +45,7 @@ func reset_vars():
 	JustPlaced = false
 	HasItem = false
 	ClosestDistance = 100.0
+	CurrentCheck = false
 	#temp ones prob delete later
 	HasRock = false
 	

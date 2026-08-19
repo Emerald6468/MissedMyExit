@@ -395,7 +395,7 @@ size = Vector3(1.3652344, 0.5391998, 1.3404236)
 [node name="MainMenuShot" type="Node3D" unique_id=650525436]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1245605573]
-transform = Transform3D(-0.96363056, -0.017478269, -0.2666658, 0, 0.9978589, -0.06540339, 0.26723796, -0.0630247, -0.9615673, -2.6903381, 2.194809, 1.1170654)
+transform = Transform3D(-0.96592593, -0.018054346, -0.25818822, 0, 0.997564, -0.06975673, 0.2588187, -0.06737983, -0.963573, -2.6903381, 2.194809, 1.1171265)
 
 [node name="MainMenu" parent="Camera3D" unique_id=1253760560 instance=ExtResource("1_fkkmi")]
 

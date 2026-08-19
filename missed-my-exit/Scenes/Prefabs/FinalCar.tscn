@@ -138,7 +138,8 @@ shape = SubResource("BoxShape3D_ntpel")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16328767, 0.8720574, -0.14527059)
 
 [node name="CarCamera" type="Camera3D" parent="Head" unique_id=182063250]
-transform = Transform3D(1, 0, 0, 0, 0.9472494, 0.32049727, 0, -0.32049727, 0.9472494, 0, 0, 0)
+transform = Transform3D(0.9992289, 0.0005452257, -0.039260514, 0, 0.9999036, 0.013886041, 0.0392643, -0.013875334, 0.9991325, -0.04701522, -0.010094643, 0.3048473)
+fov = 76.0
 
 [node name="CarIdle" type="AudioStreamPlayer" parent="Head" unique_id=348287228]
 stream = ExtResource("5_xu88u")
@@ -191,10 +192,10 @@ transform = Transform3D(0.022, 0, 0, 0, 0.022, 0, 0, 0, 0.022, -0.22310814, 0.62
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.02841802, 0.5542414, -0.10619118)
 
 [node name="CarSeat" parent="." unique_id=1242983191 instance=ExtResource("6_r0xd0")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032, -0.20688468)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032, -0.00897786)
 
 [node name="CarSeat2" parent="." unique_id=1923902849 instance=ExtResource("6_r0xd0")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.38251442, 0.29674032, -0.20688468)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.38251442, 0.29674032, -0.00897786)
 
 [node name="CarSeat3" parent="." unique_id=1904403401 instance=ExtResource("6_r0xd0")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.3002439, 0.29674032, 0.5171848)
