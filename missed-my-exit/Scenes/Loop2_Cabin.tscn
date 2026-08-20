@@ -164,12 +164,6 @@ instance_count = 20
 mesh = ExtResource("8_yksih")
 buffer = PackedFloat32Array(-0.20577152, 0, 0.45679215, -1.1220545, 0, 0.501, 0, -0.21101487, -0.45679215, 0, -0.20577152, -16.619915, -0.18183842, 0, -0.46683592, -31.97355, 0, 0.501, 0, -0.21101487, 0.46683592, 0, -0.18183842, -11.464145, -0.47052377, 0, -0.1720708, -38.68665, 0, 0.501, 0, -0.21101487, 0.1720708, 0, -0.47052377, -17.414255, 0.4836049, 0, 0.1308712, -36.6533, 0, 0.501, 0, -0.21101487, -0.1308712, 0, 0.4836049, -6.206886, -0.16505314, 0, 0.47303113, -22.429205, 0, 0.501, 0, -0.21101487, -0.47303113, 0, -0.16505314, -18.093765, 0.2496593, 0, -0.434363, -15.1848545, 0, 0.501, 0, -0.21101487, 0.434363, 0, 0.2496593, -6.7666893, -0.33577085, 0, -0.37183186, -26.909613, 0, 0.501, 0, -0.21101487, 0.37183186, 0, -0.33577085, -18.073076, -0.50097066, 0, 0.005424408, -27.985674, 0, 0.501, 0, -0.21101487, -0.005424408, 0, -0.50097066, -16.646513, 0.49874005, 0, -0.04753269, -10.89705, 0, 0.501, 0, -0.21101487, 0.04753269, 0, 0.49874005, -19.97975, -0.051611964, 0, 0.4983344, -19.643547, 0, 0.501, 0, -0.21101487, -0.4983344, 0, -0.051611964, -15.526695, -0.500639, 0, -0.01901472, -23.017843, 0, 0.501, 0, -0.21101487, 0.01901472, 0, -0.500639, -15.656182, -0.49507287, 0, -0.076836355, -0.21016955, 0, 0.501, 0, -0.21101487, 0.076836355, 0, -0.49507287, -14.926691, 0.41766044, 0, 0.27669606, -8.670995, 0, 0.501, 0, -0.21101488, -0.27669606, 0, 0.41766044, -18.53991, 0.39775544, 0, -0.3046171, -35.732555, 0, 0.501, 0, -0.21101487, 0.3046171, 0, 0.39775544, -16.696968, 0.09677081, 0, -0.49156526, -10.040645, 0, 0.501, 0, -0.21101487, 0.49156526, 0, 0.09677081, -15.091394, -0.50062203, 0, 0.019456072, -34.223797, 0, 0.501, 0, -0.21101487, -0.019456072, 0, -0.50062203, -10.052645, -0.35546827, 0, -0.35304856, -34.02837, 0, 0.501, 0, -0.21101487, 0.35304856, 0, -0.35546827, -7.455074, 0.12862416, 0, 0.4842074, -5.0813465, 0, 0.501, 0, -0.21101487, -0.4842074, 0, 0.12862416, -10.092104, 0.45894226, 0, 0.20093025, -23.799448, 0, 0.501, 0, -0.21101487, -0.20093025, 0, 0.45894226, -13.239666, -0.4936638, 0, 0.08542284, -27.45392, 0, 0.501, 0, -0.21101487, -0.08542284, 0, -0.4936638, -10.6151285)
 
-[sub_resource type="MultiMesh" id="MultiMesh_mohev"]
-transform_format = 1
-instance_count = 32
-mesh = ExtResource("10_osvag")
-buffer = PackedFloat32Array(-1.2333435, -0.07796384, -1.1413628, -18.484238, 0.13353491, 1.6570439, -0.25748518, 0.033964857, 1.1362022, -0.27937764, -1.2086837, -16.583858, -1.4916272, 0.2808046, 0.8318309, -25.384666, 0.19534147, 1.7049471, -0.22526243, 0.50035644, -0.8559414, -0.10025094, -1.5010195, -14.466067, -1.3461813, -0.262486, 1.3769218, -28.911314, -0.019937875, 1.9124683, 0.34508577, -0.103130355, -1.4015758, 0.22490627, -1.3274105, -10.569141, 1.7400677, 0.36032772, 0.47958365, -12.506698, -0.4396278, 1.7671794, 0.26735473, -0.0943581, -0.4081223, -0.36730826, 1.7567564, -9.262249, -1.2009077, 0.016700733, -0.76028174, -0.6410634, 0.014110655, 1.4213401, 0.008933303, -0.38448718, 0.7603342, 0, -1.2009907, -13.995787, -1.0828882, 0, 0.8013961, -19.421183, 0.009415752, 1.3470827, 0.012723057, -0.37977472, -0.80134064, 0.01582822, -1.0828135, -8.030451, 1.2506052, -1.0566916e-08, -0.66893125, -16.688618, -0.06527569, 1.4114989, -0.122036636, -0.3654735, 0.6657388, 0.13839746, 1.2446368, -7.274838, 1.0767254, 0.10497418, 0.56930244, -26.74417, -0.12178466, 1.2163858, 0.0060416516, 0.6611941, -0.5659447, -0.062035684, 1.0818136, -14.503735, -0.6798314, 0.08671123, 1.1100748, -30.996525, 0.101837546, 1.3000191, -0.039181016, -0.2614857, -1.1087894, 0.06623597, -0.68421805, -9.82176, 0.98605067, -0.026598519, -0.6077444, -9.506046, 0.15690365, 1.1294491, 0.20514098, -0.05216786, 0.58774304, -0.25689322, 0.96484226, -16.841871, 1.0747483, 0, -0.7132587, -29.910099, -0.00838021, 1.2898031, -0.012627418, -0.3780247, 0.71320945, 0.015155184, 1.0746741, -8.179386, 1.5794766, 0.10364208, -0.0739956, -2.6259546, -0.08837357, 1.5550201, 0.29166037, -0.029722093, 0.091690496, -0.28659022, 1.5557706, -13.3043375, -0.34037557, -0.095664404, -1.0562466, -19.921413, -0.07913516, 1.1085091, -0.07489652, -0.31633073, 1.0576135, 0.052155353, -0.34553978, -9.933974, 1.0160602, 0.5089184, 1.1638741, -1.2644714, -0.33469027, 1.5449859, -0.38338017, 0.018804453, -1.2253911, 0, 1.0697645, -10.838643, 1.6057528, 0.01278695, 0.38769442, -17.21925, -0.076714315, 1.6289035, 0.26401094, 0.14990905, -0.38024384, -0.2746332, 1.583952, -15.989117, 1.8242455, -0.5293386, -0.5639252, -33.2013, 0.5583265, 1.9010215, 0.02170586, 0.109722085, 0.5352406, -0.17888606, 1.8993684, -15.17687, 0.25422865, 0.18723023, 1.1659979, -24.368296, -0.053809047, 1.1933085, -0.17988336, 0.42492285, -1.179708, -0.014081033, 0.25947896, -12.25554, 0.64660496, 0.122797936, -0.77933383, -21.806175, -0.13651727, 1.0098511, 0.04585312, 0.40619057, 0.777048, 0.07523389, 0.6565628, -13.851188, 0.19137459, -0.29946473, 1.2350672, -26.213978, 0.26113918, 1.231606, 0.25816178, 0.40633, -1.243735, 0.21251364, 0.24424548, -10.4082155, 1.0669526, 0.11438625, 0.34665933, -15.548047, -0.11830878, 1.1214334, -0.0059040375, -0.012979023, -0.34534034, -0.030783337, 1.0730504, -11.747326, 0.8241523, -0.1291615, -0.8567195, -29.94436, 0.21556728, 1.1757987, 0.03010594, 0.3875572, 0.83915526, -0.17519398, 0.83366853, -15.98822, -0.3331197, 0, -1.1877385, -21.961971, -0.08364615, 1.230506, 0.02345986, -0.3054769, 1.1847894, 0.08687372, -0.3322926, -8.22908, 0.31158084, -0.01889448, 1.2005115, -34.51471, -0.2703823, 1.2073146, 0.089176595, 0.31607586, -1.1698198, -0.28408107, 0.29914403, -11.697874, -1.2865093, -0.37671944, -0.9132322, -27.018356, -0.4788846, 1.5493308, 0.035507437, 0.3495528, 0.86404854, 0.29778138, -1.3400608, -11.19156, 1.3023862, 0.29198804, 0.9090259, -22.763092, -0.17374887, 1.5843066, -0.25996, -0.19686386, -0.9388272, 0.11185206, 1.3091552, -7.8222494, 1.2399133, 0.1499249, 0.8207438, -6.4213867, 0.0011386867, 1.4698516, -0.27021733, -0.10944146, -0.83432406, 0.22481382, 1.2193626, -9.455503, -0.35499403, 0.275246, 1.418485, -23.623682, 0.04978742, 1.4621302, -0.2712548, 0.29600742, -1.4440849, -0.017253123, -0.3580529, -12.23233, -0.3211324, -0.050806552, 1.0422003, -19.45574, -0.16068523, 1.0798428, 0.0031297426, -0.10335469, -1.0309913, -0.15247378, -0.32511154, -17.150694, 0.8315641, -0.12582529, -1.2627102, -10.78677, -0.2686697, 1.4579991, -0.32221892, 0.14755094, 1.2401958, 0.40022075, 0.7768564, -10.698455, -1.0885894, 0, 0.21600324, -30.976564, -0.06392064, 1.0601056, -0.32214022, -0.23780012, -0.20632873, -0.32842073, -1.0398328, -18.50912, 0.3151305, 0.02572697, -1.0514723, -2.3571217, 0.09528232, 1.0924412, 0.055285875, 0.264802, 1.0474622, -0.10711384, 0.31130782, -11.110039, 1.5428052, -0.07887924, -0.18184955, -34.50333, 0.095051095, 1.5466533, 0.13553274, -0.18746966, 0.1739439, -0.14554006, 1.5388637, -15.655603)
-
 [sub_resource type="MultiMesh" id="MultiMesh_vrmu2"]
 transform_format = 1
 instance_count = 20
@@ -522,6 +516,21 @@ cull_mode = 2
 albedo_texture = ExtResource("11_7bt4e")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu578"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.66656864, 0.6665687, 0.6665685, 1)
+albedo_texture = ExtResource("5_fgag5")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.027, 0.027, 0.027)
+uv1_offset = Vector3(0, 0, -0.45)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_osvag"]
+size = Vector2(60, 35)
+
 [node name="Loop2_Cabin" type="Node3D" unique_id=445961336]
 
 [node name="Ground1" type="CSGPolygon3D" parent="." unique_id=1472466757]
@@ -644,8 +653,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.25, 13)
 mesh = SubResource("PlaneMesh_iukob")
 
 [node name="MultiMesh2" type="Node3D" parent="." unique_id=1039549510]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
+transform = Transform3D(0.6180463, 0, 0.78614175, 0, 1, 0, -0.78614175, 0, 0.6180463, -9.894517, 6.000004, -64.86519)
 
 [node name="Trees2" type="MultiMeshInstance3D" parent="MultiMesh2" unique_id=297582660]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01791954, -0.038985133, 0.0062446594)
@@ -656,11 +664,6 @@ multimesh = SubResource("MultiMesh_t50rh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01791954, -0.038985133, 0.0062446594)
 material_override = ExtResource("6_a06sv")
 multimesh = SubResource("MultiMesh_omyc8")
-
-[node name="Ferns2" type="MultiMeshInstance3D" parent="MultiMesh2" unique_id=2009120122]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01791954, 0.38180912, 0.0062446594)
-material_override = ExtResource("9_vu578")
-multimesh = SubResource("MultiMesh_mohev")
 
 [node name="Shrubs2" type="MultiMeshInstance3D" parent="MultiMesh2" unique_id=830642370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01791954, -0.038985133, 0.0062446594)
@@ -1103,168 +1106,6 @@ transform = Transform3D(0.8132319, 0, 0.38555667, 0, 0.9, 0, -0.38555667, 0, 0.8
 [node name="Wood_Fence_Custom1" parent="Props/Fences" unique_id=1213686371 instance=ExtResource("20_yksih")]
 transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -22.120705, 0, -7.5962043)
 
-[node name="Wood_Fence_Custom9" parent="Props/Fences" unique_id=1587940811 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.7688653, 0.106012374, -0.6305612, -0.13658932, 0.99062777, 7.450581e-09, 0.6246514, 0.08612793, 0.77613944, -21.27769, 0, -37.375443)
-
-[node name="Wood_Fence_Custom10" parent="Props/Fences" unique_id=1189274659 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.6551888, 0.09033848, -0.75004447, -0.13658933, 0.9906279, 1.0203117e-08, 0.74301463, 0.10244805, 0.66138744, -19.290068, -2.4245962e-08, -39.82195)
-
-[node name="Wood_Fence_Custom11" parent="Props/Fences" unique_id=400915249 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.7832726, 0.107998885, -0.61222553, -0.13658932, 0.9906278, 1.0551319e-08, 0.6064874, 0.08362346, 0.79068315, -16.879196, -2.4476442e-08, -41.94785)
-
-[node name="Wood_Fence_Custom12" parent="Props/Fences" unique_id=1117303591 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.67472494, 0.093032144, -0.73218256, -0.13658932, 0.9906278, 1.521159e-08, 0.7253201, 0.100008294, 0.6811085, -14.898813, -6.0888894e-08, -44.505493)
-
-[node name="Wood_Fence_Custom13" parent="Props/Fences" unique_id=1189792724 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.82270384, 0.113435715, -0.5570371, -0.1365893, 0.9906278, 1.9052539e-08, 0.5518162, 0.0760853, 0.83048755, -12.546562, -1.467961e-07, -46.69366)
-
-[node name="Wood_Fence_Custom14" parent="Props/Fences" unique_id=1462171922 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.70790863, 0.09760757, -0.69952685, -0.13658929, 0.99062777, 1.7429347e-08, 0.6929704, 0.09554786, 0.7146062, -10.765579, -2.0771168e-07, -49.34893)
-
-[node name="Wood_Fence_Custom15" parent="Props/Fences" unique_id=1099369975 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.5245298, 0.07232302, -0.84831464, -0.13658929, 0.99062777, 1.899835e-08, 0.8403636, 0.115870684, 0.52949244, -8.51927, -2.7996322e-07, -51.64366)
-
-[node name="Wood_Fence_Custom16" parent="Props/Fences" unique_id=48220610 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.7938101, 0.10945183, -0.59823537, -0.1365893, 0.9906279, 1.7465776e-08, 0.5926281, 0.08171253, 0.80132055, -5.7975917, -3.4295167e-07, -53.34245)
-
-[node name="Wood_Fence_Custom17" parent="Props/Fences" unique_id=456060349 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9851489, 0.13583395, -0.10502413, -0.13658932, 0.990628, 1.8681618e-08, 0.10403963, 0.014345172, 0.99446976, -3.8747482, -3.8546943e-07, -55.918045)
-
-[node name="Wood_Fence_Custom18" parent="Props/Fences" unique_id=1088416170 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9318696, 0.1284877, -0.33927777, -0.13658932, 0.990628, 1.9765963e-08, 0.3360977, 0.046341717, 0.9406863, -3.53981, -4.4869086e-07, -59.089565)
-
-[node name="Wood_Fence_Custom19" parent="Props/Fences" unique_id=779427179 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.79841506, 0.11008676, -0.59195817, -0.13658935, 0.9906281, 2.7317792e-08, 0.5864097, 0.080855146, 0.805969, -2.4485962, -5.3809646e-07, -62.115078)
-
-[node name="Wood_Fence_Custom20" parent="Props/Fences" unique_id=1617746089 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9834093, 0.13559407, -0.120499015, -0.13658935, 0.9906281, 2.9394416e-08, 0.11936936, 0.016458858, 0.9927137, -0.55008084, -6.257095e-07, -64.69996)
-
-[node name="Wood_Fence_Custom21" parent="Props/Fences" unique_id=1661692661 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.7447576, 0.10268836, -0.65938723, -0.13658936, 0.99062824, 2.6813952e-08, 0.65320677, 0.09006524, 0.7518038, -0.16230986, -7.20302e-07, -67.894554)
-
-[node name="Wood_Fence_Custom22" parent="Props/Fences" unique_id=308981387 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.968274, 0.13350716, -0.21123642, -0.13658933, 0.9906282, 3.8200888e-08, 0.20925623, 0.028852608, 0.9774351, 1.955792, -8.5809984e-07, -70.30952)
-
-[node name="Wood_Fence_Custom23" parent="Props/Fences" unique_id=1645146494 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8937433, 0.12323073, -0.43131983, -0.13658932, 0.9906281, 3.5021188e-08, 0.4272769, 0.05891364, 0.90219915, 2.6337767, -9.698285e-07, -73.44669)
-
-[node name="Wood_Fence_Custom24" parent="Props/Fences" unique_id=1469910525 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.5174503, 0.07134686, -0.85273397, -0.13658932, 0.9906281, 4.9967635e-08, 0.84474117, 0.11647428, 0.52234554, 4.0247617, -1.0999754e-06, -76.35624)
-
-[node name="Wood_Fence_Custom25" parent="Props/Fences" unique_id=2076490707 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9574765, 0.13201836, -0.2565339, -0.1365893, 0.99062806, 5.9673404e-08, 0.25412872, 0.035039686, 0.9665353, 6.755493, -1.2747496e-06, -78.02896)
-
-[node name="Wood_Fence_Custom26" parent="Props/Fences" unique_id=1555222269 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.78417414, 0.10812314, -0.6110488, -0.13658932, 0.99062806, 6.533744e-08, 0.60532105, 0.08346264, 0.79159296, 7.576241, -1.4867247e-06, -81.12127)
-
-[node name="Wood_Fence_Custom27" parent="Props/Fences" unique_id=1570967532 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8869574, 0.10812314, -0.44901672, -0.13404505, 0.99062806, -0.026240494, 0.44197038, 0.08346264, 0.893138, 9.531044, -1.6963933e-06, -83.65365)
-
-[node name="Wood_Fence_Custom28" parent="Props/Fences" unique_id=313372625 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9879623, 0.1315274, -0.08142878, -0.1340451, 0.9906284, -0.026240513, 0.077213496, 0.03683974, 0.9963337, 10.968836, 0.0840227, -86.51356)
-
-[node name="Wood_Fence_Custom29" parent="Props/Fences" unique_id=734082213 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.84657806, 0.110231124, 0.52072406, -0.13404511, 0.9909425, 0.008155851, -0.5151087, -0.07670505, 0.8536862, 11.2036495, 0.1064606, -89.61146)
-
-[node name="Wood_Fence_Custom30" parent="Props/Fences" unique_id=1509899886 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.93083733, 0.12649417, 0.34284136, -0.13404511, 0.9909746, -0.0016869098, -0.33996093, -0.044385977, 0.939392, 9.489974, 0.08889078, -92.41164)
-
-[node name="Wood_Fence_Custom31" parent="Props/Fences" unique_id=1260681596 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8786648, 0.11964021, 0.46220502, -0.1340451, 0.99097455, -0.0016869078, -0.45823547, -0.060474068, 0.8867716, 8.383443, 0.09433532, -95.44356)
-
-[node name="Wood_Fence_Custom32" parent="Props/Fences" unique_id=307533718 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.74906003, 0.102436505, 0.654534, -0.13404506, 0.9909745, -0.0016869016, -0.6487992, -0.0864734, 0.75603074, 6.8924313, 0.09977706, -98.30417)
-
-[node name="Wood_Fence_Custom33" parent="Props/Fences" unique_id=1434203318 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.34103894, 0.047729135, 0.93883634, -0.13404508, 0.9909744, -0.0016868953, -0.9304426, -0.12527095, 0.34435922, 4.7988954, 0.105172664, -100.72234)
-
-[node name="Wood_Fence_Custom34" parent="Props/Fences" unique_id=668427612 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.13416274, 0.019834224, 0.99076056, -0.13404511, 0.9909744, -0.0016868894, -0.9818509, -0.13258013, 0.13561109, 1.7920268, 0.11057537, -101.82525)
-
-[node name="Wood_Fence_Custom35" parent="Props/Fences" unique_id=2115790838 instance=ExtResource("20_yksih")]
-transform = Transform3D(-0.20270088, -0.02575213, 0.97890204, -0.13404506, 0.9909745, -0.0016868884, -0.97002214, -0.13155878, -0.20432267, -1.3809857, 0.11597781, -102.25956)
-
-[node name="Wood_Fence_Custom36" parent="Props/Fences" unique_id=896646567 instance=ExtResource("20_yksih")]
-transform = Transform3D(-0.41739613, -0.054915376, 0.9070639, -0.13404505, 0.9909745, -0.0016868871, -0.89878315, -0.122291386, -0.42098942, -4.47764, 0.12131409, -101.613205)
-
-[node name="Wood_Fence_Custom37" parent="Props/Fences" unique_id=1578443675 instance=ExtResource("20_yksih")]
-transform = Transform3D(-0.25985742, -0.033507023, 0.96506566, -0.13404506, 0.9909746, -0.0016868885, -0.9562976, -0.1298005, -0.26200292, -7.4236774, 0.12679291, -100.24589)
-
-[node name="Wood_Fence_Custom38" parent="Props/Fences" unique_id=705520190 instance=ExtResource("20_yksih")]
-transform = Transform3D(-0.6142334, -0.081748754, 0.78487873, -0.13404506, 0.9909746, -0.0016868875, -0.7776556, -0.106245145, -0.61964715, -10.50786, 0.13218391, -99.40857)
-
-[node name="Wood_Fence_Custom39" parent="Props/Fences" unique_id=1159343577 instance=ExtResource("20_yksih")]
-transform = Transform3D(-0.15487, -0.01926718, 0.9877472, -0.13404506, 0.9909746, -0.0016868822, -0.97879833, -0.13266373, -0.15605435, -13.006609, 0.1375543, -97.43585)
-
-[node name="Wood_Fence_Custom40" parent="Props/Fences" unique_id=1020379127 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.2678311, 0.037867285, 0.96272135, -0.13404506, 0.99097455, -0.0016868804, -0.95409495, -0.1285961, 0.27049023, -16.189312, 0.14298975, -96.933014)
-
-[node name="Wood_Fence_Custom41" parent="Props/Fences" unique_id=150652076 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.60438156, 0.08310108, 0.79234856, -0.13404506, 0.99097455, -0.0016868756, -0.78533655, -0.10519078, 0.61006653, -19.259018, 0.14836848, -97.795494)
-
-[node name="Wood_Fence_Custom42" parent="Props/Fences" unique_id=1583667603 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.86485004, 0.11781551, 0.48800868, -0.13404505, 0.9909745, -0.001686881, -0.48380268, -0.063956186, 0.8728372, -21.794382, 0.15376617, -99.74759)
-
-[node name="Wood_Fence_Custom43" parent="Props/Fences" unique_id=299833026 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9903735, 0.13402271, 0.034595877, -0.13404505, 0.9909745, -0.00168687, -0.034510165, -0.0029667541, 0.99939996, -23.36183, 0.15918429, -102.55108)
-
-[node name="Wood_Fence_Custom44" parent="Props/Fences" unique_id=1071787582 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8798342, 0.11822793, -0.46034044, -0.13404505, 0.9909745, -0.001686867, 0.45598513, 0.06319048, 0.88774097, -23.47305, 0.069240645, -105.763954)
-
-[node name="Wood_Fence_Custom45" parent="Props/Fences" unique_id=465441089 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9898497, 0.13397363, 0.047404885, -0.13404505, 0.9909745, -0.0016868695, -0.04720342, -0.004684601, 0.9988744, -21.979532, 0.07471347, -108.64412)
-
-[node name="Wood_Fence_Custom46" parent="Props/Fences" unique_id=1569874210 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.95681494, 0.12898098, -0.26051465, -0.13404505, 0.9909746, -0.0016868699, 0.25794497, 0.036534708, 0.96546865, -22.131683, 0.080127716, -111.85015)
-
-[node name="Wood_Fence_Custom47" parent="Props/Fences" unique_id=1340849265 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.83623755, 0.11220069, -0.53676546, -0.13404505, 0.9909746, -0.0016868643, 0.5317304, 0.07336131, 0.84373003, -21.29043, 0.11779528, -114.99903)
-
-[node name="Wood_Fence_Custom48" parent="Props/Fences" unique_id=1050856095 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.6581456, 0.08775173, -0.7477592, -0.13404506, 0.9909746, -0.0016868566, 0.74086094, 0.10134353, 0.6639681, -19.560661, 0.12322641, -117.717354)
-
-[node name="Wood_Fence_Custom49" parent="Props/Fences" unique_id=1729727744 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8411111, 0.11287321, -0.52895284, -0.13404506, 0.9909746, -0.0016868649, 0.5239874, 0.072322324, 0.84864986, -17.156374, 0.10610623, -119.85572)
-
-[node name="Wood_Fence_Custom50" parent="Props/Fences" unique_id=201727331 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.59764886, 0.07948339, -0.7978084, -0.13404506, 0.9909746, -0.0016868653, 0.7904724, 0.10795033, 0.6029091, -15.4494915, 0.15248811, -122.582954)
-
-[node name="Wood_Fence_Custom51" parent="Props/Fences" unique_id=1355686899 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.70935285, 0.09476227, -0.69845414, -0.13404506, 0.9909746, -0.0016868664, 0.6919892, 0.09482083, 0.7156531, -12.871171, 0.11220636, -124.53902)
-
-[node name="Wood_Fence_Custom52" parent="Props/Fences" unique_id=1086821135 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.92710483, 0.12480408, -0.35341084, -0.13404506, 0.9909746, -0.0016868672, 0.35000995, 0.048936885, 0.9354669, -10.676943, 0.105481766, -126.78805)
-
-[node name="Wood_Fence_Custom53" parent="Props/Fences" unique_id=461823722 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.97920036, 0.13271369, 0.15346679, -0.1340451, 0.9909747, -0.001686865, -0.15230542, -0.018919583, 0.98815274, -9.583405, 0.07323632, -129.69032)
-
-[node name="Wood_Fence_Custom54" parent="Props/Fences" unique_id=689176550 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.9358799, 0.12603259, -0.32900345, -0.1340451, 0.9909747, -0.0016868627, 0.32582062, 0.045679975, 0.9443276, -10.075952, 0.09616619, -132.89047)
-
-[node name="Wood_Fence_Custom55" parent="Props/Fences" unique_id=1246037641 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.6769383, 0.09032319, -0.73047656, -0.13404508, 0.99097466, -0.0016868646, 0.72372967, 0.09905854, 0.68293613, -9.014627, 0.023961872, -135.95877)
-
-[node name="Wood_Fence_Custom56" parent="Props/Fences" unique_id=599523729 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.8694255, 0.11678644, -0.48006147, -0.13404508, 0.99097466, -0.0016868622, 0.47553048, 0.065816395, 0.8772335, -6.654001, 0.0030546635, -138.1687)
-
-[node name="Wood_Fence_Custom57" parent="Props/Fences" unique_id=231956744 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.08282733, 0.015383684, -0.9964456, -0.13452968, 0.99090195, 0.004115691, 0.9874408, 0.13371032, 0.08414303, -5.0130444, 0.020617262, -141.01744)
-
-[node name="Wood_Fence_Custom58" parent="Props/Fences" unique_id=2047883738 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.635778, 0.08950061, -0.76666534, -0.13452967, 0.9909018, 0.0041156947, 0.76005656, 0.100522354, 0.6420343, -1.7961938, 0.0073304763, -141.28908)
-
-[node name="Wood_Fence_Custom59" parent="Props/Fences" unique_id=1228414927 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.89122343, 0.12281032, -0.4366199, -0.13452967, 0.9909018, 0.00411569, 0.4331518, 0.05507023, 0.8996371, 0.63207483, -0.0057052164, -143.3226)
-
-[node name="Wood_Fence_Custom60" parent="Props/Fences" unique_id=1366886947 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.6181282, 0.087164894, -0.7812296, -0.13452967, 0.9909018, 0.004115689, 0.7744787, 0.10255432, 0.6242309, 2.0317495, -0.018898904, -146.20656)
-
-[node name="Wood_Fence_Custom61" parent="Props/Fences" unique_id=1704846356 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.2572624, 0.03893758, -0.9655572, -0.13452965, 0.9909017, 0.0041156863, 0.9569304, 0.128837, 0.26016006, 4.533698, -0.03207972, -148.2057)
-
-[node name="Wood_Fence_Custom62" parent="Props/Fences" unique_id=1002706956 instance=ExtResource("20_yksih")]
-transform = Transform3D(0.611992, 0.086352184, -0.78613555, -0.13452967, 0.9909018, 0.00411569, 0.77933675, 0.10323959, 0.6180413, 7.638112, -0.045312278, -149.04216)
-
 [node name="Wood_Fence_Custom2" parent="Props/Fences" unique_id=1051661894 instance=ExtResource("20_yksih")]
 transform = Transform3D(-0.44671023, 0, -0.8946787, 0, 1, 0, 0.8946787, 0, -0.44671023, -19.858526, 0, -5.334026)
 
@@ -1285,3 +1126,178 @@ transform = Transform3D(0.65195376, 0.056330208, -0.75616366, 0, 0.9972368, 0.07
 
 [node name="Wood_Fence_Custom8" parent="Props/Fences" unique_id=172038730 instance=ExtResource("20_yksih")]
 transform = Transform3D(0.85767305, 0.033237755, -0.51312023, 0, 0.99790865, 0.064640306, 0.51419556, -0.055440243, 0.8558793, -3.268662, 0.10786831, -10.648102)
+
+[node name="Vista" type="Node3D" parent="Props/Fences" unique_id=206913476]
+transform = Transform3D(1, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Wood_Fence_Custom9" parent="Props/Fences/Vista" unique_id=1587940811 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.7688653, 0.106012374, -0.6305612, -0.13658932, 0.99062777, 7.450581e-09, 0.6246514, 0.08612793, 0.77613944, -21.27769, 0, -37.375443)
+
+[node name="Wood_Fence_Custom10" parent="Props/Fences/Vista" unique_id=1189274659 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.6551888, 0.09033848, -0.75004447, -0.13658933, 0.9906279, 1.0203117e-08, 0.74301463, 0.10244805, 0.66138744, -19.290068, -2.4245962e-08, -39.82195)
+
+[node name="Wood_Fence_Custom11" parent="Props/Fences/Vista" unique_id=400915249 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.7832726, 0.107998885, -0.61222553, -0.13658932, 0.9906278, 1.0551319e-08, 0.6064874, 0.08362346, 0.79068315, -16.879196, -2.4476442e-08, -41.94785)
+
+[node name="Wood_Fence_Custom12" parent="Props/Fences/Vista" unique_id=1117303591 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.67472494, 0.093032144, -0.73218256, -0.13658932, 0.9906278, 1.521159e-08, 0.7253201, 0.100008294, 0.6811085, -14.898813, -6.0888894e-08, -44.505493)
+
+[node name="Wood_Fence_Custom13" parent="Props/Fences/Vista" unique_id=1189792724 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.82270384, 0.113435715, -0.5570371, -0.1365893, 0.9906278, 1.9052539e-08, 0.5518162, 0.0760853, 0.83048755, -12.546562, -1.467961e-07, -46.69366)
+
+[node name="Wood_Fence_Custom14" parent="Props/Fences/Vista" unique_id=1462171922 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.70790863, 0.09760757, -0.69952685, -0.13658929, 0.99062777, 1.7429347e-08, 0.6929704, 0.09554786, 0.7146062, -10.765579, -2.0771168e-07, -49.34893)
+
+[node name="Wood_Fence_Custom15" parent="Props/Fences/Vista" unique_id=1099369975 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.5245298, 0.07232302, -0.84831464, -0.13658929, 0.99062777, 1.899835e-08, 0.8403636, 0.115870684, 0.52949244, -8.51927, -2.7996322e-07, -51.64366)
+
+[node name="Wood_Fence_Custom16" parent="Props/Fences/Vista" unique_id=48220610 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.7938101, 0.10945183, -0.59823537, -0.1365893, 0.9906279, 1.7465776e-08, 0.5926281, 0.08171253, 0.80132055, -5.7975917, -3.4295167e-07, -53.34245)
+
+[node name="Wood_Fence_Custom17" parent="Props/Fences/Vista" unique_id=456060349 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9851489, 0.13583395, -0.10502413, -0.13658932, 0.990628, 1.8681618e-08, 0.10403963, 0.014345172, 0.99446976, -3.8747482, -3.8546943e-07, -55.918045)
+
+[node name="Wood_Fence_Custom18" parent="Props/Fences/Vista" unique_id=1088416170 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9318696, 0.1284877, -0.33927777, -0.13658932, 0.990628, 1.9765963e-08, 0.3360977, 0.046341717, 0.9406863, -3.53981, -4.4869086e-07, -59.089565)
+
+[node name="Wood_Fence_Custom19" parent="Props/Fences/Vista" unique_id=779427179 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.79841506, 0.11008676, -0.59195817, -0.13658935, 0.9906281, 2.7317792e-08, 0.5864097, 0.080855146, 0.805969, -2.4485962, -5.3809646e-07, -62.115078)
+
+[node name="Wood_Fence_Custom20" parent="Props/Fences/Vista" unique_id=1617746089 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9834093, 0.13559407, -0.120499015, -0.13658935, 0.9906281, 2.9394416e-08, 0.11936936, 0.016458858, 0.9927137, -0.55008084, -6.257095e-07, -64.69996)
+
+[node name="Wood_Fence_Custom21" parent="Props/Fences/Vista" unique_id=1661692661 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.7447576, 0.10268836, -0.65938723, -0.13658936, 0.99062824, 2.6813952e-08, 0.65320677, 0.09006524, 0.7518038, -0.16230986, -7.20302e-07, -67.894554)
+
+[node name="Wood_Fence_Custom22" parent="Props/Fences/Vista" unique_id=308981387 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.968274, 0.13350716, -0.21123642, -0.13658933, 0.9906282, 3.8200888e-08, 0.20925623, 0.028852608, 0.9774351, 1.955792, -8.5809984e-07, -70.30952)
+
+[node name="Wood_Fence_Custom23" parent="Props/Fences/Vista" unique_id=1645146494 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8937433, 0.12323073, -0.43131983, -0.13658932, 0.9906281, 3.5021188e-08, 0.4272769, 0.05891364, 0.90219915, 2.6337767, -9.698285e-07, -73.44669)
+
+[node name="Wood_Fence_Custom24" parent="Props/Fences/Vista" unique_id=1469910525 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.5174503, 0.07134686, -0.85273397, -0.13658932, 0.9906281, 4.9967635e-08, 0.84474117, 0.11647428, 0.52234554, 4.0247617, -1.0999754e-06, -76.35624)
+
+[node name="Wood_Fence_Custom25" parent="Props/Fences/Vista" unique_id=2076490707 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9574765, 0.13201836, -0.2565339, -0.1365893, 0.99062806, 5.9673404e-08, 0.25412872, 0.035039686, 0.9665353, 6.755493, -1.2747496e-06, -78.02896)
+
+[node name="Wood_Fence_Custom26" parent="Props/Fences/Vista" unique_id=1555222269 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.78417414, 0.10812314, -0.6110488, -0.13658932, 0.99062806, 6.533744e-08, 0.60532105, 0.08346264, 0.79159296, 7.576241, -1.4867247e-06, -81.12127)
+
+[node name="Wood_Fence_Custom27" parent="Props/Fences/Vista" unique_id=1570967532 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8869574, 0.10812314, -0.44901672, -0.13404505, 0.99062806, -0.026240494, 0.44197038, 0.08346264, 0.893138, 9.531044, -1.6963933e-06, -83.65365)
+
+[node name="Wood_Fence_Custom28" parent="Props/Fences/Vista" unique_id=313372625 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9879623, 0.1315274, -0.08142878, -0.1340451, 0.9906284, -0.026240513, 0.077213496, 0.03683974, 0.9963337, 10.968836, 0.0840227, -86.51356)
+
+[node name="Wood_Fence_Custom29" parent="Props/Fences/Vista" unique_id=734082213 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.84657806, 0.110231124, 0.52072406, -0.13404511, 0.9909425, 0.008155851, -0.5151087, -0.07670505, 0.8536862, 11.2036495, 0.1064606, -89.61146)
+
+[node name="Wood_Fence_Custom30" parent="Props/Fences/Vista" unique_id=1509899886 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.93083733, 0.12649417, 0.34284136, -0.13404511, 0.9909746, -0.0016869098, -0.33996093, -0.044385977, 0.939392, 9.489974, 0.08889078, -92.41164)
+
+[node name="Wood_Fence_Custom31" parent="Props/Fences/Vista" unique_id=1260681596 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8786648, 0.11964021, 0.46220502, -0.1340451, 0.99097455, -0.0016869078, -0.45823547, -0.060474068, 0.8867716, 8.383443, 0.09433532, -95.44356)
+
+[node name="Wood_Fence_Custom32" parent="Props/Fences/Vista" unique_id=307533718 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.74906003, 0.102436505, 0.654534, -0.13404506, 0.9909745, -0.0016869016, -0.6487992, -0.0864734, 0.75603074, 6.8924313, 0.09977706, -98.30417)
+
+[node name="Wood_Fence_Custom33" parent="Props/Fences/Vista" unique_id=1434203318 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.34103894, 0.047729135, 0.93883634, -0.13404508, 0.9909744, -0.0016868953, -0.9304426, -0.12527095, 0.34435922, 4.7988954, 0.105172664, -100.72234)
+
+[node name="Wood_Fence_Custom34" parent="Props/Fences/Vista" unique_id=668427612 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.13416274, 0.019834224, 0.99076056, -0.13404511, 0.9909744, -0.0016868894, -0.9818509, -0.13258013, 0.13561109, 1.7920268, 0.11057537, -101.82525)
+
+[node name="Wood_Fence_Custom35" parent="Props/Fences/Vista" unique_id=2115790838 instance=ExtResource("20_yksih")]
+transform = Transform3D(-0.20270088, -0.02575213, 0.97890204, -0.13404506, 0.9909745, -0.0016868884, -0.97002214, -0.13155878, -0.20432267, -1.3809857, 0.11597781, -102.25956)
+
+[node name="Wood_Fence_Custom36" parent="Props/Fences/Vista" unique_id=896646567 instance=ExtResource("20_yksih")]
+transform = Transform3D(-0.41739613, -0.054915376, 0.9070639, -0.13404505, 0.9909745, -0.0016868871, -0.89878315, -0.122291386, -0.42098942, -4.47764, 0.12131409, -101.613205)
+
+[node name="Wood_Fence_Custom37" parent="Props/Fences/Vista" unique_id=1578443675 instance=ExtResource("20_yksih")]
+transform = Transform3D(-0.25985742, -0.033507023, 0.96506566, -0.13404506, 0.9909746, -0.0016868885, -0.9562976, -0.1298005, -0.26200292, -7.4236774, 0.12679291, -100.24589)
+
+[node name="Wood_Fence_Custom38" parent="Props/Fences/Vista" unique_id=705520190 instance=ExtResource("20_yksih")]
+transform = Transform3D(-0.6142334, -0.081748754, 0.78487873, -0.13404506, 0.9909746, -0.0016868875, -0.7776556, -0.106245145, -0.61964715, -10.50786, 0.13218391, -99.40857)
+
+[node name="Wood_Fence_Custom39" parent="Props/Fences/Vista" unique_id=1159343577 instance=ExtResource("20_yksih")]
+transform = Transform3D(-0.15487, -0.01926718, 0.9877472, -0.13404506, 0.9909746, -0.0016868822, -0.97879833, -0.13266373, -0.15605435, -13.006609, 0.1375543, -97.43585)
+
+[node name="Wood_Fence_Custom40" parent="Props/Fences/Vista" unique_id=1020379127 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.2678311, 0.037867285, 0.96272135, -0.13404506, 0.99097455, -0.0016868804, -0.95409495, -0.1285961, 0.27049023, -16.189312, 0.14298975, -96.933014)
+
+[node name="Wood_Fence_Custom41" parent="Props/Fences/Vista" unique_id=150652076 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.60438156, 0.08310108, 0.79234856, -0.13404506, 0.99097455, -0.0016868756, -0.78533655, -0.10519078, 0.61006653, -19.259018, 0.14836848, -97.795494)
+
+[node name="Wood_Fence_Custom42" parent="Props/Fences/Vista" unique_id=1583667603 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.86485004, 0.11781551, 0.48800868, -0.13404505, 0.9909745, -0.001686881, -0.48380268, -0.063956186, 0.8728372, -21.794382, 0.15376617, -99.74759)
+
+[node name="Wood_Fence_Custom43" parent="Props/Fences/Vista" unique_id=299833026 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9903735, 0.13402271, 0.034595877, -0.13404505, 0.9909745, -0.00168687, -0.034510165, -0.0029667541, 0.99939996, -23.36183, 0.15918429, -102.55108)
+
+[node name="Wood_Fence_Custom44" parent="Props/Fences/Vista" unique_id=1071787582 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8798342, 0.11822793, -0.46034044, -0.13404505, 0.9909745, -0.001686867, 0.45598513, 0.06319048, 0.88774097, -23.47305, 0.069240645, -105.763954)
+
+[node name="Wood_Fence_Custom45" parent="Props/Fences/Vista" unique_id=465441089 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9898497, 0.13397363, 0.047404885, -0.13404505, 0.9909745, -0.0016868695, -0.04720342, -0.004684601, 0.9988744, -21.979532, 0.07471347, -108.64412)
+
+[node name="Wood_Fence_Custom46" parent="Props/Fences/Vista" unique_id=1569874210 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.95681494, 0.12898098, -0.26051465, -0.13404505, 0.9909746, -0.0016868699, 0.25794497, 0.036534708, 0.96546865, -22.131683, 0.080127716, -111.85015)
+
+[node name="Wood_Fence_Custom47" parent="Props/Fences/Vista" unique_id=1340849265 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.83623755, 0.11220069, -0.53676546, -0.13404505, 0.9909746, -0.0016868643, 0.5317304, 0.07336131, 0.84373003, -21.29043, 0.11779528, -114.99903)
+
+[node name="Wood_Fence_Custom48" parent="Props/Fences/Vista" unique_id=1050856095 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.6581456, 0.08775173, -0.7477592, -0.13404506, 0.9909746, -0.0016868566, 0.74086094, 0.10134353, 0.6639681, -19.560661, 0.12322641, -117.717354)
+
+[node name="Wood_Fence_Custom49" parent="Props/Fences/Vista" unique_id=1729727744 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8411111, 0.11287321, -0.52895284, -0.13404506, 0.9909746, -0.0016868649, 0.5239874, 0.072322324, 0.84864986, -17.156374, 0.10610623, -119.85572)
+
+[node name="Wood_Fence_Custom50" parent="Props/Fences/Vista" unique_id=201727331 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.59764886, 0.07948339, -0.7978084, -0.13404506, 0.9909746, -0.0016868653, 0.7904724, 0.10795033, 0.6029091, -15.4494915, 0.15248811, -122.582954)
+
+[node name="Wood_Fence_Custom51" parent="Props/Fences/Vista" unique_id=1355686899 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.70935285, 0.09476227, -0.69845414, -0.13404506, 0.9909746, -0.0016868664, 0.6919892, 0.09482083, 0.7156531, -12.871171, 0.11220636, -124.53902)
+
+[node name="Wood_Fence_Custom52" parent="Props/Fences/Vista" unique_id=1086821135 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.92710483, 0.12480408, -0.35341084, -0.13404506, 0.9909746, -0.0016868672, 0.35000995, 0.048936885, 0.9354669, -10.676943, 0.105481766, -126.78805)
+
+[node name="Wood_Fence_Custom53" parent="Props/Fences/Vista" unique_id=461823722 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.97920036, 0.13271369, 0.15346679, -0.1340451, 0.9909747, -0.001686865, -0.15230542, -0.018919583, 0.98815274, -9.583405, 0.07323632, -129.69032)
+
+[node name="Wood_Fence_Custom54" parent="Props/Fences/Vista" unique_id=689176550 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.9358799, 0.12603259, -0.32900345, -0.1340451, 0.9909747, -0.0016868627, 0.32582062, 0.045679975, 0.9443276, -10.075952, 0.09616619, -132.89047)
+
+[node name="Wood_Fence_Custom55" parent="Props/Fences/Vista" unique_id=1246037641 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.6769383, 0.09032319, -0.73047656, -0.13404508, 0.99097466, -0.0016868646, 0.72372967, 0.09905854, 0.68293613, -9.014627, 0.023961872, -135.95877)
+
+[node name="Wood_Fence_Custom56" parent="Props/Fences/Vista" unique_id=599523729 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.8694255, 0.11678644, -0.48006147, -0.13404508, 0.99097466, -0.0016868622, 0.47553048, 0.065816395, 0.8772335, -6.654001, 0.0030546635, -138.1687)
+
+[node name="Wood_Fence_Custom57" parent="Props/Fences/Vista" unique_id=231956744 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.08282733, 0.015383684, -0.9964456, -0.13452968, 0.99090195, 0.004115691, 0.9874408, 0.13371032, 0.08414303, -5.0130444, 0.020617262, -141.01744)
+
+[node name="Wood_Fence_Custom58" parent="Props/Fences/Vista" unique_id=2047883738 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.635778, 0.08950061, -0.76666534, -0.13452967, 0.9909018, 0.0041156947, 0.76005656, 0.100522354, 0.6420343, -1.7961938, 0.0073304763, -141.28908)
+
+[node name="Wood_Fence_Custom59" parent="Props/Fences/Vista" unique_id=1228414927 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.89122343, 0.12281032, -0.4366199, -0.13452967, 0.9909018, 0.00411569, 0.4331518, 0.05507023, 0.8996371, 0.63207483, -0.0057052164, -143.3226)
+
+[node name="Wood_Fence_Custom60" parent="Props/Fences/Vista" unique_id=1366886947 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.6181282, 0.087164894, -0.7812296, -0.13452967, 0.9909018, 0.004115689, 0.7744787, 0.10255432, 0.6242309, 2.0317495, -0.018898904, -146.20656)
+
+[node name="Wood_Fence_Custom61" parent="Props/Fences/Vista" unique_id=1704846356 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.2572624, 0.03893758, -0.9655572, -0.13452965, 0.9909017, 0.0041156863, 0.9569304, 0.128837, 0.26016006, 4.533698, -0.03207972, -148.2057)
+
+[node name="Wood_Fence_Custom62" parent="Props/Fences/Vista" unique_id=1002706956 instance=ExtResource("20_yksih")]
+transform = Transform3D(0.611992, 0.086352184, -0.78613555, -0.13452967, 0.9909018, 0.00411569, 0.77933675, 0.10323959, 0.6180413, 7.638112, -0.045312278, -149.04216)
+
+[node name="Wall7" type="MeshInstance3D" parent="." unique_id=465114654]
+transform = Transform3D(1.3113416e-07, -1, 4.371139e-08, 7.642742e-15, -4.371139e-08, -1, 1, 1.3113416e-07, 1.9106855e-15, 36, -10.999998, -50)
+material_override = SubResource("StandardMaterial3D_vu578")
+mesh = SubResource("PlaneMesh_osvag")
+
+[node name="Wall8" type="MeshInstance3D" parent="." unique_id=42068667]
+transform = Transform3D(1.3113416e-07, -1, 4.371139e-08, 7.642742e-15, -4.371139e-08, -1, 1, 1.3113416e-07, 1.9106855e-15, 36, -10.999998, -109)
+material_override = SubResource("StandardMaterial3D_vu578")
+mesh = SubResource("PlaneMesh_osvag")

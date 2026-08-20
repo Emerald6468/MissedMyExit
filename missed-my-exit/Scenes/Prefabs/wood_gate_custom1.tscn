@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cia2tfp7qs14x"]
+
+[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="1_jtf7r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldy0o"]
+albedo_texture = ExtResource("1_jtf7r")
+uv1_scale = Vector3(0.3, 0.2, 0.3)
+uv1_offset = Vector3(0.1, 0.4, 0)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_mh5qh"]
+material = SubResource("StandardMaterial3D_ldy0o")
+size = Vector3(0.16616821, 3.7127724, 0.113292694)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f4elr"]
+material = SubResource("StandardMaterial3D_ldy0o")
+size = Vector3(0.09525299, 3.7127724, 0.113292694)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbo70"]
+albedo_texture = ExtResource("1_jtf7r")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_offset = Vector3(0.1, 0.4, 0)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
+material = SubResource("StandardMaterial3D_kbo70")
+size = Vector3(0.21295166, 1.3009052, 0.14846039)
+
+[node name="Wood_Gate_Custom1" type="Node3D" unique_id=2128566231]
+transform = Transform3D(0.99871707, 0, 0.05063724, 0, 1, 0, -0.05063724, 0, 0.99871707, 0, 0, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1017104849]
+transform = Transform3D(1, 0, 7.771561e-15, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.00920105, 0.3882321, 2.0122375)
+mesh = SubResource("BoxMesh_mh5qh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1642523300]
+transform = Transform3D(1, -1.6018748e-07, 0, 0, 0.22922893, -0.9733725, 0, 0.9733725, 0.22922893, 0.011886597, 0.90075624, 2.010559)
+mesh = SubResource("BoxMesh_f4elr")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=357774839]
+transform = Transform3D(1, 0, 7.771561e-15, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.00920105, 1.3890036, 2.0122375)
+mesh = SubResource("BoxMesh_mh5qh")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1097080289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8770621, 0.22189331)
+mesh = SubResource("BoxMesh_bhunq")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=495590534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8770621, 3.8025904)
+mesh = SubResource("BoxMesh_bhunq")

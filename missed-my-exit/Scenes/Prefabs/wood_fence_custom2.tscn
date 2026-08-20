@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bcrlinxpbigb1"]
+
+[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="1_kbo70"]
+[ext_resource type="Texture2D" uid="uid://c6bqxx50h3gau" path="res://Assets/TEMP Textures/Texturelabs_Wood_156S2.png" id="2_ow4je"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbo70"]
+albedo_texture = ExtResource("1_kbo70")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_offset = Vector3(0.1, 0.4, 0)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
+material = SubResource("StandardMaterial3D_kbo70")
+size = Vector3(0.21295166, 1.7539139, 0.14846039)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow4je"]
+albedo_texture = ExtResource("2_ow4je")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_offset = Vector3(0.2, 0.54, 0.2)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_6msqx"]
+size = Vector3(0.10284805, 1.3356972, 0.07773399)
+
+[node name="Wood_Fence_Custom2" type="Node3D" unique_id=1213686371]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1486559042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.684129, 0)
+mesh = SubResource("BoxMesh_bhunq")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1847774373]
+transform = Transform3D(-0.7071068, -3.090862e-08, -0.7071067, -0.7071067, -3.090862e-08, 0.7071068, -4.371139e-08, 1, 1.9106855e-15, -0.0032002036, 1.2777424, -0.69513845)
+material_override = SubResource("StandardMaterial3D_ow4je")
+mesh = SubResource("BoxMesh_6msqx")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=2044789910]
+transform = Transform3D(-0.7071068, -3.090862e-08, -0.7071067, -0.7071067, -3.090862e-08, 0.7071068, -4.371139e-08, 1, 1.9106855e-15, -0.0032002034, 0.87888587, -0.6978699)
+material_override = SubResource("StandardMaterial3D_ow4je")
+mesh = SubResource("BoxMesh_6msqx")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=437592271]
+transform = Transform3D(-0.7071068, -3.090862e-08, -0.7071067, -0.7071067, -3.090862e-08, 0.7071068, -4.371139e-08, 1, 1.9106855e-15, -0.0032002034, 0.49838206, -0.6978699)
+material_override = SubResource("StandardMaterial3D_ow4je")
+mesh = SubResource("BoxMesh_6msqx")
