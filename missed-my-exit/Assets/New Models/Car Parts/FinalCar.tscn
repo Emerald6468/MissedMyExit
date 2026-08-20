@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cqb4xs54sn4a1" path="res://Assets/New Models/Car Parts/Trunk/Trunk_Trunk_openPBR_shader1_Emissive.png" id="16_ae1u2"]
 [ext_resource type="Texture2D" uid="uid://dtlqe1adkxebv" path="res://Assets/New Models/Car Parts/Trunk/Trunk_Trunk_openPBR_shader1_Metallic.1001-Trunk_openPBR_shader1_Roughness.png" id="17_b8olu"]
 [ext_resource type="Texture2D" uid="uid://d4wiovvu7gyq" path="res://Assets/New Models/Car Parts/Trunk/Trunk_Trunk_openPBR_shader1_Normal.png" id="18_t8c4d"]
+[ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="19_ae1u2"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xslx7"]
 _surfaces = [{
@@ -341,3 +342,6 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 1.269259)
 shape = SubResource("SphereShape3D_bhunq")
 debug_color = Color(0.7137255, 0.5529412, 1, 1)
+
+[node name="MultiPlaceZone" parent="." unique_id=1743039300 instance=ExtResource("19_ae1u2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08968443, 0.30875397, 1.5384483)

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="7_ligur"]
 [ext_resource type="PackedScene" uid="uid://dcjny86ttjuob" path="res://Assets/New Models/Light Poles/Light1.glb" id="8_ob34o"]
 [ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_fqvrc"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_fqvrc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6dgh"]
 albedo_texture = ExtResource("1_y4rai")
@@ -128,6 +129,7 @@ show_num = 5
 
 [node name="Wheel" parent="." unique_id=760245031 instance=ExtResource("7_ligur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991859, 1.8543503, 2.624121)
+visible = false
 
 [node name="Light1" parent="." unique_id=1115778773 instance=ExtResource("8_ob34o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6022282, 3.2762861, -1.1249442)
@@ -154,3 +156,7 @@ shaded = true
 double_sided = false
 texture_filter = 2
 texture = ExtResource("9_fqvrc")
+
+[node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("10_fqvrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99830997, 1.8320235, 2.8974204)
+ObjectType = "ExtraTire"

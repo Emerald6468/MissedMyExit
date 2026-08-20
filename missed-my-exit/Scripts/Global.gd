@@ -11,10 +11,12 @@ var NearPickup = false
 var JustPickedUp = false
 var HasRock = false
 var HasAxe = false
+var HasExtraTire = false
 var AxeSwing = false
 var NearPlaceZone = false
 var JustPlaced = false
 var HasItem = false
+var TrunkOpened = false
 var ClosestDistance = 100.0
 
 #positions
@@ -32,6 +34,7 @@ var volume = 50.0
 #UI that will reset
 var CurrentCheck = false
 var tutorial_num: int = 0
+var tutorial_done = false
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = true
@@ -40,10 +43,12 @@ func reset_vars():
 	NearPickup = false
 	JustPickedUp = false
 	HasAxe = false
+	HasExtraTire = false
 	AxeSwing = false
 	NearPlaceZone = false
 	JustPlaced = false
 	HasItem = false
+	TrunkOpened = false
 	ClosestDistance = 100.0
 	CurrentCheck = false
 	tutorial_num = 0

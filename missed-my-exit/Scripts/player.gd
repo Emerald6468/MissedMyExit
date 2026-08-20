@@ -17,7 +17,7 @@ var timer_started = false
 
 #Detection
 @onready var nearby_check: Area3D = $NearbyCheck
-
+@onready var ray: RayCast3D = $Head/OnFootCamera/RayCast3D
 #Audio
 @onready var walking_on_gravel: AudioStreamPlayer = $WalkingOnGravel
 @onready var outside_ambience: AudioStreamPlayer = $OutsideAmbience
@@ -35,6 +35,7 @@ const WALK_AMP: float = 0.025
 var t_bob:float = 0.0
 
 func _ready():
+	ray.add_exception(get_parent().get_node("FinalCar").get_node("CollisionShape3D2"))
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
 	
@@ -53,7 +54,7 @@ func get_out_car():
 
 func inventory():
 	#later add all other possible items with or 
-	if Global.HasRock or Global.HasAxe:
+	if Global.HasRock or Global.HasAxe or Global.HasExtraTire:
 		Global.HasItem = true
 	else:
 		Global.HasItem = false
@@ -111,8 +112,10 @@ func _physics_process(delta: float) -> void:
 		
 		#Interactables
 		if Input.is_action_just_pressed("Interact"):
+			print(str(ray.is_colliding()))
 			if Global.NearPickup and !Global.HasItem:
 				if on_foot_camera.is_position_in_frustum(Global.ObjectPosition):
+					print(str(ray.get_collider()))
 					Global.JustPickedUp = true
 			elif Global.NearPlaceZone and Global.HasItem:
 				if on_foot_camera.is_position_in_frustum(Global.PlaceZonePosition):

@@ -3,13 +3,16 @@
 [ext_resource type="Script" uid="uid://dhcv05w8aeakr" path="res://Scripts/pickupable_object.gd" id="1_l5087"]
 [ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="2_13v2e"]
 [ext_resource type="PackedScene" uid="uid://c368ffp70oslf" path="res://Assets/New Models/Tools/Axe/Axe.glb" id="3_liq86"]
+[ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="4_e78f6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
 
 [node name="PickupableObject" type="Area3D" unique_id=1743039300]
+collision_layer = 13
+collision_mask = 13
 script = ExtResource("1_l5087")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358614051]
+[node name="Object" type="CollisionShape3D" parent="." unique_id=1358614051]
 transform = Transform3D(2.595, 0, 0, 0, 2.595, 0, 0, 0, 2.595, 0, 0, 0)
 shape = SubResource("SphereShape3D_kgrkx")
 debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
@@ -19,6 +22,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Axe" parent="." unique_id=891238446 instance=ExtResource("3_liq86")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -1.0472107)
+
+[node name="Wheel" parent="." unique_id=760245031 instance=ExtResource("4_e78f6")]
 
 [node name="PickupText" type="Label3D" parent="." unique_id=342850726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0009879, 0)

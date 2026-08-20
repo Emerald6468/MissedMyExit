@@ -32,7 +32,6 @@ var direction_held = false
 
 
 #Trunk
-var trunk_open = false
 @onready var trunk_animations: AnimationPlayer = $Trunk/TrunkAnimations
 @onready var trunk_area: Area3D = $Trunk/TrunkArea
 
@@ -40,14 +39,12 @@ var trunk_open = false
 func open_trunk():
 	if Global.tutorial_num == 3: Global.CurrentCheck = true
 	trunk_animations.play("Trunk_Open")
-	trunk_open = true
+	Global.TrunkOpened = true
 	
 func close_trunk():
 	trunk_animations.play("Trunk_Close")
-	trunk_open = false
+	Global.TrunkOpened = false
 	
-func get_trunk():
-	return trunk_open
 
 func headlights():
 	if headlight: 
@@ -58,6 +55,7 @@ func headlights():
 		left_headlight.hide()
 
 func _ready():
+	Global.TrunkOpened = false
 	steering_tilt = deg_to_rad(steering_tilt)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
@@ -127,7 +125,7 @@ func _process(delta: float) -> void:
 			for body in trunk_list:
 				if body.is_in_group("Player"):
 					if Input.is_action_just_pressed("Interact"):
-						if trunk_open: close_trunk()
+						if Global.TrunkOpened and !Global.HasItem: close_trunk()
 						else: open_trunk()
 
 func _input(event):

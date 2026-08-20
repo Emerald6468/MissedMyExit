@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="1_ov7qb"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="2_80sl8"]
 [ext_resource type="PackedScene" uid="uid://ctapry8n0dfiu" path="res://Assets/New Models/Foliage/Stump/Stump.glb" id="2_ly7g8"]
-[ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="3_8eg3t"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="4_ly7g8"]
 [ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="5_8eg3t"]
 
@@ -33,9 +32,6 @@ ObjectType = "Axe"
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("1_ov7qb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60344505, 0.44027507, 29.55008)
-
-[node name="MultiPlaceZone" parent="FinalCar" unique_id=2058875668 instance=ExtResource("3_8eg3t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08968443, 0.30875397, 1.5384483)
 
 [node name="Stump" parent="." unique_id=803317296 instance=ExtResource("2_ly7g8")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.889783, 1.1733444, 7.69771)

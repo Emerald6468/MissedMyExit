@@ -5,6 +5,8 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
 
 [node name="MultiPlaceZone" type="Area3D" unique_id=1743039300]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_iu1hw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358614051]
@@ -14,6 +16,7 @@ debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
 
 [node name="PickupText" type="Label3D" parent="." unique_id=342850726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5488042, 0)
+visible = false
 billboard = 1
 text = "Place?"
 
@@ -22,3 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5261128, 0, 0)
 
 [node name="Axe Spot" type="Marker3D" parent="." unique_id=980734220]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.535779, 0, 0)
+
+[node name="ExtraTireSpot" type="Marker3D" parent="." unique_id=1328916647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056032866, 0, 0)

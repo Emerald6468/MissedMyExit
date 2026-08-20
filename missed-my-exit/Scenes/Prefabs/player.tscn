@@ -26,7 +26,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1279738, 0)
 
 [node name="OnFootCamera" type="Camera3D" parent="Head" unique_id=1938948036]
 
-[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=542214953]
+[node name="RayCast3D" type="RayCast3D" parent="Head/OnFootCamera" unique_id=542214953]
+transform = Transform3D(1, 0, 0, 0, -7.3019564e-08, -0.9999996, 0, 1.670493, -4.371137e-08, 0, 0, -0.5628761)
+target_position = Vector3(0, -1.625, 0)
+collision_mask = 8
+hit_from_inside = true
+collide_with_areas = true
 
 [node name="NearbyCheck" type="Area3D" parent="." unique_id=102659409]
 

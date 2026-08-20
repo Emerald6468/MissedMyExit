@@ -5,6 +5,7 @@ const Pickup_Scene = preload("uid://47uwttp4dh6e")
 
 @onready var rock_spot: Marker3D = $RockSpot
 @onready var axe_spot: Marker3D = $"Axe Spot"
+@onready var extra_tire_spot: Marker3D = $ExtraTireSpot
 
 
 #debug
@@ -19,7 +20,7 @@ var current_distance: float
 
 #places item
 func check_if_place():
-	if player_nearby and Global.JustPlaced and closest:
+	if player_nearby and Global.JustPlaced and closest and Global.TrunkOpened:
 		Global.JustPlaced = false
 		if Global.HasRock:
 			var rock = Pickup_Scene.instantiate()
@@ -37,6 +38,16 @@ func check_if_place():
 			axe.scale.y = .50
 			axe.scale.z = .50
 			Global.HasAxe = false
+		elif Global.HasExtraTire:
+			print("test3")
+			var tire = Pickup_Scene.instantiate()
+			tire.set_object_type("ExtraTire")
+			extra_tire_spot.add_child(tire)
+			tire.scale.x = .50
+			tire.scale.y = .50
+			tire.scale.z = .50
+			Global.HasExtraTire = false
+			if Global.tutorial_num == 7: Global.CurrentCheck = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
