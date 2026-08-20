@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://c368ffp70oslf" path="res://Assets/New Models/Tools/Axe/Axe.glb" id="10_yeci8"]
 [ext_resource type="PackedScene" uid="uid://m384o3sk0ov4" path="res://Assets/New Models/Tools/Surveying Camera/Camera.glb" id="11_twi4o"]
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="12_u8usa"]
+[ext_resource type="PackedScene" uid="uid://cmb5grrrog4o5" path="res://Assets/New Models/Van/Van Main/Van.glb" id="13_kohnp"]
+[ext_resource type="PackedScene" uid="uid://ccxey1p13hm46" path="res://Assets/New Models/Van/Van Door/Door.glb" id="14_nc1wd"]
+[ext_resource type="PackedScene" uid="uid://dwc8wqmcusd8n" path="res://Assets/New Models/Clipboard/Clipboard.glb" id="15_1632n"]
 
 [node name="MainTestScene" type="Node2D" unique_id=1211951512]
 
@@ -70,3 +73,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62996006, 1.0441182, 5.2564
 
 [node name="Wheel5" parent="." unique_id=1645380549 instance=ExtResource("12_u8usa")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.7491641, 0.69997406, 6.906412)
+
+[node name="Van" parent="." unique_id=457926540 instance=ExtResource("13_kohnp")]
+transform = Transform3D(0.22676893, 0, -0.9739486, 0, 1, 0, 0.9739486, 0, 0.22676893, -2.502215, 4.7683716e-07, 11.50955)
+
+[node name="Door" parent="." unique_id=1416499277 instance=ExtResource("14_nc1wd")]
+transform = Transform3D(0.21886665, 0, -0.9757548, 0, 1, 0, 0.9757548, 0, 0.21886665, 4.559779, 0.4741584, 10.101231)
+
+[node name="Clipboard" parent="." unique_id=849375781 instance=ExtResource("15_1632n")]
+transform = Transform3D(0.021510925, 0, 0.9997686, 0, 1, 0, -0.9997686, 0, 0.021510925, 6.690082, 1.326798, 7.1727953)
