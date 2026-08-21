@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://gby2dq24e5t0"]
+
+[ext_resource type="PackedScene" uid="uid://cmb5grrrog4o5" path="res://Assets/New Models/Van/Van Main/Van.glb" id="1_2vy77"]
+[ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="2_t14qc"]
+[ext_resource type="PackedScene" uid="uid://ccxey1p13hm46" path="res://Assets/New Models/Van/Van Door/Door.glb" id="3_t14qc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6f8o3"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
+size = Vector2(2, 0.6)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_54jx7"]
+size = Vector2(1.9, 0.7)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tl8tx"]
+size = Vector2(1, 0.6)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1x04j"]
+size = Vector2(0.6, 0.7)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sn0t7"]
+size = Vector2(2.8, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ny4q5"]
+size = Vector2(2.2, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nmug1"]
+size = Vector2(0.4, 1)
+
+[node name="Van_Prefab" type="Node3D" unique_id=1993302519]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Van" parent="." unique_id=233212115 instance=ExtResource("1_2vy77")]
+transform = Transform3D(1.2000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.9, -0.06085205, 0, 0.05014038)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1340325878]
+transform = Transform3D(1.2, 0, 0, 0, 0.7559229, -0.5891947, 0, 0.6546607, 0.6803305, -0.06273581, 1.5000701, -1.0223228)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_bhunq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1409612230]
+transform = Transform3D(1.2, 0, 0, 0, 0.7559229, -0.5891947, 0, 0.6546607, 0.6803305, -0.06273581, 1.8640985, -1.4426416)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_54jx7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2031323491]
+transform = Transform3D(-4.5387825e-08, -0.9453918, -0.2933428, -2.6293211e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738194e-08, -1.479133, 1.318263, -1.8916161)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_tl8tx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=426982784]
+transform = Transform3D(-4.5387825e-08, -0.9453918, -0.2933428, -2.6293211e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738194e-08, -1.2978891, 1.8439457, -2.105636)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=186122844]
+transform = Transform3D(-0.28283876, -0.9453918, -0.20261112, -0.82038504, 0.3259365, -0.5876818, 0.828837, -1.976509e-08, -0.6508295, -1.3663095, 1.6454847, -1.7522424)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1907528067]
+transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.84942293, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.3510826, 1.380091, -1.8916161)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_tl8tx")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=814932971]
+transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.84942293, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.1954429, 1.8246398, -2.105636)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=1179184500]
+transform = Transform3D(0.2868064, 0.9438029, 0.20545357, -0.81900626, 0.3305089, -0.58669394, 0.8288369, 1.5248065e-07, -0.6508294, 1.2648094, 1.6265132, -1.7522424)
+material_override = SubResource("StandardMaterial3D_6f8o3")
+mesh = SubResource("PlaneMesh_1x04j")
+
+[node name="Wheel" parent="." unique_id=1641618354 instance=ExtResource("2_t14qc")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.303552, -0.0704633, -0.6773048)
+
+[node name="Wheel2" parent="." unique_id=1160136089 instance=ExtResource("2_t14qc")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.2965902, -0.0704633, -5.3227277)
+
+[node name="Wheel3" parent="." unique_id=75795329 instance=ExtResource("2_t14qc")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.2861696, -0.0704633, -0.6773048)
+
+[node name="Wheel4" parent="." unique_id=570959170 instance=ExtResource("2_t14qc")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.215655, -0.0704633, -5.328437)
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=788618023]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.060333252, 0.6971779, -3)
+mesh = SubResource("PlaneMesh_sn0t7")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=1507054323]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.020721436, 1.6971779, -3)
+mesh = SubResource("PlaneMesh_ny4q5")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=451042266]
+transform = Transform3D(0.94334906, 0, -0.33180195, 0.33180195, -4.371139e-08, 0.94334906, -1.45035255e-08, -1, -4.1235097e-08, 1.0395277, 1.5820556, -3)
+mesh = SubResource("PlaneMesh_nmug1")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=1050189854]
+transform = Transform3D(0.9218875, -2.9347463e-08, 0.38745737, -0.38745737, -3.2394627e-08, 0.9218875, -1.45035255e-08, -1, -4.12351e-08, -1.0835801, 1.5765182, -3)
+mesh = SubResource("PlaneMesh_nmug1")
+
+[node name="RightHeadlight" type="SpotLight3D" parent="." unique_id=1574627284]
+transform = Transform3D(-1.4285715, 3.2323832e-08, -1.2063417e-07, 0, 1.3798941, 0.36974153, 1.2488968e-07, 0.36974153, -1.379894, 1.2374904, 0.47211656, 0.4551451)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+shadow_enabled = true
+spot_range = 40.0
+spot_attenuation = 0.25
+
+[node name="LeftHeadlight" type="SpotLight3D" parent="." unique_id=1551749482]
+transform = Transform3D(-1.4285715, 3.2323825e-08, -1.2063416e-07, 0, 1.379894, 0.3697415, 1.2488968e-07, 0.3697415, -1.379894, -1.3275645, 0.4770982, 0.4309486)
+light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
+light_volumetric_fog_energy = 0.25
+shadow_enabled = true
+spot_range = 40.0
+spot_attenuation = 0.25
+
+[node name="Doors" type="Node3D" parent="." unique_id=572047803]
+
+[node name="LeftDoor" type="Node3D" parent="Doors" unique_id=1293345861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.126665, 1.2195933, -6.7697744)
+
+[node name="Door" parent="Doors/LeftDoor" unique_id=2076097871 instance=ExtResource("3_t14qc")]
+transform = Transform3D(1.2, 0, 0, 0, 1.01, 0, 0, 0, 1.01, -0.9074409, -0.75383073, 0.36287642)
+
+[node name="RightDoor" type="Node3D" parent="Doors" unique_id=1030335017]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2498819, 1.2195933, -6.7697744)
+
+[node name="Door" parent="Doors/RightDoor" unique_id=893260097 instance=ExtResource("3_t14qc")]
+transform = Transform3D(1.2, 0, 0, 0, 1.01, 0, 0, 0, 1.01, -0.91447055, -0.75383073, 0.36287642)

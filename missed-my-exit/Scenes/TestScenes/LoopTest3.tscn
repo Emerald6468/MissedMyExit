@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cbjs2rtwxc68o" path="res://Scenes/Loop1_Clearing2.tscn" id="10_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_qabrb"]
+[ext_resource type="PackedScene" uid="uid://gby2dq24e5t0" path="res://Scenes/Prefabs/Van_1.tscn" id="11_1x04j"]
 [ext_resource type="PackedScene" uid="uid://dqkbserk206ku" path="res://Scenes/Loop3_Main.tscn" id="11_nclww"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="12_8lrox"]
 [ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="13_27tf7"]
@@ -295,95 +296,8 @@ transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.2
 material_override = SubResource("StandardMaterial3D_4v7s2")
 mesh = SubResource("PlaneMesh_kxc82")
 
-[node name="Van_Prefab" type="Node3D" parent="Loop1/Loop1_Clearing2" unique_id=1287726481]
-transform = Transform3D(0.16573666, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.16573666, 29.918304, 0.44661164, -1.6661377)
-
-[node name="Van" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=539157743 instance=ExtResource("18_kxc82")]
-transform = Transform3D(1.2000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.9, -0.06085205, 0, 0.05014038)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1287832419]
-transform = Transform3D(1.2, 0, 0, 0, 0.75592285, -0.5891947, 0, 0.6546607, 0.6803305, -0.005493164, 1.5000701, -1.0403748)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_bhunq")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=2011139055]
-transform = Transform3D(1.2, 0, 0, 0, 0.75592285, -0.5891947, 0, 0.6546607, 0.6803305, -0.005493164, 1.8640985, -1.4606934)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_54jx7")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1675384501]
-transform = Transform3D(-4.538783e-08, -0.9453917, -0.2933428, -2.629321e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738192e-08, -1.4281006, 1.318263, -1.909668)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_tl8tx")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=867963656]
-transform = Transform3D(-4.538783e-08, -0.9453917, -0.2933428, -2.629321e-08, 0.32593647, -0.85085255, 1.2, -2.861613e-08, -2.9738192e-08, -1.2468567, 1.8439457, -2.1236877)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_1x04j")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=463220513]
-transform = Transform3D(-0.28283876, -0.9453917, -0.2026111, -0.82038504, 0.3259365, -0.5876818, 0.82883704, -1.976509e-08, -0.6508295, -1.3152771, 1.6454847, -1.7702942)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_1x04j")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1817746885]
-transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.8494229, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.4083252, 1.380091, -1.909668)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_tl8tx")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=151952732]
-transform = Transform3D(3.4984417e-08, 0.94380295, 0.29745787, -5.86344e-09, 0.3305087, -0.8494229, 1.2000003, -2.5900393e-08, -1.2822434e-08, 1.2526855, 1.8246397, -2.1236877)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_1x04j")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1058612107]
-transform = Transform3D(0.2868064, 0.9438029, 0.20545357, -0.8190062, 0.3305089, -0.58669394, 0.8288369, 1.5248065e-07, -0.6508294, 1.322052, 1.6265131, -1.7702942)
-material_override = SubResource("StandardMaterial3D_6f8o3")
-mesh = SubResource("PlaneMesh_1x04j")
-
-[node name="Wheel" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1893585879 instance=ExtResource("19_jwy6e")]
-transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.2731628, -0.0704633, -0.72576904)
-
-[node name="Wheel2" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1801977789 instance=ExtResource("19_jwy6e")]
-transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, -1.2731628, -0.0704633, -5.365082)
-
-[node name="Wheel3" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1643368691 instance=ExtResource("19_jwy6e")]
-transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.3165588, -0.0704633, -0.72576904)
-
-[node name="Wheel4" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1177828545 instance=ExtResource("19_jwy6e")]
-transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 1.3165588, -0.0704633, -5.365082)
-
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1649557608]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.060333252, 0.6971779, -3)
-mesh = SubResource("PlaneMesh_sn0t7")
-
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=25994604]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.020721436, 1.6971779, -3)
-mesh = SubResource("PlaneMesh_ny4q5")
-
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1331485955]
-transform = Transform3D(0.94334906, 0, -0.33180195, 0.33180195, -4.371139e-08, 0.94334906, -1.45035255e-08, -1, -4.1235097e-08, 1.0395277, 1.5820556, -3)
-mesh = SubResource("PlaneMesh_nmug1")
-
-[node name="MeshInstance3D12" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1051426987]
-transform = Transform3D(0.9218875, -2.9347463e-08, 0.38745737, -0.38745737, -3.2394627e-08, 0.9218875, -1.45035255e-08, -1, -4.12351e-08, -1.0835801, 1.5765182, -3)
-mesh = SubResource("PlaneMesh_nmug1")
-
-[node name="RightHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1829591211]
-transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 1.3192792, 0.45503318, 0.45514506)
-light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
-light_volumetric_fog_energy = 0.25
-shadow_enabled = true
-spot_range = 40.0
-spot_attenuation = 0.25
-
-[node name="LeftHeadlight" type="SpotLight3D" parent="Loop1/Loop1_Clearing2/Van_Prefab" unique_id=1204923959]
-transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, -1.3275645, 0.5024775, 0.43094856)
-light_color = Color(0.9684916, 0.8710161, 0.6766825, 1)
-light_volumetric_fog_energy = 0.25
-shadow_enabled = true
-spot_range = 40.0
-spot_attenuation = 0.25
+[node name="Van_Prefab2" parent="Loop1/Loop1_Clearing2" unique_id=1993302519 instance=ExtResource("11_1x04j")]
+transform = Transform3D(0.16573668, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.16573668, 29.918274, 0.44661164, -1.6661377)
 
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.00335, -6.9428215, -1.82419)
