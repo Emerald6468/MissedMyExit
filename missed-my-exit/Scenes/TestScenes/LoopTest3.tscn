@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cmb5grrrog4o5" path="res://Assets/New Models/Van/Van Main/Van.glb" id="18_kxc82"]
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="19_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://il328vw00oxa" path="res://Scenes/Loop2b_Main.tscn" id="21_54jx7"]
+[ext_resource type="PackedScene" uid="uid://b2p6osnbkujtt" path="res://Scenes/Loop4_Main.tscn" id="22_tl8tx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
 size = Vector3(1, 5.1224365, 9.735809)
@@ -446,8 +447,41 @@ ObjectType = "Axe"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.477, -7, -293.305)
 visible = false
 
+[node name="Events" type="Node3D" parent="Loop2b_Main" unique_id=987301056]
+
+[node name="HideLoop2a" type="Area3D" parent="Loop2b_Main/Events" unique_id=2133956489]
+transform = Transform3D(0.19694027, 0, -0.98041546, 0, 1, 0, 0.98041546, 0, 0.19694027, -120.67597, -4.2915344e-06, 243.4107)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop2b_Main/Events/HideLoop2a" unique_id=1510390908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop2b_Main/Events/HideLoop2a" unique_id=616923712 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Hide"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop2")
+
+[node name="HideEvent2" parent="Loop2b_Main/Events/HideLoop2a" unique_id=1200261912 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Show"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop3")
+
+[node name="HideEvent3" parent="Loop2b_Main/Events/HideLoop2a" unique_id=6523974 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Show"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop4")
+
 [node name="Loop3" parent="." unique_id=982542341 instance=ExtResource("11_nclww")]
 transform = Transform3D(-0.99869287, 0, -0.05111374, 0, 1, 0, 0.05111374, 0, -0.99869287, 126.7608, -7.091422, -293.3116)
+visible = false
+
+[node name="Loop4" parent="." unique_id=574879266 instance=ExtResource("22_tl8tx")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 252.61632, -7.0663924, -555.06067)
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
@@ -468,7 +502,7 @@ visible = false
 light_energy = 0.001
 
 [node name="Vista" parent="." unique_id=356840638 instance=ExtResource("13_slsem")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -11.390015, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -11.390015, 0)
 
 [node name="CloudLayer" type="MeshInstance3D" parent="." unique_id=730650308]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 78.23117, 0)
@@ -487,3 +521,4 @@ scroll_speed = 0.05
 [connection signal="body_entered" from="Loop1/Events/ShowLoop2" to="Loop1/Events/ShowLoop2" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop1" to="Loop2/Events/HideLoop1" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop2Intro" to="Loop2/Events/HideLoop2Intro" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop2b_Main/Events/HideLoop2a" to="Loop2b_Main/Events/HideLoop2a" method="_on_body_entered"]
