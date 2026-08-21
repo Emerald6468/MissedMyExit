@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_y4rai"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_jr836"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="3_bb8cp"]
+[ext_resource type="Script" uid="uid://bgerfyi8wq2g4" path="res://Scripts/tutorial/garage_door.gd" id="4_f0ww7"]
 [ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]
 [ext_resource type="PackedScene" uid="uid://b863pqxvtd2gm" path="res://Scenes/UI/tutorial/go_to_circle.tscn" id="5_bb8cp"]
 [ext_resource type="PackedScene" uid="uid://dcm8c1q4uktii" path="res://Scenes/UI/tutorial/point_arrow.tscn" id="6_u6dgh"]
@@ -30,6 +31,42 @@ albedo_texture = ExtResource("1_y4rai")
 albedo_color = Color(0.33692408, 0.41580406, 0.36826047, 1)
 albedo_texture = ExtResource("1_y4rai")
 
+[sub_resource type="Animation" id="Animation_k4tkk"]
+resource_name = "OpenDoor"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.915745, 1.77792, 3.4409602), Vector3(1.915745, 5.0192013, 3.4409602)]
+}
+
+[sub_resource type="Animation" id="Animation_gvnrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.915745, 1.77792, 3.4409602)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wm785"]
+_data = {
+&"OpenDoor": SubResource("Animation_k4tkk"),
+&"RESET": SubResource("Animation_gvnrr")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr836"]
 albedo_color = Color(0.727249, 0.3030704, 0.030452518, 1)
 albedo_texture = ExtResource("1_y4rai")
@@ -37,6 +74,13 @@ albedo_texture = ExtResource("1_y4rai")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb8cp"]
 albedo_color = Color(0.21629497, 0.24962568, 0.20296285, 1)
 albedo_texture = ExtResource("1_y4rai")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bhunq"]
+height = 2.7905273
+radius = 1.4189453
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bhunq"]
+radius = 0.57051957
 
 [node name="GarageTest" type="Node3D" unique_id=1617414937]
 
@@ -75,6 +119,10 @@ material = SubResource("StandardMaterial3D_y4rai")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, 3.4409602)
 size = Vector3(5.8730164, 3.5303345, 0.41882324)
 material = SubResource("StandardMaterial3D_n3ya4")
+script = ExtResource("4_f0ww7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GarageDoor" unique_id=380514257]
+libraries/ = SubResource("AnimationLibrary_wm785")
 
 [node name="Wall2" type="CSGBox3D" parent="." unique_id=1939912211]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.292947, 1.77792, 0.07848477)
@@ -96,6 +144,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4319923, 1.7410779, -2.663
 size = Vector3(0.2710681, 0.17023468, 0.060272217)
 material = SubResource("StandardMaterial3D_bb8cp")
 
+[node name="OpenerAOE" type="Area3D" parent="GarageOpener" unique_id=1345696135 groups=["OpenerAOE"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GarageOpener/OpenerAOE" unique_id=1813972636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39526367, 0)
+shape = SubResource("CylinderShape3D_bhunq")
+
+[node name="OpenerLookAt" type="Area3D" parent="GarageOpener" unique_id=252525517 groups=["OpenerLookAt"]]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GarageOpener/OpenerLookAt" unique_id=1770121443]
+shape = SubResource("SphereShape3D_bhunq")
+
 [node name="Toolcart" parent="." unique_id=1789723979 instance=ExtResource("4_jr836")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7531284, 0.18778333, 1.642514)
 
@@ -111,9 +172,17 @@ show_num = 6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41112447, -4.7683716e-07, 2.471313)
 show_num = 4
 
+[node name="GoToCircle4" parent="." unique_id=1168527223 instance=ExtResource("5_bb8cp")]
+transform = Transform3D(5.918158, 0, 0, 0, 1, 0, 0, 0, 7.1207547, 2.4111583, 0.3021102, 13.97291)
+show_num = 12
+
 [node name="PointArrow" parent="." unique_id=952205465 instance=ExtResource("6_u6dgh")]
 transform = Transform3D(0.104417905, -0.99453366, 3.3057075e-09, 0.03924444, 0.004120342, -0.99922115, 0.99375904, 0.10433658, 0.03946014, 3.1039002, 1.4300958, 2.4450548)
 show_num = 2
+
+[node name="PointArrow5" parent="." unique_id=1429688164 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, -0.37078798, 2.6284835, -2.1034088)
+show_num = 8
 
 [node name="PointArrow2" parent="." unique_id=1393243636 instance=ExtResource("6_u6dgh")]
 transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, 3.0201387, 1.0002201, 1.6636186)
@@ -126,6 +195,10 @@ show_num = 7
 [node name="PointArrow4" parent="." unique_id=398380979 instance=ExtResource("6_u6dgh")]
 transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, -1.0100247, 2.4799685, 2.6917474)
 show_num = 5
+
+[node name="PointArrow6" parent="." unique_id=1527769922 instance=ExtResource("6_u6dgh")]
+transform = Transform3D(0.04751015, -0.45251277, 1.8918034e-09, 0.017856218, 0.0018747555, -0.45464563, 0.45216033, 0.04747315, 0.017954364, 2.5175533, 1.5596935, -0.13151187)
+show_num = 9
 
 [node name="Wheel" parent="." unique_id=760245031 instance=ExtResource("7_ligur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991859, 1.8543503, 2.624121)

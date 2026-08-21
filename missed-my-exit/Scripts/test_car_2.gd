@@ -73,6 +73,7 @@ func _process(delta: float) -> void:
 		car_camera.make_current()
 		headlights()
 		if Input.is_action_just_pressed("Interact"): 
+			if Global.tutorial_num == 11: Global.CurrentCheck = true
 			if headlight: headlight = false
 			else: headlight = true
 		var dir = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")

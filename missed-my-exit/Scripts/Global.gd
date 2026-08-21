@@ -34,7 +34,12 @@ var volume = 50.0
 #UI that will reset
 var CurrentCheck = false
 var tutorial_num: int = 0
-var tutorial_done = false
+var tutorial_done = false 
+
+#Garage Opener
+var NearGarageOpener = false
+var GarageOpen = false
+
 #make sure to add every var to reset
 func reset_vars():
 	OnFoot = true
@@ -52,6 +57,9 @@ func reset_vars():
 	ClosestDistance = 100.0
 	CurrentCheck = false
 	tutorial_num = 0
+	tutorial_done = false
+	NearGarageOpener = false
+	GarageOpen = false
 	#temp ones prob delete later
 	HasRock = false
 	

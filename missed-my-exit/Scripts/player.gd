@@ -35,7 +35,6 @@ const WALK_AMP: float = 0.025
 var t_bob:float = 0.0
 
 func _ready():
-	ray.add_exception(get_parent().get_node("FinalCar").get_node("CollisionShape3D2"))
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
 	
@@ -58,29 +57,32 @@ func inventory():
 		Global.HasItem = true
 	else:
 		Global.HasItem = false
-	
+
 func check_nearby():
 	var area_list = nearby_check.get_overlapping_areas()
 	#Checks if player is nearby
 	if nearby_check.has_overlapping_areas():
 		var just_grab_range = false
 		var just_place_range = false
+		var just_opener_range = false
 		for area in area_list:
 			if area is PickUp:
 				Global.NearPickup = true
 				just_grab_range = true
-			elif area is PlaceZone or MultiPlaceZone:
+			if area is PlaceZone or MultiPlaceZone:
 				Global.NearPlaceZone = true
 				just_place_range = true
+			if area.is_in_group("OpenerAOE"):
+				Global.NearGarageOpener = true
+				just_opener_range = true
 			else:
 				if !just_grab_range: Global.NearPickup = false
 				if !just_place_range: Global.NearPlaceZone = false
+				if !just_opener_range: Global.NearGarageOpener = false
 	if Global.NearPlaceZone: Global.ClosestDistance = 100.0
-
+	
 
 func _physics_process(delta: float) -> void:
-	#if Input.is_action_just_pressed("Escape"): get_tree().quit()
-	if Global.HasRock: print("HAVEROCK")
 	inventory()
 	check_nearby()
 	#Switching
@@ -89,6 +91,7 @@ func _physics_process(delta: float) -> void:
 		Global.PlayerPosition = global_position
 		if !outside_ambience.playing: outside_ambience.play()
 		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls") and Global.NearDoor:
+			if Global.tutorial_num == 9: Global.CurrentCheck = true
 			Global.NearDoor = false
 			Global.OnFoot = false
 			Global.JustSwitched = true
@@ -120,11 +123,15 @@ func _physics_process(delta: float) -> void:
 			elif Global.NearPlaceZone and Global.HasItem:
 				if on_foot_camera.is_position_in_frustum(Global.PlaceZonePosition):
 					Global.JustPlaced = true	
-			if Global.HasAxe and !Global.AxeSwing:
+			elif Global.HasAxe and !Global.AxeSwing:
 				Global.AxeSwing = true
 				axe_swinging = true
 				AxeTimer()
-				
+			elif !Global.HasItem and Global.NearGarageOpener:
+				print("test")
+				if ray.is_colliding():
+					print(str(ray.get_collider()))
+					Global.GarageOpen = true
 		
 		# Add the gravity.
 		if not is_on_floor():

@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		#Checks if player is nearby
 		if area_3d.has_overlapping_bodies():
 			for body in body_list:
-				if body is Player:
+				if body is Player or body is Car:
 					Global.CurrentCheck = true
 					queue_free()
 	elif Global.tutorial_num > show_num:

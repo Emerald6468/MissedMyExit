@@ -7,7 +7,6 @@ var _typing_speed : float = 60
 var _typing_time : float
 
 var just_changed = true
-var tutorial_done = false
 var tutorial_text: Array = [
 	"WASD TO MOVE",
 	"Move Mouse to look around",
@@ -18,13 +17,9 @@ var tutorial_text: Array = [
 	"Store extra wheel",
 	"E to place",
 	"Open garage door",
-	"Get in Car",
 	"F to Get enter and exit car",
+	"Move Car",
 	"E to toggle headlights",
-	"W to go forward",
-	"A to turn left ",
-	"D to turn right",
-	"S to reverse",
 	"Leave Garage",
 ]
 # Called when the node enters the scene tree for the first time.
@@ -48,6 +43,7 @@ func display_text(type: RichTextLabel, text : String):
 var temp = false
 var check = false
 func run_tutorial():
+	print(str(Global.tutorial_num))
 	if just_changed:
 		just_changed = false
 		display_text(tutorial,tutorial_text[Global.tutorial_num])
@@ -73,6 +69,7 @@ func run_tutorial():
 			if temp: check = true
 		8: 
 			if temp: check = true
+		#car time
 		9: 
 			if temp: check = true
 		10: 
@@ -81,20 +78,14 @@ func run_tutorial():
 			if temp: check = true
 		12: 
 			if temp: check = true
-		13: 
-			if temp: check = true
-		14: 
-			if temp: check = true
-		15: 
-			if temp: check = true
-		16:
-			if temp: check = true
 	
 	if check:
 		check = false
 		var last_item = Global.tutorial_num >= tutorial_text.size()-1
 		if !last_item: Global.tutorial_num += 1
-		else: tutorial_done = true
+		else: 
+			print("test1")
+			Global.tutorial_done = true
 		just_changed = true
 	if temp: temp = false
 
@@ -109,5 +100,5 @@ func _process(delta: float) -> void:
 	else: visible = true
 	if Input.is_action_just_pressed("Next"):
 		temp = true
-	if !tutorial_done:run_tutorial()
+	if !Global.tutorial_done:run_tutorial()
 	else: tutorial.clear() 

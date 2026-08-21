@@ -51,6 +51,17 @@ theme = ExtResource("1_u1cco")
 theme_override_font_sizes/font_size = 640
 text = "W"
 
+[node name="Description" type="Label" parent="CanvasLayer/Control/W" unique_id=1069475064]
+layout_mode = 0
+offset_left = -706.6667
+offset_top = -600.0
+offset_right = 794.3333
+offset_bottom = -359.0
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 240
+text = "To Drive Forward"
+horizontal_alignment = 1
+
 [node name="A" type="Control" parent="CanvasLayer/Control" unique_id=473074039]
 anchors_preset = 0
 offset_left = -675.0
@@ -81,6 +92,17 @@ theme = ExtResource("1_u1cco")
 theme_override_font_sizes/font_size = 640
 text = "A"
 
+[node name="Description" type="Label" parent="CanvasLayer/Control/A" unique_id=894075709]
+layout_mode = 0
+offset_left = -1265.0001
+offset_top = -621.6667
+offset_right = 235.99988
+offset_bottom = -380.6667
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 240
+text = "To Turn Left"
+horizontal_alignment = 1
+
 [node name="S" type="Control" parent="CanvasLayer/Control" unique_id=1885507746]
 anchors_preset = 0
 offset_top = 675.0
@@ -109,6 +131,17 @@ offset_bottom = 355.40973
 theme = ExtResource("1_u1cco")
 theme_override_font_sizes/font_size = 640
 text = "S"
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/S" unique_id=470324279]
+layout_mode = 0
+offset_left = -746.6667
+offset_top = 351.66663
+offset_right = 754.3333
+offset_bottom = 592.6666
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 240
+text = "To Drive Backward"
+horizontal_alignment = 1
 
 [node name="D" type="Control" parent="CanvasLayer/Control" unique_id=1132043353]
 anchors_preset = 0
@@ -139,3 +172,14 @@ offset_bottom = 355.40973
 theme = ExtResource("1_u1cco")
 theme_override_font_sizes/font_size = 640
 text = "D"
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/D" unique_id=524639968]
+layout_mode = 0
+offset_left = -277.9997
+offset_top = -621.6667
+offset_right = 1223.0002
+offset_bottom = -380.6667
+theme = ExtResource("1_u1cco")
+theme_override_font_sizes/font_size = 240
+text = "To Turn Right"
+horizontal_alignment = 1
