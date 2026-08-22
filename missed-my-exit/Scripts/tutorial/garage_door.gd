@@ -16,4 +16,5 @@ func _process(delta: float) -> void:
 		Global.CurrentCheck = true
 	if Global.tutorial_done: 
 		print("test2")
+		Global.FlashOn = true
 		get_tree().change_scene_to_file("res://Scenes/TestScenes/LoopTest3.tscn")

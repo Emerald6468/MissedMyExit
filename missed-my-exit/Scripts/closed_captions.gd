@@ -17,9 +17,9 @@ var tutorial_text: Array = [
 	"Store extra wheel",
 	"E to place",
 	"Open garage door",
-	"F to Get enter and exit car",
+	"E to Get enter and exit car",
 	"Move Car",
-	"E to toggle headlights",
+	"F to toggle headlights",
 	"Leave Garage",
 ]
 # Called when the node enters the scene tree for the first time.

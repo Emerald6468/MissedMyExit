@@ -25,6 +25,9 @@ var timer_started = false
 #axe
 var axe_swinging = false
 
+#flashlight
+@onready var flashlight: Node3D = $Head/OnFootCamera/Flashlight
+
 #Headbob
 var BOB_FREQ: float = 3
 const RUN_FREQ: float = 3
@@ -90,7 +93,8 @@ func _physics_process(delta: float) -> void:
 	if Global.OnFoot:
 		Global.PlayerPosition = global_position
 		if !outside_ambience.playing: outside_ambience.play()
-		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls") and Global.NearDoor:
+		#can you enter the car
+		if !Global.JustSwitched and Input.is_action_just_pressed("Interact") and Global.NearDoor and !Global.HasItem:
 			if Global.tutorial_num == 9: Global.CurrentCheck = true
 			Global.NearDoor = false
 			Global.OnFoot = false
@@ -133,6 +137,13 @@ func _physics_process(delta: float) -> void:
 					print(str(ray.get_collider()))
 					Global.GarageOpen = true
 		
+		#Flashlight
+		if Input.is_action_just_pressed("ToggleLight"):
+			Global.FlashOn = !Global.FlashOn
+		if Global.FlashOn:
+			flashlight.show()
+		else:
+			flashlight.hide()
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta

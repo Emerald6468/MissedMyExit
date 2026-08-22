@@ -19,6 +19,9 @@ var HasItem = false
 var TrunkOpened = false
 var ClosestDistance = 100.0
 
+#Flashlight
+var FlashOn = false
+
 #positions
 var PlayerMarker: Vector3
 var ObjectPosition: Vector3

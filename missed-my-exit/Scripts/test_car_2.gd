@@ -67,12 +67,12 @@ func _process(delta: float) -> void:
 	#Switching
 	if !Global.OnFoot:
 		if !outside_ambience.playing: outside_ambience.play()
-		if !Global.JustSwitched and Input.is_action_just_pressed("SwitchControls"):
+		if !Global.JustSwitched and Input.is_action_just_pressed("Interact"):
 			Global.OnFoot = true
 			Global.JustSwitched = true
 		car_camera.make_current()
 		headlights()
-		if Input.is_action_just_pressed("Interact"): 
+		if Input.is_action_just_pressed("ToggleLight"): 
 			if Global.tutorial_num == 11: Global.CurrentCheck = true
 			if headlight: headlight = false
 			else: headlight = true
