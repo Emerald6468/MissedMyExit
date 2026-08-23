@@ -1,7 +1,7 @@
 @tool
 extends "res://Scenes/TestScenes/Harlan/event.gd"
 
-@export_enum("Hide", "Show", "Switch") var action: String
+@export_enum("Hide", "Show", "Switch", "Delete") var action: String
 
 @export var disable: bool
 
@@ -17,11 +17,13 @@ func _process(delta: float) -> void:
 				target.visible = true
 				if disable:
 					target.set_deferred("process_mode", PROCESS_MODE_INHERIT)
-			else:
+			elif action == "Switch":
 				target.visible = !target.visible
 				if disable:
 					if target.visible:
 						target.set_deferred("process_mode", PROCESS_MODE_INHERIT)
 					else:
 						target.set_deferred("process_mode", PROCESS_MODE_DISABLED)
+			else:
+				target.queue_free()
 			start_next_event = true
