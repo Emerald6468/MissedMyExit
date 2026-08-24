@@ -1,41 +1,40 @@
-[gd_scene format=3 uid="uid://dqkbserk206ku"]
+[gd_scene format=3 uid="uid://vyov7ysjcyv0"]
 
-[ext_resource type="PackedScene" uid="uid://byy5sok7nmg3d" path="res://Assets/New Models/Tunnel/Entrance/Entrance.glb" id="13_a8cpo"]
-[ext_resource type="Texture2D" uid="uid://c6bqxx50h3gau" path="res://Assets/TEMP Textures/Texturelabs_Wood_156S2.png" id="18_pwuwq"]
-[ext_resource type="Texture2D" uid="uid://uhajwq6h1bjk" path="res://Assets/TEMP Textures/Texturelabs_Brick_126S2.png" id="19_fhx6i"]
-[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="20_cxidg"]
-[ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="21_ievyp"]
-[ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="23_kjtkd"]
-[ext_resource type="PackedScene" uid="uid://1mgmptt54kax" path="res://Assets/Old Models/Boulder_2.glb" id="24_nxsi0"]
-[ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="25_lnjvs"]
-[ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="25_vkm5q"]
-[ext_resource type="PackedScene" uid="uid://b0rbtxxixoc7k" path="res://Scenes/Prefabs/Roads/road_45_flat.tscn" id="26_b52w5"]
-[ext_resource type="PackedScene" uid="uid://c5vtvavrtrw11" path="res://Scenes/Prefabs/Roads/r_20deg_long.tscn" id="27_mr8xa"]
-[ext_resource type="PackedScene" uid="uid://dsw24vf51qcwr" path="res://Scenes/Loop1_GasStation.tscn" id="28_oamt2"]
-[ext_resource type="PackedScene" uid="uid://oxby8e805mug" path="res://Scenes/Prefabs/Roads/r_3way.tscn" id="30_qsb8n"]
+[ext_resource type="Texture2D" uid="uid://c6bqxx50h3gau" path="res://Assets/TEMP Textures/Texturelabs_Wood_156S2.png" id="1_r1elc"]
+[ext_resource type="Texture2D" uid="uid://uhajwq6h1bjk" path="res://Assets/TEMP Textures/Texturelabs_Brick_126S2.png" id="2_t067k"]
+[ext_resource type="Texture2D" uid="uid://homrbduc43f6" path="res://Assets/TEMP Textures/Texturelabs_Wood_161S2.png" id="3_p6mvt"]
+[ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="4_xlgsi"]
+[ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="5_56egc"]
+[ext_resource type="PackedScene" uid="uid://c2065wrls2ijj" path="res://Scenes/Prefabs/Roads/Down/r_10m_10down.tscn" id="6_y3eyl"]
+[ext_resource type="PackedScene" uid="uid://co5ii7naohg16" path="res://Scenes/Prefabs/Roads/Down/r_10m_20down.tscn" id="7_r1elc"]
+[ext_resource type="PackedScene" uid="uid://rgevfgejmet0" path="res://Scenes/Prefabs/Roads/r_45deg.tscn" id="9_t067k"]
+[ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="9_usnla"]
+[ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="11_ujf3m"]
+[ext_resource type="PackedScene" uid="uid://1mgmptt54kax" path="res://Assets/Old Models/Boulder_2.glb" id="12_b5rpp"]
+[ext_resource type="PackedScene" uid="uid://byy5sok7nmg3d" path="res://Assets/New Models/Tunnel/Entrance/Entrance.glb" id="13_kutes"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6da8v"]
-albedo_texture = ExtResource("18_pwuwq")
+albedo_texture = ExtResource("1_r1elc")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_offset = Vector3(0, 0.5, 0)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl8tx"]
-albedo_texture = ExtResource("19_fhx6i")
+albedo_texture = ExtResource("2_t067k")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_offset = Vector3(0, 0, 0.5)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54jx7"]
-albedo_texture = ExtResource("20_cxidg")
+albedo_texture = ExtResource("3_p6mvt")
 uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_offset = Vector3(0, 0, 0.5)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1x04j"]
-albedo_texture = ExtResource("21_ievyp")
+albedo_texture = ExtResource("4_xlgsi")
 
-[node name="Loop3" type="Node3D" unique_id=1796093272]
+[node name="Loop5" type="Node3D" unique_id=1796093272]
 
 [node name="Cabin1" type="Node3D" parent="." unique_id=1381816161]
 transform = Transform3D(0.5044115, 0, -0.745365, 0, 0.9, 0, 0.745365, 0, 0.5044115, -136.03714, 3.8236713, 198.93489)
@@ -147,117 +146,104 @@ material = SubResource("StandardMaterial3D_54jx7")
 
 [node name="Prefabs" type="Node3D" parent="." unique_id=439888227]
 
-[node name="r_40m" parent="Prefabs" unique_id=445961336 instance=ExtResource("25_vkm5q")]
+[node name="r_40m" parent="Prefabs" unique_id=445961336 instance=ExtResource("5_56egc")]
 
-[node name="Road_20_Flat" parent="Prefabs" unique_id=1575065925 instance=ExtResource("27_mr8xa")]
-transform = Transform3D(-0.97197056, 0, -0.23510303, 0, 1, 0, 0.23510303, 0, -0.97197056, -83.8833, 0.6298485, 5.305378)
+[node name="r_10m_10down" parent="Prefabs/r_40m" unique_id=240316338 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.942528, 0, 0)
 
-[node name="Road_20_Flat6" parent="Prefabs" unique_id=1844938525 instance=ExtResource("27_mr8xa")]
-transform = Transform3D(-0.8849651, 0, -0.4656574, 0, 1, 0, 0.4656574, 0, -0.8849651, -124.74116, 0.6298485, 20.81408)
+[node name="r_10m_20down" parent="Prefabs/r_40m/r_10m_10down" unique_id=1154506843 instance=ExtResource("7_r1elc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.749531, -1.7078679, 0)
 
-[node name="Road_45_Flat3" parent="Prefabs" unique_id=1125677207 instance=ExtResource("26_b52w5")]
-transform = Transform3D(0.87758696, 0, 0.4794174, 0, 1, 0, -0.4794174, 0, 0.87758696, -124.699715, 0.6298599, 20.48721)
+[node name="r_10m_10down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down" unique_id=1078339182 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.366474, -3.4080808, 0)
 
-[node name="Road_20_Flat7" parent="Prefabs" unique_id=887025498 instance=ExtResource("27_mr8xa")]
-transform = Transform3D(-0.9404482, 0, 0.33993724, 0, 1, 0, -0.33993724, 0, -0.9404482, -201.98917, 0.6298485, 0.22381592)
+[node name="r_10m" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=112709784 instance=ExtResource("9_usnla")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.779274, -1.727159, 0)
 
-[node name="Road_45_Flat4" parent="Prefabs" unique_id=836638699 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.827232, 0, -0.56186044, 0, 1, 0, 0.56186044, 0, -0.827232, -236.62234, 0.6298599, 5.0434985)
+[node name="r_45deg" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m" unique_id=945323445 instance=ExtResource("9_t067k")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -24.044853, 0, 5.8642597)
 
-[node name="Road_45_Flat17" parent="Prefabs" unique_id=1524977291 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.00782679, 0, -0.9999693, 0, 1, 0, 0.9999693, 0, -0.00782679, -254.70486, 0.6298599, 37.675167)
+[node name="r_10m_10down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m" unique_id=1292741233 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -23.944939, 0.014070988, 5.7512074)
 
-[node name="Road_45_Flat18" parent="Prefabs" unique_id=366309839 instance=ExtResource("26_b52w5")]
-transform = Transform3D(0.8221106, 0, -0.5693276, 0, 1, 0, 0.5693276, 0, 0.8221106, -238.05508, 0.6298599, 70.86757)
+[node name="r_10m_20down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down" unique_id=99971730 instance=ExtResource("7_r1elc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.749531, -1.7078679, 0)
 
-[node name="Road_Straight_Flat2" parent="Prefabs" unique_id=1525736646 instance=ExtResource("28_oamt2")]
-transform = Transform3D(-0.81991094, 2.3357117e-08, 0.5724911, 3.1187234e-08, 1, 3.8666808e-09, -0.5724911, 2.1024748e-08, -0.81991094, -222.12527, 0.59227085, 81.85732)
+[node name="r_10m_10down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down" unique_id=562588302 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.366474, -3.4080808, 0)
 
-[node name="Road_Straight_Flat4" parent="Prefabs" unique_id=1798988763 instance=ExtResource("25_lnjvs")]
-transform = Transform3D(-0.7902868, 0, 0.6127372, 0, 1, 0, -0.6127372, 0, -0.7902868, -238.21603, 0.6298523, 71.12415)
-visible = false
+[node name="r_45deg" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=1537683473 instance=ExtResource("9_t067k")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -23.70617, -1.7271585, 5.8727303)
 
-[node name="Road_45_Flat19" parent="Prefabs" unique_id=669508429 instance=ExtResource("26_b52w5")]
-transform = Transform3D(0.92651236, 0, 0.37626404, 0, 1, 0, -0.37626404, 0, 0.92651236, -133.06714, 0.6298599, 122.34522)
+[node name="r_45deg2" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=2122698659 instance=ExtResource("9_t067k")]
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -5.9604645e-08, -29.614014, -1.7271585, 19.896267)
 
-[node name="Road_45_Flat20" parent="Prefabs" unique_id=111933733 instance=ExtResource("26_b52w5")]
-transform = Transform3D(0.23157729, 0, 0.9728164, 0, 1, 0, -0.9728164, 0, 0.23157729, -108.14206, 0.6298599, 94.47867)
+[node name="r_10m_10down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=970957359 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(0, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 0, -29.590485, -1.7236528, 19.724731)
 
-[node name="Road_45_Flat21" parent="Prefabs" unique_id=222871343 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.21554667, 0, -0.9764936, 0, 1, 0, 0.9764936, 0, -0.21554667, -108.14206, 0.6298599, 95.04607)
+[node name="r_10m_20down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m_10down" unique_id=530747223 instance=ExtResource("7_r1elc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.749531, -1.7078679, 0)
 
-[node name="Road_45_Flat5" parent="Prefabs" unique_id=993425102 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.93663317, 0, -0.35031188, 0, 1, 0, 0.35031188, 0, -0.93663317, -84.62623, 0.6298599, 67.24958)
+[node name="r_10m_10down" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m_10down/r_10m_20down" unique_id=337542337 instance=ExtResource("6_y3eyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.366474, -3.4080808, 0)
 
-[node name="Road_45_Flat6" parent="Prefabs" unique_id=2092618685 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.83997613, 0, 0.54262346, 0, 1, 0, -0.54262346, 0, -0.83997613, -47.52765, 0.6298599, 72.54614)
+[node name="r_45deg" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=1487541577 instance=ExtResource("9_t067k")]
+transform = Transform3D(-0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071067, -23.70617, -1.7271585, 5.8727303)
 
-[node name="Road_20_Flat8" parent="Prefabs" unique_id=1619157190 instance=ExtResource("27_mr8xa")]
-transform = Transform3D(-0.011643564, 0, 0.99993217, 0, 1, 0, -0.99993217, 0, -0.011643564, -29.823242, 0.6298485, 106.17078)
-
-[node name="Road_45_Flat7" parent="Prefabs" unique_id=480854706 instance=ExtResource("26_b52w5")]
-transform = Transform3D(0.210147, 0, 0.9776697, 0, 1, 0, -0.9776697, 0, 0.210147, -34.71014, 0.6298599, 149.95523)
-
-[node name="Road_20_Flat9" parent="Prefabs" unique_id=1224599769 instance=ExtResource("27_mr8xa")]
-transform = Transform3D(0.9270493, 0, 0.37493932, 0, 1, 0, -0.37493932, 0, 0.9270493, -59.777946, 0.6298485, 178.43022)
-
-[node name="Road_45_Flat8" parent="Prefabs" unique_id=170675499 instance=ExtResource("26_b52w5")]
-transform = Transform3D(-0.25860438, 0, -0.9659834, 0, 1, 0, 0.9659834, 0, -0.25860438, -127.40601, 0.6298599, 216.93344)
-
-[node name="r_3way" parent="Prefabs" unique_id=868021576 instance=ExtResource("30_qsb8n")]
-transform = Transform3D(0.29057133, 0, 0.95685333, 0, 1, 0, -0.95685333, 0, 0.29057133, -127.594475, 7.6293945e-06, 216.92589)
+[node name="r_45deg2" parent="Prefabs/r_40m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m/r_10m_10down/r_10m_20down/r_10m_10down/r_10m_10down/r_10m_20down/r_10m_10down" unique_id=148723378 instance=ExtResource("9_t067k")]
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -5.9604645e-08, -29.614014, -1.7271585, 19.896267)
 
 [node name="Props" type="Node3D" parent="." unique_id=596824693]
 
 [node name="Rocks" type="Node3D" parent="Props" unique_id=864576577]
 visible = false
 
-[node name="Boulder_1" parent="Props/Rocks" unique_id=1806608636 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_1" parent="Props/Rocks" unique_id=1806608636 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.32642, -0.053998232, -19.866734)
 
-[node name="Boulder_3" parent="Props/Rocks" unique_id=212790673 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_3" parent="Props/Rocks" unique_id=212790673 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.808685, -0.053998232, -21.041172)
 
-[node name="Boulder_2" parent="Props/Rocks" unique_id=1038124029 instance=ExtResource("24_nxsi0")]
+[node name="Boulder_2" parent="Props/Rocks" unique_id=1038124029 instance=ExtResource("12_b5rpp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.56433, -0.19617832, -20.852503)
 
-[node name="Boulder_4" parent="Props/Rocks" unique_id=1983402788 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_4" parent="Props/Rocks" unique_id=1983402788 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -183.1711, -0.053998232, -23.103863)
 
-[node name="Boulder_5" parent="Props/Rocks" unique_id=2028387230 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_5" parent="Props/Rocks" unique_id=2028387230 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -187.43402, -0.053998232, -21.287941)
 
-[node name="Boulder_6" parent="Props/Rocks" unique_id=231070770 instance=ExtResource("24_nxsi0")]
+[node name="Boulder_6" parent="Props/Rocks" unique_id=231070770 instance=ExtResource("12_b5rpp")]
 transform = Transform3D(0.79063016, 0, 0.61229396, 0, 1, 0, -0.61229396, 0, 0.79063016, -185.54404, -0.19617832, -22.51298)
 
-[node name="Boulder_7" parent="Props/Rocks" unique_id=40095414 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_7" parent="Props/Rocks" unique_id=40095414 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -262.0497, -0.053998232, 190.11336)
 
-[node name="Boulder_8" parent="Props/Rocks" unique_id=166219200 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_8" parent="Props/Rocks" unique_id=166219200 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -266.51495, -0.053998232, 188.87575)
 
-[node name="Boulder_9" parent="Props/Rocks" unique_id=1375233241 instance=ExtResource("24_nxsi0")]
+[node name="Boulder_9" parent="Props/Rocks" unique_id=1375233241 instance=ExtResource("12_b5rpp")]
 transform = Transform3D(0.9999003, 0, -0.014121532, 0, 1, 0, 0.014121532, 0, 0.9999003, -264.27347, -0.19617832, 189.0961)
 
-[node name="Boulder_10" parent="Props/Rocks" unique_id=55263624 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_10" parent="Props/Rocks" unique_id=55263624 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -124.774956, -0.053998232, 162.68767)
 
-[node name="Boulder_11" parent="Props/Rocks" unique_id=575081526 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_11" parent="Props/Rocks" unique_id=575081526 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -128.18352, -0.053998232, 159.5489)
 
-[node name="Boulder_12" parent="Props/Rocks" unique_id=1759274572 instance=ExtResource("24_nxsi0")]
+[node name="Boulder_12" parent="Props/Rocks" unique_id=1759274572 instance=ExtResource("12_b5rpp")]
 transform = Transform3D(0.8832908, 0, -0.46882534, 0, 1, 0, 0.46882534, 0, 0.8832908, -126.28953, -0.19617832, 160.76778)
 
-[node name="Boulder_13" parent="Props/Rocks" unique_id=1480878942 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_13" parent="Props/Rocks" unique_id=1480878942 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -110.254074, -0.053998232, 237.55302)
 
-[node name="Boulder_14" parent="Props/Rocks" unique_id=1968407719 instance=ExtResource("23_kjtkd")]
+[node name="Boulder_14" parent="Props/Rocks" unique_id=1968407719 instance=ExtResource("11_ujf3m")]
 transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -108.291016, -0.053998232, 233.35582)
 
-[node name="Boulder_15" parent="Props/Rocks" unique_id=1781151668 instance=ExtResource("24_nxsi0")]
+[node name="Boulder_15" parent="Props/Rocks" unique_id=1781151668 instance=ExtResource("12_b5rpp")]
 transform = Transform3D(-0.18023592, 0, -0.9836233, 0, 1, 0, 0.9836233, 0, -0.18023592, -108.88111, -0.19617832, 235.52945)
 
 [node name="Tunnels" type="Node3D" parent="Props" unique_id=687087113]
 
-[node name="Entrance" parent="Props/Tunnels" unique_id=1221259983 instance=ExtResource("13_a8cpo")]
+[node name="Entrance" parent="Props/Tunnels" unique_id=1221259983 instance=ExtResource("13_kutes")]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, -11.913784, 0.06241724, 0.07052112)

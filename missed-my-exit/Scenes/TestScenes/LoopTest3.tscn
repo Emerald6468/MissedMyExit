@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="6_slsem"]
 [ext_resource type="Texture2D" uid="uid://325u4wgkwtyi" path="res://Assets/TEMP Textures/GravelPile.png" id="6_xsjvs"]
 [ext_resource type="PackedScene" uid="uid://d0ggbph67bh0y" path="res://Scenes/Loop2_Intro.tscn" id="7_e6s4m"]
-[ext_resource type="Texture2D" uid="uid://qakhxstjpiqq" path="res://Assets/Skybox/starry sky.png" id="8_1x04j"]
 [ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="9_e6s4m"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="9_ny4q5"]
 [ext_resource type="PackedScene" uid="uid://cbjs2rtwxc68o" path="res://Scenes/Loop1_Clearing2.tscn" id="10_jwy6e"]
@@ -16,12 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://gby2dq24e5t0" path="res://Scenes/Prefabs/Van_1.tscn" id="11_1x04j"]
 [ext_resource type="PackedScene" uid="uid://dqkbserk206ku" path="res://Scenes/Loop3_Main.tscn" id="11_nclww"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="12_8lrox"]
+[ext_resource type="PackedScene" uid="uid://d1k1bomvhciya" path="res://Assets/New Models/Deer/Deer1.glb" id="12_nmug1"]
+[ext_resource type="Texture2D" uid="uid://m27a5qulrhy1" path="res://Assets/New Models/Deer/DeerTexBlood1.png" id="13_0b0n4"]
 [ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="13_27tf7"]
 [ext_resource type="PackedScene" uid="uid://cblcjjch06cra" path="res://Scenes/Vista.tscn" id="13_slsem"]
+[ext_resource type="Texture2D" uid="uid://dld1nxgprjyj1" path="res://Assets/Textures/Blood/BloodPath1.png" id="14_0b0n4"]
 [ext_resource type="Script" uid="uid://b3mu7ah4nvy8f" path="res://Scenes/TestScenes/Harlan/cloud_layer.gd" id="15_qabrb"]
 [ext_resource type="PackedScene" uid="uid://cmb5grrrog4o5" path="res://Assets/New Models/Van/Van Main/Van.glb" id="18_kxc82"]
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="19_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://il328vw00oxa" path="res://Scenes/Loop2b_Main.tscn" id="21_54jx7"]
+[ext_resource type="Texture2D" uid="uid://bqqvr1jht4kj5" path="res://Assets/Skybox/TychoSkymapII.png" id="22_0b0n4"]
 [ext_resource type="PackedScene" uid="uid://b2p6osnbkujtt" path="res://Scenes/Loop4_Main.tscn" id="22_tl8tx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
@@ -68,14 +71,35 @@ size = Vector2(2.2, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_nmug1"]
 size = Vector2(0.4, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_duwrd"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("13_0b0n4")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn0t7"]
+transparency = 1
+albedo_texture = ExtResource("14_0b0n4")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_riqys"]
+material = SubResource("StandardMaterial3D_sn0t7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_duwrd"]
+material = SubResource("StandardMaterial3D_sn0t7")
+size = Vector2(4, 4)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8lrox"]
 size = Vector3(1, 5.343506, 9.541443)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_n3l2a"]
-panorama = ExtResource("8_1x04j")
+panorama = ExtResource("22_0b0n4")
 
 [sub_resource type="Sky" id="Sky_rsxtw"]
 sky_material = SubResource("PanoramaSkyMaterial_n3l2a")
+radiance_size = 2
 
 [sub_resource type="Environment" id="Environment_2rq0p"]
 background_mode = 2
@@ -298,6 +322,52 @@ mesh = SubResource("PlaneMesh_kxc82")
 [node name="Van_Prefab2" parent="Loop1/Loop1_Clearing2" unique_id=1993302519 instance=ExtResource("11_1x04j")]
 transform = Transform3D(0.16573668, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.16573668, 29.918274, 0.44661164, -1.6661377)
 
+[node name="Deer1" parent="Loop1" unique_id=1829751290 instance=ExtResource("12_nmug1")]
+transform = Transform3D(-0.46867207, 0, 0.51994854, 0, 0.7, 0, -0.51994854, 0, -0.46867207, -175.28874, 0.13154638, 142.73436)
+
+[node name="Skeleton3D" parent="Loop1/Deer1/Armature" parent_id_path=PackedInt32Array(1829751290, 1759574120) index="0" unique_id=1859292433]
+bones/0/position = Vector3(-2.9802322e-08, -1.1426979, 0)
+bones/0/rotation = Quaternion(0.4692355, 0.5531723, -0.5249266, 0.44527572)
+bones/1/rotation = Quaternion(0.5149746, -0.49196607, -0.4870157, 0.5055554)
+bones/2/rotation = Quaternion(0.16808595, 0.7143383, -0.674738, 0.0787186)
+bones/3/rotation = Quaternion(0.03284743, -0.29417554, 0.14327529, 0.9443803)
+bones/4/rotation = Quaternion(-0.09540811, 0.2886989, -0.2542109, 0.9181106)
+bones/5/rotation = Quaternion(0.07801887, -0.059064206, -0.17020895, 0.9805373)
+bones/6/rotation = Quaternion(-0.47019213, -0.55429983, 0.5237357, 0.44426563)
+bones/7/rotation = Quaternion(-0.70229465, 0.05844722, 0.14900757, 0.6936591)
+bones/8/rotation = Quaternion(-0.1768488, 0.06479624, 0.44442782, 0.87579095)
+bones/9/rotation = Quaternion(0.037298232, -0.032066353, -0.39584902, 0.9169974)
+bones/10/rotation = Quaternion(0.098432735, 0.030803822, -0.18583173, 0.97715336)
+bones/11/rotation = Quaternion(-0.0048035844, -0.0006236628, 0.12678045, 0.991919)
+bones/12/rotation = Quaternion(-0.0056744716, 0.00021806071, 0.23922902, 0.9709466)
+bones/13/rotation = Quaternion(0.14448945, 0.11622725, 0.33803707, 0.92268366)
+bones/14/rotation = Quaternion(-0.22054312, 0.0072996607, 0.3072349, 0.9256967)
+bones/15/rotation = Quaternion(0.12291351, -0.072743446, -0.43856913, 0.88727546)
+bones/16/rotation = Quaternion(-0.32216147, 0.27458262, 0.9050181, -0.0419383)
+bones/17/rotation = Quaternion(-0.01851019, -0.6605778, -0.4875244, 0.57062626)
+bones/19/rotation = Quaternion(0.4249883, -0.24604405, -0.22263274, 0.8421888)
+bones/20/rotation = Quaternion(-0.57114244, 0.08807017, 0.72197324, -0.38051894)
+bones/21/rotation = Quaternion(-0.29296154, -0.5209788, 0.005134608, 0.80170333)
+bones/22/rotation = Quaternion(-0.18805902, 0.29781947, 0.5753414, 0.7381868)
+bones/23/rotation = Quaternion(0.45537004, 0.032998238, -0.4886318, 0.7434973)
+bones/24/rotation = Quaternion(-0.13681482, -0.09822575, 0.13948038, 0.97579646)
+bones/25/rotation = Quaternion(0.8722542, 0.13343251, 0.29431567, -0.36707866)
+bones/26/rotation = Quaternion(-0.014836858, 0.7322688, -0.27945226, 0.6208613)
+bones/27/rotation = Quaternion(0.44482258, 0.10170451, 0.12100641, 0.8815591)
+bones/28/rotation = Quaternion(-0.113034494, -0.003965879, 0.11138132, 0.9873205)
+bones/29/rotation = Quaternion(0.06810241, 0.00806703, 0.19097206, 0.97919697)
+
+[node name="Cube" parent="Loop1/Deer1/Armature/Skeleton3D" index="0" unique_id=667059371]
+material_override = SubResource("StandardMaterial3D_duwrd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Loop1" unique_id=1793102900]
+transform = Transform3D(0.5833187, 0, -0.8122435, 0, 1, 0, 0.8122435, 0, 0.5833187, -175.485, 0.14601284, 141.15721)
+mesh = SubResource("PlaneMesh_riqys")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Loop1" unique_id=1730057444]
+transform = Transform3D(-0.95667607, 0, 0.29115456, 0, 1, 0, -0.29115456, 0, -0.95667607, -174.90227, 0.1460126, 144.2007)
+mesh = SubResource("PlaneMesh_duwrd")
+
 [node name="Loop2" parent="." unique_id=378762720 instance=ExtResource("5_n2vk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.00335, -6.9428215, -1.82419)
 visible = false
@@ -435,3 +505,5 @@ scroll_speed = 0.05
 [connection signal="body_entered" from="Loop2/Events/HideLoop1" to="Loop2/Events/HideLoop1" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop2Intro" to="Loop2/Events/HideLoop2Intro" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2b_Main/Events/HideLoop2a" to="Loop2b_Main/Events/HideLoop2a" method="_on_body_entered"]
+
+[editable path="Loop1/Deer1"]
