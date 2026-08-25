@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://civkgy5xa0ny"]
 
-[ext_resource type="Script" uid="uid://c2agtrt63aafr" path="res://Scripts/place_zones.gd" id="1_os62k"]
+[ext_resource type="Script" uid="uid://c2agtrt63aafr" path="res://Scripts/Objects/place_zones.gd" id="1_os62k"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
 

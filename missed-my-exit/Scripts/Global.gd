@@ -9,13 +9,17 @@ var NearDoor = false
 #Interactables
 var NearPickup = false
 var JustPickedUp = false
-var HasRock = false
+
 var HasAxe = false
 var HasExtraTire = false
+var HasCarJack = false
+var HasPoppedTire = false
+var HasItem = false
 var AxeSwing = false
+
 var NearPlaceZone = false
 var JustPlaced = false
-var HasItem = false
+
 var TrunkOpened = false
 var ClosestDistance = 100.0
 
@@ -27,6 +31,9 @@ var PlayerMarker: Vector3
 var ObjectPosition: Vector3
 var PlaceZonePosition: Vector3
 var PlayerPosition: Vector3
+
+#Events
+var TirePopped = false
 
 #UI and Settings
 #not added to reset as they should stay even if everything else is reset
@@ -63,7 +70,5 @@ func reset_vars():
 	tutorial_done = false
 	NearGarageOpener = false
 	GarageOpen = false
-	#temp ones prob delete later
-	HasRock = false
 	
 	

@@ -22,14 +22,14 @@ var current_distance: float
 func check_if_place():
 	if player_nearby and Global.JustPlaced and closest and Global.TrunkOpened:
 		Global.JustPlaced = false
-		if Global.HasRock:
-			var rock = Pickup_Scene.instantiate()
-			rock.set_object_type("Rock")
-			rock_spot.add_child(rock)
-			rock.scale.x = .50
-			rock.scale.y = .50
-			rock.scale.z = .50
-			Global.HasRock = false
+		if Global.HasCarJack:
+			var carjack = Pickup_Scene.instantiate()
+			carjack.set_object_type("CarJack")
+			rock_spot.add_child(carjack)
+			carjack.scale.x = .25
+			carjack.scale.y = .25
+			carjack.scale.z = .25
+			Global.HasCarJack = false
 		elif Global.HasAxe:
 			var axe = Pickup_Scene.instantiate()
 			axe.set_object_type("Axe")
@@ -39,7 +39,6 @@ func check_if_place():
 			axe.scale.z = .50
 			Global.HasAxe = false
 		elif Global.HasExtraTire:
-			print("test3")
 			var tire = Pickup_Scene.instantiate()
 			tire.set_object_type("ExtraTire")
 			extra_tire_spot.add_child(tire)
@@ -48,6 +47,13 @@ func check_if_place():
 			tire.scale.z = .50
 			Global.HasExtraTire = false
 			if Global.tutorial_num == 7: Global.CurrentCheck = true
+		elif Global.HasPoppedTire:
+			var tire = Pickup_Scene.instantiate()
+			tire.set_object_type("PoppedTire")
+			extra_tire_spot.add_child(tire)
+			tire.scale.x = .50
+			tire.scale.y = .50
+			tire.scale.z = .50
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

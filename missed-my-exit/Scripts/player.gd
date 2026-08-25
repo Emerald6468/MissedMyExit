@@ -56,7 +56,7 @@ func get_out_car():
 
 func inventory():
 	#later add all other possible items with or 
-	if Global.HasRock or Global.HasAxe or Global.HasExtraTire:
+	if Global.HasAxe or Global.HasExtraTire or Global.HasCarJack or Global.HasPoppedTire:
 		Global.HasItem = true
 	else:
 		Global.HasItem = false
@@ -173,7 +173,9 @@ func _physics_process(delta: float) -> void:
 		
 		
 		move_and_slide()
-	else: outside_ambience.stop()
+	else: 
+		walking_on_gravel.stop() 
+		outside_ambience.stop()
 
 
 func _headbob(time) -> Vector3:

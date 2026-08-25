@@ -35,6 +35,8 @@ var direction_held = false
 @onready var trunk_animations: AnimationPlayer = $Trunk/TrunkAnimations
 @onready var trunk_area: Area3D = $Trunk/TrunkArea
 
+#movement popping what not
+var air = 1.0
 
 func open_trunk():
 	if Global.tutorial_num == 3: Global.CurrentCheck = true
@@ -53,6 +55,38 @@ func headlights():
 	else:
 		right_headlight.hide()
 		left_headlight.hide()
+
+var pop_stage = 0
+func pop_stages():
+	if Global.TirePopped:
+		match pop_stage:
+			0:
+				print("0")
+				brake = 1
+				air = .8
+				$wheel_back_right.wheel_friction_slip = 20
+				await get_tree().create_timer(.5).timeout
+				pop_stage += 1
+				pop_stages()
+			1:
+				print("1")
+				brake = 20
+				air = .1
+				$wheel_back_right.wheel_friction_slip = 1000
+				await get_tree().create_timer(1).timeout
+				pop_stage += 1
+				pop_stages()
+			2:
+				print("2")
+				brake = 5000
+				air = .0001
+				$wheel_back_right.wheel_friction_slip = 100000
+	else:
+		air = 1.0
+		$wheel_back_right.wheel_friction_slip = 10.5
+		pop_stage = 0
+
+
 
 func _ready():
 	Global.TrunkOpened = false
@@ -74,8 +108,10 @@ func _process(delta: float) -> void:
 		headlights()
 		if Input.is_action_just_pressed("ToggleLight"): 
 			if Global.tutorial_num == 11: Global.CurrentCheck = true
-			if headlight: headlight = false
-			else: headlight = true
+			headlight = !headlight
+			Global.TirePopped = !Global.TirePopped
+			pop_stages()
+		
 		var dir = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 		var steering_dir = Input.get_action_strength("Left") - Input.get_action_strength("Right")
 		#moves steering wheel resets z to get better rotation
@@ -84,11 +120,12 @@ func _process(delta: float) -> void:
 		steering_wheel.rotate_z(steer_wheel_change)
 		steering_wheel.rotate_x(-steering_tilt)
 		var RPM_left = abs($wheel_back_left.get_rpm())
+		
 		var RPM_right = abs($wheel_back_right.get_rpm())
 		var RPM = (RPM_left + RPM_right) / 2.0
 		
-		var torque = dir * max_torque * (1.0 - RPM / max_RPM)
-		
+		var torque = (dir * max_torque * (1.0 - RPM / max_RPM)) * air
+			
 		engine_force = torque
 		steering = lerp(steering, steering_dir * turn_amount, turn_speed * delta)
 		

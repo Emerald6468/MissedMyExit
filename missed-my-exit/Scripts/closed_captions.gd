@@ -43,7 +43,7 @@ func display_text(type: RichTextLabel, text : String):
 var temp = false
 var check = false
 func run_tutorial():
-	print(str(Global.tutorial_num))
+	#print(str(Global.tutorial_num))
 	if just_changed:
 		just_changed = false
 		display_text(tutorial,tutorial_text[Global.tutorial_num])

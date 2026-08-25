@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8p2djpbt6gcy"]
+
+[ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="1_nrd48"]
+[ext_resource type="Script" uid="uid://h6hd2lu3hnif" path="res://Scripts/Objects/car_jack.gd" id="1_qpomi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bhunq"]
+radius = 0.098112926
+
+[node name="CarJack" type="Node3D" unique_id=374245988]
+script = ExtResource("1_qpomi")
+
+[node name="Boulder_1" parent="." unique_id=1713910461 instance=ExtResource("1_nrd48")]
+transform = Transform3D(0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1265565586]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1109201445]
+transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 0, 0, 0)
+shape = SubResource("SphereShape3D_bhunq")
+debug_color = Color(0.6627451, 0.6745098, 0, 1)

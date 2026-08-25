@@ -1,34 +1,37 @@
 [gd_scene format=3 uid="uid://cy30n6vf3mecj"]
 
+[ext_resource type="Texture2D" uid="uid://dkuykk3p0ejrx" path="res://Assets/New Models/Garage/Textures/Concrete.png" id="1_aibf6"]
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="1_y4rai"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="2_jr836"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="3_bb8cp"]
+[ext_resource type="Texture2D" uid="uid://byxs0c77taanh" path="res://Assets/New Models/Garage/Textures/Wood.png" id="4_c77p7"]
 [ext_resource type="Script" uid="uid://bgerfyi8wq2g4" path="res://Scripts/tutorial/garage_door.gd" id="4_f0ww7"]
 [ext_resource type="PackedScene" uid="uid://beex6tfwgmj3e" path="res://Assets/New Models/Garage/Toolcart/Toolcart.glb" id="4_jr836"]
 [ext_resource type="PackedScene" uid="uid://b863pqxvtd2gm" path="res://Scenes/UI/tutorial/go_to_circle.tscn" id="5_bb8cp"]
 [ext_resource type="PackedScene" uid="uid://dcm8c1q4uktii" path="res://Scenes/UI/tutorial/point_arrow.tscn" id="6_u6dgh"]
+[ext_resource type="PackedScene" uid="uid://c8wcllo5qj2l" path="res://Assets/New Models/Garage/Garage Door/GarageDoor.glb" id="6_wrfxa"]
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="7_ligur"]
 [ext_resource type="PackedScene" uid="uid://dcjny86ttjuob" path="res://Assets/New Models/Light Poles/Light1.glb" id="8_ob34o"]
+[ext_resource type="PackedScene" uid="uid://d1ddn0dy6ag2a" path="res://Assets/New Models/Garage/Normal Door/Door.glb" id="8_sxhca"]
+[ext_resource type="PackedScene" uid="uid://deucocbs7ncwr" path="res://Assets/New Models/Garage/Clicker/Garage Clicker.glb" id="9_c77p7"]
 [ext_resource type="Texture2D" uid="uid://dsv4hkcsiqoc5" path="res://Assets/Other/Glare1.png" id="9_fqvrc"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_fqvrc"]
+[ext_resource type="PackedScene" uid="uid://bljni0yqlhsqo" path="res://Assets/New Models/Garage/Cork Board/Cork Board.glb" id="16_foeem"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6dgh"]
-albedo_texture = ExtResource("1_y4rai")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_evahw"]
+albedo_texture = ExtResource("1_aibf6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0ww7"]
-albedo_color = Color(0.33793393, 0.28034684, 0.06944304, 1)
-albedo_texture = ExtResource("1_y4rai")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6s0o"]
+albedo_texture = ExtResource("1_aibf6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ligur"]
-albedo_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
-albedo_texture = ExtResource("1_y4rai")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6tt2"]
+albedo_texture = ExtResource("1_aibf6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f75xr"]
+albedo_texture = ExtResource("4_c77p7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4rai"]
 albedo_color = Color(0.9516799, 0.86153966, 0.6452286, 1)
-albedo_texture = ExtResource("1_y4rai")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3ya4"]
-albedo_color = Color(0.33692408, 0.41580406, 0.36826047, 1)
 albedo_texture = ExtResource("1_y4rai")
 
 [sub_resource type="Animation" id="Animation_k4tkk"]
@@ -43,7 +46,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(1.915745, 1.77792, 3.4409602), Vector3(1.915745, 5.0192013, 3.4409602)]
+"values": [Vector3(1.915745, 0.13606477, 3.4409602), Vector3(1.915745, 2.8030672, 3.4409602)]
 }
 
 [sub_resource type="Animation" id="Animation_gvnrr"]
@@ -67,13 +70,11 @@ _data = {
 &"RESET": SubResource("Animation_gvnrr")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr836"]
-albedo_color = Color(0.727249, 0.3030704, 0.030452518, 1)
-albedo_texture = ExtResource("1_y4rai")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0ekn"]
+albedo_texture = ExtResource("4_c77p7")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb8cp"]
-albedo_color = Color(0.21629497, 0.24962568, 0.20296285, 1)
-albedo_texture = ExtResource("1_y4rai")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvt5t"]
+albedo_texture = ExtResource("4_c77p7")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bhunq"]
 height = 2.7905273
@@ -86,19 +87,19 @@ radius = 0.57051957
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=1048498076]
 transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.8152521, -0.5142399, 0.17121482)
-material_override = SubResource("StandardMaterial3D_u6dgh")
+material_override = SubResource("StandardMaterial3D_evahw")
 use_collision = true
 size = Vector3(0.76623535, 1, 0.3918457)
 
 [node name="Roof" type="CSGBox3D" parent="." unique_id=1907533677]
 transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.7591937, 3.7998233, 0.16803229)
-material_override = SubResource("StandardMaterial3D_f0ww7")
+material_override = SubResource("StandardMaterial3D_j6s0o")
 use_collision = true
 size = Vector3(0.76623535, 1, 0.3918457)
 
 [node name="Road" type="CSGBox3D" parent="." unique_id=2014676650]
 transform = Transform3D(7.6789556, 0, 0, 0, 0.9999996, 0, 0, 0, 15.759456, 1.8172338, -0.51424086, 10.368308)
-material_override = SubResource("StandardMaterial3D_ligur")
+material_override = SubResource("StandardMaterial3D_v6tt2")
 use_collision = true
 size = Vector3(0.76623535, 1, 0.8911133)
 
@@ -112,13 +113,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1507142, 0, 0)
 
 [node name="Wall" type="CSGBox3D" parent="." unique_id=1825729235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, -2.876808)
+material_override = SubResource("StandardMaterial3D_f75xr")
 size = Vector3(5.8730164, 3.5303345, 0.41882324)
 material = SubResource("StandardMaterial3D_y4rai")
 
-[node name="GarageDoor" type="CSGBox3D" parent="." unique_id=956416643]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.915745, 1.77792, 3.4409602)
-size = Vector3(5.8730164, 3.5303345, 0.41882324)
-material = SubResource("StandardMaterial3D_n3ya4")
+[node name="GarageDoor" parent="." unique_id=1076834574 instance=ExtResource("6_wrfxa")]
+transform = Transform3D(0.6843517, 0, 0, 0, 0.525, 0, 0, 0, 0.525, 1.915745, 1.77792, 3.4409602)
 script = ExtResource("4_f0ww7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GarageDoor" unique_id=380514257]
@@ -126,35 +126,35 @@ libraries/ = SubResource("AnimationLibrary_wm785")
 
 [node name="Wall2" type="CSGBox3D" parent="." unique_id=1939912211]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.292947, 1.77792, 0.07848477)
+material_override = SubResource("StandardMaterial3D_t0ekn")
 size = Vector3(6.526352, 3.5303345, 0.41882324)
 material = SubResource("StandardMaterial3D_y4rai")
 
 [node name="Wall3" type="CSGBox3D" parent="." unique_id=815234877]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.901301, 1.77792, 0.07848477)
+material_override = SubResource("StandardMaterial3D_qvt5t")
 size = Vector3(6.526352, 3.5303345, 0.41882324)
 material = SubResource("StandardMaterial3D_y4rai")
 
-[node name="Door" type="CSGBox3D" parent="." unique_id=1031770749]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68649983, 1.136059, -2.7076056)
-size = Vector3(0.9859276, 2.2466125, 0.41882324)
-material = SubResource("StandardMaterial3D_jr836")
+[node name="Door2" parent="." unique_id=774700204 instance=ExtResource("8_sxhca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5006815, -0.05523753, -2.7076056)
 
-[node name="GarageOpener" type="CSGBox3D" parent="." unique_id=1321666768]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4319923, 1.7410779, -2.663027)
-size = Vector3(0.2710681, 0.17023468, 0.060272217)
-material = SubResource("StandardMaterial3D_bb8cp")
+[node name="Garage Clicker" parent="." unique_id=253810371 instance=ExtResource("9_c77p7")]
+transform = Transform3D(0.155, 0, 0, 0, 0.155, 0, 0, 0, 0.155, -0.3873499, 1.7040305, -2.626749)
 
-[node name="OpenerAOE" type="Area3D" parent="GarageOpener" unique_id=1345696135 groups=["OpenerAOE"]]
+[node name="OpenerAOE" type="Area3D" parent="Garage Clicker" unique_id=1345696135 groups=["OpenerAOE"]]
+transform = Transform3D(6.451613, 0, 0, 0, 6.451613, 0, 0, 0, 6.451613, -0.2880156, 0.23901463, -0.12379646)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GarageOpener/OpenerAOE" unique_id=1813972636]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Garage Clicker/OpenerAOE" unique_id=1813972636]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39526367, 0)
 shape = SubResource("CylinderShape3D_bhunq")
 
-[node name="OpenerLookAt" type="Area3D" parent="GarageOpener" unique_id=252525517 groups=["OpenerLookAt"]]
+[node name="OpenerLookAt" type="Area3D" parent="Garage Clicker" unique_id=252525517 groups=["OpenerLookAt"]]
+transform = Transform3D(6.451613, 0, 0, 0, 6.451613, 0, 0, 0, 6.451613, -0.2880156, 0.23901463, -0.12379646)
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GarageOpener/OpenerLookAt" unique_id=1770121443]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Garage Clicker/OpenerLookAt" unique_id=1770121443]
 shape = SubResource("SphereShape3D_bhunq")
 
 [node name="Toolcart" parent="." unique_id=1789723979 instance=ExtResource("4_jr836")]
@@ -233,3 +233,6 @@ texture = ExtResource("9_fqvrc")
 [node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("10_fqvrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99830997, 1.8320235, 2.8974204)
 ObjectType = "ExtraTire"
+
+[node name="Cork Board" parent="." unique_id=974843161 instance=ExtResource("16_foeem")]
+transform = Transform3D(4.0013884e-08, 0, 0.53, 0, 0.53, 0, -0.53, 0, 4.0013884e-08, -1.197524, 1.5816007, 1.297352)

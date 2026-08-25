@@ -44,7 +44,7 @@ spot_range = 13.917355
 spot_angle = 18.518463
 
 [node name="Flashlight" parent="Head/OnFootCamera/Flashlight" unique_id=1061665271 instance=ExtResource("2_cb7df")]
-transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 0.014953911, -0.015112519, 0.009394646)
+transform = Transform3D(-3.2783543e-09, 0, 0.075, 0, 0.075, 0, -0.075, 0, -3.2783543e-09, 0.014953911, -0.015112519, 0.009394646)
 
 [node name="NearbyCheck" type="Area3D" parent="." unique_id=102659409]
 

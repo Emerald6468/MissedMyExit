@@ -4,27 +4,31 @@ class_name PickUp
 @export var text_on: bool
 var player_nearby = false
 @onready var pickup_text: Label3D = $PickupText
-@onready var boulder_1: Node3D = $Boulder_1
 @onready var axe: Node3D = $Axe
 @onready var wheel: Node3D = $Wheel
+@onready var car_jack: Node3D = $CarJack
+@onready var popped_tire: Node3D = $PoppedTire
 
 func set_object_type(object_type):
 	ObjectType = object_type
 
 func _ready() -> void:
 	if !text_on: pickup_text.hide()
-	boulder_1.hide()
 	axe.hide()
 	wheel.hide()
+	car_jack.hide()
+	popped_tire.hide()
 	if ObjectType != "":
 			#Have all of the different objects it can be here
 			match ObjectType:
-				"Rock":
-					boulder_1.show()
 				"Axe":
 					axe.show()
 				"ExtraTire":
 					wheel.show()
+				"CarJack":
+					car_jack.show()
+				"PoppedTire":
+					popped_tire.show()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,12 +52,14 @@ func _process(delta: float) -> void:
 		if ObjectType != "":
 			#Have all of the different objects it can be here
 			match ObjectType:
-				"Rock":
-					Global.HasRock = true
 				"Axe":
 					Global.HasAxe = true
 				"ExtraTire":
 					Global.HasExtraTire = true
 					print("tire")
 					if !Global.tutorial_done and Global.tutorial_num == 5: Global.CurrentCheck = true
+				"CarJack":
+					Global.HasCarJack = true
+				"PoppedTire":
+					Global.HasPoppedTire = true
 			queue_free()
