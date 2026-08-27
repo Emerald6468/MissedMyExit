@@ -47,7 +47,11 @@ func _process(delta: float) -> void:
 		
 		
 	#Picking up check
-	if player_nearby and Global.JustPickedUp and Global.tutorial_num >= 5:
+	var stop = false
+	if Global.in_tutorial:
+		if Global.tutorial_num < 5: stop = true
+		else: stop = false
+	if player_nearby and Global.JustPickedUp and !stop:
 		Global.JustPickedUp = false
 		if ObjectType != "":
 			#Have all of the different objects it can be here

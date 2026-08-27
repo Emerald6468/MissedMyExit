@@ -56,6 +56,7 @@ func check_tutorial():
 			d4.show()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Global.tutorial_done: queue_free()
 	check_tutorial()
 	#call_deferred("check_tutorial")
 	if Input.is_action_just_pressed("Forward"): 

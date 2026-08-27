@@ -45,6 +45,7 @@ var volume = 50.0
 var CurrentCheck = false
 var tutorial_num: int = 0
 var tutorial_done = false 
+var in_tutorial = false
 
 #Garage Opener
 var NearGarageOpener = false
@@ -68,6 +69,7 @@ func reset_vars():
 	CurrentCheck = false
 	tutorial_num = 0
 	tutorial_done = false
+	in_tutorial = false
 	NearGarageOpener = false
 	GarageOpen = false
 	

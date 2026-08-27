@@ -50,6 +50,12 @@ func switch_timer():
 		timer_started = false
 		Global.JustSwitched = false
 
+func check_scene():
+	if str(get_parent().name) == "GarageTest":
+		Global.in_tutorial = true
+	else: Global.in_tutorial = false
+	if !Global.in_tutorial: Global.tutorial_done = true
+	if Global.tutorial_done: Global.tutorial_num = 13
 
 func get_out_car():
 	global_position = Global.PlayerMarker
@@ -88,6 +94,7 @@ func check_nearby():
 func _physics_process(delta: float) -> void:
 	inventory()
 	check_nearby()
+	check_scene()
 	#Switching
 	if Global.JustSwitched: switch_timer()
 	if Global.OnFoot:

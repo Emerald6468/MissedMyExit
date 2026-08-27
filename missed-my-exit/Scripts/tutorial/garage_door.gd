@@ -1,10 +1,12 @@
-extends CSGBox3D
+extends Node3D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var opened = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.tutorial_done = false
+	Global.tutorial_num = 0
 	opened = false
 
 

@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dtlqe1adkxebv" path="res://Assets/New Models/Car Parts/Trunk/Trunk_Trunk_openPBR_shader1_Metallic.1001-Trunk_openPBR_shader1_Roughness.png" id="18_lhnu1"]
 [ext_resource type="Texture2D" uid="uid://d4wiovvu7gyq" path="res://Assets/New Models/Car Parts/Trunk/Trunk_Trunk_openPBR_shader1_Normal.png" id="19_h17vh"]
 [ext_resource type="PackedScene" uid="uid://brypsavn55fcm" path="res://Scenes/Items/multi_place_zone.tscn" id="20_8gjpw"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="22_23nww"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xslx7"]
 _surfaces = [{
@@ -178,10 +179,10 @@ albedo_texture = ExtResource("3_nqknd")
 [node name="TirePopScenario" type="Node3D" unique_id=1959280999]
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("1_cxirj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.266025, 0, 0.8455868)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.266025, -1.2625887, 0.8455868)
 
 [node name="FinalCar" type="VehicleBody3D" parent="." unique_id=1880288469]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.755144, 0, -3.111952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.755144, -1.3632436, -3.111952)
 collision_layer = 2
 axis_lock_angular_z = true
 mass = 240.0
@@ -370,3 +371,6 @@ environment = SubResource("Environment_bhunq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="CSGBox3D/WorldEnvironment" unique_id=1716436916]
 transform = Transform3D(1, 0, 0, 0, 0.07624701, 0.99708897, 0, -0.99708897, 0.07624701, 0, 21.122894, 0)
+
+[node name="PickupableObject" parent="." unique_id=139383102 instance=ExtResource("22_23nww")]
+ObjectType = "CarJack"
