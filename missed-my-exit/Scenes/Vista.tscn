@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cblcjjch06cra"]
 
 [ext_resource type="PackedScene" uid="uid://ctcxxdysedmf0" path="res://Assets/New Models/VistaOld.glb" id="1_su8dn"]
-[ext_resource type="Texture2D" uid="uid://kpgi66e5h8u" path="res://Assets/TEMP Textures/City.png" id="2_k5gss"]
+[ext_resource type="Texture2D" uid="uid://nta4xhnb4mek" path="res://Assets/TEMP Textures/CityEmission2.png" id="2_su8dn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wike"]
 
@@ -15,12 +15,9 @@ material = SubResource("StandardMaterial3D_y83uh")
 size = Vector2(1000, 1000)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riqys"]
+shading_mode = 0
 disable_fog = true
-albedo_texture = ExtResource("2_k5gss")
-metallic_specular = 0.0
-emission_enabled = true
-emission_energy_multiplier = 2.5
-emission_texture = ExtResource("2_k5gss")
+albedo_texture = ExtResource("2_su8dn")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bhunq"]
@@ -38,17 +35,24 @@ fill_to = Vector2(1, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn0t7"]
 transparency = 1
+shading_mode = 0
 disable_fog = true
-albedo_color = Color(1, 1, 1, 0.45490196)
+albedo_color = Color(1, 0.8093333, 0.56, 0.21568628)
 albedo_texture = SubResource("GradientTexture2D_6f8o3")
-emission_enabled = true
-emission = Color(0.8244052, 0.5701251, 2.887845e-06, 1)
-emission_energy_multiplier = 2.0
-emission_operator = 1
-emission_texture = SubResource("GradientTexture2D_6f8o3")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_riqys"]
 material = SubResource("StandardMaterial3D_sn0t7")
+size = Vector2(75, 250)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su8dn"]
+transparency = 1
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(1, 0.89166665, 0.75, 0.007843138)
+albedo_texture = SubResource("GradientTexture2D_6f8o3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_k5gss"]
+material = SubResource("StandardMaterial3D_su8dn")
 size = Vector2(75, 250)
 
 [sub_resource type="Gradient" id="Gradient_8wike"]
@@ -120,6 +124,10 @@ mesh = SubResource("PlaneMesh_bhunq")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=63337139]
 transform = Transform3D(0.38926485, 0.88769275, -0.24591598, -0.91581625, 0.40159738, 4.4246975e-09, 0.098759234, 0.22521387, 0.9692913, -582.6384, -2.8819675, -116.32078)
 mesh = SubResource("PlaneMesh_riqys")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1774607576]
+transform = Transform3D(0.83031297, 0.88769174, -0.5523794, -1.9534621, 0.40159693, 9.938809e-09, 0.21065624, 0.22521362, 2.177234, -597.4198, 31.893843, -120.07091)
+mesh = SubResource("PlaneMesh_k5gss")
 
 [node name="MiniCity" type="MeshInstance3D" parent="." unique_id=592166538]
 transform = Transform3D(-0.70272034, 0.10547727, 0.36750326, 0.10880703, 0.79232985, -0.01935187, -0.36653122, 0.03298498, -0.71032876, -600.8483, -6.031792, -107.88496)

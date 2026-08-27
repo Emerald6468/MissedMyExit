@@ -25,7 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="19_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://il328vw00oxa" path="res://Scenes/Loop2b_Main.tscn" id="21_54jx7"]
 [ext_resource type="Texture2D" uid="uid://bqqvr1jht4kj5" path="res://Assets/Skybox/TychoSkymapII.png" id="22_0b0n4"]
+[ext_resource type="PackedScene" uid="uid://vyov7ysjcyv0" path="res://Scenes/Loop5_Main.tscn" id="22_duwrd"]
 [ext_resource type="PackedScene" uid="uid://b2p6osnbkujtt" path="res://Scenes/Loop4_Main.tscn" id="22_tl8tx"]
+[ext_resource type="Texture2D" uid="uid://wlpd8dexaxdg" path="res://Assets/Textures/moon3.png" id="28_6da8v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
 size = Vector3(1, 5.1224365, 9.735809)
@@ -161,6 +163,15 @@ distance_fade_max_distance = 0.0
 [sub_resource type="PlaneMesh" id="PlaneMesh_jwy6e"]
 material = SubResource("StandardMaterial3D_kxc82")
 size = Vector2(10000, 10000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1esiv"]
+transparency = 1
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("28_6da8v")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6f8o3"]
+material = SubResource("StandardMaterial3D_1esiv")
 
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
@@ -454,18 +465,84 @@ action = "Show"
 trigger = NodePath("..")
 target = NodePath("../../../../Loop3")
 
-[node name="HideEvent3" parent="Loop2b_Main/Events/HideLoop2a" unique_id=6523974 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
-action = "Show"
-trigger = NodePath("..")
-target = NodePath("../../../../Loop4")
-
 [node name="Loop3" parent="." unique_id=982542341 instance=ExtResource("11_nclww")]
 transform = Transform3D(-0.99869287, 0, -0.05111374, 0, 1, 0, 0.05111374, 0, -0.99869287, 126.7608, -7.091422, -293.3116)
 visible = false
 
+[node name="Events" type="Node3D" parent="Loop3" unique_id=406159903]
+
+[node name="HideLoop2b" type="Area3D" parent="Loop3/Events" unique_id=806881501]
+transform = Transform3D(0.66624725, 0, -0.7457309, 0, 1, 0, 0.7457309, 0, 0.66624725, -248.70934, 0.18669128, 63.109623)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop3/Events/HideLoop2b" unique_id=1742997918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop3/Events/HideLoop2b" unique_id=1765869634 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop2b_Main")
+
+[node name="HideEvent2" parent="Loop3/Events/HideLoop2b" unique_id=1696763799 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Show"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop4")
+
 [node name="Loop4" parent="." unique_id=574879266 instance=ExtResource("22_tl8tx")]
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 252.61632, -7.0663924, -555.06067)
 visible = false
+
+[node name="Events" type="Node3D" parent="Loop4" unique_id=1438908141]
+
+[node name="HideLoop3" type="Area3D" parent="Loop4/Events" unique_id=601433685]
+transform = Transform3D(0.6103055, 0, -0.7921661, 0, 1, 0, 0.7921661, 0, 0.6103055, -29.265217, -10.920998, 113.684395)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop4/Events/HideLoop3" unique_id=683761526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop4/Events/HideLoop3" unique_id=456062283 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop3")
+
+[node name="HideEvent2" parent="Loop4/Events/HideLoop3" unique_id=1621020626 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Show"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop5")
+
+[node name="Loop5" parent="." unique_id=1845897523 instance=ExtResource("22_duwrd")]
+transform = Transform3D(0.9982335, 0, 0.059412908, 0, 1, 0, -0.059412908, 0, 0.9982335, -26.8582, -18.243269, -660.9354)
+visible = false
+
+[node name="Events2" type="Node3D" parent="Loop5" unique_id=1682080238]
+
+[node name="HideLoop4" type="Area3D" parent="Loop5/Events2" unique_id=1631306336]
+transform = Transform3D(0.9992988, 0, -0.037440006, 0, 1, 0, 0.037440006, 0, 0.9992988, -25.172031, 0.18669128, 0.10244174)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop5/Events2/HideLoop4" unique_id=615429036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop5/Events2/HideLoop4" unique_id=61436329 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop4")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
 environment = SubResource("Environment_2rq0p")
@@ -500,10 +577,20 @@ mesh = SubResource("PlaneMesh_jwy6e")
 script = ExtResource("15_qabrb")
 scroll_speed = 0.05
 
+[node name="Moon" type="Node3D" parent="." unique_id=697795137]
+transform = Transform3D(0.50718623, 0.47416583, 0.71967274, 0, 0.8350456, -0.55018073, -0.8618365, 0.2790441, 0.42352363, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Moon" unique_id=899638052]
+transform = Transform3D(199.445, 0, 0, 0, -8.718018e-06, -199.445, 0, 199.445, -8.718018e-06, 2.8133392e-05, 9.0782385e-05, -2338.6692)
+mesh = SubResource("PlaneMesh_6f8o3")
+
 [connection signal="body_entered" from="Loop1/Events/HideEntrance" to="Loop1/Events/HideEntrance" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop1/Events/ShowLoop2" to="Loop1/Events/ShowLoop2" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop1" to="Loop2/Events/HideLoop1" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop2Intro" to="Loop2/Events/HideLoop2Intro" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2b_Main/Events/HideLoop2a" to="Loop2b_Main/Events/HideLoop2a" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop3/Events/HideLoop2b" to="Loop3/Events/HideLoop2b" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop4/Events/HideLoop3" to="Loop4/Events/HideLoop3" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop5/Events2/HideLoop4" to="Loop5/Events2/HideLoop4" method="_on_body_entered"]
 
 [editable path="Loop1/Deer1"]

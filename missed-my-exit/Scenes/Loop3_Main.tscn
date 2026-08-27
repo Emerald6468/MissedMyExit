@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bqpu3n7l5xf1e" path="res://Assets/TEMP Textures/Texturelabs_Wood_181S2.png" id="21_ievyp"]
 [ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="23_kjtkd"]
 [ext_resource type="PackedScene" uid="uid://1mgmptt54kax" path="res://Assets/Old Models/Boulder_2.glb" id="24_nxsi0"]
-[ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="25_lnjvs"]
 [ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="25_vkm5q"]
 [ext_resource type="PackedScene" uid="uid://b0rbtxxixoc7k" path="res://Scenes/Prefabs/Roads/road_45_flat.tscn" id="26_b52w5"]
 [ext_resource type="PackedScene" uid="uid://c5vtvavrtrw11" path="res://Scenes/Prefabs/Roads/r_20deg_long.tscn" id="27_mr8xa"]
@@ -172,10 +171,6 @@ transform = Transform3D(0.8221106, 0, -0.5693276, 0, 1, 0, 0.5693276, 0, 0.82211
 
 [node name="Road_Straight_Flat2" parent="Prefabs" unique_id=1525736646 instance=ExtResource("28_oamt2")]
 transform = Transform3D(-0.81991094, 2.3357117e-08, 0.5724911, 3.1187234e-08, 1, 3.8666808e-09, -0.5724911, 2.1024748e-08, -0.81991094, -222.12527, 0.59227085, 81.85732)
-
-[node name="Road_Straight_Flat4" parent="Prefabs" unique_id=1798988763 instance=ExtResource("25_lnjvs")]
-transform = Transform3D(-0.7902868, 0, 0.6127372, 0, 1, 0, -0.6127372, 0, -0.7902868, -238.21603, 0.6298523, 71.12415)
-visible = false
 
 [node name="Road_45_Flat19" parent="Prefabs" unique_id=669508429 instance=ExtResource("26_b52w5")]
 transform = Transform3D(0.92651236, 0, 0.37626404, 0, 1, 0, -0.37626404, 0, 0.92651236, -133.06714, 0.6298599, 122.34522)

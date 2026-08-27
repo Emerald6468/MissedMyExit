@@ -45,13 +45,6 @@ uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="Curve3D" id="Curve3D_j08dp"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 20.155285, -0.6196289, 0.027131386, 0, 0, 0, 0, 0, 0, -63.09051, -0.6196289, 0.24530812),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_wcjd3"]
 _surfaces = [{
 "aabb": AABB(-63.101257, -1.6196289, -4.0728545, 83.26729, 1.1, 8.418148),
@@ -240,24 +233,6 @@ texture_filter = 0
 
 [node name="Road_Straight_Flat" type="Node3D" unique_id=445961336]
 
-[node name="Ground1" type="CSGPolygon3D" parent="." unique_id=1472466757]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
-visible = false
-polygon = PackedVector2Array(-20, 0, -20, -1, 20, -1, 20, 0)
-mode = 2
-path_node = NodePath("../Road1/Path3D")
-path_interval_type = 1
-path_interval = 0.5
-path_simplify_angle = 0.0
-path_rotation = 1
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = SubResource("StandardMaterial3D_iukob")
-metadata/_edit_lock_ = true
-
 [node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1992319202]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01791954, 0.038985133, -0.0062446594)
 mesh = SubResource("ArrayMesh_xnydp")
@@ -277,27 +252,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.467613, -1.1196289, 0.136
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBakedMeshInstance3D3/StaticBody3D" unique_id=818178955]
 shape = SubResource("BoxShape3D_sdu7r")
-
-[node name="Road1" type="CSGPolygon3D" parent="." unique_id=1455268902]
-visible = false
-polygon = PackedVector2Array(-4.1, 0, -4, 0.1, 4, 0.1, 4.1, 0, 4.1, -1, -4.1, -1)
-mode = 2
-path_node = NodePath("Path3D")
-path_interval_type = 1
-path_interval = 0.5
-path_simplify_angle = 0.0
-path_rotation = 1
-path_rotation_accurate = false
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = SubResource("StandardMaterial3D_n160a")
-metadata/_edit_lock_ = true
-
-[node name="Path3D" type="Path3D" parent="Road1" unique_id=1238718787]
-curve = SubResource("Curve3D_j08dp")
-metadata/_edit_lock_ = true
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=188309079]
 mesh = SubResource("ArrayMesh_wcjd3")
