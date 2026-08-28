@@ -20,7 +20,7 @@ var mouse_sensitivity = 0.3
 @onready var drivers_door: Area3D = $PlayerPoint/DriversDoor
 
 #Wheel & Dashboard
-@onready var steering_wheel: Node3D = $THESTEERINGWHEEL
+@onready var steering_wheel: Node3D = $Dash/THESTEERINGWHEEL
 var steering_tilt = 6.5
 
 #Audio
@@ -34,6 +34,10 @@ var direction_held = false
 #Trunk
 @onready var trunk_animations: AnimationPlayer = $Trunk/TrunkAnimations
 @onready var trunk_area: Area3D = $Trunk/TrunkArea
+
+#pop
+const wheel_place_scene = preload("uid://civkgy5xa0ny")
+var scened = false
 
 #movement popping what not
 var air = 1.0
@@ -62,7 +66,7 @@ func pop_stages():
 		match pop_stage:
 			0:
 				print("0")
-				brake = 1
+				#brake = 1
 				air = .8
 				$wheel_back_right.wheel_friction_slip = 20
 				await get_tree().create_timer(.5).timeout
@@ -70,7 +74,7 @@ func pop_stages():
 				pop_stages()
 			1:
 				print("1")
-				brake = 20
+				#brake = 20
 				air = .1
 				$wheel_back_right.wheel_friction_slip = 1000
 				await get_tree().create_timer(1).timeout
@@ -78,7 +82,7 @@ func pop_stages():
 				pop_stages()
 			2:
 				print("2")
-				brake = 5000
+				#brake = 5000
 				air = .0001
 				$wheel_back_right.wheel_friction_slip = 100000
 	else:
@@ -97,6 +101,13 @@ func _ready():
 
 
 func _process(delta: float) -> void:
+	if Global.TireEmpty and !scened:
+		%Wheel.hide()
+		var spot = wheel_place_scene.instantiate()
+		add_sibling(spot)
+		spot.global_position = $wheel_back_right/WheelPlaceSpot.global_position
+		scened = true
+	if !Global.TirePopped: %Wheel.show()
 	Global.PlayerMarker = player_point.global_position
 	#Switching
 	if !Global.OnFoot:
@@ -164,7 +175,9 @@ func _process(delta: float) -> void:
 				if body.is_in_group("Player"):
 					if Input.is_action_just_pressed("Interact"):
 						if Global.TrunkOpened and !Global.HasItem: close_trunk()
-						else: open_trunk()
+						else: 
+							print("test")
+							open_trunk()
 
 func _input(event):
 	if event is InputEventMouseMotion:

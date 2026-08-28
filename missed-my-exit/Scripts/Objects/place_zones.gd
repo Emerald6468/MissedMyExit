@@ -1,6 +1,6 @@
 extends Area3D
 class_name PlaceZone
-const BOULDER_1_Scene = preload("uid://dtuf2gqqt2bwj")
+const car_jack_scene = preload("uid://b8p2djpbt6gcy")
 
 #debug
 @export var num: int
@@ -21,21 +21,26 @@ func closest_check():
 	if current_distance != Global.ClosestDistance: 
 		debug.hide()
 		closest = false
-	if closest: 
-		print("Im " + str(num) + " myDistance " + str(current_distance) + " shortestDistance " + str(Global.ClosestDistance))
-		debug.show()
+	#if closest: 
+		#print("Im " + str(num) + " myDistance " + str(current_distance) + " shortestDistance " + str(Global.ClosestDistance))
+		#debug.show()
 		
 
 func check_if_place():
 	if player_nearby and Global.JustPlaced and closest:
 		Global.JustPlaced = false
 		if Global.HasCarJack:
-			var rock = BOULDER_1_Scene.instantiate()
-			add_child(rock)
-			rock.scale.x = .50
-			rock.scale.y = .50
-			rock.scale.z = .50
+			var jack = car_jack_scene.instantiate()
+			add_sibling(jack)
+			jack.global_position = global_position
+			#jack.scale.x = .50
+			#jack.scale.y = .50
+			#jack.scale.z = .50
 			Global.HasCarJack = false
+			queue_free()
+		if Global.JackUp and Global.HasExtraTire:
+			Global.TirePopped = false
+			print("holy moly")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

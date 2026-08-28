@@ -34,6 +34,8 @@ var PlayerPosition: Vector3
 
 #Events
 var TirePopped = false
+var JackUp = false
+var TireEmpty = false
 
 #UI and Settings
 #not added to reset as they should stay even if everything else is reset
@@ -72,5 +74,6 @@ func reset_vars():
 	in_tutorial = false
 	NearGarageOpener = false
 	GarageOpen = false
+	JackUp = false
 	
 	
