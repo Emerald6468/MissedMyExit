@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://vyov7ysjcyv0" path="res://Scenes/Loop5_Main.tscn" id="22_duwrd"]
 [ext_resource type="PackedScene" uid="uid://b2p6osnbkujtt" path="res://Scenes/Loop4_Main.tscn" id="22_tl8tx"]
 [ext_resource type="Texture2D" uid="uid://wlpd8dexaxdg" path="res://Assets/Textures/moon3.png" id="28_6da8v"]
+[ext_resource type="Script" uid="uid://oon2oypc01fw" path="res://Scripts/opening_cutscene.gd" id="29_f865a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
 size = Vector3(1, 5.1224365, 9.735809)
@@ -172,6 +173,95 @@ albedo_texture = ExtResource("28_6da8v")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6f8o3"]
 material = SubResource("StandardMaterial3D_1esiv")
+
+[sub_resource type="Animation" id="Animation_6da8v"]
+resource_name = "Opening Cutscene"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.89, 1.6, 2.47, 3.24, 3.49, 4.34, 4.9, 5.63, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(165.26332, 10.248305, -136.82036), Vector3(148.02814, 10.248305, -101.13349), Vector3(145.5, 10.248305, -95.25086), Vector3(139.06302, 10.248305, -71.25281), Vector3(138.01117, 10.248305, -66.30128), Vector3(134.82106, 10.248305, -39.322197), Vector3(134.47847, 9.634442, -33.68132), Vector3(134.47847, 9.634442, -12.404537), Vector3(131.37254, 9.634442, -7.4969025), Vector3(124.71758, 9.634442, -0.81049347), Vector3(119.25807, 9.634442, -0.81049347)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.89, 1.6, 2.47, 3.24, 3.49, 4.34, 4.9, 5.63, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.7085032, 0), Vector3(0, 2.7085032, 0), Vector3(0, 2.8581524, 0), Vector3(0, 2.8581524, 0), Vector3(0, 3.0318997, 0), Vector3(0, 3.0318997, 0), Vector3(0, -3.1415405, 0), Vector3(0, -3.1415405, 0), Vector3(0, 2.2976387, 0), Vector3(0, 1.4252355, 0), Vector3(0, 1.4252355, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f865a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(131.18057, 9.609907, -1.8685484)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5781556, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ionnv"]
+resource_name = "Reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(131.18057, 9.609907, -1.8685484)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5781556, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1h5xu"]
+_data = {
+&"Opening Cutscene": SubResource("Animation_6da8v"),
+&"RESET": SubResource("Animation_f865a"),
+&"Reset": SubResource("Animation_ionnv")
+}
 
 [node name="LoopTest" type="Node3D" unique_id=1169707784]
 
@@ -336,7 +426,7 @@ transform = Transform3D(0.16573668, 0, 0.68009657, 0, 0.7, 0, -0.68009657, 0, 0.
 [node name="Deer1" parent="Loop1" unique_id=1829751290 instance=ExtResource("12_nmug1")]
 transform = Transform3D(-0.46867207, 0, 0.51994854, 0, 0.7, 0, -0.51994854, 0, -0.46867207, -175.28874, 0.13154638, 142.73436)
 
-[node name="Skeleton3D" parent="Loop1/Deer1/Armature" parent_id_path=PackedInt32Array(1829751290, 1759574120) index="0" unique_id=1859292433]
+[node name="Skeleton3D" parent="Loop1/Deer1/Armature" parent_id_path=PackedInt32Array(1829751290, 2121941977) index="0" unique_id=1300912618]
 bones/0/position = Vector3(-2.9802322e-08, -1.1426979, 0)
 bones/0/rotation = Quaternion(0.4692355, 0.5531723, -0.5249266, 0.44527572)
 bones/1/rotation = Quaternion(0.5149746, -0.49196607, -0.4870157, 0.5055554)
@@ -368,7 +458,7 @@ bones/27/rotation = Quaternion(0.44482258, 0.10170451, 0.12100641, 0.8815591)
 bones/28/rotation = Quaternion(-0.113034494, -0.003965879, 0.11138132, 0.9873205)
 bones/29/rotation = Quaternion(0.06810241, 0.00806703, 0.19097206, 0.97919697)
 
-[node name="Cube" parent="Loop1/Deer1/Armature/Skeleton3D" index="0" unique_id=667059371]
+[node name="Cube" parent="Loop1/Deer1/Armature/Skeleton3D" index="0" unique_id=790159200]
 material_override = SubResource("StandardMaterial3D_duwrd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Loop1" unique_id=1793102900]
@@ -548,7 +638,7 @@ target = NodePath("../../../../Loop4")
 environment = SubResource("Environment_2rq0p")
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("9_ny4q5")]
-transform = Transform3D(-0.007359296, 0, 0.99997294, 0, 1, 0, -0.99997294, 0, -0.007359296, 131.18057, 9.609907, -1.8685484)
+transform = Transform3D(-0.0073592407, 0, 0.9999726, 0, 1, 0, -0.9999726, 0, -0.0073592407, 131.18057, 9.609907, -1.8685484)
 axis_lock_angular_z = false
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("10_nmug1")]
@@ -584,6 +674,11 @@ transform = Transform3D(0.50718623, 0.47416583, 0.71967274, 0, 0.8350456, -0.550
 transform = Transform3D(199.445, 0, 0, 0, -8.718018e-06, -199.445, 0, 199.445, -8.718018e-06, 2.8133392e-05, 9.0782385e-05, -2338.6692)
 mesh = SubResource("PlaneMesh_6f8o3")
 
+[node name="OpeningCutscene" type="AnimationPlayer" parent="." unique_id=1103952701]
+root_node = NodePath("../FinalCar")
+libraries/ = SubResource("AnimationLibrary_1h5xu")
+script = ExtResource("29_f865a")
+
 [connection signal="body_entered" from="Loop1/Events/HideEntrance" to="Loop1/Events/HideEntrance" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop1/Events/ShowLoop2" to="Loop1/Events/ShowLoop2" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop1" to="Loop2/Events/HideLoop1" method="_on_body_entered"]
@@ -592,5 +687,6 @@ mesh = SubResource("PlaneMesh_6f8o3")
 [connection signal="body_entered" from="Loop3/Events/HideLoop2b" to="Loop3/Events/HideLoop2b" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop4/Events/HideLoop3" to="Loop4/Events/HideLoop3" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop5/Events2/HideLoop4" to="Loop5/Events2/HideLoop4" method="_on_body_entered"]
+[connection signal="animation_finished" from="OpeningCutscene" to="OpeningCutscene" method="_on_animation_finished"]
 
 [editable path="Loop1/Deer1"]

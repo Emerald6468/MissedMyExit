@@ -38,6 +38,12 @@ const WALK_AMP: float = 0.025
 var t_bob:float = 0.0
 
 func _ready():
+	if !Global.in_tutorial: 
+		Global.OnFoot = false
+		Global.JustSwitched = true
+		switch_timer()
+		
+		
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
 	
