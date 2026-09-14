@@ -277,7 +277,7 @@ target = NodePath("../../../../Loop2")
 transform = Transform3D(0.9981988, 0, 0.05999333, 0, 1, 0, -0.05999333, 0, 0.9981988, 137.67384, 11.006775, -1.4461937)
 
 [node name="Loop1_Clearing2" parent="Loop1" unique_id=1325511302 instance=ExtResource("10_jwy6e")]
-transform = Transform3D(0.99972165, 0, -0.023593394, 0, 1, 0, 0.023593394, 0, 0.99972165, -409.98892, 3.0517578e-05, 373.65683)
+transform = Transform3D(0.99972165, 0, -0.023593394, 0, 1, 0, 0.023593394, 0, 0.99972165, -409.989, -0.973, 373.657)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Loop1/Loop1_Clearing2" unique_id=329859387]
 transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 48.26718, 0.033744037, 3.6667786)

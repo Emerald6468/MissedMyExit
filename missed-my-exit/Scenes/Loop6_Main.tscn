@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://76oeqeul6fbh"]
+
+[ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="1_xv2l3"]
+[ext_resource type="PackedScene" uid="uid://rgevfgejmet0" path="res://Scenes/Prefabs/Roads/r_45deg.tscn" id="2_1tcy2"]
+[ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="2_tb4dq"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="3_tb4dq"]
+[ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="4_i1s5h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
+size = Vector3(1, 5.1224365, 9.735809)
+
+[node name="Loop6_Main" type="Node3D" unique_id=613038284]
+
+[node name="Prefabs" type="Node3D" parent="." unique_id=1109605860]
+
+[node name="r_40m" parent="Prefabs" unique_id=445961336 instance=ExtResource("1_xv2l3")]
+visible = false
+
+[node name="r_40m2" parent="Prefabs" unique_id=1661012821 instance=ExtResource("1_xv2l3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20, 0, 20)
+
+[node name="Loop1_Entrance" parent="Prefabs/r_40m2" unique_id=878268101 instance=ExtResource("2_tb4dq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -200, 10.920403, -8.681107)
+
+[node name="r_45deg" parent="Prefabs" unique_id=848342268 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -54, 0, 6)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg" unique_id=2061671214 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg2" parent="Prefabs" unique_id=350574726 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -54, 0, 34)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg2" unique_id=1627225908 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg3" parent="Prefabs" unique_id=12602458 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -26, 0, 34)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg3" unique_id=2091901792 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg4" parent="Prefabs" unique_id=778066360 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(-0.7071069, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, -0.7071069, -25.84265, 0, 6.257199)
+visible = false
+
+[node name="r_45deg2" parent="Prefabs/r_45deg4" unique_id=1948952892 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="Props" type="Node3D" parent="." unique_id=422379982]
+
+[node name="Events" type="Node3D" parent="." unique_id=307000778]
+
+[node name="HideEntrance" type="Area3D" parent="Events" unique_id=710904809]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/HideEntrance" unique_id=71172951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Events/HideEntrance" unique_id=1518793143 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m")
+
+[node name="HideEvent2" parent="Events/HideEntrance" unique_id=1683505889 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_45deg4")
+
+[node name="HideEvent3" parent="Events/HideEntrance" unique_id=367953200 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop1")
+
+[node name="Loop1" type="Area3D" parent="Events" unique_id=658420993]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop1" unique_id=315822942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop1" unique_id=787609520 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop2")
+
+[node name="Loop2" type="Area3D" parent="Events" unique_id=1710103722]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop2" unique_id=1895178487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop2" unique_id=1384473536 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop3")
+
+[node name="Loop3" type="Area3D" parent="Events" unique_id=484623370]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop3" unique_id=1239428215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop3" unique_id=546522326 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m2")
+
+[node name="HideEvent3" parent="Events/Loop3" unique_id=1401376114 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_45deg4")
+
+[connection signal="body_entered" from="Events/HideEntrance" to="Events/HideEntrance" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop1" to="Events/Loop1" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop2" to="Events/Loop2" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop3" to="Events/Loop3" method="_on_body_entered"]
