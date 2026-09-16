@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xts3xn3aej33"
+path="res://.godot/imported/frutiger swim type beat psychedelic blues in the backrooms.wav-3c29234a5d21ff5ebfbc0da06be516f9.sample"
+
+[deps]
+
+source_file="res://Assets/AUDIO/Music/frutiger swim type beat psychedelic blues in the backrooms.wav"
+dest_files=["res://.godot/imported/frutiger swim type beat psychedelic blues in the backrooms.wav-3c29234a5d21ff5ebfbc0da06be516f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

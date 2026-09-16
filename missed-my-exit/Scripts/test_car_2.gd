@@ -29,6 +29,8 @@ var direction_held = false
 @onready var car_moving: AudioStreamPlayer = $Head/CarMoving
 @onready var car_accelerate: AudioStreamPlayer = $Head/CarAccelerate
 @onready var outside_ambience: AudioStreamPlayer = $Head/OutsideAmbience
+#Radio
+@onready var radio_audio: AudioStreamPlayer3D = $Dash/Radio/RadioAudio
 
 
 #Trunk
@@ -98,6 +100,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_as_top_level(true)
 	headlights() 
+	if !Global.in_tutorial: radio_audio.play()
 
 
 func _process(delta: float) -> void:

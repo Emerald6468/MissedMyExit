@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5rcxtshc8ixu"
+path="res://.godot/imported/Randy 14.wav-ade2071ed42b18b2060084fec5bf9b59.sample"
+
+[deps]
+
+source_file="res://Assets/AUDIO/VoiceLines/RandyLInesSeperate/Randy 14.wav"
+dest_files=["res://.godot/imported/Randy 14.wav-ade2071ed42b18b2060084fec5bf9b59.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

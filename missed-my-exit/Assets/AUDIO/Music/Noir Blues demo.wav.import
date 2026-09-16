@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cl86d8qmb65ke"
+path="res://.godot/imported/Noir Blues demo.wav-662fd83f26c45065923bf39983ad06ad.sample"
+
+[deps]
+
+source_file="res://Assets/AUDIO/Music/Noir Blues demo.wav"
+dest_files=["res://.godot/imported/Noir Blues demo.wav-662fd83f26c45065923bf39983ad06ad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
