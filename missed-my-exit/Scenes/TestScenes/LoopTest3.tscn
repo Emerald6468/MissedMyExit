@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cblcjjch06cra" path="res://Scenes/Vista.tscn" id="13_slsem"]
 [ext_resource type="Texture2D" uid="uid://dld1nxgprjyj1" path="res://Assets/Textures/Blood/BloodPath1.png" id="14_0b0n4"]
 [ext_resource type="Script" uid="uid://b3mu7ah4nvy8f" path="res://Scenes/TestScenes/Harlan/cloud_layer.gd" id="15_qabrb"]
+[ext_resource type="PackedScene" uid="uid://76oeqeul6fbh" path="res://Scenes/Loop6_Main.tscn" id="20_duwrd"]
 [ext_resource type="PackedScene" uid="uid://il328vw00oxa" path="res://Scenes/Loop2b_Main.tscn" id="21_54jx7"]
 [ext_resource type="Texture2D" uid="uid://bqqvr1jht4kj5" path="res://Assets/Skybox/TychoSkymapII.png" id="22_0b0n4"]
 [ext_resource type="PackedScene" uid="uid://vyov7ysjcyv0" path="res://Scenes/Loop5_Main.tscn" id="22_duwrd"]
@@ -495,6 +496,47 @@ action = "Delete"
 trigger = NodePath("..")
 target = NodePath("../../../../Loop4")
 
+[node name="ShowLoop6" type="Area3D" parent="Loop5/Events2" unique_id=1456612271]
+transform = Transform3D(-0.16521187, 0, -0.98625803, 0, 1, 0, 0.98625803, 0, -0.16521187, 138.88123, -27.17955, -203.89842)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop5/Events2/ShowLoop6" unique_id=1449421607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop5/Events2/ShowLoop6" unique_id=1140088450 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../../Loop6")
+
+[node name="Loop6" parent="." unique_id=613038284 instance=ExtResource("20_duwrd")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -9.31211, -45.631214, -876.9517)
+visible = false
+
+[node name="Events2" type="Node3D" parent="Loop6" unique_id=1571115797]
+
+[node name="HideLoop5" type="Area3D" parent="Loop6/Events2" unique_id=277141793]
+transform = Transform3D(0.9992988, 0, -0.037440006, 0, 1, 0, 0.037440006, 0, 0.9992988, -25.172031, 0.18669128, 0.10244174)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop6/Events2/HideLoop5" unique_id=1444234790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2044678, -0.13998795)
+shape = SubResource("BoxShape3D_8lrox")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Loop6/Events2/HideLoop5" unique_id=1377977603 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("13_27tf7")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../../Loop5")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759441216]
 environment = SubResource("Environment_2rq0p")
 
@@ -548,6 +590,8 @@ script = ExtResource("29_f865a")
 [connection signal="body_entered" from="Loop3/Events/HideLoop2b" to="Loop3/Events/HideLoop2b" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop4/Events/HideLoop3" to="Loop4/Events/HideLoop3" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop5/Events2/HideLoop4" to="Loop5/Events2/HideLoop4" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop5/Events2/ShowLoop6" to="Loop5/Events2/ShowLoop6" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop6/Events2/HideLoop5" to="Loop6/Events2/HideLoop5" method="_on_body_entered"]
 [connection signal="animation_finished" from="OpeningCutscene" to="OpeningCutscene" method="_on_animation_finished"]
 
 [editable path="Loop1/Deer2"]
