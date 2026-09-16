@@ -30,6 +30,7 @@ visible = false
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -200, 10.920403, -8.681107)
 
 [node name="FinalStretch" type="Node3D" parent="Prefabs/r_40m2" unique_id=1988033349]
+process_mode = 4
 visible = false
 
 [node name="r_40m" parent="Prefabs/r_40m2/FinalStretch" unique_id=259304941 instance=ExtResource("1_xv2l3")]

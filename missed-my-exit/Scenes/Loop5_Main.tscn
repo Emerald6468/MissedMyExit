@@ -228,6 +228,7 @@ transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -20,
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -20, 0, 0)
 
 [node name="FakeIntro" parent="Prefabs" unique_id=801391864 instance=ExtResource("5_56egc")]
+process_mode = 4
 transform = Transform3D(-1.3311835e-07, 0, -0.99999976, 0, 1, 0, 0.99999976, 0, -1.3311835e-07, -119.02341, -13.702927, 41.015064)
 visible = false
 

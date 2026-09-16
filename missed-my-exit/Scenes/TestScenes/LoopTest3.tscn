@@ -446,7 +446,7 @@ trigger = NodePath("..")
 target = NodePath("../../../../Loop4")
 
 [node name="Loop4" parent="." unique_id=574879266 instance=ExtResource("22_tl8tx")]
-transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 252.61632, -7.0663924, -555.06067)
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 247.3346, -8.066393, -549.1243)
 visible = false
 
 [node name="Events" type="Node3D" parent="Loop4" unique_id=1438908141]
@@ -474,7 +474,7 @@ trigger = NodePath("..")
 target = NodePath("../../../../Loop5")
 
 [node name="Loop5" parent="." unique_id=1845897523 instance=ExtResource("22_duwrd")]
-transform = Transform3D(0.9982335, 0, 0.059412908, 0, 1, 0, -0.059412908, 0, 0.9982335, -26.8582, -18.243269, -660.9354)
+transform = Transform3D(0.9982335, 0, 0.059412908, 0, 1, 0, -0.059412908, 0, 0.9982335, -32.139923, -20.243269, -654.9991)
 visible = false
 
 [node name="Events2" type="Node3D" parent="Loop5" unique_id=1682080238]
@@ -515,7 +515,7 @@ trigger = NodePath("..")
 target = NodePath("../../../../Loop6")
 
 [node name="Loop6" parent="." unique_id=613038284 instance=ExtResource("20_duwrd")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -9.31211, -45.631214, -876.9517)
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -14.593833, -47.631214, -871.0154)
 visible = false
 
 [node name="Events2" type="Node3D" parent="Loop6" unique_id=1571115797]
@@ -574,7 +574,7 @@ scroll_speed = 0.05
 transform = Transform3D(0.50718623, 0.47416583, 0.71967274, 0, 0.8350456, -0.55018073, -0.8618365, 0.2790441, 0.42352363, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Moon" unique_id=899638052]
-transform = Transform3D(199.445, 0, 0, 0, -8.718018e-06, -199.445, 0, 199.445, -8.718018e-06, 2.8133392e-05, 9.0782385e-05, -2338.6692)
+transform = Transform3D(199.445, 0, 0, 0, -8.718018e-06, -199.445, 0, 199.445, -8.718018e-06, -6.69694e-05, 6.782597e-05, -3717.2234)
 mesh = SubResource("PlaneMesh_6f8o3")
 
 [node name="OpeningCutscene" type="AnimationPlayer" parent="." unique_id=1103952701]
