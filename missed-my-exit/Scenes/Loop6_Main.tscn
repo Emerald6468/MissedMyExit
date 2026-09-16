@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://co5ii7naohg16" path="res://Scenes/Prefabs/Roads/Down/r_10m_20down.tscn" id="5_b6ns4"]
 [ext_resource type="PackedScene" uid="uid://cjaxa2lnstkqi" path="res://Scenes/Prefabs/Roads/Cliff/r_20m_cliff.tscn" id="6_5npkj"]
 [ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="7_ruldh"]
+[ext_resource type="PackedScene" uid="uid://cwpw0il5dj365" path="res://Assets/New Models/Foliage/Trees/TreeNewWIP1.glb" id="9_b6ns4"]
+[ext_resource type="Material" uid="uid://cml76qid1nlce" path="res://Assets/Materials/Tree1.tres" id="10_5npkj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
 size = Vector3(1, 5.1224365, 9.735809)
@@ -26,7 +28,6 @@ visible = false
 
 [node name="Loop1_Entrance" parent="Prefabs/r_40m2" unique_id=878268101 instance=ExtResource("2_tb4dq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -200, 10.920403, -8.681107)
-visible = false
 
 [node name="FinalStretch" type="Node3D" parent="Prefabs/r_40m2" unique_id=1988033349]
 visible = false
@@ -147,6 +148,1232 @@ visible = false
 transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
 
 [node name="Props" type="Node3D" parent="." unique_id=422379982]
+visible = false
+
+[node name="TreeRings" type="Node3D" parent="Props" unique_id=2044520735]
+transform = Transform3D(0.49999994, -0.06712105, -0.8634204, 0, 0.996992, -0.07750471, 0.86602545, 0.03875235, 0.498496, 3.9285276, 0, -357.80838)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings" unique_id=690831095]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings/TreeRing" unique_id=1119779742]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings/TreeRing/Node3D" unique_id=1419109415 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings/TreeRing/Node3D" unique_id=821377390 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings/TreeRing/Node3D" unique_id=961675084 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings/TreeRing/Node3D" unique_id=962394824 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings/TreeRing/Node3D" unique_id=1334530491 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings/TreeRing/Node3D" unique_id=459300351 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings/TreeRing" unique_id=2108789017]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=335017714 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=117055731 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=1738741121 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=1086289084 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=381323800 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=1012409109 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings/TreeRing/Node3D2" unique_id=1097441107 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings" unique_id=379783962]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings/TreeRing2" unique_id=777095656]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=2039694778 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=343634102 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=1060859594 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=91478317 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=1555078245 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings/TreeRing2/Node3D" unique_id=1101161022 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings/TreeRing2" unique_id=789135174]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=1976469230 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=1344421164 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=961258436 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=1984310747 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=2089693053 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=1649984360 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings/TreeRing2/Node3D2" unique_id=1427959147 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings2" type="Node3D" parent="Props" unique_id=338696242]
+transform = Transform3D(0.49999994, -0.06712105, -0.8634204, 0, 0.996992, -0.07750471, 0.86602545, 0.03875235, 0.498496, 0.57206535, -1.4856338e-08, -363.62195)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings2" unique_id=2042238993]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings2/TreeRing" unique_id=1909399199]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=1535662451 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=1830757325 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=88489000 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=925804055 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=873825715 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings2/TreeRing/Node3D" unique_id=1117698606 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings2/TreeRing" unique_id=1822420529]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=788009531 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=190705493 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=115090251 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=1261466042 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=1185300781 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=256104036 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings2/TreeRing/Node3D2" unique_id=457373004 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings2" unique_id=1605952574]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings2/TreeRing2" unique_id=1633588405]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=1228747859 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=1017390803 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=116053373 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=2070832703 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=1845241482 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings2/TreeRing2/Node3D" unique_id=1495441507 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings2/TreeRing2" unique_id=1267681374]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=48135816 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1153014529 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1757407080 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1420161300 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1777102359 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1932906498 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings2/TreeRing2/Node3D2" unique_id=1788263459 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings3" type="Node3D" parent="Props" unique_id=1817743675]
+transform = Transform3D(0.70643246, -0.06712105, -0.70459056, 0.020059694, 0.996992, -0.0748638, 0.70749605, 0.03875235, 0.705654, -1.6841501, -0.49252808, -366.60516)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings3" unique_id=1182519486]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings3/TreeRing" unique_id=2105854566]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=1133644651 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=1945061573 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=913658332 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=662970089 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=1160978131 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings3/TreeRing/Node3D" unique_id=1054297847 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings3/TreeRing" unique_id=247412048]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=470234927 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=570622006 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=52340931 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=843197277 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=97276490 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=694315907 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings3/TreeRing/Node3D2" unique_id=1736746656 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings3" unique_id=1504447819]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings3/TreeRing2" unique_id=1507011303]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=778376704 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=34583485 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=86515346 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=461672317 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=2026618099 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings3/TreeRing2/Node3D" unique_id=424222944 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings3/TreeRing2" unique_id=311554927]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=676246455 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=1451532710 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=1806535681 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=230327862 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=1710705803 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=1027909981 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings3/TreeRing2/Node3D2" unique_id=27990503 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings4" type="Node3D" parent="Props" unique_id=1367462012]
+transform = Transform3D(0.70643246, -0.06712105, -0.70459056, 0.020059694, 0.996992, -0.0748638, 0.70749605, 0.03875235, 0.705654, -5.129714, -1.8791306, -370.19263)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings4" unique_id=510347011]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings4/TreeRing" unique_id=1505126562]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=1870195547 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=1815718296 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=109323948 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=526220317 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=2082118122 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings4/TreeRing/Node3D" unique_id=1935301813 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings4/TreeRing" unique_id=1774322228]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=1117880330 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=1943690128 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=1443808406 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=1282738958 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=127828704 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=1312888631 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings4/TreeRing/Node3D2" unique_id=515294294 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings4" unique_id=123218020]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings4/TreeRing2" unique_id=43393675]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=833115847 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=777028056 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=2019695774 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=521548229 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=1527494608 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings4/TreeRing2/Node3D" unique_id=80218028 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings4/TreeRing2" unique_id=1887070201]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=1567887839 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=621769948 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=1576975106 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=1463452757 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=1633431016 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=7096653 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings4/TreeRing2/Node3D2" unique_id=1191644997 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings5" type="Node3D" parent="Props" unique_id=1231626769]
+transform = Transform3D(0.70643246, -0.06712105, -0.70459056, 0.020059694, 0.996992, -0.0748638, 0.70749605, 0.03875235, 0.705654, -9.227536, -2.9291472, -374.39566)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings5" unique_id=790402639]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings5/TreeRing" unique_id=136164251]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=1996991092 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=1737670916 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=1755415474 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=21609462 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=1470528349 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings5/TreeRing/Node3D" unique_id=92681066 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings5/TreeRing" unique_id=478149288]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=754597945 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=1050221835 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=2145664601 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=795174880 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=1163364918 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=497218255 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings5/TreeRing/Node3D2" unique_id=391033961 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings5" unique_id=1244996798]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings5/TreeRing2" unique_id=1498496408]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=647789961 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=73662819 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=1931549672 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=602587654 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=1235695084 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings5/TreeRing2/Node3D" unique_id=867478302 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings5/TreeRing2" unique_id=535093809]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=1839358948 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=790061400 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=1378298100 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=614012000 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=463601187 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=1334867053 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings5/TreeRing2/Node3D2" unique_id=1097764023 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings6" type="Node3D" parent="Props" unique_id=1322302033]
+transform = Transform3D(0.8647228, -0.06712105, -0.49774396, 0.038752355, 0.996992, -0.06712104, 0.500752, 0.03875235, 0.86472285, -12.496021, -4.5761304, -378.2007)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings6" unique_id=1640757612]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings6/TreeRing" unique_id=1147220024]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1339959505 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1631232752 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1590500521 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1525638189 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1957618374 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings6/TreeRing/Node3D" unique_id=1559361009 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings6/TreeRing" unique_id=1679012954]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=1070630673 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=1501432610 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=1219021037 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=306318392 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=822001548 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=581801817 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings6/TreeRing/Node3D2" unique_id=1230642124 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings6" unique_id=259375737]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings6/TreeRing2" unique_id=586952917]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=1066256825 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=327003 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=1255109245 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=728036871 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=1395905152 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings6/TreeRing2/Node3D" unique_id=1076476934 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings6/TreeRing2" unique_id=732714027]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=20609169 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=1643685095 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=907773157 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=949151183 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=2038229657 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=379363533 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings6/TreeRing2/Node3D2" unique_id=713932577 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRings7" type="Node3D" parent="Props" unique_id=842736663]
+transform = Transform3D(0.8647228, -0.06712105, -0.49774396, 0.038752355, 0.996992, -0.06712104, 0.500752, 0.03875235, 0.86472285, -17.455221, -6.700484, -380.6575)
+
+[node name="TreeRing" type="Node3D" parent="Props/TreeRings7" unique_id=1594494996]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.7252903e-09, 0, 1.8626451e-09, 1, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings7/TreeRing" unique_id=172579276]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=319842929 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=2060307024 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=1969731990 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=1880554483 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=936215971 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings7/TreeRing/Node3D" unique_id=1390666033 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings7/TreeRing" unique_id=1478337815]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=1705745398 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=215259416 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=2082003060 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=826370129 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=849250854 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=78906204 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings7/TreeRing/Node3D2" unique_id=745231358 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeRing2" type="Node3D" parent="Props/TreeRings7" unique_id=369571599]
+transform = Transform3D(-1, -3.7252903e-09, -2.9802322e-08, 1.4901161e-08, 0.98224074, -0.187625, 1.7881393e-07, -0.18762498, -0.9822408, -3.0401917, 9.536743e-07, 1.5258789e-05)
+
+[node name="Node3D" type="Node3D" parent="Props/TreeRings7/TreeRing2" unique_id=184049232]
+
+[node name="TreeNewWIP1" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=1719192372 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.52653e-09, -1, -4.3058527e-08, 0, 1, 29)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=1435092437 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9073486e-06, 8.766951, 29.063019)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=1048613440 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9073486e-06, 15.813368, 25.174702)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=328127495 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9073486e-06, 21.013857, 19.87258)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=1783301104 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9073486e-06, 26.873642, 14.427631)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings7/TreeRing2/Node3D" unique_id=433308319 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8146973e-06, 30.950005, 7.576435)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="Node3D2" type="Node3D" parent="Props/TreeRings7/TreeRing2" unique_id=1394721015]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TreeNewWIP1" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=1118277501 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.98506427, 0, -0.17218693, 0.17218693, -4.371139e-08, 0.98506427, -7.5265305e-09, -1, -4.3058527e-08, -5.186007e-08, 1, 29.593212)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP1" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP2" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=1386100794 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.7212426, 0, 0.6926825, -0.6690799, -0.25881907, 0.69666684, 0.17927945, -0.9659258, -0.18667135, 1.9069231e-06, 8.999809, 28.407862)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP2" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP3" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=1732108020 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.97661346, 7.450581e-09, 0.21500255, -0.18619768, -0.5, 0.84577197, 0.1075013, -0.8660254, -0.48830673, 1.9058266e-06, 15.972835, 24.823006)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP3" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP4" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=386229851 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.51090014, 0, -0.85964, 0.6078573, -0.7071068, 0.36126095, -0.60785735, -0.7071067, -0.3612609, 1.9682527e-06, 23.495792, 21.34079)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP4" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP5" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=555705697 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.9159426, 1.4901161e-08, 0.40130928, -0.20065466, -0.8660253, 0.45797125, 0.34754407, -0.49999994, -0.79322946, 1.9031662e-06, 27.537971, 13.93958)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP5" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP6" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=1860711071 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, 1.4901161e-08, -0.81694406, 0.21144071, -0.96592575, 0.14926524, -0.7891075, -0.25881898, -0.55706555, 3.8038497e-06, 31.885204, 7.2994)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP6" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
+
+[node name="TreeNewWIP7" parent="Props/TreeRings7/TreeRing2/Node3D2" unique_id=155564000 instance=ExtResource("9_b6ns4")]
+transform = Transform3D(0.5767168, -2.9829188e-08, -0.81694406, 1.4901161e-08, -0.9999998, 2.9802322e-08, -0.8169442, 4.470348e-08, -0.57671666, 4.444496e-06, 32.951843, -0.15524435)
+
+[node name="Plane_001" parent="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP7" index="0" unique_id=2133457078]
+material_override = ExtResource("10_5npkj")
 
 [node name="Events" type="Node3D" parent="." unique_id=307000778]
 
@@ -266,6 +1493,12 @@ disable = true
 trigger = NodePath("..")
 target = NodePath("../../../Prefabs/r_40m2/FinalStretch")
 
+[node name="HideEvent4" parent="Events/FakeOut" unique_id=1268993704 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Props")
+
 [node name="HideEvent3" parent="Events/FakeOut" unique_id=12802833 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
 action = "Delete"
 trigger = NodePath("..")
@@ -276,3 +1509,186 @@ target = NodePath("../../../Prefabs/r_40m2/Loop1_Entrance")
 [connection signal="body_entered" from="Events/Loop2" to="Events/Loop2" method="_on_body_entered"]
 [connection signal="body_entered" from="Events/Loop3" to="Events/Loop3" method="_on_body_entered"]
 [connection signal="body_entered" from="Events/FakeOut" to="Events/FakeOut" method="_on_body_entered"]
+
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings2/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings2/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings2/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings3/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings3/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings3/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings4/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings4/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings4/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings5/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings5/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings5/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings6/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings6/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings6/TreeRing2/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings7/TreeRing/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings7/TreeRing/Node3D2/TreeNewWIP7"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP1"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP2"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP3"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP4"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP5"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D/TreeNewWIP6"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP1"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP2"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP3"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP4"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP5"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP6"]
+[editable path="Props/TreeRings7/TreeRing2/Node3D2/TreeNewWIP7"]
