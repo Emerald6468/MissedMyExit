@@ -1,0 +1,278 @@
+[gd_scene format=3 uid="uid://76oeqeul6fbh"]
+
+[ext_resource type="PackedScene" uid="uid://b716pyw7uytj2" path="res://Scenes/Prefabs/Roads/r_40m.tscn" id="1_xv2l3"]
+[ext_resource type="PackedScene" uid="uid://rgevfgejmet0" path="res://Scenes/Prefabs/Roads/r_45deg.tscn" id="2_1tcy2"]
+[ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="2_tb4dq"]
+[ext_resource type="PackedScene" uid="uid://dyn2ndd4ar3ho" path="res://Scenes/Prefabs/Roads/r_20m.tscn" id="3_mvxov"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="3_tb4dq"]
+[ext_resource type="PackedScene" uid="uid://c2065wrls2ijj" path="res://Scenes/Prefabs/Roads/Down/r_10m_10down.tscn" id="4_bo4we"]
+[ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="4_i1s5h"]
+[ext_resource type="PackedScene" uid="uid://co5ii7naohg16" path="res://Scenes/Prefabs/Roads/Down/r_10m_20down.tscn" id="5_b6ns4"]
+[ext_resource type="PackedScene" uid="uid://cjaxa2lnstkqi" path="res://Scenes/Prefabs/Roads/Cliff/r_20m_cliff.tscn" id="6_5npkj"]
+[ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="7_ruldh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0jes"]
+size = Vector3(1, 5.1224365, 9.735809)
+
+[node name="Loop6_Main" type="Node3D" unique_id=613038284]
+
+[node name="Prefabs" type="Node3D" parent="." unique_id=1109605860]
+
+[node name="r_40m" parent="Prefabs" unique_id=445961336 instance=ExtResource("1_xv2l3")]
+
+[node name="r_40m2" parent="Prefabs" unique_id=1661012821 instance=ExtResource("1_xv2l3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20, 0, 20)
+visible = false
+
+[node name="Loop1_Entrance" parent="Prefabs/r_40m2" unique_id=878268101 instance=ExtResource("2_tb4dq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -200, 10.920403, -8.681107)
+visible = false
+
+[node name="FinalStretch" type="Node3D" parent="Prefabs/r_40m2" unique_id=1988033349]
+visible = false
+
+[node name="r_40m" parent="Prefabs/r_40m2/FinalStretch" unique_id=259304941 instance=ExtResource("1_xv2l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180, 10, -10.000001)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m" unique_id=1846402425 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -40, 0, 0)
+
+[node name="r_10m_10down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m" unique_id=376944607 instance=ExtResource("4_bo4we")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -20, 0, 0)
+
+[node name="r_10m_20down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down" unique_id=295779615 instance=ExtResource("5_b6ns4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.822769, -1.7293396, 7.450581e-09)
+
+[node name="r_10m_20down2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down" unique_id=141036193 instance=ExtResource("5_b6ns4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.147715, -5.1328197, 7.450581e-09)
+
+[node name="r_10m_10down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2" unique_id=1880700163 instance=ExtResource("4_bo4we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.305122, -3.4065115, 0)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down" unique_id=1545816276 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -9.828913, -1.7411873, 0)
+
+[node name="r_20m_cliff" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=396244410 instance=ExtResource("6_5npkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="r_20m_cliff2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=1193949128 instance=ExtResource("6_5npkj")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -40, 0, 0)
+
+[node name="r_20m_cliff3" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=674411879 instance=ExtResource("6_5npkj")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -59.318516, 0, 5.176381)
+
+[node name="r_20m_cliff4" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=1922661447 instance=ExtResource("6_5npkj")]
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -76.63902, 0, 15.176381)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4" unique_id=1324193278 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -20, 0, 0)
+
+[node name="r_10m_10down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m" unique_id=1477380584 instance=ExtResource("4_bo4we")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -20, 0, 0)
+
+[node name="r_10m_20down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down" unique_id=1197790835 instance=ExtResource("5_b6ns4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.80275, -1.7272865, 0)
+
+[node name="r_10m_20down2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down" unique_id=1862943427 instance=ExtResource("5_b6ns4")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -19.183779, -5.14229, 0)
+
+[node name="r_10m_10down" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2" unique_id=1490203310 instance=ExtResource("4_bo4we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.381358, -3.4188952, 0)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down" unique_id=1869557884 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -9.76742, -1.7193718, 0)
+
+[node name="r_10m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=1967450520 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -20, 0, 0)
+
+[node name="r_10m2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=1604358668 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -29.659258, 0, 2.5881906)
+
+[node name="r_10m3" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m" unique_id=1741664108 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, -38.31951, 0, 7.5881906)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3" unique_id=1434649132 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -10, 0, 0)
+
+[node name="r_20m2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3" unique_id=96117464 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -29.318518, 0, -5.1763806)
+
+[node name="r_10m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2" unique_id=164081085 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -20, 0, 0)
+
+[node name="r_10m2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2" unique_id=302156640 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -29.659258, 0, -2.5881906)
+
+[node name="r_10m3" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2" unique_id=1416019131 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, -38.319515, 0, -7.58819)
+
+[node name="r_10m4" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2" unique_id=2061361521 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.4999999, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.4999999, -45.390583, 0, -14.659258)
+
+[node name="r_10m5" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2" unique_id=2146846982 instance=ExtResource("7_ruldh")]
+transform = Transform3D(0.25881898, 0, -0.9659257, 0, 1, 0, 0.9659257, 0, 0.25881898, -50.390583, 0, -23.319511)
+
+[node name="r_20m" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2/r_10m5" unique_id=1166005492 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -10, 0, 0)
+
+[node name="r_20m2" parent="Prefabs/r_40m2/FinalStretch/r_40m/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_20m_cliff4/r_20m/r_10m_10down/r_10m_20down2/r_10m_10down/r_20m/r_10m3/r_20m2/r_10m5" unique_id=1304345306 instance=ExtResource("3_mvxov")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -29.318518, 0, -5.1763806)
+
+[node name="r_40m2" parent="Prefabs/r_40m2/FinalStretch" unique_id=210400161 instance=ExtResource("1_xv2l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 10, -10.000001)
+
+[node name="r_45deg" parent="Prefabs" unique_id=848342268 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -54, 0, 6)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg" unique_id=2061671214 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg2" parent="Prefabs" unique_id=350574726 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -54, 0, 34)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg2" unique_id=1627225908 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg3" parent="Prefabs" unique_id=12602458 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -26, 0, 34)
+
+[node name="r_45deg2" parent="Prefabs/r_45deg3" unique_id=2091901792 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="r_45deg4" parent="Prefabs" unique_id=778066360 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(-0.7071069, 0, 0.70710665, 0, 1, 0, -0.70710665, 0, -0.7071069, -25.84265, 0, 6.257199)
+visible = false
+
+[node name="r_45deg2" parent="Prefabs/r_45deg4" unique_id=1948952892 instance=ExtResource("2_1tcy2")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
+
+[node name="Props" type="Node3D" parent="." unique_id=422379982]
+
+[node name="Events" type="Node3D" parent="." unique_id=307000778]
+
+[node name="HideEntrance" type="Area3D" parent="Events" unique_id=710904809]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/HideEntrance" unique_id=71172951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent" parent="Events/HideEntrance" unique_id=1518793143 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m")
+
+[node name="HideEvent2" parent="Events/HideEntrance" unique_id=1683505889 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_45deg4")
+
+[node name="HideEvent3" parent="Events/HideEntrance" unique_id=367953200 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop1")
+
+[node name="Loop1" type="Area3D" parent="Events" unique_id=658420993]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop1" unique_id=315822942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop1" unique_id=787609520 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop2")
+
+[node name="Loop2" type="Area3D" parent="Events" unique_id=1710103722]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop2" unique_id=1895178487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop2" unique_id=1384473536 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../Loop3")
+
+[node name="Loop3" type="Area3D" parent="Events" unique_id=484623370]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -53.8913, 0.786942, 33.921642)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Loop3" unique_id=1239428215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/Loop3" unique_id=546522326 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m2")
+
+[node name="HideEvent4" parent="Events/Loop3" unique_id=21535388 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../FakeOut")
+
+[node name="HideEvent3" parent="Events/Loop3" unique_id=1401376114 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_45deg4")
+
+[node name="FakeOut" type="Area3D" parent="Events" unique_id=535832745]
+transform = Transform3D(-0.03898794, 0, -0.99923956, 0, 1, 0, 0.99923956, 0, -0.03898794, -10.415943, 10.750531, -157.03406)
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_tb4dq")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/FakeOut" unique_id=569147205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_e0jes")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="HideEvent2" parent="Events/FakeOut" unique_id=1332450481 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Show"
+disable = true
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m2/FinalStretch")
+
+[node name="HideEvent3" parent="Events/FakeOut" unique_id=12802833 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_i1s5h")]
+action = "Delete"
+trigger = NodePath("..")
+target = NodePath("../../../Prefabs/r_40m2/Loop1_Entrance")
+
+[connection signal="body_entered" from="Events/HideEntrance" to="Events/HideEntrance" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop1" to="Events/Loop1" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop2" to="Events/Loop2" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/Loop3" to="Events/Loop3" method="_on_body_entered"]
+[connection signal="body_entered" from="Events/FakeOut" to="Events/FakeOut" method="_on_body_entered"]
