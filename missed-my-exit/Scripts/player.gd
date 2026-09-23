@@ -76,24 +76,26 @@ func inventory():
 func check_nearby():
 	var area_list = nearby_check.get_overlapping_areas()
 	#Checks if player is nearby
+	var just_grab_range = false
+	var just_place_range = false
+	var just_opener_range = false
 	if nearby_check.has_overlapping_areas():
-		var just_grab_range = false
-		var just_place_range = false
-		var just_opener_range = false
 		for area in area_list:
 			if area is PickUp:
 				Global.NearPickup = true
 				just_grab_range = true
 			if area is PlaceZone or MultiPlaceZone:
+				print(str(area))
+				print("switch true")
 				Global.NearPlaceZone = true
 				just_place_range = true
 			if area.is_in_group("OpenerAOE"):
 				Global.NearGarageOpener = true
 				just_opener_range = true
-			else:
-				if !just_grab_range: Global.NearPickup = false
-				if !just_place_range: Global.NearPlaceZone = false
-				if !just_opener_range: Global.NearGarageOpener = false
+	else:
+		if !just_grab_range: Global.NearPickup = false
+		if !just_place_range: Global.NearPlaceZone = false
+		if !just_opener_range: Global.NearGarageOpener = false
 	if Global.NearPlaceZone: Global.ClosestDistance = 100.0
 	
 
@@ -132,10 +134,12 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("Interact"):
 			print(str(ray.is_colliding()))
 			if Global.NearPickup and !Global.HasItem:
+				print("1")
 				if on_foot_camera.is_position_in_frustum(Global.ObjectPosition):
 					print(str(ray.get_collider()))
 					Global.JustPickedUp = true
 			elif Global.NearPlaceZone and Global.HasItem:
+				print("2")
 				if on_foot_camera.is_position_in_frustum(Global.PlaceZonePosition):
 					Global.JustPlaced = true	
 			elif Global.HasAxe and !Global.AxeSwing:

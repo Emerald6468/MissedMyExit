@@ -18,13 +18,9 @@ sky = SubResource("Sky_ly7g8")
 [node name="TreefallingScenario" type="Node3D" unique_id=1032229353]
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=1978042508]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.611603)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0065546036, 0.01929152, 7.5931177)
 use_collision = true
 size = Vector3(10.38324, 1, 81.898254)
-
-[node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("2_80sl8")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.7603245, 1.1818451, 31.628744)
-ObjectType = "Rock"
 
 [node name="PickupableObject2" parent="." unique_id=393651177 instance=ExtResource("2_80sl8")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.0111032, 1.1818451, 31.628744)
@@ -46,4 +42,4 @@ environment = SubResource("Environment_80sl8")
 transform = Transform3D(1, 0, 0, 0, 0.9969051, 0.078615725, 0, -0.078615725, 0.9969051, 0, 12.427002, 0)
 
 [node name="Player" parent="." unique_id=1477566545 instance=ExtResource("4_ly7g8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -258.18536, 59.148796, 44.17181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9983997, 45.568066)
