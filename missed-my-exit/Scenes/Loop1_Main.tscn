@@ -199,12 +199,13 @@ transform = Transform3D(0.98611116, 0, -0.16608702, 0, 1, 0, 0.16608702, 0, 0.98
 transform = Transform3D(0.98611116, 0, -0.16608702, 0, 1, 0, 0.16608702, 0, 0.98611116, -330.07968, -0.062311172, 98.75629)
 
 [node name="sign1" parent="Props/Signs" unique_id=613367588 instance=ExtResource("15_a0wly")]
-transform = Transform3D(-0.6866188, 0, 0.72701764, 0, 1, 0, -0.72701764, 0, -0.6866188, -126.25401, -0.07395565, 161.36804)
+transform = Transform3D(-0.6866188, 0, 0.72701764, 0, 1, 0, -0.72701764, 0, -0.6866188, -126.25401, -1.0329286, 161.36804)
 
 [node name="sign3" parent="Props/Signs" unique_id=1115154374 instance=ExtResource("16_sib6d")]
-transform = Transform3D(0.9402095, -0.1038769, -0.32436952, 0.12341602, 0.99154055, 0.04019727, 0.31745002, -0.07782625, 0.94507605, -164.28958, -0.22842526, 340.3293)
+transform = Transform3D(0.9402095, -0.1038769, -0.32436952, 0.12341602, 0.99154055, 0.04019727, 0.31745002, -0.07782625, 0.94507605, -164.28958, -1.1873982, 340.3293)
 
 [node name="Fences" type="Node3D" parent="Props" unique_id=1990361871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.961118, 0)
 
 [node name="Wood_Fence_Custom1" parent="Props/Fences" unique_id=1213686371 instance=ExtResource("17_a0wly")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -111.403534, 0, 335.0743)

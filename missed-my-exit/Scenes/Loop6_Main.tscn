@@ -24,13 +24,14 @@ size = Vector3(1, 5.1224365, 9.735809)
 
 [node name="r_40m2" parent="Prefabs" unique_id=1661012821 instance=ExtResource("1_xv2l3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20, 0, 20)
+visible = false
 
 [node name="Loop1_Entrance" parent="Prefabs/r_40m2" unique_id=878268101 instance=ExtResource("2_tb4dq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -200, 10.920403, -8.681107)
-visible = false
 
 [node name="FinalStretch" type="Node3D" parent="Prefabs/r_40m2" unique_id=1988033349]
 process_mode = 4
+visible = false
 
 [node name="r_40m" parent="Prefabs/r_40m2/FinalStretch" unique_id=259304941 instance=ExtResource("1_xv2l3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180, 10, -10.000001)
@@ -148,6 +149,7 @@ visible = false
 transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 14.142132, 0, -5.6568527)
 
 [node name="Props" type="Node3D" parent="." unique_id=422379982]
+visible = false
 
 [node name="TreeRings" type="Node3D" parent="Props" unique_id=2044520735]
 transform = Transform3D(0.49999994, -0.06712105, -0.8634204, 0, 0.996992, -0.07750471, 0.86602545, 0.03875235, 0.498496, 3.9285276, -1.4408379, -357.80838)

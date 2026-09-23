@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://rgevfgejmet0" path="res://Scenes/Prefabs/Roads/r_45deg.tscn" id="9_t067k"]
 [ext_resource type="PackedScene" uid="uid://dujlc4p3ayyds" path="res://Scenes/Prefabs/Roads/r_10m.tscn" id="9_usnla"]
 [ext_resource type="PackedScene" uid="uid://dyn2ndd4ar3ho" path="res://Scenes/Prefabs/Roads/r_20m.tscn" id="10_t067k"]
+[ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="11_krv5y"]
 [ext_resource type="PackedScene" uid="uid://cjaxa2lnstkqi" path="res://Scenes/Prefabs/Roads/Cliff/r_20m_cliff.tscn" id="11_p6mvt"]
 [ext_resource type="PackedScene" uid="uid://dtuf2gqqt2bwj" path="res://Assets/Old Models/Boulder_1.glb" id="11_ujf3m"]
 [ext_resource type="PackedScene" uid="uid://cbx7qyjgm4mvq" path="res://Scenes/Prefabs/Roads/Cliff/r_10m_cliff.tscn" id="12_56egc"]
@@ -19,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c3hor01hr41bl" path="res://Scenes/Loop5_Cabin.tscn" id="14_gw5ko"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="15_xlgsi"]
 [ext_resource type="PackedScene" uid="uid://dmuahqlhfsrs8" path="res://Scenes/Events/hide_event.tscn" id="16_56egc"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="16_usnla"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6da8v"]
 albedo_texture = ExtResource("1_r1elc")
@@ -227,6 +229,9 @@ transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -20,
 [node name="r_20m3" parent="Prefabs/FallenTree/r_20m2" unique_id=763151763 instance=ExtResource("10_t067k")]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -20, 0, 0)
 
+[node name="FallenTree" parent="Prefabs/FallenTree" unique_id=124688568 instance=ExtResource("11_krv5y")]
+transform = Transform3D(-0.46345288, -0.039260413, 0.88525176, -0.047189683, 0.9986939, 0.019586474, -0.8848647, -0.032697324, -0.46470028, -33.153046, -0.1914711, 1.6430054)
+
 [node name="FakeIntro" parent="Prefabs" unique_id=801391864 instance=ExtResource("5_56egc")]
 process_mode = 4
 transform = Transform3D(-1.3311835e-07, 0, -0.99999976, 0, 1, 0, 0.99999976, 0, -1.3311835e-07, -119.02341, -13.702927, 41.015064)
@@ -338,6 +343,10 @@ transform = Transform3D(0.9345837, 0, 0.35574323, 0, 1, 0, -0.35574323, 0, 0.934
 
 [node name="Loop5_Cabin" parent="Prefabs/RoadToCabin" unique_id=260756847 instance=ExtResource("14_gw5ko")]
 transform = Transform3D(-0.7684112, 0, 0.63995725, 0, 1, 0, -0.63995725, 0, -0.7684112, -98.85544, 0.01735115, 20.837112)
+
+[node name="PickupableObject" parent="Prefabs/RoadToCabin" unique_id=1743039300 instance=ExtResource("16_usnla")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199.62827, 1.3540039, 153.46901)
+ObjectType = "Axe"
 
 [node name="Props" type="Node3D" parent="." unique_id=596824693]
 

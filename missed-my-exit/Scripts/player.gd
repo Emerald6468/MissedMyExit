@@ -112,6 +112,7 @@ func _physics_process(delta: float) -> void:
 			Global.NearDoor = false
 			Global.OnFoot = false
 			Global.JustSwitched = true
+			Global.FlashOn = false
 		#Camera
 		on_foot_camera.make_current()
 		
@@ -126,9 +127,6 @@ func _physics_process(delta: float) -> void:
 			BOB_AMP = WALK_AMP
 			SPEED = WALK_SPEED
 			walking_on_gravel.volume_db = -3.0
-		
-
-		
 		
 		#Interactables
 		if Input.is_action_just_pressed("Interact"):

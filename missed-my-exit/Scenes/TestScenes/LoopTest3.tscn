@@ -7,11 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cnsuvxbm5jl5q" path="res://Scenes/Loop1_Entrance.tscn" id="6_slsem"]
 [ext_resource type="Texture2D" uid="uid://325u4wgkwtyi" path="res://Assets/TEMP Textures/GravelPile.png" id="6_xsjvs"]
 [ext_resource type="PackedScene" uid="uid://d0ggbph67bh0y" path="res://Scenes/Loop2_Intro.tscn" id="7_e6s4m"]
-[ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="9_e6s4m"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="9_ny4q5"]
 [ext_resource type="PackedScene" uid="uid://cbjs2rtwxc68o" path="res://Scenes/Loop1_Clearing2.tscn" id="10_jwy6e"]
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="10_nmug1"]
-[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="10_qabrb"]
 [ext_resource type="PackedScene" uid="uid://gby2dq24e5t0" path="res://Scenes/Prefabs/Van_1.tscn" id="11_1x04j"]
 [ext_resource type="PackedScene" uid="uid://dqkbserk206ku" path="res://Scenes/Loop3_Main.tscn" id="11_nclww"]
 [ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="12_8lrox"]
@@ -25,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bqqvr1jht4kj5" path="res://Assets/Skybox/TychoSkymapII.png" id="22_0b0n4"]
 [ext_resource type="PackedScene" uid="uid://vyov7ysjcyv0" path="res://Scenes/Loop5_Main.tscn" id="22_duwrd"]
 [ext_resource type="PackedScene" uid="uid://b2p6osnbkujtt" path="res://Scenes/Loop4_Main.tscn" id="22_tl8tx"]
+[ext_resource type="Script" uid="uid://cgnock31b3ihc" path="res://Scripts/dev_loop_select.gd" id="26_0b0n4"]
 [ext_resource type="Texture2D" uid="uid://wlpd8dexaxdg" path="res://Assets/Textures/moon3.png" id="28_6da8v"]
 [ext_resource type="Script" uid="uid://oon2oypc01fw" path="res://Scripts/opening_cutscene.gd" id="29_f865a"]
 
@@ -60,6 +59,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8lrox"]
 size = Vector3(1, 5.343506, 9.541443)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nmug1"]
+size = Vector3(1, 5.1224365, 9.735809)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_n3l2a"]
 panorama = ExtResource("22_0b0n4")
@@ -382,13 +384,6 @@ visible = false
 
 [node name="Loop2_Intro" parent="Loop2" unique_id=193075106 instance=ExtResource("7_e6s4m")]
 
-[node name="FallenTree" parent="Loop2" unique_id=124688568 instance=ExtResource("9_e6s4m")]
-transform = Transform3D(0.020355254, 0.017022144, -0.99964786, -0.059802257, 0.9980856, 0.01577782, 0.9980027, 0.05946004, 0.021334246, -89.98376, -0.76393133, 93.09948)
-
-[node name="PickupableObject2" parent="Loop2" unique_id=1743039300 instance=ExtResource("10_qabrb")]
-transform = Transform3D(-0.21552686, 0.10272676, -0.07413085, 0.0019795038, 0.149007, 0.20073119, 0.12666589, 0.17246488, -0.12927344, -77.37526, 1.4963431, 205.50055)
-ObjectType = "Axe"
-
 [node name="Loop2b_Main" parent="." unique_id=420409623 instance=ExtResource("21_54jx7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.477, -7, -293.305)
 visible = false
@@ -472,6 +467,23 @@ target = NodePath("../../../../Loop3")
 action = "Show"
 trigger = NodePath("..")
 target = NodePath("../../../../Loop5")
+
+[node name="PopTires" type="Area3D" parent="Loop4/Events" unique_id=506457250]
+transform = Transform3D(0.25468782, 0, 0.9670235, 0, 1, 0, -0.9670235, 0, 0.25468782, -182.2936, -10.655174, 73.390335)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("12_8lrox")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Loop4/Events/PopTires" unique_id=795152285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_nmug1")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="MethodEvent" parent="Loop4/Events/PopTires" unique_id=364416835 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("4_slsem")]
+method = "pop_tires"
+trigger = NodePath("..")
+target = NodePath("../../../../FinalCar")
 
 [node name="Loop5" parent="." unique_id=1845897523 instance=ExtResource("22_duwrd")]
 transform = Transform3D(0.9982335, 0, 0.059412908, 0, 1, 0, -0.059412908, 0, 0.9982335, -32.139923, -20.243269, -654.9991)
@@ -582,6 +594,9 @@ root_node = NodePath("../FinalCar")
 libraries/ = SubResource("AnimationLibrary_1h5xu")
 script = ExtResource("29_f865a")
 
+[node name="Dev_Loop_Select" type="Node" parent="." unique_id=1588776601]
+script = ExtResource("26_0b0n4")
+
 [connection signal="body_entered" from="Loop1/Events/HideEntrance" to="Loop1/Events/HideEntrance" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop1/Events/ShowLoop2" to="Loop1/Events/ShowLoop2" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop2/Events/HideLoop1" to="Loop2/Events/HideLoop1" method="_on_body_entered"]
@@ -589,6 +604,7 @@ script = ExtResource("29_f865a")
 [connection signal="body_entered" from="Loop2b_Main/Events/HideLoop2a" to="Loop2b_Main/Events/HideLoop2a" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop3/Events/HideLoop2b" to="Loop3/Events/HideLoop2b" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop4/Events/HideLoop3" to="Loop4/Events/HideLoop3" method="_on_body_entered"]
+[connection signal="body_entered" from="Loop4/Events/PopTires" to="Loop4/Events/PopTires" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop5/Events2/HideLoop4" to="Loop5/Events2/HideLoop4" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop5/Events2/ShowLoop6" to="Loop5/Events2/ShowLoop6" method="_on_body_entered"]
 [connection signal="body_entered" from="Loop6/Events2/HideLoop5" to="Loop6/Events2/HideLoop5" method="_on_body_entered"]

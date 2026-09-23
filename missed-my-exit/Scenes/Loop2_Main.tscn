@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://mkjngcbtdvyb"]
 
+[ext_resource type="PackedScene" uid="uid://0vlkoawichio" path="res://Scenes/TestScenes/Zander/fallen_tree.tscn" id="13_3c8nk"]
+[ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="14_l7hjs"]
 [ext_resource type="PackedScene" uid="uid://byf2nidlieewq" path="res://Scenes/Loop2_Cabin.tscn" id="22_rb32r"]
 [ext_resource type="PackedScene" uid="uid://ccfcxp6lunija" path="res://Assets/Old Models/sign1.glb" id="23_dhw8q"]
 [ext_resource type="PackedScene" uid="uid://cjaxa2lnstkqi" path="res://Scenes/Prefabs/Roads/Cliff/r_20m_cliff.tscn" id="23_kuiug"]
@@ -188,3 +190,10 @@ transform = Transform3D(0.046593606, 0, -0.99891394, 0, 1, 0, 0.99891394, 0, 0.0
 
 [node name="sign2" parent="Props/Signs" unique_id=1784950125 instance=ExtResource("23_dhw8q")]
 transform = Transform3D(-0.94407034, 0, -0.32974428, 0, 1, 0, 0.32974428, 0, -0.94407034, -255.63797, -4.7683716e-07, 114.584465)
+
+[node name="FallenTree" parent="." unique_id=124688568 instance=ExtResource("13_3c8nk")]
+transform = Transform3D(-0.864836, -0.045371976, 0.50000006, -0.052391045, 0.99862665, -1.8626451e-09, -0.49931338, -0.026195526, -0.86602545, -88.07547, -0.17986858, 71.92307)
+
+[node name="PickupableObject" parent="." unique_id=1743039300 instance=ExtResource("14_l7hjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.073952, 0.97643065, 225.5612)
+ObjectType = "Axe"

@@ -62,6 +62,10 @@ func headlights():
 		right_headlight.hide()
 		left_headlight.hide()
 
+func pop_tires():
+	Global.TirePopped = !Global.TirePopped
+	pop_stages()
+
 var pop_stage = 0
 func pop_stages():
 	if Global.TirePopped:
@@ -123,8 +127,8 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("ToggleLight"): 
 			if Global.tutorial_num == 11: Global.CurrentCheck = true
 			headlight = !headlight
-			Global.TirePopped = !Global.TirePopped
-			pop_stages()
+			#Global.TirePopped = !Global.TirePopped
+			#pop_stages()
 		
 		var dir = Input.get_action_strength("Forward") - Input.get_action_strength("Backward")
 		var steering_dir = Input.get_action_strength("Left") - Input.get_action_strength("Right")
