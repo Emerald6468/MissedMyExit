@@ -302,10 +302,10 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 1.26925
 shape = SubResource("SphereShape3D_bhunq")
 debug_color = Color(0.7137255, 0.5529412, 1, 1)
 
-[node name="MultiPlaceZone" parent="Trunk" unique_id=1743039300 instance=ExtResource("19_ae1u2")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.1326679, -0.73260224, -0.028009892)
+[node name="MultiPlaceZone" parent="." unique_id=1743039300 instance=ExtResource("19_ae1u2")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.08968443, 0.25625715, 1.5384483)
 
-[node name="CollisionShape3D" parent="Trunk/MultiPlaceZone" index="0" unique_id=1358614051]
+[node name="CollisionShape3D" parent="MultiPlaceZone" index="0" unique_id=1358614051]
 transform = Transform3D(-1.1343106e-07, 2.595, 0, -2.5949512, -1.1342959e-07, 0, 0, 0, 2.5949512, -0.07274556, 0.27736387, 0.45605516)
 shape = SubResource("CapsuleShape3D_n7hwx")
 
@@ -357,4 +357,4 @@ shape = SubResource("BoxShape3D_ntpel")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56402016, 0, 0.37824678)
 collision_mask = 4
 
-[editable path="Trunk/MultiPlaceZone"]
+[editable path="MultiPlaceZone"]

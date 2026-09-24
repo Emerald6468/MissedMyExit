@@ -26,34 +26,34 @@ func check_if_place():
 			var carjack = Pickup_Scene.instantiate()
 			carjack.set_object_type("CarJack")
 			rock_spot.add_child(carjack)
-			carjack.scale.x = .25
-			carjack.scale.y = .25
-			carjack.scale.z = .25
+			#carjack.scale.x = .25
+			#carjack.scale.y = .25
+			#carjack.scale.z = .25
 			Global.HasCarJack = false
 		elif Global.HasAxe:
 			var axe = Pickup_Scene.instantiate()
 			axe.set_object_type("Axe")
 			axe_spot.add_child(axe)
-			axe.scale.x = .50
-			axe.scale.y = .50
-			axe.scale.z = .50
+			#axe.scale.x = .50
+			#axe.scale.y = .50
+			#axe.scale.z = .50
 			Global.HasAxe = false
 		elif Global.HasExtraTire:
 			var tire = Pickup_Scene.instantiate()
 			tire.set_object_type("ExtraTire")
 			extra_tire_spot.add_child(tire)
-			tire.scale.x = .50
-			tire.scale.y = .50
-			tire.scale.z = .50
+			#tire.scale.x = .50
+			#tire.scale.y = .50
+			#tire.scale.z = .50
 			Global.HasExtraTire = false
 			if Global.tutorial_num == 7: Global.CurrentCheck = true
 		elif Global.HasPoppedTire:
 			var tire = Pickup_Scene.instantiate()
 			tire.set_object_type("PoppedTire")
 			extra_tire_spot.add_child(tire)
-			tire.scale.x = .50
-			tire.scale.y = .50
-			tire.scale.z = .50
+			#tire.scale.x = .50
+			#tire.scale.y = .50
+			#tire.scale.z = .50
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
