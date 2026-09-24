@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://47uwttp4dh6e"]
 
 [ext_resource type="Script" uid="uid://dhcv05w8aeakr" path="res://Scripts/Objects/pickupable_object.gd" id="1_l5087"]
-[ext_resource type="PackedScene" uid="uid://cdk0pmvmll2a6" path="res://Assets/New Models/Tools/Carjack/Carjack2.glb" id="2_3ebpn"]
+[ext_resource type="PackedScene" uid="uid://d0mdb8a0xfaus" path="res://Assets/New Models/Tools/Carjack/Carjack3.glb" id="2_3ebpn"]
 [ext_resource type="PackedScene" uid="uid://kphl2red1fk4" path="res://Assets/New Models/Car Parts/Wheel/Wheel.glb" id="3_3ebpn"]
 [ext_resource type="PackedScene" uid="uid://c368ffp70oslf" path="res://Assets/New Models/Tools/Axe/Axe.glb" id="3_liq86"]
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="4_e78f6"]
@@ -18,7 +18,17 @@ script = ExtResource("1_l5087")
 shape = SubResource("SphereShape3D_kgrkx")
 debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
 
-[node name="CarJack" parent="." unique_id=1362966683 instance=ExtResource("2_3ebpn")]
+[node name="CarJack" parent="." unique_id=950437133 instance=ExtResource("2_3ebpn")]
+
+[node name="Skeleton3D" parent="CarJack/Armature" parent_id_path=PackedInt32Array(950437133, 1470947792) index="0" unique_id=384848563]
+bones/0/rotation = Quaternion(-4.80462e-08, 0.7713663, 0.6363915, -5.823652e-08)
+bones/1/rotation = Quaternion(0.9780477, 0, 1.4768119e-07, 0.208381)
+bones/2/rotation = Quaternion(-0.6370603, -8.857647e-15, 1.996635e-15, 0.77081406)
+bones/3/rotation = Quaternion(0.97797376, -4.9764594e-08, -2.331673e-07, 0.20872796)
+bones/4/scale = Vector3(1.6605326, 0.36266464, 1.6605326)
+bones/5/scale = Vector3(0.6022164, 2.7573683, 0.6022164)
+bones/6/position = Vector3(-1.7672841e-16, 0.22899282, -1.1175872e-09)
+bones/6/rotation = Quaternion(4.9021515e-10, 0.999979, -0.006493074, -7.549631e-08)
 
 [node name="PoppedTire" parent="." unique_id=438927806 instance=ExtResource("3_3ebpn")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0.25510246, 0)
@@ -33,3 +43,5 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0009879, 0)
 billboard = 1
 text = "Pick Up?"
+
+[editable path="CarJack"]
