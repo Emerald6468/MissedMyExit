@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://pk4s64evlkpw" path="res://Assets/New Models/Car Parts/WheelV2/Wheel.glb" id="4_e78f6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kgrkx"]
+radius = 0.75
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhunq"]
 cull_mode = 2
@@ -17,14 +18,13 @@ collision_mask = 13
 script = ExtResource("1_l5087")
 
 [node name="Object" type="CollisionShape3D" parent="." unique_id=1358614051]
-transform = Transform3D(2.595, 0, 0, 0, 2.595, 0, 0, 0, 2.595, 0, 0, 0)
 shape = SubResource("SphereShape3D_kgrkx")
 debug_color = Color(0.9529412, 0.19607843, 0.24705882, 1)
 
 [node name="CarJack" parent="." unique_id=679646876 instance=ExtResource("2_3ebpn")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
-[node name="Carjack" parent="CarJack" index="0" unique_id=517779283]
+[node name="Carjack" parent="CarJack" index="0" unique_id=37498256]
 material_override = SubResource("StandardMaterial3D_bhunq")
 
 [node name="PoppedTire" parent="." unique_id=438927806 instance=ExtResource("3_3ebpn")]
