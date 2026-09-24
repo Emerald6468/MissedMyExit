@@ -135,6 +135,10 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_bhunq"]
 radius = 1.5
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7hwx"]
+radius = 0.25878906
+height = 0.6
+
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_bhunq"]
 loop = false
 stream_count = 2
@@ -190,6 +194,8 @@ unique_name_in_owner = true
 transform = Transform3D(-0.425, 0, 6.417322e-08, 0, 0.425, 0, -6.417322e-08, 0, -0.425, 0, 0, 0)
 
 [node name="PoppedTire" type="Area3D" parent="wheel_back_right" unique_id=416883390]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("5_t8c4d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wheel_back_right/PoppedTire" unique_id=1282007447]
@@ -299,6 +305,10 @@ debug_color = Color(0.7137255, 0.5529412, 1, 1)
 [node name="MultiPlaceZone" parent="Trunk" unique_id=1743039300 instance=ExtResource("19_ae1u2")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.1326679, -0.73260224, -0.028009892)
 
+[node name="CollisionShape3D" parent="Trunk/MultiPlaceZone" index="0" unique_id=1358614051]
+transform = Transform3D(-1.1343106e-07, 2.595, 0, -2.5949512, -1.1342959e-07, 0, 0, 0, 2.5949512, -0.07274556, 0.27736387, 0.45605516)
+shape = SubResource("CapsuleShape3D_n7hwx")
+
 [node name="CarSeats" type="Node3D" parent="." unique_id=2039167525]
 
 [node name="CarSeat" parent="CarSeats" unique_id=1242983191 instance=ExtResource("6_r0xd0")]
@@ -346,3 +356,5 @@ shape = SubResource("BoxShape3D_ntpel")
 [node name="CarJackPlace" parent="." unique_id=1879783454 instance=ExtResource("20_b8olu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56402016, 0, 0.37824678)
 collision_mask = 4
+
+[editable path="Trunk/MultiPlaceZone"]

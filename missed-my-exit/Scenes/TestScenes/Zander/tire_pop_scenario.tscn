@@ -3,12 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://5cfidd5tn0et" path="res://Scenes/Prefabs/player.tscn" id="1_cxirj"]
 [ext_resource type="Texture2D" uid="uid://cjl8bywknh384" path="res://Assets/Other/templategrid_albedo.png" id="3_nqknd"]
 [ext_resource type="PackedScene" uid="uid://b4y13shhgrde7" path="res://Assets/New Models/Car Parts/FinalCar.tscn" id="4_sok06"]
+[ext_resource type="Script" uid="uid://2xrjkij1rqpb" path="res://Scripts/Events/trigger.gd" id="5_ebs8j"]
+[ext_resource type="PackedScene" uid="uid://dy5roeg1lmxyy" path="res://Scenes/Events/method_event.tscn" id="6_edesw"]
 [ext_resource type="PackedScene" uid="uid://47uwttp4dh6e" path="res://Scenes/Items/PickupableObject.tscn" id="22_23nww"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sok06"]
 albedo_texture = ExtResource("3_nqknd")
 
 [sub_resource type="Environment" id="Environment_bhunq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fuwis"]
+size = Vector3(1, 5.1224365, 9.735809)
 
 [node name="TirePopScenario" type="Node3D" unique_id=1959280999]
 
@@ -38,3 +43,22 @@ ObjectType = "ExtraTire"
 
 [node name="FinalCar" parent="." unique_id=1880288469 instance=ExtResource("4_sok06")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017413914, -4.483871)
+
+[node name="PopTires" type="Area3D" parent="." unique_id=1566893630]
+transform = Transform3D(0.25468782, 0, 0.9670235, 0, 1, 0, -0.9670235, 0, 0.25468782, -0.48235464, 0.030965328, -14.775794)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_ebs8j")
+one_time = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PopTires" unique_id=1329159519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6293945e-05, 1.5376587, -0.038856506)
+shape = SubResource("BoxShape3D_fuwis")
+debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[node name="MethodEvent" parent="PopTires" unique_id=1959494374 node_paths=PackedStringArray("trigger", "target") instance=ExtResource("6_edesw")]
+method = "pop_tires"
+trigger = NodePath("..")
+target = NodePath("../../FinalCar")
+
+[connection signal="body_entered" from="PopTires" to="PopTires" method="_on_body_entered"]
